@@ -49,31 +49,34 @@ namespace GroceryStoreDiscountCalculator
 
                 ArrayList items = new ArrayList();
                 Item item = new Item();
-                items.Add(item = new Item(25, "Lays"));
-                items.Add(item = new Item(56, "Roasted Chicken"));
-                items.Add(item = new Item(2.76, "Canned Tuna"));
-                items.Add(item = new Item(23.50, "Eggs"));
+                items.Add(item = new Item("Lays", 25, 2.80));
+                items.Add(item = new Item("Roasted Chicken", 10, 50.0));
+                items.Add(item = new Item("Canned Tuna", 69, 1.50));
+                items.Add(item = new Item("Eggs", 20, 5.0));
 
                 Console.WriteLine("\nProducts: ");
                 foreach (Item i in items)
                 {
-                    Console.WriteLine($"{i.name} Price: ${i.price}");
+                    Console.WriteLine($"{i.name.PadRight(20)} | ${i.price.ToString().PadLeft(5)} | x{i.qty.ToString().PadLeft(3)}");
                 }
-            }
+
+        }
 
         class Item
         {
             public double price;
             public String name;
+            public int qty;
 
             public Item()
             {
 
             }
-            public Item(double price, string name)
+            public Item(String name, int qty, double price)
             {
                 this.price = price;
                 this.name = name;
+                this.qty = qty; 
             }
         }
         static void Purchase()
