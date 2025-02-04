@@ -84,6 +84,16 @@ namespace GroceryStoreDiscountCalculator
 
         }
 
+    static double Discount(double total)
+    {
+        double discounted_value, discount_apply;
+
+        if (total > 100 && total < 200) { discount_apply = total * 0.10; return discounted_value = total - discount_apply; }
+        else if (total > 200 && total < 500) { discount_apply = total * 0.15; return discounted_value = total - discount_apply; }
+        else if (total > 500) { discount_apply = total * 0.20; return discounted_value = total - discount_apply; }
+        else { return total; }
+    }
+
     }
 }
 
