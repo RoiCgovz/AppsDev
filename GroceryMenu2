@@ -1,0 +1,87 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GroceryStoreDiscountCalculator
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            string input;
+            while (true)
+            {
+                Console.WriteLine("\n***** WELCOME TO THE GROCERY STORE DISCOUNT CALCULATOR *****");
+                Console.WriteLine("1: Purchase an Item");
+                Console.WriteLine("2: Display Product");
+                Console.WriteLine("3: Display Purchase Product");
+                Console.WriteLine("x: Exit Progam");
+                input = Console.ReadLine();
+                if (input.Equals("x"))
+                {
+                    break;
+                }
+                switch (input)
+                {
+                    case "1":
+                        break;
+                    case "2":
+                        display();
+                        break;
+                    case "3":
+                        break;
+                    case "x":
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Input");
+                        break;
+                }
+            }
+        }
+            static public void display()
+            {
+                const double discount = 0.1;
+                double total = 0;
+
+                ArrayList items = new ArrayList();
+                Item item = new Item();
+                items.Add(item = new Item(25, "Lays"));
+                items.Add(item = new Item(56, "Roasted Chicken"));
+                items.Add(item = new Item(2.76, "Canned Tuna"));
+                items.Add(item = new Item(23.50, "Eggs"));
+
+                Console.WriteLine("\nProducts: ");
+                foreach (Item i in items)
+                {
+                    Console.WriteLine($"{i.name} Price: ${i.price}");
+                }
+            }
+
+        class Item
+        {
+            public double price;
+            public String name;
+
+            public Item()
+            {
+
+            }
+            public Item(double price, string name)
+            {
+                this.price = price;
+                this.name = name;
+            }
+        }
+        static void Purchase()
+        {
+
+        }
+
+    }
+}
+
+
