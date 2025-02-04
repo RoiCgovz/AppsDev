@@ -1,0 +1,104 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GroceryStoreDiscountCalculator
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            string input;
+            int opt;
+            while (true)
+            {
+                Console.WriteLine("\n***** WELCOME TO THE GROCERY STORE DISCOUNT CALCULATOR *****");
+                Console.WriteLine("1: Purchase an Item");
+                Console.WriteLine("2: Display Product");
+                Console.WriteLine("3: Display Purchase Product");
+                Console.WriteLine("x: Exit Progam");
+                input = Console.ReadLine();
+                if (input.Equals("x"))
+                {
+                    break;
+                }
+                switch (input)
+                {
+                    case "1":
+                        display();
+
+                        break;
+                    case "2":
+                        display();
+                        Console.WriteLine("Choice: ");
+                        opt = Convert.ToInt32(Console.ReadLine());
+                        
+                        break;
+                    case "3":
+                        break;
+                    case "x":
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Input");
+                        break;
+                }
+            }
+
+            static ArrayList getItems()
+            {
+                Item item = new Item();
+                ArrayList items = new ArrayList();
+                items.Add(item = new Item("Lays", 25, 2.80));
+                items.Add(item = new Item("Roasted Chicken", 10, 50.0));
+                items.Add(item = new Item("Canned Tuna", 69, 1.50));
+                items.Add(item = new Item("Eggs", 20, 5.0));
+                return items;
+            }
+            static void display()
+            {
+                const double discount = 0.1;
+                double total = 0;
+                int index = 1;
+
+                ArrayList items = new ArrayList();
+                items = getItems();
+
+                Console.WriteLine("\nProducts: ");
+                foreach (Item i in items)
+                {
+                    Console.WriteLine($"{index++}.) {i.name.PadRight(20)} | ${i.price.ToString().PadLeft(5)} | x{i.qty.ToString().PadLeft(3)}");
+                }
+            }
+        }
+            
+
+        class Item
+        {
+            public double price;
+            public String name;
+            public int qty;
+
+            public Item()
+            {
+
+            }
+            public Item(String name, int qty, double price)
+            {
+                this.price = price;
+                this.name = name;
+                this.qty = qty; 
+            }
+        }
+        static void Purchase()
+        {
+            
+        }
+
+    }
+}
+
+
