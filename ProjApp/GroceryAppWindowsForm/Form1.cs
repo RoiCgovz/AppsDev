@@ -17,19 +17,19 @@ namespace GroceryAppWindowsForm
             InitializeComponent();
         }
 
-        private void exitBtn_Click (object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
-        private void minimizeBtn_Click(object sender, EventArgs e)
+        private void dairyBtn_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            meatUserControl.Show();
         }
 
-        private void maximizeBtn_Click(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            meatUserControl.Hide();
         }
     }
 }

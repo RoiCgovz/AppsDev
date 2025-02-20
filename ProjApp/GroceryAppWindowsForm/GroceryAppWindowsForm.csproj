@@ -52,10 +52,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="dairyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dairyUserControl.Designer.cs">
+      <DependentUpon>dairyUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dairyUserControl.resx">
+      <DependentUpon>dairyUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +97,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_226538033_C42p96JDNwkSdQs86Agxd1TtaVJsyJ71.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-544807136-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dairy-products-milk-cream-black-background-with-copy-space-concept-raw-food-natural-food_542566-321.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pastry-bakery-making-process-with-ingredients_114579-15238.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\premium_photo-1665669263531-cdcbe18e7fe4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-518468635-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snacks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bev.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prod.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,9 +63,29 @@ namespace GroceryAppWindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _360_F_226538033_C42p96JDNwkSdQs86Agxd1TtaVJsyJ71 {
+            get {
+                object obj = ResourceManager.GetObject("360_F_226538033_C42p96JDNwkSdQs86Agxd1TtaVJsyJ71", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Adobe_Express___file {
             get {
                 object obj = ResourceManager.GetObject("Adobe Express - file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bev {
+            get {
+                object obj = ResourceManager.GetObject("bev", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +103,90 @@ namespace GroceryAppWindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dairy_products_milk_cream_black_background_with_copy_space_concept_raw_food_natural_food_542566_321 {
+            get {
+                object obj = ResourceManager.GetObject("dairy-products-milk-cream-black-background-with-copy-space-concept-raw-food-natur" +
+                        "al-food_542566-321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images1 {
+            get {
+                object obj = ResourceManager.GetObject("images1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_518468635_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-518468635-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_544807136_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-544807136-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pastry_bakery_making_process_with_ingredients_114579_15238 {
+            get {
+                object obj = ResourceManager.GetObject("pastry-bakery-making-process-with-ingredients_114579-15238", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premium_photo_1665669263531_cdcbe18e7fe4 {
+            get {
+                object obj = ResourceManager.GetObject("premium_photo-1665669263531-cdcbe18e7fe4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prod {
+            get {
+                object obj = ResourceManager.GetObject("prod", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap snacks {
+            get {
+                object obj = ResourceManager.GetObject("snacks", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
