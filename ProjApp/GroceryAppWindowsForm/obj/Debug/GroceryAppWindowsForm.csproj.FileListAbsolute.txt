@@ -1,0 +1,10 @@
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\bin\Debug\GroceryAppWindowsForm.exe.config
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\bin\Debug\GroceryAppWindowsForm.exe
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\bin\Debug\GroceryAppWindowsForm.pdb
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.csproj.AssemblyReference.cache
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.MainForm.resources
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.Properties.Resources.resources
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.csproj.GenerateResource.cache
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.csproj.CoreCompileInputs.cache
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.exe
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.pdb
