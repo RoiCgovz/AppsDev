@@ -39,7 +39,7 @@
             this.snacksBtn = new System.Windows.Forms.Button();
             this.bakeryBtn = new System.Windows.Forms.Button();
             this.dairyBtn = new System.Windows.Forms.Button();
-            this.meatUserControl = new GroceryAppWindowsForm.dairyUserControl();
+            this.dairyUsrCtrl = new GroceryAppWindowsForm.dairyUserControl();
             this.panel1.SuspendLayout();
             this.categoryPnl.SuspendLayout();
             this.SuspendLayout();
@@ -143,7 +143,6 @@
             this.beveragesBtn.TabIndex = 8;
             this.beveragesBtn.Text = "Beverages";
             this.beveragesBtn.UseVisualStyleBackColor = false;
-            this.beveragesBtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // grainsBtn
             // 
@@ -190,6 +189,7 @@
             this.bakeryBtn.TabIndex = 5;
             this.bakeryBtn.Text = "Bakery";
             this.bakeryBtn.UseVisualStyleBackColor = false;
+            this.bakeryBtn.Click += new System.EventHandler(this.bakeryBtn_Click);
             // 
             // dairyBtn
             // 
@@ -207,12 +207,13 @@
             this.dairyBtn.UseVisualStyleBackColor = false;
             this.dairyBtn.Click += new System.EventHandler(this.dairyBtn_Click);
             // 
-            // meatUserControl
+            // dairyUsrCtrl
             // 
-            this.meatUserControl.Location = new System.Drawing.Point(324, 94);
-            this.meatUserControl.Name = "meatUserControl";
-            this.meatUserControl.Size = new System.Drawing.Size(524, 444);
-            this.meatUserControl.TabIndex = 2;
+            this.dairyUsrCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.dairyUsrCtrl.Location = new System.Drawing.Point(296, 94);
+            this.dairyUsrCtrl.Name = "dairyUsrCtrl";
+            this.dairyUsrCtrl.Size = new System.Drawing.Size(594, 557);
+            this.dairyUsrCtrl.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -220,7 +221,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(902, 668);
-            this.Controls.Add(this.meatUserControl);
+            this.Controls.Add(this.dairyUsrCtrl);
             this.Controls.Add(this.categoryPnl);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,7 +248,7 @@
         private System.Windows.Forms.Label cartBtn;
         private System.Windows.Forms.Label bcktoHomeLbl;
         private System.Windows.Forms.Label bckLbl;
-        private dairyUserControl meatUserControl;
+        private dairyUserControl dairyUsrCtrl;
     }
 }
 

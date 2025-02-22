@@ -16,20 +16,19 @@ namespace GroceryAppWindowsForm
         {
             InitializeComponent();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dairyBtn_Click(object sender, EventArgs e)
         {
-            meatUserControl.Show();
+            dairyUsrCtrl.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            meatUserControl.Hide();
+            dairyUsrCtrl.Hide();
+        }
+
+        private void bakeryBtn_Click(object sender, EventArgs e)
+        {
+            dairyUsrCtrl.Hide();
         }
     }
 }
