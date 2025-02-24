@@ -210,10 +210,11 @@
             // dairyUsrCtrl
             // 
             this.dairyUsrCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.dairyUsrCtrl.Location = new System.Drawing.Point(296, 94);
+            this.dairyUsrCtrl.Location = new System.Drawing.Point(286, 77);
             this.dairyUsrCtrl.Name = "dairyUsrCtrl";
             this.dairyUsrCtrl.Size = new System.Drawing.Size(594, 557);
             this.dairyUsrCtrl.TabIndex = 2;
+            this.dairyUsrCtrl.Load += new System.EventHandler(this.dairyUsrCtrl_Load);
             // 
             // MainForm
             // 

@@ -30,5 +30,10 @@ namespace GroceryAppWindowsForm
         {
             dairyUsrCtrl.Hide();
         }
+
+        private void dairyUsrCtrl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
