@@ -125,6 +125,7 @@
             this.wheatAddBtn.TabIndex = 15;
             this.wheatAddBtn.Text = "ADD";
             this.wheatAddBtn.UseVisualStyleBackColor = false;
+            this.wheatAddBtn.Click += new System.EventHandler(this.wheatAddBtn_Click);
             // 
             // cornAddBtn
             // 
@@ -138,6 +139,7 @@
             this.cornAddBtn.TabIndex = 14;
             this.cornAddBtn.Text = "ADD";
             this.cornAddBtn.UseVisualStyleBackColor = false;
+            this.cornAddBtn.Click += new System.EventHandler(this.cornAddBtn_Click);
             // 
             // riceAddBtn
             // 
@@ -151,6 +153,7 @@
             this.riceAddBtn.TabIndex = 13;
             this.riceAddBtn.Text = "ADD";
             this.riceAddBtn.UseVisualStyleBackColor = false;
+            this.riceAddBtn.Click += new System.EventHandler(this.riceAddBtn_Click);
             // 
             // wheatDec
             // 
@@ -164,6 +167,7 @@
             this.wheatDec.TabIndex = 12;
             this.wheatDec.Text = "-";
             this.wheatDec.UseVisualStyleBackColor = false;
+            this.wheatDec.Click += new System.EventHandler(this.wheatDec_Click);
             // 
             // wheatTxtBox
             // 
@@ -187,6 +191,7 @@
             this.wheatInc.TabIndex = 10;
             this.wheatInc.Text = "+";
             this.wheatInc.UseVisualStyleBackColor = false;
+            this.wheatInc.Click += new System.EventHandler(this.wheatInc_Click);
             // 
             // cornDec
             // 
@@ -200,6 +205,7 @@
             this.cornDec.TabIndex = 9;
             this.cornDec.Text = "-";
             this.cornDec.UseVisualStyleBackColor = false;
+            this.cornDec.Click += new System.EventHandler(this.cornDec_Click);
             // 
             // cornTxtBox
             // 
@@ -224,6 +230,7 @@
             this.cornInc.TabIndex = 7;
             this.cornInc.Text = "+";
             this.cornInc.UseVisualStyleBackColor = false;
+            this.cornInc.Click += new System.EventHandler(this.cornInc_Click);
             // 
             // riceDec
             // 
@@ -237,6 +244,7 @@
             this.riceDec.TabIndex = 6;
             this.riceDec.Text = "-";
             this.riceDec.UseVisualStyleBackColor = false;
+            this.riceDec.Click += new System.EventHandler(this.riceDec_Click);
             // 
             // riceTxtBox
             // 
@@ -261,6 +269,7 @@
             this.riceInc.TabIndex = 3;
             this.riceInc.Text = "+";
             this.riceInc.UseVisualStyleBackColor = false;
+            this.riceInc.Click += new System.EventHandler(this.riceInc_Click);
             // 
             // wheatPicBox
             // 

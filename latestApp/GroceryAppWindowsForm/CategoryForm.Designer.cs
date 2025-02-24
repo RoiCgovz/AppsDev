@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.closeButton = new System.Windows.Forms.Button();
             this.cartBtn = new System.Windows.Forms.Label();
             this.bcktoHomeLbl = new System.Windows.Forms.Label();
             this.bckLbl = new System.Windows.Forms.Label();
@@ -41,10 +40,13 @@
             this.snacksBtn = new System.Windows.Forms.Button();
             this.bakeryBtn = new System.Windows.Forms.Button();
             this.dairyBtn = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.grains1 = new GroceryAppWindowsForm.Grains();
             this.snacksCtrl = new GroceryAppWindowsForm.Snacks();
             this.dairyCtrl = new GroceryAppWindowsForm.dairyUserControl();
             this.bevCtrl = new GroceryAppWindowsForm.Beverage();
             this.bakeryCtrl = new GroceryAppWindowsForm.bakeryUserControl();
+            this.produce1 = new GroceryAppWindowsForm.Produce();
             this.panel1.SuspendLayout();
             this.categoryPnl.SuspendLayout();
             this.SuspendLayout();
@@ -62,18 +64,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(902, 71);
             this.panel1.TabIndex = 0;
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.White;
-            this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
-            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closeButton.Location = new System.Drawing.Point(863, 9);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(32, 33);
-            this.closeButton.TabIndex = 3;
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // cartBtn
             // 
@@ -145,6 +135,7 @@
             this.produceBtn.TabIndex = 10;
             this.produceBtn.Text = "Produce";
             this.produceBtn.UseVisualStyleBackColor = false;
+            this.produceBtn.Click += new System.EventHandler(this.produceBtn_Click);
             // 
             // beveragesBtn
             // 
@@ -177,6 +168,7 @@
             this.grainsBtn.TabIndex = 9;
             this.grainsBtn.Text = "Grains";
             this.grainsBtn.UseVisualStyleBackColor = false;
+            this.grainsBtn.Click += new System.EventHandler(this.grainsBtn_Click);
             // 
             // snacksBtn
             // 
@@ -227,6 +219,26 @@
             this.dairyBtn.UseVisualStyleBackColor = false;
             this.dairyBtn.Click += new System.EventHandler(this.dairyBtn_Click);
             // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.White;
+            this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.closeButton.Location = new System.Drawing.Point(863, 9);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(32, 33);
+            this.closeButton.TabIndex = 3;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // grains1
+            // 
+            this.grains1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(194)))));
+            this.grains1.Location = new System.Drawing.Point(276, 78);
+            this.grains1.Name = "grains1";
+            this.grains1.Size = new System.Drawing.Size(585, 380);
+            this.grains1.TabIndex = 6;
+            // 
             // snacksCtrl
             // 
             this.snacksCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
@@ -260,12 +272,22 @@
             this.bakeryCtrl.Size = new System.Drawing.Size(594, 413);
             this.bakeryCtrl.TabIndex = 2;
             // 
+            // produce1
+            // 
+            this.produce1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(194)))));
+            this.produce1.Location = new System.Drawing.Point(276, 78);
+            this.produce1.Name = "produce1";
+            this.produce1.Size = new System.Drawing.Size(589, 385);
+            this.produce1.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(902, 668);
+            this.Controls.Add(this.produce1);
+            this.Controls.Add(this.grains1);
             this.Controls.Add(this.snacksCtrl);
             this.Controls.Add(this.dairyCtrl);
             this.Controls.Add(this.bevCtrl);
@@ -305,6 +327,8 @@
         private Beverage bevCtrl;
         private dairyUserControl dairyCtrl;
         private Snacks snacksCtrl;
+        private Grains grains1;
+        private Produce produce1;
     }
 }
 

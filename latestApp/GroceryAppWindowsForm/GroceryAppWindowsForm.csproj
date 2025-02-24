@@ -103,6 +103,12 @@
     <Compile Include="Grains.Designer.cs">
       <DependentUpon>Grains.cs</DependentUpon>
     </Compile>
+    <Compile Include="Produce.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Produce.Designer.cs">
+      <DependentUpon>Produce.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="receiptUserControl.cs">
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Grains.resx">
       <DependentUpon>Grains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produce.resx">
+      <DependentUpon>Produce.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -225,6 +234,8 @@
     <None Include="Resources\1egg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\_apple.jpg" />
+    <None Include="Resources\_cabbage.jpg" />
     <None Include="Resources\_wheat.jpg" />
     <None Include="Resources\_corn.jpg" />
     <None Include="Resources\_rice.jpg" />
