@@ -136,6 +136,9 @@
   <data name="1condense" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1condense.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close-icon-button-on-a-blue-gradient-circle-vector-35537528-Photoroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close-icon-button-on-a-blue-gradient-circle-vector-35537528-Photoroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1juice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1juice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,11 +154,14 @@
   <data name="2bagel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2bagel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_corn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_corn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1yogurt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1yogurt1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close-icon-button-on-a-blue-gradient-circle-vector-35537528-Photoroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close-icon-button-on-a-blue-gradient-circle-vector-35537528-Photoroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_rice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_rice.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bev" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bev.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -204,5 +210,8 @@
   </data>
   <data name="_soda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_soda.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_wheat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_wheat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

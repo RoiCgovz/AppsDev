@@ -11,37 +11,34 @@ namespace GroceryAppWindowsForm
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            /*dairyUserControl1.Hide();
+            dairyCtrl.Hide();
             bakeryCtrl.Hide();
             snacksCtrl.Hide();
-            bevCtrl.Hide();*/
+            bevCtrl.Hide();
         }
         private void snacksBtn_Click(object sender, EventArgs e)
         {
-            /*dairyUserControl1.Hide();
+            dairyCtrl.Hide();
             snacksCtrl.Show();
             bakeryCtrl.Hide();
-            bevCtrl.Hide();*/
+            bevCtrl.Hide();
         }
         private void dairyBtn_Click(object sender, EventArgs e)
         {
-            /*dairyUserControl1.Show();
+            dairyCtrl.Show();
             bakeryCtrl.Hide();
             snacksCtrl.Hide();
-            bevCtrl.Hide();*/
+            bevCtrl.Hide();
         }
         private void bakeryBtn_Click(object sender, EventArgs e)
         {
-            /*dairyUserControl1.Hide();
+            dairyCtrl.Hide();
             bakeryCtrl.Show();
             snacksCtrl.Hide();
-            bevCtrl.Hide();*/
+            bevCtrl.Hide();
         }
 
-        private void dairyUsrCtrl_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -50,10 +47,12 @@ namespace GroceryAppWindowsForm
 
         private void beveragesBtn_Click(object sender, EventArgs e)
         {
-            /*dairyUserControl1.Hide();
+            dairyCtrl.Hide();
             bakeryCtrl.Hide();
             snacksCtrl.Hide();
-            bevCtrl.Show();*/
+            bevCtrl.Show();
         }
+
+        
     }
 }

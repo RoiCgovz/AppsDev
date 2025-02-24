@@ -41,10 +41,10 @@
             this.snacksBtn = new System.Windows.Forms.Button();
             this.bakeryBtn = new System.Windows.Forms.Button();
             this.dairyBtn = new System.Windows.Forms.Button();
-            this.bakeryUserControl1 = new GroceryAppWindowsForm.bakeryUserControl();
-            this.beverage1 = new GroceryAppWindowsForm.Beverage();
-            this.dairyUserControl1 = new GroceryAppWindowsForm.dairyUserControl();
-            this.snacks1 = new GroceryAppWindowsForm.Snacks();
+            this.snacksCtrl = new GroceryAppWindowsForm.Snacks();
+            this.dairyCtrl = new GroceryAppWindowsForm.dairyUserControl();
+            this.bevCtrl = new GroceryAppWindowsForm.Beverage();
+            this.bakeryCtrl = new GroceryAppWindowsForm.bakeryUserControl();
             this.panel1.SuspendLayout();
             this.categoryPnl.SuspendLayout();
             this.SuspendLayout();
@@ -227,38 +227,38 @@
             this.dairyBtn.UseVisualStyleBackColor = false;
             this.dairyBtn.Click += new System.EventHandler(this.dairyBtn_Click);
             // 
-            // bakeryUserControl1
+            // snacksCtrl
             // 
-            this.bakeryUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.bakeryUserControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bakeryUserControl1.Location = new System.Drawing.Point(277, 78);
-            this.bakeryUserControl1.Name = "bakeryUserControl1";
-            this.bakeryUserControl1.Size = new System.Drawing.Size(594, 413);
-            this.bakeryUserControl1.TabIndex = 2;
+            this.snacksCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.snacksCtrl.Location = new System.Drawing.Point(276, 78);
+            this.snacksCtrl.Name = "snacksCtrl";
+            this.snacksCtrl.Size = new System.Drawing.Size(589, 394);
+            this.snacksCtrl.TabIndex = 5;
             // 
-            // beverage1
+            // dairyCtrl
             // 
-            this.beverage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.beverage1.Location = new System.Drawing.Point(277, 78);
-            this.beverage1.Name = "beverage1";
-            this.beverage1.Size = new System.Drawing.Size(595, 394);
-            this.beverage1.TabIndex = 3;
+            this.dairyCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.dairyCtrl.Location = new System.Drawing.Point(278, 78);
+            this.dairyCtrl.Name = "dairyCtrl";
+            this.dairyCtrl.Size = new System.Drawing.Size(594, 487);
+            this.dairyCtrl.TabIndex = 4;
             // 
-            // dairyUserControl1
+            // bevCtrl
             // 
-            this.dairyUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.dairyUserControl1.Location = new System.Drawing.Point(277, 78);
-            this.dairyUserControl1.Name = "dairyUserControl1";
-            this.dairyUserControl1.Size = new System.Drawing.Size(594, 487);
-            this.dairyUserControl1.TabIndex = 4;
+            this.bevCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.bevCtrl.Location = new System.Drawing.Point(277, 78);
+            this.bevCtrl.Name = "bevCtrl";
+            this.bevCtrl.Size = new System.Drawing.Size(595, 394);
+            this.bevCtrl.TabIndex = 3;
             // 
-            // snacks1
+            // bakeryCtrl
             // 
-            this.snacks1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.snacks1.Location = new System.Drawing.Point(277, 78);
-            this.snacks1.Name = "snacks1";
-            this.snacks1.Size = new System.Drawing.Size(589, 394);
-            this.snacks1.TabIndex = 5;
+            this.bakeryCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.bakeryCtrl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bakeryCtrl.Location = new System.Drawing.Point(277, 78);
+            this.bakeryCtrl.Name = "bakeryCtrl";
+            this.bakeryCtrl.Size = new System.Drawing.Size(594, 413);
+            this.bakeryCtrl.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -266,10 +266,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(902, 668);
-            this.Controls.Add(this.snacks1);
-            this.Controls.Add(this.dairyUserControl1);
-            this.Controls.Add(this.beverage1);
-            this.Controls.Add(this.bakeryUserControl1);
+            this.Controls.Add(this.snacksCtrl);
+            this.Controls.Add(this.dairyCtrl);
+            this.Controls.Add(this.bevCtrl);
+            this.Controls.Add(this.bakeryCtrl);
             this.Controls.Add(this.categoryPnl);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,10 +301,10 @@
        // private bakeryUserControl bakeryUsrCtrl;
 
         private System.Windows.Forms.Button closeButton;
-        private bakeryUserControl bakeryUserControl1;
-        private Beverage beverage1;
-        private dairyUserControl dairyUserControl1;
-        private Snacks snacks1;
+        private bakeryUserControl bakeryCtrl;
+        private Beverage bevCtrl;
+        private dairyUserControl dairyCtrl;
+        private Snacks snacksCtrl;
     }
 }
 
