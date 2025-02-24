@@ -9,3 +9,4 @@ C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Deb
 C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.exe
 C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.pdb
 C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.dairyUserControl.resources
+C:\Users\PTO\source\repos\RoiCgovz\AppsDev\ProjApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.bakeryUserControl.resources
