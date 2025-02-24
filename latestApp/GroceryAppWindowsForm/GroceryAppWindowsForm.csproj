@@ -67,11 +67,29 @@
     <Compile Include="bakeryUserControl.Designer.cs">
       <DependentUpon>bakeryUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Beverage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Beverage.Designer.cs">
+      <DependentUpon>Beverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartOrReceipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CartOrReceipt.Designer.cs">
+      <DependentUpon>CartOrReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryForm.Designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="dairyUserControl.cs">
       <SubType>UserControl</SubType>
@@ -87,11 +105,26 @@
     <Compile Include="receiptUserControl.Designer.cs">
       <DependentUpon>receiptUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Snacks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Snacks.Designer.cs">
+      <DependentUpon>Snacks.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="bakeryUserControl.resx">
       <DependentUpon>bakeryUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Beverage.resx">
+      <DependentUpon>Beverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CartOrReceipt.resx">
+      <DependentUpon>CartOrReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dairyUserControl.resx">
       <DependentUpon>dairyUserControl.cs</DependentUpon>
@@ -108,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="receiptUserControl.resx">
       <DependentUpon>receiptUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Snacks.resx">
+      <DependentUpon>Snacks.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -180,9 +216,16 @@
     <None Include="Resources\1egg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\_soda.jpg" />
+    <None Include="Resources\_wine.jpg" />
+    <None Include="Resources\1nacho.jpg" />
+    <None Include="Resources\2bananachips.jpg" />
+    <None Include="Resources\1yogurt1.jpg" />
+    <None Include="Resources\1juice.jpg" />
     <Content Include="Resources\2croissant.png" />
     <Content Include="Resources\2bread.jpg" />
     <Content Include="Resources\2bagel.jpg" />
+    <None Include="Resources\cookies.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

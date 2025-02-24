@@ -104,7 +104,7 @@
             this.dairyPnl.Controls.Add(this.milkPicBox);
             this.dairyPnl.Location = new System.Drawing.Point(13, 16);
             this.dairyPnl.Name = "dairyPnl";
-            this.dairyPnl.Size = new System.Drawing.Size(563, 523);
+            this.dairyPnl.Size = new System.Drawing.Size(563, 434);
             this.dairyPnl.TabIndex = 1;
             // 
             // eggAdd
@@ -488,7 +488,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
             this.Controls.Add(this.dairyPnl);
             this.Name = "dairyUserControl";
-            this.Size = new System.Drawing.Size(594, 557);
+            this.Size = new System.Drawing.Size(594, 487);
             this.dairyPnl.ResumeLayout(false);
             this.dairyPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eggPicBox)).EndInit();

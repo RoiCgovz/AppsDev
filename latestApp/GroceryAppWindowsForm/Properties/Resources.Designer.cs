@@ -103,9 +103,29 @@ namespace GroceryAppWindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1juice {
+            get {
+                object obj = ResourceManager.GetObject("1juice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1milk {
             get {
                 object obj = ResourceManager.GetObject("1milk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1nacho {
+            get {
+                object obj = ResourceManager.GetObject("1nacho", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +143,29 @@ namespace GroceryAppWindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1yogurt1 {
+            get {
+                object obj = ResourceManager.GetObject("1yogurt1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2bagel {
             get {
                 object obj = ResourceManager.GetObject("2bagel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2bananachips {
+            get {
+                object obj = ResourceManager.GetObject("2bananachips", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +203,26 @@ namespace GroceryAppWindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _soda {
+            get {
+                object obj = ResourceManager.GetObject("_soda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _wine {
+            get {
+                object obj = ResourceManager.GetObject("_wine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Adobe_Express___file {
             get {
                 object obj = ResourceManager.GetObject("Adobe Express - file", resourceCulture);
@@ -186,6 +246,16 @@ namespace GroceryAppWindowsForm.Properties {
         internal static System.Drawing.Bitmap close_icon_button_on_a_blue_gradient_circle_vector_35537528_Photoroom {
             get {
                 object obj = ResourceManager.GetObject("close-icon-button-on-a-blue-gradient-circle-vector-35537528-Photoroom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cookies {
+            get {
+                object obj = ResourceManager.GetObject("cookies", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

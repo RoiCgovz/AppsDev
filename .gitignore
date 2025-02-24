@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/latestApp/GroceryAppWindowsForm/Form1.cs
+/latestApp/GroceryAppWindowsForm/Form1.Designer.cs
+/latestApp/GroceryAppWindowsForm/Form1.resx
+/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/f68658b5-20bf-4e88-9367-2fbadcef1ea1.vsidx
+/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/fcbb0bf8-5782-4291-b841-a395bd0bf83c.vsidx
