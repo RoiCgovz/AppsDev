@@ -38,3 +38,5 @@ C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\Groc
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.CartOrReceipt.resources
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.Snacks.resources
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.Beverage.resources
+C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.Grains.resources
+C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.Produce.resources

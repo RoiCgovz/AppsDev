@@ -274,7 +274,7 @@
             // carrotsPicBox
             // 
             this.carrotsPicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._wheat;
-            this.carrotsPicBox.Location = new System.Drawing.Point(390, 54);
+            this.carrotsPicBox.Location = new System.Drawing.Point(391, 54);
             this.carrotsPicBox.Name = "carrotsPicBox";
             this.carrotsPicBox.Size = new System.Drawing.Size(159, 197);
             this.carrotsPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

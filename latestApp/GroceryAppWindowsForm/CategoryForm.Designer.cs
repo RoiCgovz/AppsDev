@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.closeButton = new System.Windows.Forms.Button();
             this.cartBtn = new System.Windows.Forms.Label();
             this.bcktoHomeLbl = new System.Windows.Forms.Label();
             this.bckLbl = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.snacksBtn = new System.Windows.Forms.Button();
             this.bakeryBtn = new System.Windows.Forms.Button();
             this.dairyBtn = new System.Windows.Forms.Button();
-            this.closeButton = new System.Windows.Forms.Button();
             this.grains1 = new GroceryAppWindowsForm.Grains();
             this.snacksCtrl = new GroceryAppWindowsForm.Snacks();
             this.dairyCtrl = new GroceryAppWindowsForm.dairyUserControl();
@@ -64,6 +64,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(902, 71);
             this.panel1.TabIndex = 0;
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.White;
+            this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.closeButton.Location = new System.Drawing.Point(863, 9);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(32, 33);
+            this.closeButton.TabIndex = 3;
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // cartBtn
             // 
@@ -218,18 +230,6 @@
             this.dairyBtn.Text = "Dairy";
             this.dairyBtn.UseVisualStyleBackColor = false;
             this.dairyBtn.Click += new System.EventHandler(this.dairyBtn_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.White;
-            this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
-            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closeButton.Location = new System.Drawing.Point(863, 9);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(32, 33);
-            this.closeButton.TabIndex = 3;
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // grains1
             // 

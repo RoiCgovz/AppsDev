@@ -33,7 +33,7 @@ namespace GroceryAppWindowsForm
             }
         }
 
-        // Method to update textboxes
+        // Method to update textbox
         private void UpdateTextBoxes()
         {
             cabbageTxtBox.Text = cabbageCount.ToString();
