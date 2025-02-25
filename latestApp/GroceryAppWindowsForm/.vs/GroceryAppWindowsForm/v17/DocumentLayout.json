@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\pto\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\cartorreceipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:cartorreceipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\pto\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\pto\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\cartorreceipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:cartorreceipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\pto\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\pto\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,27 +50,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cart.cs",
-              "DocumentMoniker": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Cart.cs",
-              "RelativeDocumentMoniker": "Cart.cs",
-              "ToolTip": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Cart.cs",
-              "RelativeToolTip": "Cart.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAADwv0gAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CartOrReceipt.cs",
+              "DocumentMoniker": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\CartOrReceipt.cs",
+              "RelativeDocumentMoniker": "CartOrReceipt.cs",
+              "ToolTip": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\CartOrReceipt.cs*",
+              "RelativeToolTip": "CartOrReceipt.cs*",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA8wBoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T14:38:48.298Z",
+              "WhenOpened": "2025-02-25T16:07:57.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Cart.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Cart.cs",
-              "RelativeDocumentMoniker": "Cart.cs",
-              "ToolTip": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Cart.cs [Design]",
-              "RelativeToolTip": "Cart.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "CartOrReceipt.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\CartOrReceipt.cs",
+              "RelativeDocumentMoniker": "CartOrReceipt.cs",
+              "ToolTip": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\CartOrReceipt.cs [Design]*",
+              "RelativeToolTip": "CartOrReceipt.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T12:27:04.011Z",
+              "WhenOpened": "2025-02-25T16:05:55.712Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -83,8 +83,7 @@
               "RelativeToolTip": "CategoryForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T14:32:56.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T14:32:56.535Z"
             },
             {
               "$type": "Document",
@@ -95,8 +94,7 @@
               "ToolTip": "C:\\Users\\PTO\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\CategoryForm.cs [Design]",
               "RelativeToolTip": "CategoryForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T14:32:30.762Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-25T14:32:30.762Z"
             }
           ]
         }

@@ -29,12 +29,10 @@ C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\Groc
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.MainForm.resources
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.dairyUserControl.resources
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.Properties.Resources.resources
-C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.receiptUserControl.resources
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.csproj.GenerateResource.cache
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.csproj.CoreCompileInputs.cache
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.exe
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.pdb
-C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.Cart.resources
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.CartOrReceipt.resources
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.Snacks.resources
 C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.Beverage.resources

@@ -18,13 +18,13 @@ namespace GroceryAppWindowsForm
         }
         public void ShowCart()
         {
-            cartCtrl.Show();
-            receiptCtrl.Hide();
+            cartPnl.Show();
+            receiptPnl.Hide();
         }
         public void ShowReceipt()
         {
-            cartCtrl.Hide();
-            receiptCtrl.Show();
+            cartPnl.Hide();
+            receiptPnl.Show();
         }
 
         private void closeButton_Click(object sender, EventArgs e)
