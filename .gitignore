@@ -1,15 +1,1 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/latestApp/GroceryAppWindowsForm/Form1.cs
-/latestApp/GroceryAppWindowsForm/Form1.Designer.cs
-/latestApp/GroceryAppWindowsForm/Form1.resx
-/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/f68658b5-20bf-4e88-9367-2fbadcef1ea1.vsidx
-/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/fcbb0bf8-5782-4291-b841-a395bd0bf83c.vsidx
-/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/3ab6106e-4700-4bac-b674-4a1e0d82698e.vsidx
-/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/1ad46a41-569c-4480-895c-797cd6e652c4.vsidx
-/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/11ca71e8-c82b-4fd1-ac60-fe120947e5ef.vsidx
-/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/14861247-cbe8-402a-a405-bc2339e12ce5.vsidx
-/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/966365ff-1365-4053-9830-b467ce6ad6d9.vsidx
-/latestApp/GroceryAppWindowsForm/.vs/GroceryAppWindowsForm/FileContentIndex/9777210d-7009-49ec-ae28-aeb05e0280e3.vsidx
+.vs/
