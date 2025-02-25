@@ -79,5 +79,12 @@ namespace GroceryAppWindowsForm
             grains1.Hide();
             produce1.Show();
         }
+
+        private void bckLbl_Click(object sender, EventArgs e)
+        {
+            MainMenuForm mainMnu = new MainMenuForm();
+            mainMnu.Show();
+            this.Hide();   
+        }
     }
 }
