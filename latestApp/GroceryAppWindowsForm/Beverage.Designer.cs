@@ -77,7 +77,7 @@
             this.bakeryPnl.Controls.Add(this.juicePicBox);
             this.bakeryPnl.Location = new System.Drawing.Point(19, 16);
             this.bakeryPnl.Name = "bakeryPnl";
-            this.bakeryPnl.Size = new System.Drawing.Size(563, 356);
+            this.bakeryPnl.Size = new System.Drawing.Size(563, 383);
             this.bakeryPnl.TabIndex = 4;
             // 
             // label2
@@ -85,33 +85,36 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.label2.Location = new System.Drawing.Point(441, 19);
+            this.label2.Location = new System.Drawing.Point(422, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 22);
+            this.label2.Size = new System.Drawing.Size(93, 44);
             this.label2.TabIndex = 18;
-            this.label2.Text = "$2.30";
+            this.label2.Text = "Soda\r\n$1.30/Can";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.label1.Location = new System.Drawing.Point(255, 19);
+            this.label1.Location = new System.Drawing.Point(230, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 22);
+            this.label1.Size = new System.Drawing.Size(100, 44);
             this.label1.TabIndex = 17;
-            this.label1.Text = "$3.00";
+            this.label1.Text = "Wine\r\n$6.20/Liter";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chipsLabel
             // 
             this.chipsLabel.AutoSize = true;
             this.chipsLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chipsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.chipsLabel.Location = new System.Drawing.Point(66, 19);
+            this.chipsLabel.Location = new System.Drawing.Point(46, 29);
             this.chipsLabel.Name = "chipsLabel";
-            this.chipsLabel.Size = new System.Drawing.Size(55, 22);
+            this.chipsLabel.Size = new System.Drawing.Size(105, 44);
             this.chipsLabel.TabIndex = 16;
-            this.chipsLabel.Text = "$1.00";
+            this.chipsLabel.Text = "Juice\r\n$0.43/ Liter";
+            this.chipsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // sodaAddBtn
             // 
@@ -119,7 +122,7 @@
             this.sodaAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sodaAddBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sodaAddBtn.ForeColor = System.Drawing.Color.White;
-            this.sodaAddBtn.Location = new System.Drawing.Point(408, 300);
+            this.sodaAddBtn.Location = new System.Drawing.Point(407, 332);
             this.sodaAddBtn.Name = "sodaAddBtn";
             this.sodaAddBtn.Size = new System.Drawing.Size(117, 44);
             this.sodaAddBtn.TabIndex = 15;
@@ -133,7 +136,7 @@
             this.wineAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wineAddBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wineAddBtn.ForeColor = System.Drawing.Color.White;
-            this.wineAddBtn.Location = new System.Drawing.Point(224, 300);
+            this.wineAddBtn.Location = new System.Drawing.Point(223, 332);
             this.wineAddBtn.Name = "wineAddBtn";
             this.wineAddBtn.Size = new System.Drawing.Size(117, 44);
             this.wineAddBtn.TabIndex = 14;
@@ -147,7 +150,7 @@
             this.jceAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jceAddBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jceAddBtn.ForeColor = System.Drawing.Color.White;
-            this.jceAddBtn.Location = new System.Drawing.Point(35, 300);
+            this.jceAddBtn.Location = new System.Drawing.Point(34, 332);
             this.jceAddBtn.Name = "jceAddBtn";
             this.jceAddBtn.Size = new System.Drawing.Size(117, 44);
             this.jceAddBtn.TabIndex = 13;
@@ -161,7 +164,7 @@
             this.sodaDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sodaDec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sodaDec.ForeColor = System.Drawing.Color.White;
-            this.sodaDec.Location = new System.Drawing.Point(391, 257);
+            this.sodaDec.Location = new System.Drawing.Point(390, 289);
             this.sodaDec.Name = "sodaDec";
             this.sodaDec.Size = new System.Drawing.Size(46, 37);
             this.sodaDec.TabIndex = 12;
@@ -173,7 +176,7 @@
             // 
             this.sodaTxtBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sodaTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.sodaTxtBox.Location = new System.Drawing.Point(443, 257);
+            this.sodaTxtBox.Location = new System.Drawing.Point(442, 289);
             this.sodaTxtBox.Multiline = true;
             this.sodaTxtBox.Name = "sodaTxtBox";
             this.sodaTxtBox.Size = new System.Drawing.Size(53, 37);
@@ -185,7 +188,7 @@
             this.sodaInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sodaInc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sodaInc.ForeColor = System.Drawing.Color.White;
-            this.sodaInc.Location = new System.Drawing.Point(503, 257);
+            this.sodaInc.Location = new System.Drawing.Point(502, 289);
             this.sodaInc.Name = "sodaInc";
             this.sodaInc.Size = new System.Drawing.Size(46, 37);
             this.sodaInc.TabIndex = 10;
@@ -199,7 +202,7 @@
             this.wineDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wineDec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wineDec.ForeColor = System.Drawing.Color.White;
-            this.wineDec.Location = new System.Drawing.Point(205, 257);
+            this.wineDec.Location = new System.Drawing.Point(204, 289);
             this.wineDec.Name = "wineDec";
             this.wineDec.Size = new System.Drawing.Size(46, 37);
             this.wineDec.TabIndex = 9;
@@ -211,7 +214,7 @@
             // 
             this.wineTxtBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wineTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.wineTxtBox.Location = new System.Drawing.Point(257, 257);
+            this.wineTxtBox.Location = new System.Drawing.Point(256, 289);
             this.wineTxtBox.Multiline = true;
             this.wineTxtBox.Name = "wineTxtBox";
             this.wineTxtBox.Size = new System.Drawing.Size(53, 37);
@@ -224,7 +227,7 @@
             this.wineInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wineInc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wineInc.ForeColor = System.Drawing.Color.White;
-            this.wineInc.Location = new System.Drawing.Point(317, 257);
+            this.wineInc.Location = new System.Drawing.Point(316, 289);
             this.wineInc.Name = "wineInc";
             this.wineInc.Size = new System.Drawing.Size(46, 37);
             this.wineInc.TabIndex = 7;
@@ -238,7 +241,7 @@
             this.jceDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jceDec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jceDec.ForeColor = System.Drawing.Color.White;
-            this.jceDec.Location = new System.Drawing.Point(18, 257);
+            this.jceDec.Location = new System.Drawing.Point(17, 289);
             this.jceDec.Name = "jceDec";
             this.jceDec.Size = new System.Drawing.Size(46, 37);
             this.jceDec.TabIndex = 6;
@@ -250,7 +253,7 @@
             // 
             this.jceTxtBx.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jceTxtBx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.jceTxtBx.Location = new System.Drawing.Point(70, 257);
+            this.jceTxtBx.Location = new System.Drawing.Point(69, 289);
             this.jceTxtBx.Multiline = true;
             this.jceTxtBx.Name = "jceTxtBx";
             this.jceTxtBx.Size = new System.Drawing.Size(53, 37);
@@ -263,7 +266,7 @@
             this.jceInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jceInc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jceInc.ForeColor = System.Drawing.Color.White;
-            this.jceInc.Location = new System.Drawing.Point(130, 257);
+            this.jceInc.Location = new System.Drawing.Point(129, 289);
             this.jceInc.Name = "jceInc";
             this.jceInc.Size = new System.Drawing.Size(46, 37);
             this.jceInc.TabIndex = 3;
@@ -274,7 +277,7 @@
             // sodaPicBox
             // 
             this.sodaPicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._soda;
-            this.sodaPicBox.Location = new System.Drawing.Point(391, 54);
+            this.sodaPicBox.Location = new System.Drawing.Point(390, 86);
             this.sodaPicBox.Name = "sodaPicBox";
             this.sodaPicBox.Size = new System.Drawing.Size(158, 197);
             this.sodaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,7 +287,7 @@
             // winePicBox
             // 
             this.winePicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._wine;
-            this.winePicBox.Location = new System.Drawing.Point(224, 54);
+            this.winePicBox.Location = new System.Drawing.Point(223, 86);
             this.winePicBox.Name = "winePicBox";
             this.winePicBox.Size = new System.Drawing.Size(117, 197);
             this.winePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -294,7 +297,7 @@
             // juicePicBox
             // 
             this.juicePicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._1juice;
-            this.juicePicBox.Location = new System.Drawing.Point(18, 54);
+            this.juicePicBox.Location = new System.Drawing.Point(17, 86);
             this.juicePicBox.Name = "juicePicBox";
             this.juicePicBox.Size = new System.Drawing.Size(158, 197);
             this.juicePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -308,7 +311,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
             this.Controls.Add(this.bakeryPnl);
             this.Name = "Beverage";
-            this.Size = new System.Drawing.Size(595, 394);
+            this.Size = new System.Drawing.Size(595, 413);
             this.bakeryPnl.ResumeLayout(false);
             this.bakeryPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sodaPicBox)).EndInit();

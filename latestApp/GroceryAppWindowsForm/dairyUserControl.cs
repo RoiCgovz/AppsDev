@@ -9,10 +9,6 @@ namespace GroceryAppWindowsForm
         private int milkCount = 0;
         private int cheeseCount = 0;
         private int yogurtCount = 0;
-        private int butterCount = 0;
-        private int condMilkCount = 0;
-        private int eggCount = 0;
-
         public dairyUserControl()
         {
             InitializeComponent();
@@ -24,9 +20,6 @@ namespace GroceryAppWindowsForm
             milkTxtBx.KeyPress += ValidateInput;
             cheeseTxtBox.KeyPress += ValidateInput;
             yogurtTxtBox.KeyPress += ValidateInput;
-            btrTxtBox.KeyPress += ValidateInput;
-            condmilkTxtBox.KeyPress += ValidateInput;
-            eggTxtBox.KeyPress += ValidateInput;
         }
 
         // Cannot Input letters and symbols in the TextBox
@@ -44,9 +37,6 @@ namespace GroceryAppWindowsForm
             milkTxtBx.Text = milkCount.ToString();
             cheeseTxtBox.Text = cheeseCount.ToString();
             yogurtTxtBox.Text = yogurtCount.ToString();
-            btrTxtBox.Text = butterCount.ToString();
-            condmilkTxtBox.Text = condMilkCount.ToString();
-            eggTxtBox.Text = eggCount.ToString();
         }
 
         // Update the Count
@@ -75,15 +65,6 @@ namespace GroceryAppWindowsForm
         private void yogurtInc_Click(object sender, EventArgs e) => UpdateCount(yogurtTxtBox, ref yogurtCount, true);
         private void yogurtDec_Click(object sender, EventArgs e) => UpdateCount(yogurtTxtBox, ref yogurtCount, false);
 
-        private void btrInc_Click(object sender, EventArgs e) => UpdateCount(btrTxtBox, ref butterCount, true);
-        private void btrDec_Click(object sender, EventArgs e) => UpdateCount(btrTxtBox, ref butterCount, false);
-
-        private void condmilkInc_Click(object sender, EventArgs e) => UpdateCount(condmilkTxtBox, ref condMilkCount, true);
-        private void condmilkDec_Click(object sender, EventArgs e) => UpdateCount(condmilkTxtBox, ref condMilkCount, false);
-
-        private void eggInc_Click(object sender, EventArgs e) => UpdateCount(eggTxtBox, ref eggCount, true);
-        private void eggDec_Click(object sender, EventArgs e) => UpdateCount(eggTxtBox, ref eggCount, false);
-
         private void milkAddBtn_Click(object sender, EventArgs e)
         {
 
@@ -95,21 +76,6 @@ namespace GroceryAppWindowsForm
         }
 
         private void yogurtAddBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btrAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void condmilkAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void eggAdd_Click(object sender, EventArgs e)
         {
 
         }

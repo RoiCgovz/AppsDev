@@ -130,7 +130,7 @@
             this.categoryPnl.Dock = System.Windows.Forms.DockStyle.Left;
             this.categoryPnl.Location = new System.Drawing.Point(0, 71);
             this.categoryPnl.Name = "categoryPnl";
-            this.categoryPnl.Size = new System.Drawing.Size(270, 597);
+            this.categoryPnl.Size = new System.Drawing.Size(270, 470);
             this.categoryPnl.TabIndex = 1;
             // 
             // produceBtn
@@ -245,7 +245,7 @@
             this.grains1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(194)))));
             this.grains1.Location = new System.Drawing.Point(276, 78);
             this.grains1.Name = "grains1";
-            this.grains1.Size = new System.Drawing.Size(585, 380);
+            this.grains1.Size = new System.Drawing.Size(579, 394);
             this.grains1.TabIndex = 6;
             // 
             // snacksCtrl
@@ -259,9 +259,9 @@
             // dairyCtrl
             // 
             this.dairyCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.dairyCtrl.Location = new System.Drawing.Point(278, 78);
+            this.dairyCtrl.Location = new System.Drawing.Point(277, 78);
             this.dairyCtrl.Name = "dairyCtrl";
-            this.dairyCtrl.Size = new System.Drawing.Size(594, 487);
+            this.dairyCtrl.Size = new System.Drawing.Size(594, 390);
             this.dairyCtrl.TabIndex = 4;
             // 
             // bevCtrl
@@ -278,7 +278,7 @@
             this.bakeryCtrl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bakeryCtrl.Location = new System.Drawing.Point(277, 78);
             this.bakeryCtrl.Name = "bakeryCtrl";
-            this.bakeryCtrl.Size = new System.Drawing.Size(594, 413);
+            this.bakeryCtrl.Size = new System.Drawing.Size(594, 394);
             this.bakeryCtrl.TabIndex = 2;
             // 
             // MainForm
@@ -286,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(902, 668);
+            this.ClientSize = new System.Drawing.Size(902, 541);
             this.Controls.Add(this.produce1);
             this.Controls.Add(this.grains1);
             this.Controls.Add(this.snacksCtrl);

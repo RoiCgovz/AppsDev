@@ -77,7 +77,7 @@
             this.bakeryPnl.Controls.Add(this.breadPicBox);
             this.bakeryPnl.Location = new System.Drawing.Point(16, 17);
             this.bakeryPnl.Name = "bakeryPnl";
-            this.bakeryPnl.Size = new System.Drawing.Size(563, 378);
+            this.bakeryPnl.Size = new System.Drawing.Size(563, 373);
             this.bakeryPnl.TabIndex = 2;
             // 
             // label2
@@ -85,33 +85,36 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.label2.Location = new System.Drawing.Point(436, 27);
+            this.label2.Location = new System.Drawing.Point(438, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 22);
+            this.label2.Size = new System.Drawing.Size(55, 44);
             this.label2.TabIndex = 19;
-            this.label2.Text = "$4.00";
+            this.label2.Text = "Bagel\r\n$4.00";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.label1.Location = new System.Drawing.Point(250, 27);
+            this.label1.Location = new System.Drawing.Point(238, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 22);
+            this.label1.Size = new System.Drawing.Size(105, 44);
             this.label1.TabIndex = 18;
-            this.label1.Text = "$2.50";
+            this.label1.Text = "Croissant\r\n$0.25/Piece\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chipsLabel
             // 
             this.chipsLabel.AutoSize = true;
             this.chipsLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chipsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.chipsLabel.Location = new System.Drawing.Point(61, 27);
+            this.chipsLabel.Location = new System.Drawing.Point(44, 17);
             this.chipsLabel.Name = "chipsLabel";
-            this.chipsLabel.Size = new System.Drawing.Size(55, 22);
+            this.chipsLabel.Size = new System.Drawing.Size(110, 44);
             this.chipsLabel.TabIndex = 17;
-            this.chipsLabel.Text = "$1.50";
+            this.chipsLabel.Text = "Sliced Bread\r\n$1.50/Loaf";
+            this.chipsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bagelAddBtn
             // 
@@ -119,7 +122,7 @@
             this.bagelAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bagelAddBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bagelAddBtn.ForeColor = System.Drawing.Color.White;
-            this.bagelAddBtn.Location = new System.Drawing.Point(403, 309);
+            this.bagelAddBtn.Location = new System.Drawing.Point(405, 316);
             this.bagelAddBtn.Name = "bagelAddBtn";
             this.bagelAddBtn.Size = new System.Drawing.Size(117, 44);
             this.bagelAddBtn.TabIndex = 15;
@@ -133,7 +136,7 @@
             this.croissantAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.croissantAddBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.croissantAddBtn.ForeColor = System.Drawing.Color.White;
-            this.croissantAddBtn.Location = new System.Drawing.Point(219, 309);
+            this.croissantAddBtn.Location = new System.Drawing.Point(221, 316);
             this.croissantAddBtn.Name = "croissantAddBtn";
             this.croissantAddBtn.Size = new System.Drawing.Size(117, 44);
             this.croissantAddBtn.TabIndex = 14;
@@ -147,7 +150,7 @@
             this.breadAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.breadAddBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breadAddBtn.ForeColor = System.Drawing.Color.White;
-            this.breadAddBtn.Location = new System.Drawing.Point(30, 309);
+            this.breadAddBtn.Location = new System.Drawing.Point(32, 316);
             this.breadAddBtn.Name = "breadAddBtn";
             this.breadAddBtn.Size = new System.Drawing.Size(117, 44);
             this.breadAddBtn.TabIndex = 13;
@@ -161,7 +164,7 @@
             this.bagelInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bagelInc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bagelInc.ForeColor = System.Drawing.Color.White;
-            this.bagelInc.Location = new System.Drawing.Point(386, 266);
+            this.bagelInc.Location = new System.Drawing.Point(388, 273);
             this.bagelInc.Name = "bagelInc";
             this.bagelInc.Size = new System.Drawing.Size(46, 37);
             this.bagelInc.TabIndex = 12;
@@ -173,7 +176,7 @@
             // 
             this.bagelTxtBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bagelTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.bagelTxtBox.Location = new System.Drawing.Point(438, 266);
+            this.bagelTxtBox.Location = new System.Drawing.Point(440, 273);
             this.bagelTxtBox.Multiline = true;
             this.bagelTxtBox.Name = "bagelTxtBox";
             this.bagelTxtBox.Size = new System.Drawing.Size(53, 37);
@@ -185,7 +188,7 @@
             this.bagelDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bagelDec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bagelDec.ForeColor = System.Drawing.Color.White;
-            this.bagelDec.Location = new System.Drawing.Point(498, 266);
+            this.bagelDec.Location = new System.Drawing.Point(500, 273);
             this.bagelDec.Name = "bagelDec";
             this.bagelDec.Size = new System.Drawing.Size(46, 37);
             this.bagelDec.TabIndex = 10;
@@ -199,7 +202,7 @@
             this.croissantDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.croissantDec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.croissantDec.ForeColor = System.Drawing.Color.White;
-            this.croissantDec.Location = new System.Drawing.Point(200, 266);
+            this.croissantDec.Location = new System.Drawing.Point(202, 273);
             this.croissantDec.Name = "croissantDec";
             this.croissantDec.Size = new System.Drawing.Size(46, 37);
             this.croissantDec.TabIndex = 9;
@@ -211,7 +214,7 @@
             // 
             this.croissantTxtBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.croissantTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.croissantTxtBox.Location = new System.Drawing.Point(252, 266);
+            this.croissantTxtBox.Location = new System.Drawing.Point(254, 273);
             this.croissantTxtBox.Multiline = true;
             this.croissantTxtBox.Name = "croissantTxtBox";
             this.croissantTxtBox.Size = new System.Drawing.Size(53, 37);
@@ -223,7 +226,7 @@
             this.croissantInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.croissantInc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.croissantInc.ForeColor = System.Drawing.Color.White;
-            this.croissantInc.Location = new System.Drawing.Point(312, 266);
+            this.croissantInc.Location = new System.Drawing.Point(314, 273);
             this.croissantInc.Name = "croissantInc";
             this.croissantInc.Size = new System.Drawing.Size(46, 37);
             this.croissantInc.TabIndex = 7;
@@ -237,7 +240,7 @@
             this.breadDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.breadDec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breadDec.ForeColor = System.Drawing.Color.White;
-            this.breadDec.Location = new System.Drawing.Point(13, 266);
+            this.breadDec.Location = new System.Drawing.Point(15, 273);
             this.breadDec.Name = "breadDec";
             this.breadDec.Size = new System.Drawing.Size(46, 37);
             this.breadDec.TabIndex = 6;
@@ -249,7 +252,7 @@
             // 
             this.breadTxtBx.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breadTxtBx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.breadTxtBx.Location = new System.Drawing.Point(65, 266);
+            this.breadTxtBx.Location = new System.Drawing.Point(67, 273);
             this.breadTxtBx.Multiline = true;
             this.breadTxtBx.Name = "breadTxtBx";
             this.breadTxtBx.Size = new System.Drawing.Size(53, 37);
@@ -262,7 +265,7 @@
             this.breadInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.breadInc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.breadInc.ForeColor = System.Drawing.Color.White;
-            this.breadInc.Location = new System.Drawing.Point(125, 266);
+            this.breadInc.Location = new System.Drawing.Point(127, 273);
             this.breadInc.Name = "breadInc";
             this.breadInc.Size = new System.Drawing.Size(46, 37);
             this.breadInc.TabIndex = 3;
@@ -273,7 +276,7 @@
             // bagelPicBox
             // 
             this.bagelPicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._2bagel;
-            this.bagelPicBox.Location = new System.Drawing.Point(385, 63);
+            this.bagelPicBox.Location = new System.Drawing.Point(387, 70);
             this.bagelPicBox.Name = "bagelPicBox";
             this.bagelPicBox.Size = new System.Drawing.Size(159, 197);
             this.bagelPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,7 +286,7 @@
             // croissantPicBox
             // 
             this.croissantPicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._2croissant;
-            this.croissantPicBox.Location = new System.Drawing.Point(200, 63);
+            this.croissantPicBox.Location = new System.Drawing.Point(202, 70);
             this.croissantPicBox.Name = "croissantPicBox";
             this.croissantPicBox.Size = new System.Drawing.Size(159, 197);
             this.croissantPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -293,7 +296,7 @@
             // breadPicBox
             // 
             this.breadPicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._2bread;
-            this.breadPicBox.Location = new System.Drawing.Point(13, 63);
+            this.breadPicBox.Location = new System.Drawing.Point(15, 70);
             this.breadPicBox.Name = "breadPicBox";
             this.breadPicBox.Size = new System.Drawing.Size(158, 197);
             this.breadPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -308,7 +311,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Controls.Add(this.bakeryPnl);
             this.Name = "bakeryUserControl";
-            this.Size = new System.Drawing.Size(594, 413);
+            this.Size = new System.Drawing.Size(594, 401);
             this.bakeryPnl.ResumeLayout(false);
             this.bakeryPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bagelPicBox)).EndInit();

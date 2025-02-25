@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\xx521\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\produce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:produce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\xx521\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\beverage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:beverage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\xx521\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:categoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\xx521\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:mainmenuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\xx521\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\dairyusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:dairyusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\xx521\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\grains.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:grains.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|c:\\users\\xx521\\source\\repos\\appsdev\\latestapp\\groceryappwindowsform\\bakeryusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC92BAFA-69A2-45DB-B238-13EC488325D6}|GroceryAppWindowsForm.csproj|solutionrelative:bakeryusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,21 +57,52 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Produce.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Produce.cs",
+              "RelativeDocumentMoniker": "Produce.cs",
+              "ToolTip": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Produce.cs [Design]*",
+              "RelativeToolTip": "Produce.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T05:21:12.059Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoryForm.cs",
-              "DocumentMoniker": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\CategoryForm.cs",
-              "RelativeDocumentMoniker": "CategoryForm.cs",
-              "ToolTip": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\CategoryForm.cs",
-              "RelativeToolTip": "CategoryForm.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAhwFUAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Beverage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Beverage.cs",
+              "RelativeDocumentMoniker": "Beverage.cs",
+              "ToolTip": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Beverage.cs [Design]",
+              "RelativeToolTip": "Beverage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T04:48:04.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T05:17:33.414Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "bakeryUserControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\bakeryUserControl.cs",
+              "RelativeDocumentMoniker": "bakeryUserControl.cs",
+              "ToolTip": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\bakeryUserControl.cs [Design]",
+              "RelativeToolTip": "bakeryUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T05:14:58.678Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Grains.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Grains.cs",
+              "RelativeDocumentMoniker": "Grains.cs",
+              "ToolTip": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\Grains.cs [Design]",
+              "RelativeToolTip": "Grains.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T05:12:12.035Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -83,20 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainMenuForm.cs",
-              "DocumentMoniker": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\MainMenuForm.cs",
-              "RelativeDocumentMoniker": "MainMenuForm.cs",
-              "ToolTip": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\MainMenuForm.cs",
-              "RelativeToolTip": "MainMenuForm.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBsAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T04:28:22.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainMenuForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\MainMenuForm.cs",
               "RelativeDocumentMoniker": "MainMenuForm.cs",
@@ -104,18 +126,6 @@
               "RelativeToolTip": "MainMenuForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T04:11:49.436Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "dairyUserControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\dairyUserControl.cs",
-              "RelativeDocumentMoniker": "dairyUserControl.cs",
-              "ToolTip": "C:\\Users\\xx521\\source\\repos\\AppsDev\\latestApp\\GroceryAppWindowsForm\\dairyUserControl.cs [Design]",
-              "RelativeToolTip": "dairyUserControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T04:55:52.502Z",
               "EditorCaption": " [Design]"
             }
           ]
