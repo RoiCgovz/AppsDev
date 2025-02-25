@@ -36,9 +36,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.cartListBox = new System.Windows.Forms.ListBox();
             this.discountNum_Label = new System.Windows.Forms.Label();
-            this.subtotalNum_Label = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.subtotalLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -103,7 +103,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.cartListBox);
             this.panel4.Controls.Add(this.discountNum_Label);
-            this.panel4.Controls.Add(this.subtotalNum_Label);
+            this.panel4.Controls.Add(this.subtotalLabel);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(0, 55);
@@ -120,7 +120,6 @@
             this.cartListBox.Name = "cartListBox";
             this.cartListBox.Size = new System.Drawing.Size(569, 298);
             this.cartListBox.TabIndex = 5;
-            this.cartListBox.SelectedIndexChanged += new System.EventHandler(this.cartListBox_SelectedIndexChanged);
             // 
             // discountNum_Label
             // 
@@ -132,25 +131,15 @@
             this.discountNum_Label.Text = "0%";
             this.discountNum_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // subtotalNum_Label
+            // subtotalLabel
             // 
-            this.subtotalNum_Label.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalNum_Label.Location = new System.Drawing.Point(456, 343);
-            this.subtotalNum_Label.Name = "subtotalNum_Label";
-            this.subtotalNum_Label.Size = new System.Drawing.Size(121, 25);
-            this.subtotalNum_Label.TabIndex = 3;
-            this.subtotalNum_Label.Text = "$0.00";
-            this.subtotalNum_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(363, 339);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 52);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Subtotal\r\nDiscount";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.subtotalLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtotalLabel.Location = new System.Drawing.Point(456, 343);
+            this.subtotalLabel.Name = "subtotalLabel";
+            this.subtotalLabel.Size = new System.Drawing.Size(121, 25);
+            this.subtotalLabel.TabIndex = 3;
+            this.subtotalLabel.Text = "$0.00";
+            this.subtotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
@@ -161,6 +150,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "QTY            DESCRIPTION               UNIT PRICE                     AMOUNT";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(363, 339);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 52);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Subtotal\r\nDiscount";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -204,7 +203,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ListBox cartListBox;
         private System.Windows.Forms.Label discountNum_Label;
-        private System.Windows.Forms.Label subtotalNum_Label;
+        private System.Windows.Forms.Label subtotalLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

@@ -34,7 +34,7 @@ namespace GroceryAppWindowsForm
 
         private void bckLbl_Click(object sender, EventArgs e)
         {
-            MainMenuForm mnu = new MainMenuForm();
+            MainForm mnu = new MainForm();
             mnu.Show();
             this.Hide();
         }
