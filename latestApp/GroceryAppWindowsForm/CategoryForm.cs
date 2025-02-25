@@ -86,5 +86,13 @@ namespace GroceryAppWindowsForm
             mainMnu.Show();
             this.Hide();   
         }
+
+        private void cartBtn_Click(object sender, EventArgs e)
+        {
+            CartOrReceipt cartReceipt = new CartOrReceipt();
+            cartReceipt.ShowCart();
+            cartReceipt.Show();
+            this.Hide();
+        }
     }
 }

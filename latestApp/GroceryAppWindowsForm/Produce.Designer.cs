@@ -85,11 +85,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.label2.Location = new System.Drawing.Point(434, 39);
+            this.label2.Location = new System.Drawing.Point(418, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 22);
+            this.label2.Size = new System.Drawing.Size(100, 44);
             this.label2.TabIndex = 18;
-            this.label2.Text = "$1.30";
+            this.label2.Text = "Carrots\r\n$2.45/ Kilo\r\n";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -100,7 +101,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 44);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Apple\r\n$3.00/Kilo";
+            this.label1.Text = "Apple\r\n$5.26/Kilo";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // appleLbl
@@ -275,7 +276,7 @@
             // 
             // carrotsPicBox
             // 
-            this.carrotsPicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._wheat;
+            this.carrotsPicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._carrots;
             this.carrotsPicBox.Location = new System.Drawing.Point(384, 74);
             this.carrotsPicBox.Name = "carrotsPicBox";
             this.carrotsPicBox.Size = new System.Drawing.Size(159, 197);

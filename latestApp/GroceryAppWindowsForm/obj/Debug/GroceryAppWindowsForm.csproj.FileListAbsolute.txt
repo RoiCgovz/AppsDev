@@ -60,3 +60,4 @@ C:\Users\xx521\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\Gr
 C:\Users\xx521\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.exe
 C:\Users\xx521\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.pdb
 C:\Users\xx521\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.MainMenuForm.resources
+C:\Users\PTO\Source\Repos\AppsDev\latestApp\GroceryAppWindowsForm\obj\Debug\GroceryAppWindowsForm.MainMenuForm.resources

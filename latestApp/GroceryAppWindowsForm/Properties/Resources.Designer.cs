@@ -223,6 +223,16 @@ namespace GroceryAppWindowsForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _carrots {
+            get {
+                object obj = ResourceManager.GetObject("_carrots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _corn {
             get {
                 object obj = ResourceManager.GetObject("_corn", resourceCulture);

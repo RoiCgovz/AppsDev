@@ -243,6 +243,7 @@
     <None Include="Resources\1egg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\_carrots.jpg" />
     <None Include="Resources\a.jpg" />
     <None Include="Resources\_apple.jpg" />
     <None Include="Resources\_cabbage.jpg" />

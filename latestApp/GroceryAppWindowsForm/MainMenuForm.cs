@@ -24,14 +24,17 @@ namespace GroceryAppWindowsForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainForm frm = new MainForm();          
+            MainForm frm = new MainForm();
             frm.Show();
-            this.Hide();   
+            this.Hide();
         }
 
-        private void MainMenuForm_Load(object sender, EventArgs e)
+        private void cartBtn_Click(object sender, EventArgs e)
         {
-
+            CartOrReceipt cartReceipt = new CartOrReceipt();
+            cartReceipt.ShowCart();
+            cartReceipt.Show();
+            this.Hide();
         }
     }
 }

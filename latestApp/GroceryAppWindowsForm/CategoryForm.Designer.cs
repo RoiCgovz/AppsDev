@@ -89,6 +89,7 @@
             this.cartBtn.Size = new System.Drawing.Size(94, 50);
             this.cartBtn.TabIndex = 2;
             this.cartBtn.Text = "Cart";
+            this.cartBtn.Click += new System.EventHandler(this.cartBtn_Click);
             // 
             // bcktoHomeLbl
             // 
