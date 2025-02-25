@@ -5,6 +5,7 @@ namespace GroceryAppWindowsForm
 {
     public partial class MainForm : Form
     {
+        public CartOrReceipt cartForm = new CartOrReceipt();    
         public MainForm()
         {
             InitializeComponent();

@@ -38,5 +38,10 @@ namespace GroceryAppWindowsForm
             mnu.Show();
             this.Hide();
         }
+        // Public method to add items to ListBox
+        public void AddToCart(string itemText)
+        {
+            listBox1.Items.Add(itemText);
+        }
     }
 }
