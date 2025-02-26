@@ -62,19 +62,14 @@ namespace GroceryAppWindowsForm
             if (quantity > 0)
             {
                 decimal total = quantity * price;
-                string totalPriceStr = total.ToString("C"); // Formats as currency
-
-                // Retrieve MainForm reference
+                string totalPriceStr = total.ToString("C"); 
                 MainForm mainForm = this.FindForm() as MainForm;
                 if (mainForm != null)
                 {
-                    // Ensure cart form is not null before adding items
                     if (mainForm.cartForm != null)
                     {
                         mainForm.cartForm.AddToCart(itemName, quantity, price, totalPriceStr);
                     }
-
-                    // Retrieve CartOrReceipt form reference
                     CartOrReceipt cartForm = mainForm.cartForm as CartOrReceipt;
                     if (cartForm != null && cartForm.receipt != null)
                     {

@@ -5,10 +5,13 @@ namespace GroceryAppWindowsForm
 {
     public partial class Beverage : UserControl
     {
-        // Initialization
         private int juiceCount = 0;
         private int wineCount = 0;
         private int sodaCount = 0;
+
+        private const decimal juicePrice = 0.43m;
+        private const decimal winePrice = 6.20m;
+        private const decimal sodaPrice = 1.30m;
 
         public Beverage()
         {
@@ -24,7 +27,6 @@ namespace GroceryAppWindowsForm
             sodaTxtBox.KeyPress += ValidateInput;
         }
 
-        // Prevent letters and symbols in the TextBox
         private void ValidateInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -33,7 +35,6 @@ namespace GroceryAppWindowsForm
             }
         }
 
-        // Method to update textboxes
         private void UpdateTextBoxes()
         {
             jceTxtBx.Text = juiceCount.ToString();
@@ -41,7 +42,6 @@ namespace GroceryAppWindowsForm
             sodaTxtBox.Text = sodaCount.ToString();
         }
 
-        // Update the count
         private void UpdateCount(TextBox textBox, ref int count, bool increment)
         {
             if (int.TryParse(textBox.Text, out int userValue))
@@ -57,7 +57,28 @@ namespace GroceryAppWindowsForm
             textBox.Text = count.ToString();
         }
 
-        // Buttons
+        private void AddItemToCart(string itemName, int quantity, decimal price)
+        {
+            if (quantity > 0)
+            {
+                decimal total = quantity * price;
+                string totalPriceStr = total.ToString("C");
+                MainForm mainForm = this.FindForm() as MainForm;
+                if (mainForm != null)
+                {
+                    if (mainForm.cartForm != null)
+                    {
+                        mainForm.cartForm.AddToCart(itemName, quantity, price, totalPriceStr);
+                    }
+                    CartOrReceipt cartForm = mainForm.cartForm as CartOrReceipt;
+                    if (cartForm != null && cartForm.receipt != null)
+                    {
+                        cartForm.receipt.AddToReceipt(itemName, quantity, price, totalPriceStr);
+                    }
+                }
+            }
+        }
+
         private void jceInc_Click(object sender, EventArgs e) => UpdateCount(jceTxtBx, ref juiceCount, true);
         private void jceDec_Click(object sender, EventArgs e) => UpdateCount(jceTxtBx, ref juiceCount, false);
 
@@ -69,17 +90,29 @@ namespace GroceryAppWindowsForm
 
         private void jceAddBtn_Click(object sender, EventArgs e)
         {
-           
+            if (juiceCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Juice", juiceCount, juicePrice);
+            }
         }
 
         private void wineAddBtn_Click(object sender, EventArgs e)
         {
-            
+            if (wineCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Wine", wineCount, winePrice);
+            }
         }
 
         private void sodaAddBtn_Click(object sender, EventArgs e)
-        { 
-
+        {
+            if (sodaCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Soda", sodaCount, sodaPrice);
+            }
         }
     }
 }

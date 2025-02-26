@@ -100,6 +100,7 @@ namespace GroceryAppWindowsForm
                 if (cartForm != null && cartForm.receipt != null)
                 {
                     cartForm.receipt.Show();
+                    this.Close();
                 }
             }
             else

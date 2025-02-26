@@ -5,10 +5,13 @@ namespace GroceryAppWindowsForm
 {
     public partial class Snacks : UserControl
     {
-        // Initialization
         private int nanaCount = 0;
         private int nachoCount = 0;
         private int cookieCount = 0;
+
+        private const decimal nanaPrice = 2.0m;
+        private const decimal nachoPrice = 3.00m;
+        private const decimal cookiePrice = 4.30m;
 
         public Snacks()
         {
@@ -24,7 +27,6 @@ namespace GroceryAppWindowsForm
             cookieTxtBox.KeyPress += ValidateInput;
         }
 
-        // Prevent letters and symbols in the TextBox
         private void ValidateInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -33,7 +35,6 @@ namespace GroceryAppWindowsForm
             }
         }
 
-        // Method to update textboxes
         private void UpdateTextBoxes()
         {
             nanaTxtBx.Text = nanaCount.ToString();
@@ -41,7 +42,6 @@ namespace GroceryAppWindowsForm
             cookieTxtBox.Text = cookieCount.ToString();
         }
 
-        // Update the count
         private void UpdateCount(TextBox textBox, ref int count, bool increment)
         {
             if (int.TryParse(textBox.Text, out int userValue))
@@ -57,7 +57,27 @@ namespace GroceryAppWindowsForm
             textBox.Text = count.ToString();
         }
 
-        // Buttons
+        private void AddItemToCart(string itemName, int quantity, decimal price)
+        {
+            if (quantity > 0)
+            {
+                decimal total = quantity * price;
+                string totalPriceStr = total.ToString("C");
+                MainForm mainForm = this.FindForm() as MainForm;
+                if (mainForm != null)
+                {
+                    if (mainForm.cartForm != null)
+                    {
+                        mainForm.cartForm.AddToCart(itemName, quantity, price, totalPriceStr);
+                    }
+                    CartOrReceipt cartForm = mainForm.cartForm as CartOrReceipt;
+                    if (cartForm != null && cartForm.receipt != null)
+                    {
+                        cartForm.receipt.AddToReceipt(itemName, quantity, price, totalPriceStr);
+                    }
+                }
+            }
+        }
         private void nanaInc_Click(object sender, EventArgs e) => UpdateCount(nanaTxtBx, ref nanaCount, true);
         private void nanaDec_Click(object sender, EventArgs e) => UpdateCount(nanaTxtBx, ref nanaCount, false);
 
@@ -69,19 +89,29 @@ namespace GroceryAppWindowsForm
 
         private void nanaAddBtn_Click(object sender, EventArgs e)
         {
-            // Add nanaCount to cart logic here
+            if (nanaCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Banana Chips", nanaCount, nanaPrice);
+            }
         }
 
         private void nachoAddBtn_Click(object sender, EventArgs e)
         {
-            // Add nachoCount to cart logic here
+            if (nachoCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Nachos", nachoCount, nachoPrice);
+            }
         }
 
         private void cookieAddBtn_Click(object sender, EventArgs e)
         {
-            // Add cookieCount to cart logic here
+            if (cookieCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Cookies", cookieCount, cookiePrice);
+            }
         }
-
-       
     }
 }

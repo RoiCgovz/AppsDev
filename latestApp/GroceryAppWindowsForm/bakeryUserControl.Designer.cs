@@ -85,11 +85,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.label2.Location = new System.Drawing.Point(438, 17);
+            this.label2.Location = new System.Drawing.Point(417, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 44);
+            this.label2.Size = new System.Drawing.Size(105, 44);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Bagel\r\n$4.00";
+            this.label2.Text = "Bagel\r\n$1.50/piece";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -113,7 +113,7 @@
             this.chipsLabel.Name = "chipsLabel";
             this.chipsLabel.Size = new System.Drawing.Size(110, 44);
             this.chipsLabel.TabIndex = 17;
-            this.chipsLabel.Text = "Sliced Bread\r\n$1.50/Loaf";
+            this.chipsLabel.Text = "Sliced Bread\r\n$3.50/Loaf";
             this.chipsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bagelAddBtn

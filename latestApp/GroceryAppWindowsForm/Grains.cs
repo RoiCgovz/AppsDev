@@ -5,10 +5,13 @@ namespace GroceryAppWindowsForm
 {
     public partial class Grains : UserControl
     {
-        // Initialization
         private int riceCount = 0;
         private int wheatCount = 0;
         private int cornCount = 0;
+
+        private const decimal ricePrice = 1.20m;
+        private const decimal wheatPrice = 3.00m;
+        private const decimal cornPrice = 1.30m;
 
         public Grains()
         {
@@ -24,7 +27,6 @@ namespace GroceryAppWindowsForm
             cornTxtBox.KeyPress += ValidateInput;
         }
 
-        // Prevent letters and symbols in the TextBox
         private void ValidateInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -33,7 +35,6 @@ namespace GroceryAppWindowsForm
             }
         }
 
-        // Method to update textboxes
         private void UpdateTextBoxes()
         {
             riceTxtBox.Text = riceCount.ToString();
@@ -41,7 +42,6 @@ namespace GroceryAppWindowsForm
             cornTxtBox.Text = cornCount.ToString();
         }
 
-        // Update the count
         private void UpdateCount(TextBox textBox, ref int count, bool increment)
         {
             if (int.TryParse(textBox.Text, out int userValue))
@@ -57,31 +57,61 @@ namespace GroceryAppWindowsForm
             textBox.Text = count.ToString();
         }
 
-        // Buttons
+        private void AddItemToCart(string itemName, int quantity, decimal price)
+        {
+            if (quantity > 0)
+            {
+                decimal total = quantity * price;
+                string totalPriceStr = total.ToString("C");
+                MainForm mainForm = this.FindForm() as MainForm;
+                if (mainForm != null)
+                {
+                    if (mainForm.cartForm != null)
+                    {
+                        mainForm.cartForm.AddToCart(itemName, quantity, price, totalPriceStr);
+                    }
+                    CartOrReceipt cartForm = mainForm.cartForm as CartOrReceipt;
+                    if (cartForm != null && cartForm.receipt != null)
+                    {
+                        cartForm.receipt.AddToReceipt(itemName, quantity, price, totalPriceStr);
+                    }
+                }
+            }
+        }
         private void riceInc_Click(object sender, EventArgs e) => UpdateCount(riceTxtBox, ref riceCount, true);
         private void riceDec_Click(object sender, EventArgs e) => UpdateCount(riceTxtBox, ref riceCount, false);
 
         private void wheatInc_Click(object sender, EventArgs e) => UpdateCount(wheatTxtBox, ref wheatCount, true);
         private void wheatDec_Click(object sender, EventArgs e) => UpdateCount(wheatTxtBox, ref wheatCount, false);
 
-        private void cornDec_Click(object sender, EventArgs e) => UpdateCount(cornTxtBox, ref cornCount, false);
         private void cornInc_Click(object sender, EventArgs e) => UpdateCount(cornTxtBox, ref cornCount, true);
+        private void cornDec_Click(object sender, EventArgs e) => UpdateCount(cornTxtBox, ref cornCount, false);
 
-        private void cornAddBtn_Click(object sender, EventArgs e)
+        private void riceAddBtn_Click(object sender, EventArgs e)
         {
-
+            if (riceCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Rice", riceCount, ricePrice);
+            }
         }
 
         private void wheatAddBtn_Click(object sender, EventArgs e)
         {
-
+            if (wheatCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Wheat", wheatCount, wheatPrice);
+            }
         }
 
-        private void riceAddBtn_Click(object sender, EventArgs e)
+        private void cornAddBtn_Click(object sender, EventArgs e)
         {
-
+            if (cornCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Corn", cornCount, cornPrice);
+            }
         }
-
-       
     }
 }

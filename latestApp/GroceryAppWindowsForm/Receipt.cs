@@ -120,11 +120,18 @@ namespace GroceryAppWindowsForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = this.FindForm() as MainForm;
-
-            if (mainForm != null && mainForm.cartForm != null)
+            receiptListBox.Items.Clear();
+            MainForm mn = new MainForm();
+            DialogResult confirm = MessageBox.Show("Make Another Purchase?", "Proceed", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (confirm == DialogResult.OK)
             {
-                mainForm.cartForm.Show();
+                mn.Show();
+               
+                this.Hide();
+            }
+            else
+            {
+                return;
             }
         }
     }

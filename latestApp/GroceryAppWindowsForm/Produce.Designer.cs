@@ -113,7 +113,7 @@
             this.appleLbl.Name = "appleLbl";
             this.appleLbl.Size = new System.Drawing.Size(100, 44);
             this.appleLbl.TabIndex = 16;
-            this.appleLbl.Text = "Cabbage\r\n$1.20/ Kilo";
+            this.appleLbl.Text = "Cabbage\r\n$1.70/ Kilo";
             this.appleLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // carrotsAddBtn

@@ -5,10 +5,13 @@ namespace GroceryAppWindowsForm
 {
     public partial class Produce : UserControl
     {
-        // Initialization
         private int cabbageCount = 0;
         private int appleCount = 0;
         private int carrotCount = 0;
+
+        private const decimal cabbagePrice = 1.70m;
+        private const decimal applePrice = 5.26m;
+        private const decimal carrotPrice = 2.45m;
 
         public Produce()
         {
@@ -24,7 +27,6 @@ namespace GroceryAppWindowsForm
             carrotsTxtBox.KeyPress += ValidateInput;
         }
 
-        // Prevent letters and symbols in the TextBox
         private void ValidateInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -33,7 +35,6 @@ namespace GroceryAppWindowsForm
             }
         }
 
-        // Method to update textbox
         private void UpdateTextBoxes()
         {
             cabbageTxtBox.Text = cabbageCount.ToString();
@@ -41,7 +42,6 @@ namespace GroceryAppWindowsForm
             carrotsTxtBox.Text = carrotCount.ToString();
         }
 
-        // Update the count
         private void UpdateCount(TextBox textBox, ref int count, bool increment)
         {
             if (int.TryParse(textBox.Text, out int userValue))
@@ -57,7 +57,27 @@ namespace GroceryAppWindowsForm
             textBox.Text = count.ToString();
         }
 
-        // Buttons
+        private void AddItemToCart(string itemName, int quantity, decimal price)
+        {
+            if (quantity > 0)
+            {
+                decimal total = quantity * price;
+                string totalPriceStr = total.ToString("C");
+                MainForm mainForm = this.FindForm() as MainForm;
+                if (mainForm != null)
+                {
+                    if (mainForm.cartForm != null)
+                    {
+                        mainForm.cartForm.AddToCart(itemName, quantity, price, totalPriceStr);
+                    }
+                    CartOrReceipt cartForm = mainForm.cartForm as CartOrReceipt;
+                    if (cartForm != null && cartForm.receipt != null)
+                    {
+                        cartForm.receipt.AddToReceipt(itemName, quantity, price, totalPriceStr);
+                    }
+                }
+            }
+        }
         private void cabbageInc_Click(object sender, EventArgs e) => UpdateCount(cabbageTxtBox, ref cabbageCount, true);
         private void cabbageDec_Click(object sender, EventArgs e) => UpdateCount(cabbageTxtBox, ref cabbageCount, false);
 
@@ -69,17 +89,29 @@ namespace GroceryAppWindowsForm
 
         private void cabbageAddBtn_Click(object sender, EventArgs e)
         {
-            // Add cabbageCount to cart logic here
+            if (cabbageCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Cabbage", cabbageCount, cabbagePrice);
+            }
         }
 
         private void appleAddBtn_Click(object sender, EventArgs e)
         {
-            // Add appleCount to cart logic here
+            if (appleCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Apple", appleCount, applePrice);
+            }
         }
 
         private void carrotsAddBtn_Click(object sender, EventArgs e)
         {
-            // Add carrotCount to cart logic here
+            if (carrotCount > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Carrot", carrotCount, carrotPrice);
+            }
         }
     }
 }
