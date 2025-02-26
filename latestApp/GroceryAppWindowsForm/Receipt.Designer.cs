@@ -1,6 +1,6 @@
 ﻿namespace GroceryAppWindowsForm
 {
-    partial class CartOrReceipt
+    partial class Receipt
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CartOrReceipt));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Receipt));
             this.bckLbl = new System.Windows.Forms.Label();
             this.cartPnl = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rTotalLabel = new System.Windows.Forms.Label();
+            this.rTotaltextLable = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.cartListBox = new System.Windows.Forms.ListBox();
+            this.receiptListBox = new System.Windows.Forms.ListBox();
+            this.discountNum_Label = new System.Windows.Forms.Label();
             this.subtotalLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
             this.cartPnl.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,23 +54,59 @@
             this.bckLbl.AutoSize = true;
             this.bckLbl.Font = new System.Drawing.Font("Segoe UI Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bckLbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bckLbl.Location = new System.Drawing.Point(12, 1);
+            this.bckLbl.Location = new System.Drawing.Point(4, -13);
             this.bckLbl.Name = "bckLbl";
             this.bckLbl.Size = new System.Drawing.Size(38, 40);
-            this.bckLbl.TabIndex = 6;
+            this.bckLbl.TabIndex = 9;
             this.bckLbl.Text = "<";
             this.bckLbl.Click += new System.EventHandler(this.bckLbl_Click);
             // 
             // cartPnl
             // 
+            this.cartPnl.Controls.Add(this.panel3);
             this.cartPnl.Controls.Add(this.panel2);
             this.cartPnl.Controls.Add(this.panel4);
             this.cartPnl.Controls.Add(this.panel5);
             this.cartPnl.Controls.Add(this.label1);
-            this.cartPnl.Location = new System.Drawing.Point(19, 44);
+            this.cartPnl.Location = new System.Drawing.Point(11, 30);
             this.cartPnl.Name = "cartPnl";
-            this.cartPnl.Size = new System.Drawing.Size(584, 469);
-            this.cartPnl.TabIndex = 7;
+            this.cartPnl.Size = new System.Drawing.Size(584, 557);
+            this.cartPnl.TabIndex = 10;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.rTotalLabel);
+            this.panel3.Controls.Add(this.rTotaltextLable);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.panel3.Location = new System.Drawing.Point(0, 464);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(584, 78);
+            this.panel3.TabIndex = 11;
+            // 
+            // rTotalLabel
+            // 
+            this.rTotalLabel.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTotalLabel.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.rTotalLabel.Location = new System.Drawing.Point(344, 25);
+            this.rTotalLabel.Name = "rTotalLabel";
+            this.rTotalLabel.Size = new System.Drawing.Size(225, 28);
+            this.rTotalLabel.TabIndex = 1;
+            this.rTotalLabel.Text = "$0.00";
+            this.rTotalLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // rTotaltextLable
+            // 
+            this.rTotaltextLable.AutoSize = true;
+            this.rTotaltextLable.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTotaltextLable.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.rTotaltextLable.Location = new System.Drawing.Point(3, 25);
+            this.rTotaltextLable.Name = "rTotaltextLable";
+            this.rTotaltextLable.Size = new System.Drawing.Size(151, 28);
+            this.rTotaltextLable.TabIndex = 0;
+            this.rTotaltextLable.Text = "Receipt Total";
             // 
             // panel2
             // 
@@ -81,7 +122,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel4.Location = new System.Drawing.Point(0, 454);
+            this.panel4.Location = new System.Drawing.Point(0, 542);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(584, 15);
             this.panel4.TabIndex = 9;
@@ -89,7 +130,8 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.cartListBox);
+            this.panel5.Controls.Add(this.receiptListBox);
+            this.panel5.Controls.Add(this.discountNum_Label);
             this.panel5.Controls.Add(this.subtotalLabel);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label3);
@@ -98,22 +140,32 @@
             this.panel5.Size = new System.Drawing.Size(587, 398);
             this.panel5.TabIndex = 13;
             // 
-            // cartListBox
+            // receiptListBox
             // 
-            this.cartListBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cartListBox.FormattingEnabled = true;
-            this.cartListBox.ItemHeight = 21;
-            this.cartListBox.Location = new System.Drawing.Point(8, 37);
-            this.cartListBox.Name = "cartListBox";
-            this.cartListBox.Size = new System.Drawing.Size(569, 298);
-            this.cartListBox.TabIndex = 5;
+            this.receiptListBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptListBox.FormattingEnabled = true;
+            this.receiptListBox.ItemHeight = 21;
+            this.receiptListBox.Location = new System.Drawing.Point(8, 37);
+            this.receiptListBox.Name = "receiptListBox";
+            this.receiptListBox.Size = new System.Drawing.Size(569, 298);
+            this.receiptListBox.TabIndex = 5;
+            // 
+            // discountNum_Label
+            // 
+            this.discountNum_Label.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountNum_Label.Location = new System.Drawing.Point(522, 362);
+            this.discountNum_Label.Name = "discountNum_Label";
+            this.discountNum_Label.Size = new System.Drawing.Size(60, 25);
+            this.discountNum_Label.TabIndex = 4;
+            this.discountNum_Label.Text = "0%";
+            this.discountNum_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // subtotalLabel
             // 
             this.subtotalLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalLabel.Location = new System.Drawing.Point(496, 358);
+            this.subtotalLabel.Location = new System.Drawing.Point(456, 343);
             this.subtotalLabel.Name = "subtotalLabel";
-            this.subtotalLabel.Size = new System.Drawing.Size(74, 25);
+            this.subtotalLabel.Size = new System.Drawing.Size(121, 25);
             this.subtotalLabel.TabIndex = 3;
             this.subtotalLabel.Text = "$0.00";
             this.subtotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -131,11 +183,11 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(406, 344);
+            this.label3.Location = new System.Drawing.Point(363, 339);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 52);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Subtotal";
+            this.label3.Text = "Subtotal\r\nDiscount";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
@@ -144,11 +196,11 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label1.Location = new System.Drawing.Point(261, 24);
+            this.label1.Location = new System.Drawing.Point(218, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 28);
+            this.label1.Size = new System.Drawing.Size(99, 28);
             this.label1.TabIndex = 12;
-            this.label1.Text = "CART";
+            this.label1.Text = "RECEIPT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // closeButton
@@ -156,27 +208,28 @@
             this.closeButton.BackColor = System.Drawing.Color.White;
             this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
             this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closeButton.Location = new System.Drawing.Point(571, 5);
+            this.closeButton.Location = new System.Drawing.Point(563, -9);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(32, 33);
-            this.closeButton.TabIndex = 4;
+            this.closeButton.TabIndex = 8;
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // CartOrReceipt
+            // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 521);
+            this.ClientSize = new System.Drawing.Size(599, 574);
             this.Controls.Add(this.bckLbl);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.cartPnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CartOrReceipt";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CartOrReceipt";
+            this.Name = "Receipt";
+            this.Text = "Receipt";
             this.cartPnl.ResumeLayout(false);
             this.cartPnl.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,13 +237,18 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button closeButton;
+
         private System.Windows.Forms.Label bckLbl;
+        private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Panel cartPnl;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label rTotalLabel;
+        private System.Windows.Forms.Label rTotaltextLable;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ListBox cartListBox;
+        private System.Windows.Forms.ListBox receiptListBox;
+        private System.Windows.Forms.Label discountNum_Label;
         private System.Windows.Forms.Label subtotalLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GroceryAppWindowsForm
 {
-    public partial class CartOrReceipt : Form
+    public partial class Receipt : Form
     {
-
-        public CartOrReceipt()
+        public Receipt()
         {
             InitializeComponent();
         }
@@ -33,33 +38,31 @@ namespace GroceryAppWindowsForm
                 mn.Show();
             }
         }
-
-        public void AddToCart(string itemName, string itemQty, string price, string totalprice)
+        public void AddToReceipt(string itemName, string itemQty)
         {
             if (int.TryParse(itemQty, out int newQty) && newQty > 0)
             {
                 bool itemExists = false;
 
-                for (int i = 0; i < cartListBox.Items.Count; i++)
+                for (int i = 0; i < receiptListBox.Items.Count; i++)
                 {
-                    string itemText = cartListBox.Items[i].ToString();
-                    string[] parts = itemText.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+                    string itemText = receiptListBox.Items[i].ToString();
 
-                    if (parts.Length == 2 && parts[1].Trim().Equals(itemName, StringComparison.OrdinalIgnoreCase))
+                    if (itemText.StartsWith(itemName))
                     {
-                        if (int.TryParse(parts[0].Trim(), out int existingQty))
+                        string[] parts = itemText.Split('-');
+                        if (parts.Length == 2 && int.TryParse(parts[1].Trim(), out int existingQty))
                         {
                             int updatedQty = existingQty + newQty;
-                            cartListBox.Items[i] = $"{updatedQty} {itemName} {price} {totalprice}";
+                            receiptListBox.Items[i] = $"{updatedQty} {"\t\t"} {itemName}";
                         }
                         itemExists = true;
                         break;
                     }
                 }
-
                 if (!itemExists)
                 {
-                    cartListBox.Items.Add($" {newQty}\t    {itemName}\t\t        {price}\t\t         {totalprice}");
+                    receiptListBox.Items.Add($"{newQty} {"\t\t"} {itemName}");
                 }
             }
             else

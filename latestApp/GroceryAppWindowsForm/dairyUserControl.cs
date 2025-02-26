@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace GroceryAppWindowsForm
 {
     public partial class dairyUserControl : UserControl
     {
-        // Initialization
         private int milkCount = 0;
         private int cheeseCount = 0;
         private int yogurtCount = 0;
@@ -24,7 +24,6 @@ namespace GroceryAppWindowsForm
             yogurtTxtBox.KeyPress += ValidateInput;
         }
 
-        // Prevents letters and symbols in the TextBox
         private void ValidateInput(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -33,7 +32,6 @@ namespace GroceryAppWindowsForm
             }
         }
 
-        // Method to update textboxes
         private void UpdateTextBoxes()
         {
             milkTxtBx.Text = milkCount.ToString();
@@ -41,8 +39,7 @@ namespace GroceryAppWindowsForm
             yogurtTxtBox.Text = yogurtCount.ToString();
         }
 
-        // Update the Count
-        private void UpdateCount(System.Windows.Forms.TextBox textBox, ref int count, bool increment)
+        private void UpdateCount(TextBox textBox, ref int count, bool increment)
         {
             if (int.TryParse(textBox.Text, out int userValue))
             {
@@ -56,8 +53,20 @@ namespace GroceryAppWindowsForm
 
             textBox.Text = count.ToString();
         }
+        private void AddItemToCart(string itemName, TextBox textBox, string price, string totalprice)
+        {
+            MainForm mainForm = this.FindForm() as MainForm;
 
-        // Increment and Decrement Buttons
+            if (mainForm != null && mainForm.cartForm != null)
+            {
+                string itemQty = textBox.Text;
+                mainForm.cartForm.AddToCart(itemName, itemQty, price, totalprice);
+                mainForm.receipt.AddToReceipt(itemName, itemQty);
+                
+            }
+            
+        }
+
         private void milkInc_Click(object sender, EventArgs e) => UpdateCount(milkTxtBx, ref milkCount, true);
         private void milkDec_Click(object sender, EventArgs e) => UpdateCount(milkTxtBx, ref milkCount, false);
 
@@ -66,42 +75,37 @@ namespace GroceryAppWindowsForm
 
         private void yogurtInc_Click(object sender, EventArgs e) => UpdateCount(yogurtTxtBox, ref yogurtCount, true);
         private void yogurtDec_Click(object sender, EventArgs e) => UpdateCount(yogurtTxtBox, ref yogurtCount, false);
-
-        // Add to Cart Buttons
         private void milkAddBtn_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = this.FindForm() as MainForm;
 
-            if (mainForm != null && mainForm.cartForm != null)
+            DialogResult confirm = MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (confirm == DialogResult.OK)
             {
-                string item = milkTxtBx.Text + " - Milk";
-                mainForm.cartForm.AddToCart(item);
-                mainForm.cartForm.Show();
+                string milkPrice = "$1.00";
+                decimal milkTotal = Convert.ToDecimal(milkTxtBx.Text);
+                decimal total = 1.00m * milkTotal;
+                string finTotal = Convert.ToString(total);
+
+                AddItemToCart("Milk", milkTxtBx, milkPrice, finTotal);
+
             }
         }
-
         private void cheeseAddBtn_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = this.FindForm() as MainForm;
-
-            if (mainForm != null && mainForm.cartForm != null)
-            {
-                string item = cheeseTxtBox.Text + " - Cheese";
-                mainForm.cartForm.AddToCart(item);
-                mainForm.cartForm.Show();
-            }
+           // DialogResult confirm = MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //if (confirm == DialogResult.OK)
+            //{
+              //  AddItemToCart("Cheese", cheeseTxtBox);
+           // }
         }
-
+          
         private void yogurtAddBtn_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = this.FindForm() as MainForm;
-
-            if (mainForm != null && mainForm.cartForm != null)
-            {
-                string item = yogurtTxtBox.Text + " - Yogurt";
-                mainForm.cartForm.AddToCart(item);
-                mainForm.cartForm.Show();
-            }
+           // DialogResult confirm = MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //if (confirm == DialogResult.OK)
+            //{
+                //AddItemToCart("Yogurt", yogurtTxtBox);
+            //}
         }
     }
 }

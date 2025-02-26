@@ -41,6 +41,7 @@
             this.snacksBtn = new System.Windows.Forms.Button();
             this.bakeryBtn = new System.Windows.Forms.Button();
             this.dairyBtn = new System.Windows.Forms.Button();
+            this.checkoutBtn = new System.Windows.Forms.Button();
             this.produce1 = new GroceryAppWindowsForm.Produce();
             this.grains1 = new GroceryAppWindowsForm.Grains();
             this.snacksCtrl = new GroceryAppWindowsForm.Snacks();
@@ -131,7 +132,7 @@
             this.categoryPnl.Dock = System.Windows.Forms.DockStyle.Left;
             this.categoryPnl.Location = new System.Drawing.Point(0, 71);
             this.categoryPnl.Name = "categoryPnl";
-            this.categoryPnl.Size = new System.Drawing.Size(270, 470);
+            this.categoryPnl.Size = new System.Drawing.Size(270, 483);
             this.categoryPnl.TabIndex = 1;
             // 
             // produceBtn
@@ -233,6 +234,20 @@
             this.dairyBtn.UseVisualStyleBackColor = false;
             this.dairyBtn.Click += new System.EventHandler(this.dairyBtn_Click);
             // 
+            // checkoutBtn
+            // 
+            this.checkoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.checkoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkoutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutBtn.ForeColor = System.Drawing.Color.White;
+            this.checkoutBtn.Location = new System.Drawing.Point(495, 494);
+            this.checkoutBtn.Name = "checkoutBtn";
+            this.checkoutBtn.Size = new System.Drawing.Size(142, 44);
+            this.checkoutBtn.TabIndex = 15;
+            this.checkoutBtn.Text = "CHECKOUT";
+            this.checkoutBtn.UseVisualStyleBackColor = false;
+            this.checkoutBtn.Click += new System.EventHandler(this.checkoutBtn_Click);
+            // 
             // produce1
             // 
             this.produce1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(194)))));
@@ -287,7 +302,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(902, 541);
+            this.ClientSize = new System.Drawing.Size(902, 554);
+            this.Controls.Add(this.checkoutBtn);
             this.Controls.Add(this.produce1);
             this.Controls.Add(this.grains1);
             this.Controls.Add(this.snacksCtrl);
@@ -319,7 +335,6 @@
         private System.Windows.Forms.Panel categoryPnl;
         private System.Windows.Forms.Button produceBtn;
         private System.Windows.Forms.Label cartBtn;
-        private System.Windows.Forms.Label bcktoHomeLbl;
         private System.Windows.Forms.Label bckLbl;
 
        // private bakeryUserControl bakeryUsrCtrl;
@@ -331,6 +346,8 @@
         private Snacks snacksCtrl;
         private Grains grains1;
         private Produce produce1;
+        private System.Windows.Forms.Label bcktoHomeLbl;
+        private System.Windows.Forms.Button checkoutBtn;
     }
 }
 

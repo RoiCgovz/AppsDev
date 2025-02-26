@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GroceryAppWindowsForm
 {
     public partial class MainForm : Form
     {
-        public CartOrReceipt cartForm = new CartOrReceipt();    
+        public CartOrReceipt cartForm = new CartOrReceipt();
+        public Receipt receipt = new Receipt();
         public MainForm()
         {
             InitializeComponent();
         }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             dairyCtrl.Hide();
@@ -18,82 +21,78 @@ namespace GroceryAppWindowsForm
             bevCtrl.Hide();
             grains1.Hide();
             produce1.Hide();
-
         }
+
         private void snacksBtn_Click(object sender, EventArgs e)
         {
-            dairyCtrl.Hide();
+            HideAllUserControls();
             snacksCtrl.Show();
-            bakeryCtrl.Hide();
-            bevCtrl.Hide();
-            grains1.Hide();
-            produce1.Hide();
         }
+
         private void dairyBtn_Click(object sender, EventArgs e)
         {
+            HideAllUserControls();
             dairyCtrl.Show();
-            bakeryCtrl.Hide();
-            snacksCtrl.Hide();
-            bevCtrl.Hide();
-            grains1.Hide();
-            produce1.Hide();
         }
+
         private void bakeryBtn_Click(object sender, EventArgs e)
         {
-            dairyCtrl.Hide();
+            HideAllUserControls();
             bakeryCtrl.Show();
-            snacksCtrl.Hide();
-            bevCtrl.Hide();
-            grains1.Hide();
-            produce1.Hide();
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
+
         private void beveragesBtn_Click(object sender, EventArgs e)
         {
-            dairyCtrl.Hide();
-            bakeryCtrl.Hide();
-            snacksCtrl.Hide();
+            HideAllUserControls();
             bevCtrl.Show();
-            grains1.Hide();
-            produce1.Hide();
         }
 
         private void grainsBtn_Click(object sender, EventArgs e)
         {
-            dairyCtrl.Hide();
-            bakeryCtrl.Hide();
-            snacksCtrl.Hide();
-            bevCtrl.Hide();
+            HideAllUserControls();
             grains1.Show();
-            produce1.Hide();
         }
 
         private void produceBtn_Click(object sender, EventArgs e)
+        {
+            HideAllUserControls();
+            produce1.Show();
+        }
+        private void HideAllUserControls()
         {
             dairyCtrl.Hide();
             bakeryCtrl.Hide();
             snacksCtrl.Hide();
             bevCtrl.Hide();
             grains1.Hide();
-            produce1.Show();
+            produce1.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         private void bckLbl_Click(object sender, EventArgs e)
         {
             MainMenuForm mainMnu = new MainMenuForm();
             mainMnu.Show();
-            this.Hide();   
+            this.Hide();
         }
 
         private void cartBtn_Click(object sender, EventArgs e)
         {
-            CartOrReceipt cartReceipt = new CartOrReceipt();
-            cartReceipt.ShowCart();
-            cartReceipt.Show();
-            this.Hide();
+            MainForm mainForm = this.FindForm() as MainForm;
+
+            if (mainForm != null && mainForm.cartForm != null)
+            {
+                mainForm.cartForm.Show();
+            }
+        }
+
+        private void checkoutBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
