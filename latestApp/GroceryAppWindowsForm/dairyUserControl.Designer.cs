@@ -77,7 +77,7 @@
             this.dairyPnl.Controls.Add(this.milkPicBox);
             this.dairyPnl.Location = new System.Drawing.Point(13, 16);
             this.dairyPnl.Name = "dairyPnl";
-            this.dairyPnl.Size = new System.Drawing.Size(563, 384);
+            this.dairyPnl.Size = new System.Drawing.Size(563, 362);
             this.dairyPnl.TabIndex = 1;
             // 
             // label2
@@ -85,7 +85,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.label2.Location = new System.Drawing.Point(414, 33);
+            this.label2.Location = new System.Drawing.Point(414, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 44);
             this.label2.TabIndex = 18;
@@ -97,7 +97,7 @@
             this.cheeseLbl.AutoSize = true;
             this.cheeseLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cheeseLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.cheeseLbl.Location = new System.Drawing.Point(231, 33);
+            this.cheeseLbl.Location = new System.Drawing.Point(231, 11);
             this.cheeseLbl.Name = "cheeseLbl";
             this.cheeseLbl.Size = new System.Drawing.Size(108, 44);
             this.cheeseLbl.TabIndex = 17;
@@ -109,7 +109,7 @@
             this.milkPriceLbl.AutoSize = true;
             this.milkPriceLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.milkPriceLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.milkPriceLbl.Location = new System.Drawing.Point(40, 33);
+            this.milkPriceLbl.Location = new System.Drawing.Point(40, 11);
             this.milkPriceLbl.Name = "milkPriceLbl";
             this.milkPriceLbl.Size = new System.Drawing.Size(100, 44);
             this.milkPriceLbl.TabIndex = 16;
@@ -122,7 +122,7 @@
             this.yogurtAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yogurtAddBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yogurtAddBtn.ForeColor = System.Drawing.Color.White;
-            this.yogurtAddBtn.Location = new System.Drawing.Point(406, 335);
+            this.yogurtAddBtn.Location = new System.Drawing.Point(406, 313);
             this.yogurtAddBtn.Name = "yogurtAddBtn";
             this.yogurtAddBtn.Size = new System.Drawing.Size(117, 44);
             this.yogurtAddBtn.TabIndex = 15;
@@ -136,7 +136,7 @@
             this.cheeseAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cheeseAddBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cheeseAddBtn.ForeColor = System.Drawing.Color.White;
-            this.cheeseAddBtn.Location = new System.Drawing.Point(222, 335);
+            this.cheeseAddBtn.Location = new System.Drawing.Point(222, 313);
             this.cheeseAddBtn.Name = "cheeseAddBtn";
             this.cheeseAddBtn.Size = new System.Drawing.Size(117, 44);
             this.cheeseAddBtn.TabIndex = 14;
@@ -150,7 +150,7 @@
             this.milkAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.milkAddBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.milkAddBtn.ForeColor = System.Drawing.Color.White;
-            this.milkAddBtn.Location = new System.Drawing.Point(33, 335);
+            this.milkAddBtn.Location = new System.Drawing.Point(33, 313);
             this.milkAddBtn.Name = "milkAddBtn";
             this.milkAddBtn.Size = new System.Drawing.Size(117, 44);
             this.milkAddBtn.TabIndex = 13;
@@ -164,7 +164,7 @@
             this.yogurtInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yogurtInc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yogurtInc.ForeColor = System.Drawing.Color.White;
-            this.yogurtInc.Location = new System.Drawing.Point(500, 292);
+            this.yogurtInc.Location = new System.Drawing.Point(500, 270);
             this.yogurtInc.Name = "yogurtInc";
             this.yogurtInc.Size = new System.Drawing.Size(46, 37);
             this.yogurtInc.TabIndex = 12;
@@ -176,7 +176,7 @@
             // 
             this.yogurtTxtBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yogurtTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.yogurtTxtBox.Location = new System.Drawing.Point(441, 292);
+            this.yogurtTxtBox.Location = new System.Drawing.Point(441, 270);
             this.yogurtTxtBox.Multiline = true;
             this.yogurtTxtBox.Name = "yogurtTxtBox";
             this.yogurtTxtBox.Size = new System.Drawing.Size(53, 37);
@@ -188,7 +188,7 @@
             this.yogurtDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yogurtDec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yogurtDec.ForeColor = System.Drawing.Color.White;
-            this.yogurtDec.Location = new System.Drawing.Point(390, 292);
+            this.yogurtDec.Location = new System.Drawing.Point(390, 270);
             this.yogurtDec.Name = "yogurtDec";
             this.yogurtDec.Size = new System.Drawing.Size(46, 37);
             this.yogurtDec.TabIndex = 10;
@@ -202,7 +202,7 @@
             this.cheeseDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cheeseDec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cheeseDec.ForeColor = System.Drawing.Color.White;
-            this.cheeseDec.Location = new System.Drawing.Point(203, 292);
+            this.cheeseDec.Location = new System.Drawing.Point(203, 270);
             this.cheeseDec.Name = "cheeseDec";
             this.cheeseDec.Size = new System.Drawing.Size(46, 37);
             this.cheeseDec.TabIndex = 9;
@@ -214,7 +214,7 @@
             // 
             this.cheeseTxtBox.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cheeseTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.cheeseTxtBox.Location = new System.Drawing.Point(255, 292);
+            this.cheeseTxtBox.Location = new System.Drawing.Point(255, 270);
             this.cheeseTxtBox.Multiline = true;
             this.cheeseTxtBox.Name = "cheeseTxtBox";
             this.cheeseTxtBox.Size = new System.Drawing.Size(53, 37);
@@ -226,7 +226,7 @@
             this.cheeseInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cheeseInc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cheeseInc.ForeColor = System.Drawing.Color.White;
-            this.cheeseInc.Location = new System.Drawing.Point(315, 292);
+            this.cheeseInc.Location = new System.Drawing.Point(315, 270);
             this.cheeseInc.Name = "cheeseInc";
             this.cheeseInc.Size = new System.Drawing.Size(46, 37);
             this.cheeseInc.TabIndex = 7;
@@ -240,7 +240,7 @@
             this.milkDec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.milkDec.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.milkDec.ForeColor = System.Drawing.Color.White;
-            this.milkDec.Location = new System.Drawing.Point(16, 292);
+            this.milkDec.Location = new System.Drawing.Point(16, 270);
             this.milkDec.Name = "milkDec";
             this.milkDec.Size = new System.Drawing.Size(46, 37);
             this.milkDec.TabIndex = 6;
@@ -252,7 +252,7 @@
             // 
             this.milkTxtBx.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.milkTxtBx.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.milkTxtBx.Location = new System.Drawing.Point(68, 292);
+            this.milkTxtBx.Location = new System.Drawing.Point(68, 270);
             this.milkTxtBx.Multiline = true;
             this.milkTxtBx.Name = "milkTxtBx";
             this.milkTxtBx.Size = new System.Drawing.Size(53, 37);
@@ -266,7 +266,7 @@
             this.milkInc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.milkInc.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.milkInc.ForeColor = System.Drawing.Color.White;
-            this.milkInc.Location = new System.Drawing.Point(128, 292);
+            this.milkInc.Location = new System.Drawing.Point(128, 270);
             this.milkInc.Name = "milkInc";
             this.milkInc.Size = new System.Drawing.Size(46, 37);
             this.milkInc.TabIndex = 3;
@@ -277,7 +277,7 @@
             // yogurtPicBox
             // 
             this.yogurtPicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._1yogurt;
-            this.yogurtPicBox.Location = new System.Drawing.Point(388, 89);
+            this.yogurtPicBox.Location = new System.Drawing.Point(388, 67);
             this.yogurtPicBox.Name = "yogurtPicBox";
             this.yogurtPicBox.Size = new System.Drawing.Size(159, 197);
             this.yogurtPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -287,7 +287,7 @@
             // cheesePicBox
             // 
             this.cheesePicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._1cheese;
-            this.cheesePicBox.Location = new System.Drawing.Point(203, 89);
+            this.cheesePicBox.Location = new System.Drawing.Point(203, 67);
             this.cheesePicBox.Name = "cheesePicBox";
             this.cheesePicBox.Size = new System.Drawing.Size(159, 197);
             this.cheesePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -297,7 +297,7 @@
             // milkPicBox
             // 
             this.milkPicBox.Image = global::GroceryAppWindowsForm.Properties.Resources._1milk;
-            this.milkPicBox.Location = new System.Drawing.Point(16, 89);
+            this.milkPicBox.Location = new System.Drawing.Point(16, 67);
             this.milkPicBox.Name = "milkPicBox";
             this.milkPicBox.Size = new System.Drawing.Size(158, 197);
             this.milkPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -311,7 +311,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
             this.Controls.Add(this.dairyPnl);
             this.Name = "dairyUserControl";
-            this.Size = new System.Drawing.Size(594, 415);
+            this.Size = new System.Drawing.Size(594, 388);
             this.dairyPnl.ResumeLayout(false);
             this.dairyPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.yogurtPicBox)).EndInit();

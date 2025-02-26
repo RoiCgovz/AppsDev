@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace GroceryAppWindowsForm
 {
     public partial class MainForm : Form
     {
         public CartOrReceipt cartForm = new CartOrReceipt();
-        public Receipt receipt = new Receipt();
+        public Receipt rec = new Receipt();
 
         public MainForm()
         {
@@ -20,8 +21,8 @@ namespace GroceryAppWindowsForm
             bakeryCtrl.Hide();
             snacksCtrl.Hide();
             bevCtrl.Hide();
-            grains1.Hide();
-            produce1.Hide();
+            grainCtrl.Hide();
+            prodCtrl.Hide();
         }
 
         private void snacksBtn_Click(object sender, EventArgs e)
@@ -51,13 +52,13 @@ namespace GroceryAppWindowsForm
         private void grainsBtn_Click(object sender, EventArgs e)
         {
             HideAllUserControls();
-            grains1.Show();
+            grainCtrl.Show();
         }
 
         private void produceBtn_Click(object sender, EventArgs e)
         {
             HideAllUserControls();
-            produce1.Show();
+            prodCtrl.Show();
         }
         private void HideAllUserControls()
         {
@@ -65,8 +66,8 @@ namespace GroceryAppWindowsForm
             bakeryCtrl.Hide();
             snacksCtrl.Hide();
             bevCtrl.Hide();
-            grains1.Hide();
-            produce1.Hide();
+            grainCtrl.Hide();
+            prodCtrl.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,14 +92,5 @@ namespace GroceryAppWindowsForm
             }
         }
 
-        private void checkoutBtn_Click(object sender, EventArgs e)
-        {
-            MainForm mainForm = this.FindForm() as MainForm;
-
-            if (mainForm != null && mainForm.receipt != null)
-            {
-                mainForm.receipt.Show();
-            }
-        }
     }
 }

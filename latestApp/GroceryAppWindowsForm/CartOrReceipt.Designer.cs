@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.cartPnl.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.cartPnl.Controls.Add(this.label1);
             this.cartPnl.Location = new System.Drawing.Point(19, 44);
             this.cartPnl.Name = "cartPnl";
-            this.cartPnl.Size = new System.Drawing.Size(584, 469);
+            this.cartPnl.Size = new System.Drawing.Size(584, 465);
             this.cartPnl.TabIndex = 7;
             // 
             // panel2
@@ -81,7 +82,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel4.Location = new System.Drawing.Point(0, 454);
+            this.panel4.Location = new System.Drawing.Point(0, 450);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(584, 15);
             this.panel4.TabIndex = 9;
@@ -163,11 +164,24 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(168, 533);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(300, 49);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Proceed to Checkout";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CartOrReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 521);
+            this.ClientSize = new System.Drawing.Size(615, 609);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.bckLbl);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.cartPnl);
@@ -195,5 +209,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

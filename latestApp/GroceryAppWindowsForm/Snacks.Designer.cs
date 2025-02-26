@@ -85,33 +85,36 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.label2.Location = new System.Drawing.Point(441, 19);
+            this.label2.Location = new System.Drawing.Point(431, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 22);
+            this.label2.Size = new System.Drawing.Size(94, 44);
             this.label2.TabIndex = 18;
-            this.label2.Text = "$2.30";
+            this.label2.Text = "Cookies\r\n$4.30/Box";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.label1.Location = new System.Drawing.Point(255, 19);
+            this.label1.Location = new System.Drawing.Point(235, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 22);
+            this.label1.Size = new System.Drawing.Size(106, 44);
             this.label1.TabIndex = 17;
-            this.label1.Text = "$3.00";
+            this.label1.Text = "Nachos\r\n$3.00/ Pack";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chipsLabel
             // 
             this.chipsLabel.AutoSize = true;
             this.chipsLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chipsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.chipsLabel.Location = new System.Drawing.Point(66, 19);
+            this.chipsLabel.Location = new System.Drawing.Point(34, 8);
             this.chipsLabel.Name = "chipsLabel";
-            this.chipsLabel.Size = new System.Drawing.Size(55, 22);
+            this.chipsLabel.Size = new System.Drawing.Size(118, 44);
             this.chipsLabel.TabIndex = 16;
-            this.chipsLabel.Text = "$2.00";
+            this.chipsLabel.Text = "Banana Chips\r\n$2.00/Pack\r\n";
+            this.chipsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cookieAddBtn
             // 

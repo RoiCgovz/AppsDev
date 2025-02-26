@@ -6,6 +6,7 @@ namespace GroceryAppWindowsForm
 {
     public partial class CartOrReceipt : Form
     {
+        public Receipt receipt = new Receipt();
         public CartOrReceipt()
         {
             InitializeComponent();
@@ -87,6 +88,24 @@ namespace GroceryAppWindowsForm
                 }
             }
             subtotalLabel.Text = subtotal.ToString("C");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Proceed to Checkout?", "Proceed", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (confirm == DialogResult.OK)
+            {
+                CartOrReceipt cartForm = this.FindForm() as CartOrReceipt;
+
+                if (cartForm != null && cartForm.receipt != null)
+                {
+                    cartForm.receipt.Show();
+                }
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

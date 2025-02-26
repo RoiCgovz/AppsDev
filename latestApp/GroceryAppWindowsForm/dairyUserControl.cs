@@ -64,11 +64,22 @@ namespace GroceryAppWindowsForm
                 decimal total = quantity * price;
                 string totalPriceStr = total.ToString("C"); // Formats as currency
 
+                // Retrieve MainForm reference
                 MainForm mainForm = this.FindForm() as MainForm;
-                if (mainForm != null && mainForm.cartForm != null)
+                if (mainForm != null)
                 {
-                    mainForm.cartForm.AddToCart(itemName, quantity, price, totalPriceStr);
-                    mainForm.receipt.AddToReceipt(itemName, quantity,price,totalPriceStr);
+                    // Ensure cart form is not null before adding items
+                    if (mainForm.cartForm != null)
+                    {
+                        mainForm.cartForm.AddToCart(itemName, quantity, price, totalPriceStr);
+                    }
+
+                    // Retrieve CartOrReceipt form reference
+                    CartOrReceipt cartForm = mainForm.cartForm as CartOrReceipt;
+                    if (cartForm != null && cartForm.receipt != null)
+                    {
+                        cartForm.receipt.AddToReceipt(itemName, quantity, price, totalPriceStr);
+                    }
                 }
             }
         }
@@ -84,32 +95,30 @@ namespace GroceryAppWindowsForm
 
         private void milkAddBtn_Click(object sender, EventArgs e)
         {
-            int quantity = int.Parse(milkTxtBx.Text);
-            if (quantity > 0)
+            if (milkCount > 0)
             {
                 MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AddItemToCart("Milk", quantity, milkPrice);
+                AddItemToCart("Milk", milkCount, milkPrice);
             }
         }
 
         private void cheeseAddBtn_Click(object sender, EventArgs e)
         {
-            int quantity = int.Parse(cheeseTxtBox.Text);
-            if (quantity > 0)
+            if (cheeseCount > 0)
             {
                 MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AddItemToCart("Cheese", quantity, cheesePrice);
+                AddItemToCart("Cheese", cheeseCount, cheesePrice);
             }
         }
 
         private void yogurtAddBtn_Click(object sender, EventArgs e)
         {
-            int quantity = int.Parse(yogurtTxtBox.Text);
-            if (quantity > 0)
+            if (yogurtCount > 0)
             {
                 MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AddItemToCart("Yogurt", quantity, yogurtPrice);
+                AddItemToCart("Yogurt", yogurtCount, yogurtPrice);
             }
         }
     }
 }
+

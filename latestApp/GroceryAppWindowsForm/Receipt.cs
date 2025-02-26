@@ -72,8 +72,9 @@ namespace GroceryAppWindowsForm
 
         private void UpdateSubtotal()
         {
+            decimal discountRate = 0;
             decimal subtotal = 0;
-
+            decimal discountAmount, finalTotal;
             foreach (var item in receiptListBox.Items)
             {
                 string itemText = item.ToString();
@@ -81,14 +82,50 @@ namespace GroceryAppWindowsForm
 
                 if (parts.Length >= 4)
                 {
-                    string totalPriceStr = parts[3]; 
+                    string totalPriceStr = parts[3];
                     if (decimal.TryParse(totalPriceStr, System.Globalization.NumberStyles.Currency, null, out decimal itemTotal))
                     {
                         subtotal += itemTotal;
                     }
                 }
             }
+            if (subtotal >= 300)
+            {
+                discountRate = 0.20m;
+            }
+            else if (subtotal >= 200)
+            {
+                discountRate = 0.15m; 
+            }
+            else if (subtotal >= 100)
+            {
+                discountRate = 0.10m; 
+            }
+
+            discountAmount = subtotal * discountRate;
+            finalTotal = subtotal - discountAmount;
+
             subtotalLabel.Text = subtotal.ToString("C");
+            dis.Text = discountAmount.ToString("C");
+            totalLabel.Text = finalTotal.ToString("C");
+        }
+
+        private void anotherBtn_Click(object sender, EventArgs e)
+        {
+            receiptListBox.Items.Clear();
+            MainForm mn = new MainForm();
+            mn.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = this.FindForm() as MainForm;
+
+            if (mainForm != null && mainForm.cartForm != null)
+            {
+                mainForm.cartForm.Show();
+            }
         }
     }
 }

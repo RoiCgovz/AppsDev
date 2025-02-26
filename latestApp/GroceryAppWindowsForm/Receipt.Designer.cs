@@ -32,18 +32,19 @@
             this.bckLbl = new System.Windows.Forms.Label();
             this.cartPnl = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.rTotalLabel = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
             this.rTotaltextLable = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.receiptListBox = new System.Windows.Forms.ListBox();
-            this.discountNum_Label = new System.Windows.Forms.Label();
+            this.dis = new System.Windows.Forms.Label();
             this.subtotalLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.cartPnl.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -77,7 +78,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.rTotalLabel);
+            this.panel3.Controls.Add(this.totalLabel);
             this.panel3.Controls.Add(this.rTotaltextLable);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -86,16 +87,16 @@
             this.panel3.Size = new System.Drawing.Size(584, 78);
             this.panel3.TabIndex = 11;
             // 
-            // rTotalLabel
+            // totalLabel
             // 
-            this.rTotalLabel.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTotalLabel.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.rTotalLabel.Location = new System.Drawing.Point(344, 25);
-            this.rTotalLabel.Name = "rTotalLabel";
-            this.rTotalLabel.Size = new System.Drawing.Size(225, 28);
-            this.rTotalLabel.TabIndex = 1;
-            this.rTotalLabel.Text = "$0.00";
-            this.rTotalLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.totalLabel.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.totalLabel.Location = new System.Drawing.Point(344, 25);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(225, 28);
+            this.totalLabel.TabIndex = 1;
+            this.totalLabel.Text = "$0.00";
+            this.totalLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // rTotaltextLable
             // 
@@ -131,7 +132,7 @@
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.receiptListBox);
-            this.panel5.Controls.Add(this.discountNum_Label);
+            this.panel5.Controls.Add(this.dis);
             this.panel5.Controls.Add(this.subtotalLabel);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label3);
@@ -150,15 +151,15 @@
             this.receiptListBox.Size = new System.Drawing.Size(569, 298);
             this.receiptListBox.TabIndex = 5;
             // 
-            // discountNum_Label
+            // dis
             // 
-            this.discountNum_Label.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.discountNum_Label.Location = new System.Drawing.Point(522, 362);
-            this.discountNum_Label.Name = "discountNum_Label";
-            this.discountNum_Label.Size = new System.Drawing.Size(60, 25);
-            this.discountNum_Label.TabIndex = 4;
-            this.discountNum_Label.Text = "0%";
-            this.discountNum_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dis.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dis.Location = new System.Drawing.Point(522, 362);
+            this.dis.Name = "dis";
+            this.dis.Size = new System.Drawing.Size(60, 25);
+            this.dis.TabIndex = 4;
+            this.dis.Text = "0%";
+            this.dis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // subtotalLabel
             // 
@@ -215,16 +216,29 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(98, 644);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(416, 65);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Make Another Purchase";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 641);
+            this.ClientSize = new System.Drawing.Size(606, 740);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.bckLbl);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.cartPnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Receipt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receipt";
             this.cartPnl.ResumeLayout(false);
             this.cartPnl.PerformLayout();
@@ -242,16 +256,17 @@
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Panel cartPnl;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label rTotalLabel;
+        private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label rTotaltextLable;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ListBox receiptListBox;
-        private System.Windows.Forms.Label discountNum_Label;
+        private System.Windows.Forms.Label dis;
         private System.Windows.Forms.Label subtotalLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
