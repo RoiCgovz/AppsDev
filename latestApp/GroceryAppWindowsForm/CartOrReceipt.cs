@@ -47,8 +47,6 @@ namespace GroceryAppWindowsForm
                         {
                             int updatedQty = existingQty + quantity;
                             decimal updatedTotal = updatedQty * price;
-
-                            // Ensure alignment with headers
                             cartListBox.Items[i] = string.Format("{0,-16}{1,-35}{2,-40}{3,-30}",
                                 updatedQty, itemName, price.ToString("C"), updatedTotal.ToString("C"));
                         }

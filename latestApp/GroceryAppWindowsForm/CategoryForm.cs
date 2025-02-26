@@ -8,6 +8,7 @@ namespace GroceryAppWindowsForm
     {
         public CartOrReceipt cartForm = new CartOrReceipt();
         public Receipt receipt = new Receipt();
+
         public MainForm()
         {
             InitializeComponent();
@@ -92,7 +93,12 @@ namespace GroceryAppWindowsForm
 
         private void checkoutBtn_Click(object sender, EventArgs e)
         {
+            MainForm mainForm = this.FindForm() as MainForm;
 
+            if (mainForm != null && mainForm.receipt != null)
+            {
+                mainForm.receipt.Show();
+            }
         }
     }
 }

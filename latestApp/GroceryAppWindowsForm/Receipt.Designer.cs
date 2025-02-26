@@ -54,7 +54,7 @@
             this.bckLbl.AutoSize = true;
             this.bckLbl.Font = new System.Drawing.Font("Segoe UI Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bckLbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bckLbl.Location = new System.Drawing.Point(4, -13);
+            this.bckLbl.Location = new System.Drawing.Point(3, 12);
             this.bckLbl.Name = "bckLbl";
             this.bckLbl.Size = new System.Drawing.Size(38, 40);
             this.bckLbl.TabIndex = 9;
@@ -68,7 +68,7 @@
             this.cartPnl.Controls.Add(this.panel4);
             this.cartPnl.Controls.Add(this.panel5);
             this.cartPnl.Controls.Add(this.label1);
-            this.cartPnl.Location = new System.Drawing.Point(11, 30);
+            this.cartPnl.Location = new System.Drawing.Point(11, 60);
             this.cartPnl.Name = "cartPnl";
             this.cartPnl.Size = new System.Drawing.Size(584, 557);
             this.cartPnl.TabIndex = 10;
@@ -208,7 +208,7 @@
             this.closeButton.BackColor = System.Drawing.Color.White;
             this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
             this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closeButton.Location = new System.Drawing.Point(563, -9);
+            this.closeButton.Location = new System.Drawing.Point(562, 12);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(32, 33);
             this.closeButton.TabIndex = 8;
@@ -219,7 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 574);
+            this.ClientSize = new System.Drawing.Size(606, 641);
             this.Controls.Add(this.bckLbl);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.cartPnl);

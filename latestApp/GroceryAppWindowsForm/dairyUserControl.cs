@@ -68,7 +68,7 @@ namespace GroceryAppWindowsForm
                 if (mainForm != null && mainForm.cartForm != null)
                 {
                     mainForm.cartForm.AddToCart(itemName, quantity, price, totalPriceStr);
-                    mainForm.receipt.AddToReceipt(itemName, quantity.ToString());
+                    mainForm.receipt.AddToReceipt(itemName, quantity,price,totalPriceStr);
                 }
             }
         }
