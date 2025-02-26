@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace GroceryAppWindowsForm
 {
@@ -9,6 +8,10 @@ namespace GroceryAppWindowsForm
         private int milkCount = 0;
         private int cheeseCount = 0;
         private int yogurtCount = 0;
+
+        private const decimal milkPrice = 1.00m;
+        private const decimal cheesePrice = 2.50m;
+        private const decimal yogurtPrice = 1.75m;
 
         public dairyUserControl()
         {
@@ -53,18 +56,21 @@ namespace GroceryAppWindowsForm
 
             textBox.Text = count.ToString();
         }
-        private void AddItemToCart(string itemName, TextBox textBox, string price, string totalprice)
-        {
-            MainForm mainForm = this.FindForm() as MainForm;
 
-            if (mainForm != null && mainForm.cartForm != null)
+        private void AddItemToCart(string itemName, int quantity, decimal price)
+        {
+            if (quantity > 0)
             {
-                string itemQty = textBox.Text;
-                mainForm.cartForm.AddToCart(itemName, itemQty, price, totalprice);
-                mainForm.receipt.AddToReceipt(itemName, itemQty);
-                
+                decimal total = quantity * price;
+                string totalPriceStr = total.ToString("C"); // Formats as currency
+
+                MainForm mainForm = this.FindForm() as MainForm;
+                if (mainForm != null && mainForm.cartForm != null)
+                {
+                    mainForm.cartForm.AddToCart(itemName, quantity, price, totalPriceStr);
+                    mainForm.receipt.AddToReceipt(itemName, quantity.ToString());
+                }
             }
-            
         }
 
         private void milkInc_Click(object sender, EventArgs e) => UpdateCount(milkTxtBx, ref milkCount, true);
@@ -75,37 +81,35 @@ namespace GroceryAppWindowsForm
 
         private void yogurtInc_Click(object sender, EventArgs e) => UpdateCount(yogurtTxtBox, ref yogurtCount, true);
         private void yogurtDec_Click(object sender, EventArgs e) => UpdateCount(yogurtTxtBox, ref yogurtCount, false);
+
         private void milkAddBtn_Click(object sender, EventArgs e)
         {
-
-            DialogResult confirm = MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (confirm == DialogResult.OK)
+            int quantity = int.Parse(milkTxtBx.Text);
+            if (quantity > 0)
             {
-                string milkPrice = "$1.00";
-                decimal milkTotal = Convert.ToDecimal(milkTxtBx.Text);
-                decimal total = 1.00m * milkTotal;
-                string finTotal = Convert.ToString(total);
-
-                AddItemToCart("Milk", milkTxtBx, milkPrice, finTotal);
-
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Milk", quantity, milkPrice);
             }
         }
+
         private void cheeseAddBtn_Click(object sender, EventArgs e)
         {
-           // DialogResult confirm = MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //if (confirm == DialogResult.OK)
-            //{
-              //  AddItemToCart("Cheese", cheeseTxtBox);
-           // }
+            int quantity = int.Parse(cheeseTxtBox.Text);
+            if (quantity > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Cheese", quantity, cheesePrice);
+            }
         }
-          
+
         private void yogurtAddBtn_Click(object sender, EventArgs e)
         {
-           // DialogResult confirm = MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //if (confirm == DialogResult.OK)
-            //{
-                //AddItemToCart("Yogurt", yogurtTxtBox);
-            //}
+            int quantity = int.Parse(yogurtTxtBox.Text);
+            if (quantity > 0)
+            {
+                MessageBox.Show("Item Added to Cart", "Added to Cart", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AddItemToCart("Yogurt", quantity, yogurtPrice);
+            }
         }
     }
 }
