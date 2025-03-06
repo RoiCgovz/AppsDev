@@ -41,12 +41,12 @@
             this.snacksBtn = new System.Windows.Forms.Button();
             this.bakeryBtn = new System.Windows.Forms.Button();
             this.dairyBtn = new System.Windows.Forms.Button();
-            this.bakeryCtrl = new GroceryAppWindowsForm.bakeryUserControl();
-            this.bevCtrl = new GroceryAppWindowsForm.Beverage();
-            this.dairyCtrl = new GroceryAppWindowsForm.dairyUserControl();
-            this.grainCtrl = new GroceryAppWindowsForm.Grains();
-            this.prodCtrl = new GroceryAppWindowsForm.Produce();
             this.snacksCtrl = new GroceryAppWindowsForm.Snacks();
+            this.prodCtrl = new GroceryAppWindowsForm.Produce();
+            this.grainCtrl = new GroceryAppWindowsForm.Grains();
+            this.dairyCtrl = new GroceryAppWindowsForm.dairyUserControl();
+            this.bevCtrl = new GroceryAppWindowsForm.Beverage();
+            this.bakeryCtrl = new GroceryAppWindowsForm.bakeryUserControl();
             this.panel1.SuspendLayout();
             this.categoryPnl.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +103,7 @@
             this.bcktoHomeLbl.Size = new System.Drawing.Size(392, 50);
             this.bcktoHomeLbl.TabIndex = 1;
             this.bcktoHomeLbl.Text = "Home";
+            this.bcktoHomeLbl.Click += new System.EventHandler(this.bcktoHomeLbl_Click);
             // 
             // bckLbl
             // 
@@ -233,38 +234,13 @@
             this.dairyBtn.UseVisualStyleBackColor = false;
             this.dairyBtn.Click += new System.EventHandler(this.dairyBtn_Click);
             // 
-            // bakeryCtrl
+            // snacksCtrl
             // 
-            this.bakeryCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.bakeryCtrl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bakeryCtrl.Location = new System.Drawing.Point(293, 109);
-            this.bakeryCtrl.Name = "bakeryCtrl";
-            this.bakeryCtrl.Size = new System.Drawing.Size(594, 401);
-            this.bakeryCtrl.TabIndex = 2;
-            // 
-            // bevCtrl
-            // 
-            this.bevCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.bevCtrl.Location = new System.Drawing.Point(293, 109);
-            this.bevCtrl.Name = "bevCtrl";
-            this.bevCtrl.Size = new System.Drawing.Size(595, 413);
-            this.bevCtrl.TabIndex = 3;
-            // 
-            // dairyCtrl
-            // 
-            this.dairyCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.dairyCtrl.Location = new System.Drawing.Point(293, 109);
-            this.dairyCtrl.Name = "dairyCtrl";
-            this.dairyCtrl.Size = new System.Drawing.Size(594, 388);
-            this.dairyCtrl.TabIndex = 4;
-            // 
-            // grainCtrl
-            // 
-            this.grainCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(194)))));
-            this.grainCtrl.Location = new System.Drawing.Point(293, 109);
-            this.grainCtrl.Name = "grainCtrl";
-            this.grainCtrl.Size = new System.Drawing.Size(594, 401);
-            this.grainCtrl.TabIndex = 5;
+            this.snacksCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.snacksCtrl.Location = new System.Drawing.Point(293, 109);
+            this.snacksCtrl.Name = "snacksCtrl";
+            this.snacksCtrl.Size = new System.Drawing.Size(589, 394);
+            this.snacksCtrl.TabIndex = 7;
             // 
             // prodCtrl
             // 
@@ -274,13 +250,38 @@
             this.prodCtrl.Size = new System.Drawing.Size(589, 363);
             this.prodCtrl.TabIndex = 6;
             // 
-            // snacksCtrl
+            // grainCtrl
             // 
-            this.snacksCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
-            this.snacksCtrl.Location = new System.Drawing.Point(293, 109);
-            this.snacksCtrl.Name = "snacksCtrl";
-            this.snacksCtrl.Size = new System.Drawing.Size(589, 394);
-            this.snacksCtrl.TabIndex = 7;
+            this.grainCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(194)))));
+            this.grainCtrl.Location = new System.Drawing.Point(293, 109);
+            this.grainCtrl.Name = "grainCtrl";
+            this.grainCtrl.Size = new System.Drawing.Size(594, 401);
+            this.grainCtrl.TabIndex = 5;
+            // 
+            // dairyCtrl
+            // 
+            this.dairyCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.dairyCtrl.Location = new System.Drawing.Point(293, 109);
+            this.dairyCtrl.Name = "dairyCtrl";
+            this.dairyCtrl.Size = new System.Drawing.Size(594, 388);
+            this.dairyCtrl.TabIndex = 4;
+            // 
+            // bevCtrl
+            // 
+            this.bevCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.bevCtrl.Location = new System.Drawing.Point(293, 109);
+            this.bevCtrl.Name = "bevCtrl";
+            this.bevCtrl.Size = new System.Drawing.Size(595, 413);
+            this.bevCtrl.TabIndex = 3;
+            // 
+            // bakeryCtrl
+            // 
+            this.bakeryCtrl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(97)))), ((int)(((byte)(190)))));
+            this.bakeryCtrl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bakeryCtrl.Location = new System.Drawing.Point(293, 109);
+            this.bakeryCtrl.Name = "bakeryCtrl";
+            this.bakeryCtrl.Size = new System.Drawing.Size(594, 401);
+            this.bakeryCtrl.TabIndex = 2;
             // 
             // MainForm
             // 

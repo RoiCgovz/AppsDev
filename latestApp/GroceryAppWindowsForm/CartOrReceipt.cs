@@ -21,12 +21,12 @@ namespace GroceryAppWindowsForm
             Form existingMainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
             if (existingMainForm != null)
             {
-                existingMainForm.Show();
+                existingMainForm.ShowDialog();
             }
             else
             {
                 MainForm mn = new MainForm();
-                mn.Show();
+                mn.ShowDialog();
             }
         }
         public void AddToCart(string itemName, int quantity, decimal price, string totalprice)
@@ -100,7 +100,7 @@ namespace GroceryAppWindowsForm
                 if (cartForm != null && cartForm.receipt != null)
                 {
                     cartForm.receipt.Show();
-                    this.Close();
+                    this.Hide();
                 }
             }
             else

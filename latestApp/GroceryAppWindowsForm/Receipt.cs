@@ -31,7 +31,8 @@ namespace GroceryAppWindowsForm
                 mn.Show();
             }
         }
-        public void AddToReceipt(string itemName, int quantity, decimal price ,string totalprice)
+
+        public void AddToReceipt(string itemName, int quantity, decimal price, string totalprice)
         {
             if (quantity > 0)
             {
@@ -95,11 +96,11 @@ namespace GroceryAppWindowsForm
             }
             else if (subtotal >= 200)
             {
-                discountRate = 0.15m; 
+                discountRate = 0.15m;
             }
             else if (subtotal >= 100)
             {
-                discountRate = 0.10m; 
+                discountRate = 0.10m;
             }
 
             discountAmount = subtotal * discountRate;
@@ -110,29 +111,12 @@ namespace GroceryAppWindowsForm
             totalLabel.Text = finalTotal.ToString("C");
         }
 
-        private void anotherBtn_Click(object sender, EventArgs e)
-        {
-            receiptListBox.Items.Clear();
-            MainForm mn = new MainForm();
-            mn.Show();
-            this.Close();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             receiptListBox.Items.Clear();
-            MainForm mn = new MainForm();
-            DialogResult confirm = MessageBox.Show("Make Another Purchase?", "Proceed", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (confirm == DialogResult.OK)
-            {
-                mn.Show();
-               
-                this.Hide();
-            }
-            else
-            {
-                return;
-            }
+            MainForm categoryForm = new MainForm();
+            categoryForm.Show();
+            this.Hide();
         }
     }
 }

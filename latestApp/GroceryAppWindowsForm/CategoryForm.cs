@@ -79,7 +79,7 @@ namespace GroceryAppWindowsForm
         {
             MainMenuForm mainMnu = new MainMenuForm();
             mainMnu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void cartBtn_Click(object sender, EventArgs e)
@@ -89,8 +89,13 @@ namespace GroceryAppWindowsForm
             if (mainForm != null && mainForm.cartForm != null)
             {
                 mainForm.cartForm.Show();
+                this.Hide();
             }
         }
 
+        private void bcktoHomeLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
