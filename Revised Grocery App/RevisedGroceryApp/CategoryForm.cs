@@ -13,6 +13,8 @@ namespace RevisedGroceryApp
 {
     public partial class CategoryForm : Form
     {
+        public Cart cartForm;
+        public Receipt receiptForm;
         public CategoryForm()
         {
             InitializeComponent();
@@ -55,6 +57,16 @@ namespace RevisedGroceryApp
             Beverages bev = new Beverages();
             bev.Show();
             this.Hide();
+        }
+
+        private void cartBtn_Click(object sender, EventArgs e)
+        {
+            if (cartForm == null || cartForm.IsDisposed)
+            {
+                cartForm = new Cart();
+            }
+            this.Hide();
+            cartForm.Show();
         }
     }
 }

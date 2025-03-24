@@ -91,6 +91,7 @@
             this.cartBtn.TabIndex = 5;
             this.cartBtn.Text = "Cart";
             this.cartBtn.UseVisualStyleBackColor = true;
+            this.cartBtn.Click += new System.EventHandler(this.cartBtn_Click);
             // 
             // homeBtn
             // 
@@ -159,9 +160,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label4.Location = new System.Drawing.Point(16, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 21);
+            this.label4.Size = new System.Drawing.Size(128, 21);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Corn";
+            this.label4.Text = "Corn - $1.50/KG";
             // 
             // cornAdd
             // 
@@ -233,9 +234,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label2.Location = new System.Drawing.Point(16, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 21);
+            this.label2.Size = new System.Drawing.Size(142, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Wheat";
+            this.label2.Text = "Wheat - $2.40/KG";
             // 
             // wheatAdd
             // 
@@ -336,9 +337,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(16, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 21);
+            this.label1.Size = new System.Drawing.Size(124, 21);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Rice";
+            this.label1.Text = "Rice - $4.00/KG";
             // 
             // pictureBox1
             // 
@@ -363,7 +364,6 @@
             this.bevBtn.Text = "Beverages";
             this.bevBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bevBtn.UseVisualStyleBackColor = false;
-            this.bevBtn.Click += new System.EventHandler(this.bevBtn_Click);
             // 
             // panel1
             // 
@@ -433,7 +433,6 @@
             this.bakeBtn.Text = "Bakery";
             this.bakeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bakeBtn.UseVisualStyleBackColor = false;
-            this.bakeBtn.Click += new System.EventHandler(this.bakeBtn_Click);
             // 
             // itemToCart
             // 
@@ -447,6 +446,7 @@
             this.itemToCart.TabIndex = 11;
             this.itemToCart.Text = "ADD ALL ITEMS TO CART";
             this.itemToCart.UseVisualStyleBackColor = false;
+            this.itemToCart.Click += new System.EventHandler(this.itemToCart_Click);
             // 
             // Grains
             // 

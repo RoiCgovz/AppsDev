@@ -10,3 +10,5 @@ C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debu
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.CategoryForm.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Grains.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Resources.Beverages.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Cart.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Receipt.resources
