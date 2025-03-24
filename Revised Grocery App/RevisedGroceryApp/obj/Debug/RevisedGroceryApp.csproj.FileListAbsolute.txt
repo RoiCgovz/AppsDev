@@ -1,0 +1,12 @@
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\RevisedGroceryApp.exe.config
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\RevisedGroceryApp.exe
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\RevisedGroceryApp.pdb
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.csproj.AssemblyReference.cache
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Properties.Resources.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.csproj.GenerateResource.cache
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.csproj.CoreCompileInputs.cache
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.exe
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.pdb
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.CategoryForm.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Grains.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Resources.Beverages.resources
