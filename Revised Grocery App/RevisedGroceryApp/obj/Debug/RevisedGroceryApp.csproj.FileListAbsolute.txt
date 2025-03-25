@@ -12,3 +12,17 @@ C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debu
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Resources.Beverages.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Cart.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Receipt.resources
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.csproj.AssemblyReference.cache
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Cart.resources
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.CategoryForm.resources
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Grains.resources
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Properties.Resources.resources
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Resources.Beverages.resources
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Receipt.resources
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.csproj.GenerateResource.cache
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.csproj.CoreCompileInputs.cache
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.exe
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.pdb
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\bin\Debug\RevisedGroceryApp.exe.config
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\bin\Debug\RevisedGroceryApp.exe
+D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\bin\Debug\RevisedGroceryApp.pdb
