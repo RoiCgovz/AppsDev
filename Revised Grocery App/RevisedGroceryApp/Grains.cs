@@ -49,7 +49,7 @@ namespace RevisedGroceryApp
             }
             else
             {
-                mainForm.BringToFront();
+                mainForm.Show();
             }
         }
 
@@ -58,13 +58,14 @@ namespace RevisedGroceryApp
             Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
             if (cartForm == null)
             {
-                cartForm = new Cart();
+                cartForm = new Cart(CategoryForm.CartItems);
                 cartForm.Show();
             }
             else
             {
-                cartForm.BringToFront();
+                cartForm.Show();
             }
+            this.Close();
         }
 
         private void itemToCart_Click(object sender, EventArgs e)
@@ -73,35 +74,48 @@ namespace RevisedGroceryApp
             int wheatQty = int.TryParse(wheatTxtBox.Text, out int wQty) ? wQty : 0;
             int cornQty = int.TryParse(cornTxtBox.Text, out int cQty) ? cQty : 0;
 
-            List<Items> selectedItems = new List<Items>();
-
-            if (riceQty > 0)
-                selectedItems.Add(new Items { Name = "Rice", Quantity = riceQty, Price = ricePrice });
-
-            if (wheatQty > 0)
-                selectedItems.Add(new Items { Name = "Wheat", Quantity = wheatQty, Price = wheatPrice });
-
-            if (cornQty > 0)
-                selectedItems.Add(new Items { Name = "Corn", Quantity = cornQty, Price = cornPrice });
-
-            if (selectedItems.Count == 0)
+            if (riceQty == 0 && wheatQty == 0 && cornQty == 0)
             {
                 MessageBox.Show("Please select at least one item before adding to the cart.",
                                 "No Items Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            List<Items> selectedItems = new List<Items>
+            {
+                new Items { Name = "Rice", Quantity = riceQty, Price = ricePrice },
+                new Items { Name = "Wheat", Quantity = wheatQty, Price = wheatPrice },
+                new Items { Name = "Corn", Quantity = cornQty, Price = cornPrice }
+            };
+
+            foreach (var newItem in selectedItems)
+            {
+                if (newItem.Quantity > 0)
+                {
+                    var existingItem = CategoryForm.CartItems.FirstOrDefault(i => i.Name == newItem.Name);
+                    if (existingItem != null)
+                    {
+                        existingItem.Quantity += newItem.Quantity; // Update quantity
+                    }
+                    else
+                    {
+                        CategoryForm.CartItems.Add(newItem); // Add new item
+                    }
+                }
+            }
+
             Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
             if (cartForm == null)
             {
-                cartForm = new Cart(selectedItems);
+                cartForm = new Cart(CategoryForm.CartItems);
                 cartForm.Show();
             }
             else
             {
-                cartForm.AddItems(selectedItems);
-                cartForm.BringToFront();
+                cartForm.LoadCartItems(CategoryForm.CartItems);
+                cartForm.Show();
             }
+            this.Close();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -114,7 +128,7 @@ namespace RevisedGroceryApp
             }
             else
             {
-                mainForm.BringToFront();
+                mainForm.Show();
             }
         }
     }

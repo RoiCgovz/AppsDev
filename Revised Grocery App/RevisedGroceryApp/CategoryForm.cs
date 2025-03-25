@@ -1,20 +1,16 @@
 ﻿using RevisedGroceryApp.Resources;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RevisedGroceryApp
 {
     public partial class CategoryForm : Form
     {
-        public Cart cartForm;
-        public Receipt receiptForm;
+        private static Cart cartForm;
+        public static List<Items> CartItems = new List<Items>(); // Global cart list
+
         public CategoryForm()
         {
             InitializeComponent();
@@ -25,31 +21,11 @@ namespace RevisedGroceryApp
             Application.Exit();
         }
 
-        private void daiVwMr_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void gnVwMr_Click(object sender, EventArgs e)
         {
             Grains grain = new Grains();
             this.Hide();
             grain.Show();
-        }
-
-        private void bkryVwMr_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void prodVwMr_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void snksVwMr_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void bevVwMr_Click(object sender, EventArgs e)
@@ -63,8 +39,13 @@ namespace RevisedGroceryApp
         {
             if (cartForm == null || cartForm.IsDisposed)
             {
-                cartForm = new Cart();
+                cartForm = new Cart(CartItems);
             }
+            else
+            {
+                cartForm.LoadCartItems(CartItems);
+            }
+
             this.Hide();
             cartForm.Show();
         }

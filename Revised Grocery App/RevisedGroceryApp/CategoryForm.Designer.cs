@@ -164,7 +164,7 @@
             this.snksVwMr.Size = new System.Drawing.Size(108, 25);
             this.snksVwMr.TabIndex = 1;
             this.snksVwMr.Text = "View More";
-            this.snksVwMr.Click += new System.EventHandler(this.snksVwMr_Click);
+           
             // 
             // pictureBox6
             // 
@@ -209,7 +209,7 @@
             this.prodVwMr.Size = new System.Drawing.Size(108, 25);
             this.prodVwMr.TabIndex = 1;
             this.prodVwMr.Text = "View More";
-            this.prodVwMr.Click += new System.EventHandler(this.prodVwMr_Click);
+           
             // 
             // pictureBox5
             // 
@@ -254,7 +254,7 @@
             this.daiVwMr.Size = new System.Drawing.Size(108, 25);
             this.daiVwMr.TabIndex = 1;
             this.daiVwMr.Text = "View More";
-            this.daiVwMr.Click += new System.EventHandler(this.daiVwMr_Click);
+          
             // 
             // pictureBox4
             // 
@@ -299,7 +299,7 @@
             this.bkryVwMr.Size = new System.Drawing.Size(108, 25);
             this.bkryVwMr.TabIndex = 1;
             this.bkryVwMr.Text = "View More";
-            this.bkryVwMr.Click += new System.EventHandler(this.bkryVwMr_Click);
+
             // 
             // pictureBox3
             // 

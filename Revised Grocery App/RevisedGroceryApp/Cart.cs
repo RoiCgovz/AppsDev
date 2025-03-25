@@ -7,7 +7,7 @@ namespace RevisedGroceryApp
 {
     public partial class Cart : Form
     {
-        private List<Items> cartItems = new List<Items>();
+        private List<Items> cartItems;
         private decimal grandTotal = 0;
 
         public Cart(List<Items> items = null)
@@ -15,12 +15,9 @@ namespace RevisedGroceryApp
             InitializeComponent();
             InitializeDataGridView();
 
-            if (items != null)
-            {
-                cartItems.AddRange(items);
-            }
+            cartItems = items ?? new List<Items>();
             DisplayCartItems();
-            CalculateGrandTotal();
+            CalculateTotal();
         }
 
         private void InitializeDataGridView()
@@ -32,26 +29,27 @@ namespace RevisedGroceryApp
             dataGridView1.Columns.Add("Total", "TOTAL");
         }
 
+        public void LoadCartItems(List<Items> items)
+        {
+            cartItems = items;
+            DisplayCartItems();
+            CalculateTotal();
+        }
+
         private void DisplayCartItems()
         {
             dataGridView1.Rows.Clear();
             foreach (var item in cartItems)
             {
-                dataGridView1.Rows.Add(item.Name, item.Quantity, item.Price.ToString("C"), item.Total.ToString("C"));
+                decimal total = item.Quantity * item.Price;
+                dataGridView1.Rows.Add(item.Name, item.Quantity, item.Price.ToString("C"), total.ToString("C"));
             }
         }
 
-        private void CalculateGrandTotal()
+        private void CalculateTotal()
         {
-            grandTotal = cartItems.Sum(item => item.Total);
-            lblTotal.Text = $"Grand Total: {grandTotal:C}";
-        }
-
-        public void AddItems(List<Items> newItems)
-        {
-            cartItems.AddRange(newItems);
-            DisplayCartItems();
-            CalculateGrandTotal();
+            grandTotal = cartItems.Sum(item => item.Quantity * item.Price);
+            lblTotal.Text = $"Total: {grandTotal:C}";
         }
 
         private void xBtn_Click(object sender, EventArgs e)
@@ -71,6 +69,16 @@ namespace RevisedGroceryApp
 
         private void checkoutBtn_Click(object sender, EventArgs e)
         {
+            if (cartItems.Count == 0)
+            {
+                MessageBox.Show("Your cart is empty. Please add items before checking out.",
+                                "Empty Cart", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            Receipt receiptForm = new Receipt(cartItems);
+            receiptForm.Show();
+            this.Close();
         }
+
     }
 }

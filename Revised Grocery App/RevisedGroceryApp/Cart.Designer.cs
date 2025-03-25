@@ -80,7 +80,7 @@
             this.checkoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkoutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutBtn.ForeColor = System.Drawing.Color.White;
-            this.checkoutBtn.Location = new System.Drawing.Point(136, 541);
+            this.checkoutBtn.Location = new System.Drawing.Point(138, 471);
             this.checkoutBtn.Name = "checkoutBtn";
             this.checkoutBtn.Size = new System.Drawing.Size(206, 44);
             this.checkoutBtn.TabIndex = 10;
@@ -102,17 +102,16 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTotal.Location = new System.Drawing.Point(241, 454);
+            this.lblTotal.Location = new System.Drawing.Point(290, 417);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(149, 21);
+            this.lblTotal.Size = new System.Drawing.Size(0, 21);
             this.lblTotal.TabIndex = 13;
-            this.lblTotal.Text = "\"Header for Total\"";
             // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(451, 600);
+            this.ClientSize = new System.Drawing.Size(451, 530);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.checkoutBtn);
