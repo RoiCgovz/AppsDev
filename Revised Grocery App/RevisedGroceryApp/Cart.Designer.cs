@@ -102,11 +102,11 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTotal.Location = new System.Drawing.Point(362, 452);
+            this.lblTotal.Location = new System.Drawing.Point(241, 454);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(58, 21);
+            this.lblTotal.Size = new System.Drawing.Size(149, 21);
             this.lblTotal.TabIndex = 13;
-            this.lblTotal.Text = "Grains";
+            this.lblTotal.Text = "\"Header for Total\"";
             // 
             // Cart
             // 

@@ -70,9 +70,19 @@ namespace RevisedGroceryApp.Resources
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            CategoryForm cat = new CategoryForm();
-            cat.Show();
-            this.Close();
+            CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                this.Close();
+                mainForm.Show();
+            }
+        }
+
+        private void cartBtn_Click(object sender, EventArgs e)
+        {
+            Cart cart = new Cart();
+            cart.Show();
+            this.Hide();
         }
     }
 }

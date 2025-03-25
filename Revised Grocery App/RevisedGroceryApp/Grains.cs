@@ -44,16 +44,24 @@ namespace RevisedGroceryApp
             CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
             if (mainForm != null)
             {
-                this.Close();
+                this.Hide();
                 mainForm.Show();
             }
         }
 
         private void cartBtn_Click(object sender, EventArgs e)
         {
-            Cart cart = new Cart();
-            cart.Show();
-            this.Close();
+            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
+            if (cartForm == null)
+            {
+                cartForm = new Cart();
+                cartForm.Show();
+            }
+            else
+            {
+                cartForm.BringToFront();
+            }
+            this.Hide();
         }
 
         private void itemToCart_Click(object sender, EventArgs e)
@@ -63,6 +71,7 @@ namespace RevisedGroceryApp
             int cornQty = int.TryParse(cornTxtBox.Text, out int cQty) ? cQty : 0;
 
             List<Items> selectedItems = new List<Items>();
+
             if (riceQty > 0)
                 selectedItems.Add(new Items { Name = "Rice", Quantity = riceQty, Price = ricePrice });
 
@@ -72,24 +81,35 @@ namespace RevisedGroceryApp
             if (cornQty > 0)
                 selectedItems.Add(new Items { Name = "Corn", Quantity = cornQty, Price = cornPrice });
 
-            if (selectedItems.Count > 0)
+            if (selectedItems.Count == 0)
             {
-                Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
-                if (cartForm == null)
-                {
-                    cartForm = new Cart(selectedItems);
-                    cartForm.Show();
-                }
-                else
-                {
-                    cartForm.AddItems(selectedItems);
-                }
+                MessageBox.Show("Please select at least one item before adding to the cart.",
+                                "No Items Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                this.Close();
+            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
+            if (cartForm == null)
+            {
+                cartForm = new Cart(selectedItems);
+                cartForm.Show();
             }
             else
             {
-                MessageBox.Show("Please select at least one item before adding to the cart.");
+                cartForm.AddItems(selectedItems);
+                cartForm.BringToFront();
+            }
+
+            this.Hide();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                this.Hide();
+                mainForm.Show();
             }
         }
     }

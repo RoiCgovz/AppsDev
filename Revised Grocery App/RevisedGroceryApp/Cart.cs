@@ -8,7 +8,7 @@ namespace RevisedGroceryApp
     public partial class Cart : Form
     {
         private List<Items> cartItems = new List<Items>();
-        private decimal grandTotal;
+        private decimal grandTotal = 0;
 
         public Cart(List<Items> items = null)
         {
@@ -19,7 +19,6 @@ namespace RevisedGroceryApp
             {
                 cartItems.AddRange(items);
             }
-
             DisplayCartItems();
             CalculateGrandTotal();
         }
@@ -42,29 +41,17 @@ namespace RevisedGroceryApp
             }
         }
 
-        public void AddItems(List<Items> newItems)
-        {
-            foreach (var newItem in newItems)
-            {
-                var existingItem = cartItems.FirstOrDefault(i => i.Name == newItem.Name);
-                if (existingItem != null)
-                {
-                    existingItem.Quantity += newItem.Quantity; // Update quantity if item exists
-                }
-                else
-                {
-                    cartItems.Add(newItem); // Otherwise, add new item
-                }
-            }
-
-            DisplayCartItems();
-            CalculateGrandTotal();
-        }
-
         private void CalculateGrandTotal()
         {
             grandTotal = cartItems.Sum(item => item.Total);
             lblTotal.Text = $"Grand Total: {grandTotal:C}";
+        }
+
+        public void AddItems(List<Items> newItems)
+        {
+            cartItems.AddRange(newItems);
+            DisplayCartItems();
+            CalculateGrandTotal();
         }
 
         private void xBtn_Click(object sender, EventArgs e)
@@ -74,25 +61,16 @@ namespace RevisedGroceryApp
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            CategoryForm existingMainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
-            if (existingMainForm != null)
+            CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
+            if (mainForm != null)
             {
-                existingMainForm.Show();
-            }
-            else
-            {
-                CategoryForm newMainForm = new CategoryForm();
-                newMainForm.Show();
+                this.Hide();
+                mainForm.Show();
             }
         }
 
         private void checkoutBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Your final total is: {lblTotal.Text}\nThank you for shopping!", "Checkout Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            cartItems.Clear();
-            dataGridView1.Rows.Clear();
-            lblTotal.Text = "Grand Total: $0.00";
         }
     }
 }
