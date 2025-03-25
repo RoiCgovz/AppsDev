@@ -42,10 +42,14 @@ namespace RevisedGroceryApp
         private void homeBtn_Click(object sender, EventArgs e)
         {
             CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
-            if (mainForm != null)
+            if (mainForm == null)
             {
-                this.Hide();
+                mainForm = new CategoryForm();
                 mainForm.Show();
+            }
+            else
+            {
+                mainForm.BringToFront();
             }
         }
 
@@ -61,7 +65,6 @@ namespace RevisedGroceryApp
             {
                 cartForm.BringToFront();
             }
-            this.Hide();
         }
 
         private void itemToCart_Click(object sender, EventArgs e)
@@ -99,17 +102,19 @@ namespace RevisedGroceryApp
                 cartForm.AddItems(selectedItems);
                 cartForm.BringToFront();
             }
-
-            this.Hide();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
             CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
-            if (mainForm != null)
+            if (mainForm == null)
             {
-                this.Hide();
+                mainForm = new CategoryForm();
                 mainForm.Show();
+            }
+            else
+            {
+                mainForm.BringToFront();
             }
         }
     }
