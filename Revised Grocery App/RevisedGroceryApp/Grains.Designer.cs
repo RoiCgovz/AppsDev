@@ -53,6 +53,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bevBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.backbtn = new System.Windows.Forms.Label();
             this.snksBtn = new System.Windows.Forms.Button();
             this.prodBtn = new System.Windows.Forms.Button();
             this.daiBtn = new System.Windows.Forms.Button();
@@ -364,10 +365,12 @@
             this.bevBtn.Text = "Beverages";
             this.bevBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bevBtn.UseVisualStyleBackColor = false;
+            this.bevBtn.Click += new System.EventHandler(this.bevBtn_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.backbtn);
             this.panel1.Controls.Add(this.snksBtn);
             this.panel1.Controls.Add(this.prodBtn);
             this.panel1.Controls.Add(this.daiBtn);
@@ -377,6 +380,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 603);
             this.panel1.TabIndex = 4;
+ 
+            // backbtn
+            // 
+            this.backbtn.AutoSize = true;
+            this.backbtn.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtn.ForeColor = System.Drawing.Color.White;
+            this.backbtn.Location = new System.Drawing.Point(12, 9);
+            this.backbtn.Name = "backbtn";
+            this.backbtn.Size = new System.Drawing.Size(31, 32);
+            this.backbtn.TabIndex = 6;
+            this.backbtn.Text = "<";
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click_1);
             // 
             // snksBtn
             // 
@@ -412,13 +427,14 @@
             this.daiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.daiBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daiBtn.ForeColor = System.Drawing.Color.White;
-            this.daiBtn.Location = new System.Drawing.Point(12, 304);
+            this.daiBtn.Location = new System.Drawing.Point(12, 203);
             this.daiBtn.Name = "daiBtn";
             this.daiBtn.Size = new System.Drawing.Size(131, 44);
             this.daiBtn.TabIndex = 8;
             this.daiBtn.Text = "Dairy";
             this.daiBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.daiBtn.UseVisualStyleBackColor = false;
+            this.daiBtn.Click += new System.EventHandler(this.daiBtn_Click);
             // 
             // bakeBtn
             // 
@@ -426,7 +442,7 @@
             this.bakeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bakeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bakeBtn.ForeColor = System.Drawing.Color.White;
-            this.bakeBtn.Location = new System.Drawing.Point(12, 205);
+            this.bakeBtn.Location = new System.Drawing.Point(12, 304);
             this.bakeBtn.Name = "bakeBtn";
             this.bakeBtn.Size = new System.Drawing.Size(131, 44);
             this.bakeBtn.TabIndex = 7;
@@ -460,7 +476,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Grains";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Grains";
+            this.Text = " ";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xBtn)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -474,6 +490,7 @@
             this.grainsPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -510,5 +527,6 @@
         private System.Windows.Forms.Button daiBtn;
         private System.Windows.Forms.Button bakeBtn;
         private System.Windows.Forms.Button itemToCart;
+        private System.Windows.Forms.Label backbtn;
     }
 }

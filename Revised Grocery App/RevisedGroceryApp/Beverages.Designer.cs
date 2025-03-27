@@ -33,6 +33,7 @@
             this.prodBtn = new System.Windows.Forms.Button();
             this.daiBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.backbtn = new System.Windows.Forms.Label();
             this.bakeBtn = new System.Windows.Forms.Button();
             this.grnBtn = new System.Windows.Forms.Button();
             this.wineTxtBox = new System.Windows.Forms.TextBox();
@@ -82,6 +83,7 @@
             this.itemToCart.TabIndex = 15;
             this.itemToCart.Text = "ADD ALL ITEMS TO CART";
             this.itemToCart.UseVisualStyleBackColor = false;
+            this.itemToCart.Click += new System.EventHandler(this.itemToCart_Click_1);
             // 
             // snksBtn
             // 
@@ -117,7 +119,7 @@
             this.daiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.daiBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daiBtn.ForeColor = System.Drawing.Color.White;
-            this.daiBtn.Location = new System.Drawing.Point(12, 304);
+            this.daiBtn.Location = new System.Drawing.Point(12, 208);
             this.daiBtn.Name = "daiBtn";
             this.daiBtn.Size = new System.Drawing.Size(131, 44);
             this.daiBtn.TabIndex = 8;
@@ -128,6 +130,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.backbtn);
             this.panel1.Controls.Add(this.snksBtn);
             this.panel1.Controls.Add(this.prodBtn);
             this.panel1.Controls.Add(this.daiBtn);
@@ -138,13 +141,25 @@
             this.panel1.Size = new System.Drawing.Size(166, 603);
             this.panel1.TabIndex = 12;
             // 
+            // backbtn
+            // 
+            this.backbtn.AutoSize = true;
+            this.backbtn.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtn.ForeColor = System.Drawing.Color.White;
+            this.backbtn.Location = new System.Drawing.Point(3, 10);
+            this.backbtn.Name = "backbtn";
+            this.backbtn.Size = new System.Drawing.Size(31, 32);
+            this.backbtn.TabIndex = 7;
+            this.backbtn.Text = "<";
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
+            // 
             // bakeBtn
             // 
             this.bakeBtn.BackColor = System.Drawing.Color.Navy;
             this.bakeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bakeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bakeBtn.ForeColor = System.Drawing.Color.White;
-            this.bakeBtn.Location = new System.Drawing.Point(12, 205);
+            this.bakeBtn.Location = new System.Drawing.Point(12, 299);
             this.bakeBtn.Name = "bakeBtn";
             this.bakeBtn.Size = new System.Drawing.Size(131, 44);
             this.bakeBtn.TabIndex = 7;
@@ -212,9 +227,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(16, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 21);
+            this.label1.Size = new System.Drawing.Size(166, 21);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Wine";
+            this.label1.Text = "Wine - $15.35/Bottle";
             // 
             // grainsPnl
             // 
@@ -257,9 +272,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label2.Location = new System.Drawing.Point(16, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 21);
+            this.label2.Size = new System.Drawing.Size(160, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Juice";
+            this.label2.Text = "Juice - $3.00/Gallon";
             // 
             // juiceAdd
             // 
@@ -331,9 +346,9 @@
             this.soda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.soda.Location = new System.Drawing.Point(16, 13);
             this.soda.Name = "soda";
-            this.soda.Size = new System.Drawing.Size(48, 21);
+            this.soda.Size = new System.Drawing.Size(138, 21);
             this.soda.TabIndex = 2;
-            this.soda.Text = "Soda";
+            this.soda.Text = "Soda - $1.50/Can";
             // 
             // sodaAdd
             // 
@@ -461,6 +476,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Beverages";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.grainsPnl.ResumeLayout(false);
             this.grainsPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -509,5 +525,6 @@
         private System.Windows.Forms.Button homeBtn;
         private System.Windows.Forms.PictureBox xBtn;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label backbtn;
     }
 }

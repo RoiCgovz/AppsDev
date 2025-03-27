@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using RevisedGroceryApp.Resources;
 
 namespace RevisedGroceryApp
 {
@@ -95,11 +96,11 @@ namespace RevisedGroceryApp
                     var existingItem = CategoryForm.CartItems.FirstOrDefault(i => i.Name == newItem.Name);
                     if (existingItem != null)
                     {
-                        existingItem.Quantity += newItem.Quantity; // Update quantity
+                        existingItem.Quantity += newItem.Quantity; 
                     }
                     else
                     {
-                        CategoryForm.CartItems.Add(newItem); // Add new item
+                        CategoryForm.CartItems.Add(newItem); 
                     }
                 }
             }
@@ -118,7 +119,7 @@ namespace RevisedGroceryApp
             this.Close();
         }
 
-        private void backBtn_Click(object sender, EventArgs e)
+        private void backbtn_Click_1(object sender, EventArgs e)
         {
             CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
             if (mainForm == null)
@@ -130,6 +131,20 @@ namespace RevisedGroceryApp
             {
                 mainForm.Show();
             }
+        }
+
+        private void daiBtn_Click(object sender, EventArgs e)
+        {
+            Dairy dairy = new Dairy();
+            dairy.Show();
+            this.Close();
+        }
+
+        private void bevBtn_Click(object sender, EventArgs e)
+        {
+            Beverages bev = new Beverages(); 
+            bev.Show();
+            this.Close();
         }
     }
 }

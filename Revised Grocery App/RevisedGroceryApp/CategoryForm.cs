@@ -49,5 +49,19 @@ namespace RevisedGroceryApp
             this.Hide();
             cartForm.Show();
         }
+
+        private void daiVwMr_Click(object sender, EventArgs e)
+        {
+            Dairy dairy = new Dairy();
+            dairy.Show();
+            this.Hide();
+        }
+
+        private void bkryVwMr_Click(object sender, EventArgs e)
+        {
+            Bakery bakery = new Bakery();
+            this.Hide();
+            bakery.Show();
+        }
     }
 }

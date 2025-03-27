@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bakery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bakery.Designer.cs">
+      <DependentUpon>Bakery.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="CategoryForm.Designer.cs">
       <DependentUpon>CategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dairy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dairy.Designer.cs">
+      <DependentUpon>Dairy.cs</DependentUpon>
     </Compile>
     <Compile Include="Grains.cs">
       <SubType>Form</SubType>
@@ -79,11 +91,17 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Bakery.resx">
+      <DependentUpon>Bakery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dairy.resx">
+      <DependentUpon>Dairy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Grains.resx">
       <DependentUpon>Grains.cs</DependentUpon>

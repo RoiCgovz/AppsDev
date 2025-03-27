@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GroceryCalculatorDiscountApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a40743f85500a88e3ff276a2974b2cdf3c6fbfd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73db354ac3fd24edf081c9f35bc4c59c04ef7300")]
 [assembly: System.Reflection.AssemblyProductAttribute("GroceryCalculatorDiscountApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GroceryCalculatorDiscountApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
