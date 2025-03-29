@@ -358,7 +358,7 @@
             this.bevBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bevBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bevBtn.ForeColor = System.Drawing.Color.White;
-            this.bevBtn.Location = new System.Drawing.Point(12, 97);
+            this.bevBtn.Location = new System.Drawing.Point(12, 287);
             this.bevBtn.Name = "bevBtn";
             this.bevBtn.Size = new System.Drawing.Size(131, 44);
             this.bevBtn.TabIndex = 6;
@@ -380,7 +380,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 603);
             this.panel1.TabIndex = 4;
- 
+            // 
             // backbtn
             // 
             this.backbtn.AutoSize = true;
@@ -399,13 +399,14 @@
             this.snksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.snksBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.snksBtn.ForeColor = System.Drawing.Color.White;
-            this.snksBtn.Location = new System.Drawing.Point(12, 507);
+            this.snksBtn.Location = new System.Drawing.Point(12, 486);
             this.snksBtn.Name = "snksBtn";
             this.snksBtn.Size = new System.Drawing.Size(131, 44);
             this.snksBtn.TabIndex = 10;
             this.snksBtn.Text = "Snacks";
             this.snksBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.snksBtn.UseVisualStyleBackColor = false;
+            this.snksBtn.Click += new System.EventHandler(this.snksBtn_Click);
             // 
             // prodBtn
             // 
@@ -413,13 +414,14 @@
             this.prodBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prodBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prodBtn.ForeColor = System.Drawing.Color.White;
-            this.prodBtn.Location = new System.Drawing.Point(12, 411);
+            this.prodBtn.Location = new System.Drawing.Point(12, 387);
             this.prodBtn.Name = "prodBtn";
             this.prodBtn.Size = new System.Drawing.Size(131, 44);
             this.prodBtn.TabIndex = 9;
             this.prodBtn.Text = "Produce";
             this.prodBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.prodBtn.UseVisualStyleBackColor = false;
+            this.prodBtn.Click += new System.EventHandler(this.prodBtn_Click);
             // 
             // daiBtn
             // 
@@ -427,7 +429,7 @@
             this.daiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.daiBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daiBtn.ForeColor = System.Drawing.Color.White;
-            this.daiBtn.Location = new System.Drawing.Point(12, 203);
+            this.daiBtn.Location = new System.Drawing.Point(12, 176);
             this.daiBtn.Name = "daiBtn";
             this.daiBtn.Size = new System.Drawing.Size(131, 44);
             this.daiBtn.TabIndex = 8;
@@ -442,13 +444,14 @@
             this.bakeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bakeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bakeBtn.ForeColor = System.Drawing.Color.White;
-            this.bakeBtn.Location = new System.Drawing.Point(12, 304);
+            this.bakeBtn.Location = new System.Drawing.Point(12, 81);
             this.bakeBtn.Name = "bakeBtn";
             this.bakeBtn.Size = new System.Drawing.Size(131, 44);
             this.bakeBtn.TabIndex = 7;
             this.bakeBtn.Text = "Bakery";
             this.bakeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bakeBtn.UseVisualStyleBackColor = false;
+            this.bakeBtn.Click += new System.EventHandler(this.bakeBtn_Click);
             // 
             // itemToCart
             // 

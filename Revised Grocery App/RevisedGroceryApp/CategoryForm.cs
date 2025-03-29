@@ -63,5 +63,19 @@ namespace RevisedGroceryApp
             this.Hide();
             bakery.Show();
         }
+
+        private void prodVwMr_Click(object sender, EventArgs e)
+        {
+            Produce p = new Produce();
+            p.Show();
+            this.Hide();
+        }
+
+        private void snksVwMr_Click(object sender, EventArgs e)
+        {
+            Snacks s = new Snacks();
+            s.Show();
+            this.Hide();
+        }
     }
 }

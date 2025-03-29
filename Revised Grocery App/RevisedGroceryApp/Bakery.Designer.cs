@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.sliBreTxtBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.sliBreAdd = new System.Windows.Forms.Button();
@@ -41,11 +39,13 @@
             this.bagelAdd = new System.Windows.Forms.Button();
             this.bagelMin = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.grainsPnl = new System.Windows.Forms.Panel();
             this.croisTxtBox = new System.Windows.Forms.TextBox();
             this.croisAdd = new System.Windows.Forms.Button();
             this.croisMin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cartBtn = new System.Windows.Forms.Button();
@@ -56,40 +56,20 @@
             this.backbtn = new System.Windows.Forms.Label();
             this.snksBtn = new System.Windows.Forms.Button();
             this.prodBtn = new System.Windows.Forms.Button();
+            this.dairyBtn = new System.Windows.Forms.Button();
             this.grainsBtn = new System.Windows.Forms.Button();
-            this.bakeBtn = new System.Windows.Forms.Button();
             this.itemToCart = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             this.grainsPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xBtn)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._rice;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._corn;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(39, 37);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // sliBreTxtBox
             // 
@@ -126,6 +106,7 @@
             this.sliBreAdd.Text = "+";
             this.sliBreAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.sliBreAdd.UseVisualStyleBackColor = false;
+            this.sliBreAdd.Click += new System.EventHandler(this.sliBreAdd_Click);
             // 
             // panel4
             // 
@@ -143,7 +124,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._wheat;
+            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._2bread;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(45, 37);
             this.pictureBox2.Name = "pictureBox2";
@@ -163,6 +144,7 @@
             this.sliBreMin.Text = "-";
             this.sliBreMin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.sliBreMin.UseVisualStyleBackColor = true;
+            this.sliBreMin.Click += new System.EventHandler(this.sliBreMin_Click);
             // 
             // bagelTxtBox
             // 
@@ -198,6 +180,7 @@
             this.bagelAdd.Text = "+";
             this.bagelAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bagelAdd.UseVisualStyleBackColor = false;
+            this.bagelAdd.Click += new System.EventHandler(this.bagelAdd_Click);
             // 
             // bagelMin
             // 
@@ -211,6 +194,7 @@
             this.bagelMin.Text = "-";
             this.bagelMin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bagelMin.UseVisualStyleBackColor = true;
+            this.bagelMin.Click += new System.EventHandler(this.bagelMin_Click);
             // 
             // panel5
             // 
@@ -225,6 +209,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(195, 244);
             this.panel5.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._2bagel;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(39, 37);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(223, 165);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // panel3
             // 
@@ -245,8 +239,8 @@
             this.grainsPnl.Controls.Add(this.croisTxtBox);
             this.grainsPnl.Controls.Add(this.croisAdd);
             this.grainsPnl.Controls.Add(this.croisMin);
-            this.grainsPnl.Controls.Add(this.label1);
             this.grainsPnl.Controls.Add(this.pictureBox1);
+            this.grainsPnl.Controls.Add(this.label1);
             this.grainsPnl.Location = new System.Drawing.Point(22, 13);
             this.grainsPnl.Name = "grainsPnl";
             this.grainsPnl.Size = new System.Drawing.Size(195, 244);
@@ -275,6 +269,7 @@
             this.croisAdd.Text = "+";
             this.croisAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.croisAdd.UseVisualStyleBackColor = false;
+            this.croisAdd.Click += new System.EventHandler(this.croisAdd_Click);
             // 
             // croisMin
             // 
@@ -288,6 +283,17 @@
             this.croisMin.Text = "-";
             this.croisMin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.croisMin.UseVisualStyleBackColor = true;
+            this.croisMin.Click += new System.EventHandler(this.croisMin_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._2croissant;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(53, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 165);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -321,6 +327,7 @@
             this.cartBtn.TabIndex = 5;
             this.cartBtn.Text = "Cart";
             this.cartBtn.UseVisualStyleBackColor = true;
+            this.cartBtn.Click += new System.EventHandler(this.cartBtn_Click);
             // 
             // homeBtn
             // 
@@ -332,6 +339,7 @@
             this.homeBtn.TabIndex = 4;
             this.homeBtn.Text = "Home";
             this.homeBtn.UseVisualStyleBackColor = true;
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
             // 
             // xBtn
             // 
@@ -357,6 +365,7 @@
             this.bevBtn.Text = "Beverages";
             this.bevBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bevBtn.UseVisualStyleBackColor = false;
+            this.bevBtn.Click += new System.EventHandler(this.bevBtn_Click);
             // 
             // panel1
             // 
@@ -364,8 +373,8 @@
             this.panel1.Controls.Add(this.backbtn);
             this.panel1.Controls.Add(this.snksBtn);
             this.panel1.Controls.Add(this.prodBtn);
+            this.panel1.Controls.Add(this.dairyBtn);
             this.panel1.Controls.Add(this.grainsBtn);
-            this.panel1.Controls.Add(this.bakeBtn);
             this.panel1.Controls.Add(this.bevBtn);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
@@ -382,6 +391,7 @@
             this.backbtn.Size = new System.Drawing.Size(31, 32);
             this.backbtn.TabIndex = 6;
             this.backbtn.Text = "<";
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
             // 
             // snksBtn
             // 
@@ -410,6 +420,22 @@
             this.prodBtn.Text = "Produce";
             this.prodBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.prodBtn.UseVisualStyleBackColor = false;
+            this.prodBtn.Click += new System.EventHandler(this.prodBtn_Click);
+            // 
+            // dairyBtn
+            // 
+            this.dairyBtn.BackColor = System.Drawing.Color.Navy;
+            this.dairyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dairyBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dairyBtn.ForeColor = System.Drawing.Color.White;
+            this.dairyBtn.Location = new System.Drawing.Point(12, 190);
+            this.dairyBtn.Name = "dairyBtn";
+            this.dairyBtn.Size = new System.Drawing.Size(131, 44);
+            this.dairyBtn.TabIndex = 8;
+            this.dairyBtn.Text = "Dairy";
+            this.dairyBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dairyBtn.UseVisualStyleBackColor = false;
+            this.dairyBtn.Click += new System.EventHandler(this.dairyBtn_Click);
             // 
             // grainsBtn
             // 
@@ -417,27 +443,14 @@
             this.grainsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grainsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grainsBtn.ForeColor = System.Drawing.Color.White;
-            this.grainsBtn.Location = new System.Drawing.Point(12, 190);
+            this.grainsBtn.Location = new System.Drawing.Point(12, 295);
             this.grainsBtn.Name = "grainsBtn";
             this.grainsBtn.Size = new System.Drawing.Size(131, 44);
-            this.grainsBtn.TabIndex = 8;
-            this.grainsBtn.Text = "Dairy";
+            this.grainsBtn.TabIndex = 7;
+            this.grainsBtn.Text = "Grains";
             this.grainsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.grainsBtn.UseVisualStyleBackColor = false;
-            // 
-            // bakeBtn
-            // 
-            this.bakeBtn.BackColor = System.Drawing.Color.Navy;
-            this.bakeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bakeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bakeBtn.ForeColor = System.Drawing.Color.White;
-            this.bakeBtn.Location = new System.Drawing.Point(12, 295);
-            this.bakeBtn.Name = "bakeBtn";
-            this.bakeBtn.Size = new System.Drawing.Size(131, 44);
-            this.bakeBtn.TabIndex = 7;
-            this.bakeBtn.Text = "Bakery";
-            this.bakeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bakeBtn.UseVisualStyleBackColor = false;
+            this.grainsBtn.Click += new System.EventHandler(this.grainsBtn_Click);
             // 
             // itemToCart
             // 
@@ -451,6 +464,7 @@
             this.itemToCart.TabIndex = 19;
             this.itemToCart.Text = "ADD ALL ITEMS TO CART";
             this.itemToCart.UseVisualStyleBackColor = false;
+            this.itemToCart.Click += new System.EventHandler(this.itemToCart_Click_1);
             // 
             // Bakery
             // 
@@ -463,17 +477,18 @@
             this.Controls.Add(this.itemToCart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Bakery";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bakery";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.grainsPnl.ResumeLayout(false);
             this.grainsPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xBtn)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -512,8 +527,8 @@
         private System.Windows.Forms.Label backbtn;
         private System.Windows.Forms.Button snksBtn;
         private System.Windows.Forms.Button prodBtn;
+        private System.Windows.Forms.Button dairyBtn;
         private System.Windows.Forms.Button grainsBtn;
-        private System.Windows.Forms.Button bakeBtn;
         private System.Windows.Forms.Button itemToCart;
     }
 }

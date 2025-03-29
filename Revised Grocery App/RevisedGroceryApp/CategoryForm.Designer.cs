@@ -36,42 +36,42 @@
             this.snksPnl = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.snksVwMr = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.prodPnl = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.prodVwMr = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.daiPnl = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.daiVwMr = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bkryPnl = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.bkryVwMr = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bevPnl = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.bevVwMr = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.grainsPnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gnVwMr = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.xBtn = new System.Windows.Forms.PictureBox();
             this.headerPicture = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.categoryPnl.SuspendLayout();
             this.snksPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.prodPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.daiPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.bkryPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.bevPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.grainsPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).BeginInit();
@@ -79,7 +79,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.cartBtn);
             this.panel1.Controls.Add(this.homeBtn);
@@ -119,6 +119,7 @@
             // categoryPnl
             // 
             this.categoryPnl.AutoScroll = true;
+            this.categoryPnl.BackColor = System.Drawing.Color.White;
             this.categoryPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.categoryPnl.Controls.Add(this.snksPnl);
             this.categoryPnl.Controls.Add(this.prodPnl);
@@ -138,7 +139,7 @@
             this.snksPnl.Controls.Add(this.label6);
             this.snksPnl.Controls.Add(this.snksVwMr);
             this.snksPnl.Controls.Add(this.pictureBox6);
-            this.snksPnl.Location = new System.Drawing.Point(471, 258);
+            this.snksPnl.Location = new System.Drawing.Point(472, 257);
             this.snksPnl.Name = "snksPnl";
             this.snksPnl.Size = new System.Drawing.Size(195, 205);
             this.snksPnl.TabIndex = 4;
@@ -164,16 +165,7 @@
             this.snksVwMr.Size = new System.Drawing.Size(108, 25);
             this.snksVwMr.TabIndex = 1;
             this.snksVwMr.Text = "View More";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.istockphoto_1263013701_612x612;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(59, 22);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.snksVwMr.Click += new System.EventHandler(this.snksVwMr_Click);
             // 
             // prodPnl
             // 
@@ -182,7 +174,7 @@
             this.prodPnl.Controls.Add(this.label5);
             this.prodPnl.Controls.Add(this.prodVwMr);
             this.prodPnl.Controls.Add(this.pictureBox5);
-            this.prodPnl.Location = new System.Drawing.Point(247, 258);
+            this.prodPnl.Location = new System.Drawing.Point(248, 257);
             this.prodPnl.Name = "prodPnl";
             this.prodPnl.Size = new System.Drawing.Size(195, 205);
             this.prodPnl.TabIndex = 4;
@@ -208,16 +200,7 @@
             this.prodVwMr.Size = new System.Drawing.Size(108, 25);
             this.prodVwMr.TabIndex = 1;
             this.prodVwMr.Text = "View More";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._360_F_53144147_Zx2dgnSeefxIjOQ5cjD4PBdZF4m8M7sm;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(59, 22);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.prodVwMr.Click += new System.EventHandler(this.prodVwMr_Click);
             // 
             // daiPnl
             // 
@@ -226,7 +209,7 @@
             this.daiPnl.Controls.Add(this.label4);
             this.daiPnl.Controls.Add(this.daiVwMr);
             this.daiPnl.Controls.Add(this.pictureBox4);
-            this.daiPnl.Location = new System.Drawing.Point(693, 28);
+            this.daiPnl.Location = new System.Drawing.Point(694, 27);
             this.daiPnl.Name = "daiPnl";
             this.daiPnl.Size = new System.Drawing.Size(195, 205);
             this.daiPnl.TabIndex = 3;
@@ -254,16 +237,6 @@
             this.daiVwMr.Text = "View More";
             this.daiVwMr.Click += new System.EventHandler(this.daiVwMr_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.istockphoto_1194278577_612x612;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(42, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
             // bkryPnl
             // 
             this.bkryPnl.BackColor = System.Drawing.Color.White;
@@ -271,7 +244,7 @@
             this.bkryPnl.Controls.Add(this.label3);
             this.bkryPnl.Controls.Add(this.bkryVwMr);
             this.bkryPnl.Controls.Add(this.pictureBox3);
-            this.bkryPnl.Location = new System.Drawing.Point(471, 28);
+            this.bkryPnl.Location = new System.Drawing.Point(472, 27);
             this.bkryPnl.Name = "bkryPnl";
             this.bkryPnl.Size = new System.Drawing.Size(195, 205);
             this.bkryPnl.TabIndex = 3;
@@ -299,16 +272,6 @@
             this.bkryVwMr.Text = "View More";
             this.bkryVwMr.Click += new System.EventHandler(this.bkryVwMr_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__4_;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(80, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
             // bevPnl
             // 
             this.bevPnl.BackColor = System.Drawing.Color.White;
@@ -316,7 +279,7 @@
             this.bevPnl.Controls.Add(this.label2);
             this.bevPnl.Controls.Add(this.bevVwMr);
             this.bevPnl.Controls.Add(this.pictureBox2);
-            this.bevPnl.Location = new System.Drawing.Point(247, 28);
+            this.bevPnl.Location = new System.Drawing.Point(248, 27);
             this.bevPnl.Name = "bevPnl";
             this.bevPnl.Size = new System.Drawing.Size(195, 205);
             this.bevPnl.TabIndex = 2;
@@ -344,16 +307,6 @@
             this.bevVwMr.Text = "View More";
             this.bevVwMr.Click += new System.EventHandler(this.bevVwMr_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__3_;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(75, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(177, 171);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // grainsPnl
             // 
             this.grainsPnl.BackColor = System.Drawing.Color.White;
@@ -361,7 +314,7 @@
             this.grainsPnl.Controls.Add(this.label1);
             this.grainsPnl.Controls.Add(this.gnVwMr);
             this.grainsPnl.Controls.Add(this.pictureBox1);
-            this.grainsPnl.Location = new System.Drawing.Point(26, 28);
+            this.grainsPnl.Location = new System.Drawing.Point(27, 27);
             this.grainsPnl.Name = "grainsPnl";
             this.grainsPnl.Size = new System.Drawing.Size(195, 205);
             this.grainsPnl.TabIndex = 0;
@@ -388,6 +341,56 @@
             this.gnVwMr.TabIndex = 1;
             this.gnVwMr.Text = "View More";
             this.gnVwMr.Click += new System.EventHandler(this.gnVwMr_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.istockphoto_1263013701_612x612;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(59, 22);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(223, 165);
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._360_F_53144147_Zx2dgnSeefxIjOQ5cjD4PBdZF4m8M7sm;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(59, 22);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(223, 165);
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.istockphoto_1194278577_612x612;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(42, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(223, 165);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__4_;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(80, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(223, 165);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__3_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(75, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(177, 171);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -427,7 +430,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1000, 720);
             this.Controls.Add(this.categoryPnl);
             this.Controls.Add(this.xBtn);
@@ -441,21 +444,21 @@
             this.categoryPnl.ResumeLayout(false);
             this.snksPnl.ResumeLayout(false);
             this.snksPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.prodPnl.ResumeLayout(false);
             this.prodPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.daiPnl.ResumeLayout(false);
             this.daiPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.bkryPnl.ResumeLayout(false);
             this.bkryPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.bevPnl.ResumeLayout(false);
             this.bevPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.grainsPnl.ResumeLayout(false);
             this.grainsPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).EndInit();

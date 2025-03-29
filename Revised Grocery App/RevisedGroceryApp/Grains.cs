@@ -146,5 +146,26 @@ namespace RevisedGroceryApp
             bev.Show();
             this.Close();
         }
+
+        private void bakeBtn_Click(object sender, EventArgs e)
+        {
+            Bakery bake = new Bakery();
+            bake.Show();
+            this.Close();
+        }
+
+        private void prodBtn_Click(object sender, EventArgs e)
+        {
+            Produce p = new Produce();
+            p.Show();
+            this.Close();
+        }
+
+        private void snksBtn_Click(object sender, EventArgs e)
+        {
+            Snacks sn = new Snacks();
+            sn.Show();
+            this.Close();
+        }
     }
 }

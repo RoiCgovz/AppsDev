@@ -137,5 +137,40 @@ namespace RevisedGroceryApp.Resources
             }
             this.Close();
         }
+
+        private void bakeBtn_Click(object sender, EventArgs e)
+        {
+            Bakery bake = new Bakery();
+            bake.Show();
+            this.Hide();
+        }
+
+        private void prodBtn_Click(object sender, EventArgs e)
+        {
+            Produce p = new Produce();
+            p.Show();
+            this.Close();
+        }
+
+        private void daiBtn_Click(object sender, EventArgs e)
+        {
+            Dairy dairy = new Dairy();
+            dairy.Show();
+            this.Close();
+        }
+
+        private void grnBtn_Click(object sender, EventArgs e)
+        {
+            Grains grains = new Grains();
+            grains.Show();
+            this.Close();
+        }
+
+        private void snksBtn_Click(object sender, EventArgs e)
+        {
+            Snacks sn = new Snacks();
+            sn.Show();
+            this.Close();
+        }
     }
 }

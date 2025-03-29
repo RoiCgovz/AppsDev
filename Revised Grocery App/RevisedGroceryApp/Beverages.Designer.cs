@@ -98,6 +98,7 @@
             this.snksBtn.Text = "Snacks";
             this.snksBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.snksBtn.UseVisualStyleBackColor = false;
+            this.snksBtn.Click += new System.EventHandler(this.snksBtn_Click);
             // 
             // prodBtn
             // 
@@ -105,13 +106,14 @@
             this.prodBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prodBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prodBtn.ForeColor = System.Drawing.Color.White;
-            this.prodBtn.Location = new System.Drawing.Point(12, 411);
+            this.prodBtn.Location = new System.Drawing.Point(12, 399);
             this.prodBtn.Name = "prodBtn";
             this.prodBtn.Size = new System.Drawing.Size(131, 44);
             this.prodBtn.TabIndex = 9;
             this.prodBtn.Text = "Produce";
             this.prodBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.prodBtn.UseVisualStyleBackColor = false;
+            this.prodBtn.Click += new System.EventHandler(this.prodBtn_Click);
             // 
             // daiBtn
             // 
@@ -119,13 +121,14 @@
             this.daiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.daiBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daiBtn.ForeColor = System.Drawing.Color.White;
-            this.daiBtn.Location = new System.Drawing.Point(12, 208);
+            this.daiBtn.Location = new System.Drawing.Point(12, 185);
             this.daiBtn.Name = "daiBtn";
             this.daiBtn.Size = new System.Drawing.Size(131, 44);
             this.daiBtn.TabIndex = 8;
             this.daiBtn.Text = "Dairy";
             this.daiBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.daiBtn.UseVisualStyleBackColor = false;
+            this.daiBtn.Click += new System.EventHandler(this.daiBtn_Click);
             // 
             // panel1
             // 
@@ -159,13 +162,14 @@
             this.bakeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bakeBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bakeBtn.ForeColor = System.Drawing.Color.White;
-            this.bakeBtn.Location = new System.Drawing.Point(12, 299);
+            this.bakeBtn.Location = new System.Drawing.Point(12, 80);
             this.bakeBtn.Name = "bakeBtn";
             this.bakeBtn.Size = new System.Drawing.Size(131, 44);
             this.bakeBtn.TabIndex = 7;
             this.bakeBtn.Text = "Bakery";
             this.bakeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bakeBtn.UseVisualStyleBackColor = false;
+            this.bakeBtn.Click += new System.EventHandler(this.bakeBtn_Click);
             // 
             // grnBtn
             // 
@@ -173,13 +177,14 @@
             this.grnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grnBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grnBtn.ForeColor = System.Drawing.Color.White;
-            this.grnBtn.Location = new System.Drawing.Point(12, 97);
+            this.grnBtn.Location = new System.Drawing.Point(12, 303);
             this.grnBtn.Name = "grnBtn";
             this.grnBtn.Size = new System.Drawing.Size(131, 44);
             this.grnBtn.TabIndex = 6;
             this.grnBtn.Text = "Grains";
             this.grnBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.grnBtn.UseVisualStyleBackColor = false;
+            this.grnBtn.Click += new System.EventHandler(this.grnBtn_Click);
             // 
             // wineTxtBox
             // 

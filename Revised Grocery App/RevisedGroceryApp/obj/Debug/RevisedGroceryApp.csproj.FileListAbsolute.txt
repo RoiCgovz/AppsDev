@@ -44,3 +44,5 @@ C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\De
 C:\Users\xx521\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Bakery.resources
 C:\Users\PTO\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Bakery.resources
 C:\Users\PTO\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Dairy.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Produce.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Snacks.resources
