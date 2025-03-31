@@ -3,13 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace RevisedGroceryApp
 {
     public partial class CategoryForm : Form
     {
         private static Cart cartForm;
-        public static List<Items> CartItems = new List<Items>(); // Global cart list
+        public static List<Items> CartItems = new List<Items>(); 
 
         public CategoryForm()
         {

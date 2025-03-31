@@ -41,6 +41,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bagelStockLbl = new System.Windows.Forms.Label();
+            this.sliBreStockLbl = new System.Windows.Forms.Label();
+            this.croisStockLbl = new System.Windows.Forms.Label();
             this.grainsPnl = new System.Windows.Forms.Panel();
             this.croisTxtBox = new System.Windows.Forms.TextBox();
             this.croisAdd = new System.Windows.Forms.Button();
@@ -205,7 +208,7 @@
             this.panel5.Controls.Add(this.bagelAdd);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.bagelMin);
-            this.panel5.Location = new System.Drawing.Point(162, 277);
+            this.panel5.Location = new System.Drawing.Point(154, 314);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(195, 244);
             this.panel5.TabIndex = 3;
@@ -224,6 +227,9 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.bagelStockLbl);
+            this.panel3.Controls.Add(this.sliBreStockLbl);
+            this.panel3.Controls.Add(this.croisStockLbl);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.grainsPnl);
@@ -231,6 +237,39 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(521, 399);
             this.panel3.TabIndex = 18;
+            // 
+            // bagelStockLbl
+            // 
+            this.bagelStockLbl.AutoSize = true;
+            this.bagelStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bagelStockLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.bagelStockLbl.Location = new System.Drawing.Point(150, 563);
+            this.bagelStockLbl.Name = "bagelStockLbl";
+            this.bagelStockLbl.Size = new System.Drawing.Size(104, 21);
+            this.bagelStockLbl.TabIndex = 8;
+            this.bagelStockLbl.Text = "Bagel Stock:";
+            // 
+            // sliBreStockLbl
+            // 
+            this.sliBreStockLbl.AutoSize = true;
+            this.sliBreStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sliBreStockLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.sliBreStockLbl.Location = new System.Drawing.Point(279, 270);
+            this.sliBreStockLbl.Name = "sliBreStockLbl";
+            this.sliBreStockLbl.Size = new System.Drawing.Size(155, 21);
+            this.sliBreStockLbl.TabIndex = 7;
+            this.sliBreStockLbl.Text = "Sliced Bread Stock:";
+            // 
+            // croisStockLbl
+            // 
+            this.croisStockLbl.AutoSize = true;
+            this.croisStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.croisStockLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.croisStockLbl.Location = new System.Drawing.Point(31, 270);
+            this.croisStockLbl.Name = "croisStockLbl";
+            this.croisStockLbl.Size = new System.Drawing.Size(131, 21);
+            this.croisStockLbl.TabIndex = 6;
+            this.croisStockLbl.Text = "Croissant Stock:";
             // 
             // grainsPnl
             // 
@@ -351,6 +390,7 @@
             this.xBtn.Size = new System.Drawing.Size(20, 20);
             this.xBtn.TabIndex = 3;
             this.xBtn.TabStop = false;
+            this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
             // 
             // bevBtn
             // 
@@ -464,7 +504,7 @@
             this.itemToCart.TabIndex = 19;
             this.itemToCart.Text = "ADD ALL ITEMS TO CART";
             this.itemToCart.UseVisualStyleBackColor = false;
-            this.itemToCart.Click += new System.EventHandler(this.itemToCart_Click_1);
+            this.itemToCart.Click += new System.EventHandler(this.itemToCart_Click);
             // 
             // Bakery
             // 
@@ -486,6 +526,7 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.grainsPnl.ResumeLayout(false);
             this.grainsPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -530,5 +571,8 @@
         private System.Windows.Forms.Button dairyBtn;
         private System.Windows.Forms.Button grainsBtn;
         private System.Windows.Forms.Button itemToCart;
+        private System.Windows.Forms.Label sliBreStockLbl;
+        private System.Windows.Forms.Label croisStockLbl;
+        private System.Windows.Forms.Label bagelStockLbl;
     }
 }

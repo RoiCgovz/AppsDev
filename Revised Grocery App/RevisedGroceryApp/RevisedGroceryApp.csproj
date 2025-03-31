@@ -70,6 +70,7 @@
     <Compile Include="Dairy.Designer.cs">
       <DependentUpon>Dairy.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseHelperClass.cs" />
     <Compile Include="Grains.cs">
       <SubType>Form</SubType>
     </Compile>

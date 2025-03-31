@@ -1,33 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 using RevisedGroceryApp.Resources;
 
 namespace RevisedGroceryApp
 {
     public partial class Snacks : Form
     {
-        private const decimal chipsPrice = 1.50m;
-        private const decimal nachosPrice = 2.00m;
-        private const decimal cookiesPrice = 1.80m;
-
         public Snacks()
         {
             InitializeComponent();
+            LoadStockLabels();
+        }
+
+        private void LoadStockLabels()
+        {
+            chipsStocklbl.Text = $"Stock: {DatabaseHelperClass.GetItemStock("Chips")}";
+            nachosStockLbl.Text = $"Stock: {DatabaseHelperClass.GetItemStock("Nachos")}";
+            cookiesStockLbl.Text = $"Stock: {DatabaseHelperClass.GetItemStock("Cookies")}";
         }
 
         private void chipsMin_Click(object sender, EventArgs e) => DecrementQuantity(chipsTxtBox);
-        private void chipsAdd_Click(object sender, EventArgs e) => IncrementQuantity(chipsTxtBox);
-        private void nachosMin_Click(object sender, EventArgs e) => DecrementQuantity(nachosTxtBox);
-        private void nachosAdd_Click(object sender, EventArgs e) => IncrementQuantity(nachosTxtBox);
-        private void cookiesMin_Click(object sender, EventArgs e) => DecrementQuantity(cookiesTxtBox);
-        private void cookiesAdd_Click(object sender, EventArgs e) => IncrementQuantity(cookiesTxtBox);
+        private void chipsAdd_Click(object sender, EventArgs e) => IncrementQuantity(chipsTxtBox, "Chips");
 
-        private void IncrementQuantity(TextBox txtBox)
+        private void nachosMin_Click(object sender, EventArgs e) => DecrementQuantity(nachosTxtBox);
+        private void nachosAdd_Click(object sender, EventArgs e) => IncrementQuantity(nachosTxtBox, "Nachos");
+
+        private void cookiesMin_Click(object sender, EventArgs e) => DecrementQuantity(cookiesTxtBox);
+        private void cookiesAdd_Click(object sender, EventArgs e) => IncrementQuantity(cookiesTxtBox, "Cookies");
+
+        private void IncrementQuantity(TextBox txtBox, string itemName)
         {
+            int currentStock = DatabaseHelperClass.GetItemStock(itemName);
             int currentValue = int.TryParse(txtBox.Text, out int value) ? value : 0;
-            txtBox.Text = (currentValue + 1).ToString();
+
+            if (currentValue < currentStock)
+            {
+                txtBox.Text = (currentValue + 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show($"Only {currentStock} {itemName} left in stock.", "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void DecrementQuantity(TextBox txtBox)
@@ -70,52 +85,7 @@ namespace RevisedGroceryApp
 
         private void itemToCart_Click(object sender, EventArgs e)
         {
-            int chipsQty = int.TryParse(chipsTxtBox.Text, out int cQty) ? cQty : 0;
-            int nachosQty = int.TryParse(nachosTxtBox.Text, out int nQty) ? nQty : 0;
-            int cookiesQty = int.TryParse(cookiesTxtBox.Text, out int coQty) ? coQty : 0;
-
-            if (chipsQty == 0 && nachosQty == 0 && cookiesQty == 0)
-            {
-                MessageBox.Show("Please select at least one item before adding to the cart.",
-                                "No Items Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            List<Items> selectedItems = new List<Items>
-            {
-                new Items { Name = "Chips", Quantity = chipsQty, Price = chipsPrice },
-                new Items { Name = "Nachos", Quantity = nachosQty, Price = nachosPrice },
-                new Items { Name = "Cookies", Quantity = cookiesQty, Price = cookiesPrice }
-            };
-
-            foreach (var newItem in selectedItems)
-            {
-                if (newItem.Quantity > 0)
-                {
-                    var existingItem = CategoryForm.CartItems.FirstOrDefault(i => i.Name == newItem.Name);
-                    if (existingItem != null)
-                    {
-                        existingItem.Quantity += newItem.Quantity;
-                    }
-                    else
-                    {
-                        CategoryForm.CartItems.Add(newItem);
-                    }
-                }
-            }
-
-            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
-            if (cartForm == null)
-            {
-                cartForm = new Cart(CategoryForm.CartItems);
-                cartForm.Show();
-            }
-            else
-            {
-                cartForm.LoadCartItems(CategoryForm.CartItems);
-                cartForm.Show();
-            }
-            this.Close();
+            AddItemsToCart();
         }
 
         private void bakeryBtn_Click(object sender, EventArgs e)
@@ -156,6 +126,87 @@ namespace RevisedGroceryApp
         private void xBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void AddItemsToCart()
+        {
+            var items = new List<(string Name, TextBox TextBox, Label StockLabel)>
+            {
+                ("Chips", chipsTxtBox, chipsStocklbl),
+                ("Nachos", nachosTxtBox, nachosStockLbl),
+                ("Cookies", cookiesTxtBox, cookiesStockLbl)
+            };
+
+            List<Items> selectedItems = new List<Items>();
+
+            foreach (var (itemName, textBox, stockLabel) in items)
+            {
+                int quantity = int.TryParse(textBox.Text, out int q) ? q : 0;
+                if (quantity > 0)
+                {
+                    int stock = DatabaseHelperClass.GetItemStock(itemName);
+                    if (stock < quantity)
+                    {
+                        MessageBox.Show($"Not enough stock for {itemName}. Available: {stock}",
+                                        "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        continue;
+                    }
+
+                    decimal price = DatabaseHelperClass.GetItemPrice(itemName);
+                    selectedItems.Add(new Items { Name = itemName, Quantity = quantity, Price = price });
+
+                    DatabaseHelperClass.UpdateItemStock(itemName, quantity);
+                }
+            }
+
+            if (selectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select at least one item before adding to the cart.",
+                                "No Items Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            foreach (var newItem in selectedItems)
+            {
+                var existingItem = CategoryForm.CartItems.FirstOrDefault(i => i.Name == newItem.Name);
+                if (existingItem != null)
+                {
+                    existingItem.Quantity += newItem.Quantity;
+                }
+                else
+                {
+                    CategoryForm.CartItems.Add(newItem);
+                }
+            }
+
+            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
+            if (cartForm == null)
+            {
+                cartForm = new Cart(CategoryForm.CartItems);
+                cartForm.Show();
+            }
+            else
+            {
+                cartForm.LoadCartItems(CategoryForm.CartItems);
+                cartForm.Show();
+            }
+
+            LoadStockLabels();
+            this.Close();
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
+            if (mainForm == null)
+            {
+                mainForm = new CategoryForm();
+                mainForm.Show();
+            }
+            else
+            {
+                mainForm.Show();
+            }
         }
     }
 }
