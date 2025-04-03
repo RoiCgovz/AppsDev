@@ -9,7 +9,6 @@ C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debu
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.pdb
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.CategoryForm.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Grains.resources
-C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Resources.Beverages.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Cart.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Receipt.resources
 D:\FajardoRepo\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.csproj.AssemblyReference.cache
@@ -46,3 +45,4 @@ C:\Users\PTO\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debu
 C:\Users\PTO\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Dairy.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Produce.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Snacks.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Beverages.resources

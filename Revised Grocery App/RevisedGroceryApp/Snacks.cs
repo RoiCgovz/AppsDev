@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using RevisedGroceryApp.Resources;
+
 
 namespace RevisedGroceryApp
 {

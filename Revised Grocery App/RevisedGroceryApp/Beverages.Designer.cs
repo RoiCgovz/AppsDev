@@ -1,4 +1,4 @@
-﻿namespace RevisedGroceryApp.Resources
+﻿namespace RevisedGroceryApp
 {
     partial class Beverages
     {
@@ -59,6 +59,9 @@
             this.homeBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.xBtn = new System.Windows.Forms.PictureBox();
+            this.wineStockLbl = new System.Windows.Forms.Label();
+            this.juiceStockLbl = new System.Windows.Forms.Label();
+            this.sodaStockLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.grainsPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -412,6 +415,9 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.sodaStockLbl);
+            this.panel3.Controls.Add(this.juiceStockLbl);
+            this.panel3.Controls.Add(this.wineStockLbl);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.grainsPnl);
@@ -467,6 +473,39 @@
             this.xBtn.TabStop = false;
             this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
             // 
+            // wineStockLbl
+            // 
+            this.wineStockLbl.AutoSize = true;
+            this.wineStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wineStockLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.wineStockLbl.Location = new System.Drawing.Point(35, 267);
+            this.wineStockLbl.Name = "wineStockLbl";
+            this.wineStockLbl.Size = new System.Drawing.Size(101, 21);
+            this.wineStockLbl.TabIndex = 6;
+            this.wineStockLbl.Text = "Wine Stock:";
+            // 
+            // juiceStockLbl
+            // 
+            this.juiceStockLbl.AutoSize = true;
+            this.juiceStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.juiceStockLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.juiceStockLbl.Location = new System.Drawing.Point(301, 267);
+            this.juiceStockLbl.Name = "juiceStockLbl";
+            this.juiceStockLbl.Size = new System.Drawing.Size(100, 21);
+            this.juiceStockLbl.TabIndex = 7;
+            this.juiceStockLbl.Text = "Juice Stock:";
+            // 
+            // sodaStockLbl
+            // 
+            this.sodaStockLbl.AutoSize = true;
+            this.sodaStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sodaStockLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.sodaStockLbl.Location = new System.Drawing.Point(172, 548);
+            this.sodaStockLbl.Name = "sodaStockLbl";
+            this.sodaStockLbl.Size = new System.Drawing.Size(99, 21);
+            this.sodaStockLbl.TabIndex = 8;
+            this.sodaStockLbl.Text = "Soda Stock:";
+            // 
             // Beverages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,6 +531,7 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xBtn)).EndInit();
             this.ResumeLayout(false);
@@ -531,5 +571,8 @@
         private System.Windows.Forms.PictureBox xBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label backbtn;
+        private System.Windows.Forms.Label wineStockLbl;
+        private System.Windows.Forms.Label juiceStockLbl;
+        private System.Windows.Forms.Label sodaStockLbl;
     }
 }
