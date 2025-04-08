@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE insertIntoInv
+﻿CREATE PROCEDURE insertIntoItems
 AS
 BEGIN
     INSERT INTO Items (itemName, itemCategory, itemPrice)
