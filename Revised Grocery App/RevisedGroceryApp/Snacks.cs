@@ -155,7 +155,7 @@ namespace RevisedGroceryApp
                     decimal price = DatabaseHelperClass.GetItemPrice(itemName);
                     selectedItems.Add(new Items { Name = itemName, Quantity = quantity, Price = price });
 
-                    DatabaseHelperClass.UpdateItemStock(itemName, quantity);
+                    DatabaseHelperClass.UpdateItemStock(itemName, quantity, DateTime.Now);
                 }
             }
 

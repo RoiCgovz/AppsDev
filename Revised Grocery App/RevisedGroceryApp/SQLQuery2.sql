@@ -1,74 +1,96 @@
-﻿CREATE PROCEDURE insertIntoItems
+﻿use grocerydb;
+go
+
+-- Gets the stock of a specific item
+CREATE PROCEDURE GetItemStock
+    @ItemName NVARCHAR(100)
 AS
 BEGIN
-    INSERT INTO Items (itemName, itemCategory, itemPrice)
-    SELECT itemName, itemCategory, itemPrice
-    FROM (VALUES
-        ('croissant', 'bakery', 2.50),
-        ('sliced bread', 'bakery', 1.80),
-        ('bagel', 'bakery', 2.00),
-        ('butter', 'dairy', 1.50),
-        ('cheese', 'dairy', 3.00),
-        ('yogurt', 'dairy', 1.20),
-        ('wine', 'beverage', 12.00),
-        ('juice', 'beverage', 3.50),
-        ('soda', 'beverage', 1.00),
-        ('rice', 'grains', 0.75),
-        ('wheat', 'grains', 0.90),
-        ('corn', 'grains', 1.20),
-        ('tomato', 'vegetable', 0.80),
-        ('cabbage', 'vegetable', 1.00),
-        ('carrots', 'vegetable', 0.90),
-        ('chips', 'snacks', 2.00),
-        ('nachos', 'snacks', 2.50),
-        ('cookies', 'snacks', 1.50)
-    ) AS ItemsData(itemName, itemCategory, itemPrice)
-    WHERE NOT EXISTS (SELECT 1 FROM Items WHERE itemName = ItemsData.itemName);
-
-    DECLARE @itemId INT;
-    DECLARE @itemName NVARCHAR(50);
-    DECLARE @inventoryStock INT;
-
-    DECLARE inventory_cursor CURSOR FOR
-    SELECT itemName, 
-        CASE
-            WHEN itemName = 'croissant' THEN 20
-            WHEN itemName = 'sliced bread' THEN 25
-            WHEN itemName = 'bagel' THEN 30
-            WHEN itemName = 'butter' THEN 30
-            WHEN itemName = 'cheese' THEN 20
-            WHEN itemName = 'yogurt' THEN 20
-            WHEN itemName = 'wine' THEN 30
-            WHEN itemName = 'juice' THEN 50
-            WHEN itemName = 'soda' THEN 60
-            WHEN itemName = 'rice' THEN 1000
-            WHEN itemName = 'wheat' THEN 90
-            WHEN itemName = 'corn' THEN 70
-            WHEN itemName = 'tomato' THEN 40
-            WHEN itemName = 'cabbage' THEN 30
-            WHEN itemName = 'carrots' THEN 30
-            WHEN itemName = 'chips' THEN 40
-            WHEN itemName = 'nachos' THEN 30
-            WHEN itemName = 'cookies' THEN 30
-            ELSE 0  
-        END AS inventoryStock
-    FROM Items;
-
-    OPEN inventory_cursor;
-
-    FETCH NEXT FROM inventory_cursor INTO @itemName, @inventoryStock;
-
-    WHILE @@FETCH_STATUS = 0
-    BEGIN
-    
-        SET @itemId = (SELECT itemId FROM Items WHERE itemName = @itemName);
-
-        INSERT INTO Inventory (inv_itemId, inventoryDate, inventoryStock)
-        VALUES (@itemId, GETDATE(), @inventoryStock);
-
-        FETCH NEXT FROM inventory_cursor INTO @itemName, @inventoryStock;
-    END
-
-    CLOSE inventory_cursor;
-    DEALLOCATE inventory_cursor;
+    SELECT inventorystock
+    FROM dbo.inventory
 END
+go
+
+-- Updates the stock after a sale
+create procedure UpdateItemStockAfterSale
+    @ItemName nvarchar(50),
+    @SoldQuantity int,
+    @InventoryDate datetime
+as
+begin
+    set nocount on;
+
+    declare @ItemId int, @CurrentStock int;
+
+    select @ItemId = itemid
+    from dbo.items
+    where items.itemname = @ItemName;
+
+    if @ItemId is not null
+    begin
+
+        select top 1 @CurrentStock = inventorystock
+        from inventory
+        where inventory.inv_itemid = @ItemId
+        order by inventorydate desc;
+
+        if @CurrentStock >= @SoldQuantity
+        begin
+            insert into inventory (inv_itemid, inventorystock, inventorydate)
+            values (@ItemId, @CurrentStock - @SoldQuantity, @InventoryDate);
+        end
+        else
+        begin
+            raiserror('Not enough stock available for sale.', 16, 1);
+        end
+    end
+    else
+    begin
+        raiserror('Item not found.', 16, 1);
+    end
+end;
+go
+
+-- Get Item Price Procedure
+create procedure GetItemPriceByName
+    @ItemName nvarchar(50)
+as
+begin
+    set nocount on;
+
+    select itemprice
+    from items
+    where itemname = @ItemName;
+end;
+go
+
+-- Reset Inventory Stock Procedure
+create procedure resetInventoryStock
+AS
+BEGIN
+    UPDATE inventory
+    SET inventorystock = CASE 
+        WHEN items.itemname = 'croissant' THEN 20
+        WHEN items.itemname = 'sliced bread' THEN 25
+        WHEN items.itemname = 'bagel' THEN 30
+        WHEN items.itemname = 'butter' THEN 30
+        WHEN items.itemname = 'cheese' THEN 20
+        WHEN items.itemname = 'yogurt' THEN 20
+        WHEN items.itemname = 'wine' THEN 30
+        WHEN items.itemname = 'juice' THEN 50
+        WHEN items.itemname = 'soda' THEN 60
+        WHEN items.itemname = 'rice' THEN 1000
+        WHEN items.itemname = 'wheat' THEN 90
+        WHEN items.itemname = 'corn' THEN 70
+        WHEN items.itemname = 'tomato' THEN 40
+        WHEN items.itemname = 'cabbage' THEN 30
+        WHEN items.itemname = 'carrots' THEN 30
+        WHEN items.itemname = 'chips' THEN 40
+        WHEN items.itemname = 'nachos' THEN 30
+        WHEN items.itemname = 'cookies' THEN 30
+        ELSE inventorystock
+    END
+    FROM inventory
+    INNER JOIN items ON inventory.inv_itemid = items.itemid;
+END;
+GO

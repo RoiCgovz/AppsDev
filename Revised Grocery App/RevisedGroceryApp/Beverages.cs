@@ -15,6 +15,23 @@ namespace RevisedGroceryApp
         {
             InitializeComponent();
             LoadStockLabels();
+            InitializeQuantityBoxes();
+        }
+
+        private void InitializeQuantityBoxes()
+        {
+            wineTxtBox.Text = "0";
+            juiceTxtBox.Text = "0";
+            sodaTxtBox.Text = "0";
+            wineTxtBox.TextChanged += QuantityChanged;
+            juiceTxtBox.TextChanged += QuantityChanged;
+            sodaTxtBox.TextChanged += QuantityChanged;
+            itemToCart.Enabled = false;
+        }
+
+        private void QuantityChanged(object sender, EventArgs e)
+        {
+            itemToCart.Enabled = wineTxtBox.Text != "0" || juiceTxtBox.Text != "0" || sodaTxtBox.Text != "0";
         }
 
         private void LoadStockLabels()
@@ -56,40 +73,37 @@ namespace RevisedGroceryApp
                 txtBox.Text = (currentValue - 1).ToString();
             }
         }
+
         private void bakeBtn_Click(object sender, EventArgs e)
         {
-            Bakery bake = new Bakery();
-            bake.Show();
+            new Bakery().Show();
             this.Hide();
         }
 
         private void prodBtn_Click(object sender, EventArgs e)
         {
-            Produce p = new Produce();
-            p.Show();
+            new Produce().Show();
             this.Close();
         }
 
         private void daiBtn_Click(object sender, EventArgs e)
         {
-            Dairy dairy = new Dairy();
-            dairy.Show();
+            new Dairy().Show();
             this.Close();
         }
 
         private void grnBtn_Click(object sender, EventArgs e)
         {
-            Grains grains = new Grains();
-            grains.Show();
+            new Grains().Show();
             this.Close();
         }
 
         private void snksBtn_Click(object sender, EventArgs e)
         {
-            Snacks sn = new Snacks();
-            sn.Show();
+            new Snacks().Show();
             this.Close();
         }
+
         private void xBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -97,21 +111,20 @@ namespace RevisedGroceryApp
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault() ?? new CategoryForm();
+            var mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault() ?? new CategoryForm();
             mainForm.Show();
         }
 
         private void cartBtn_Click(object sender, EventArgs e)
         {
-            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault() ?? new Cart(CategoryForm.CartItems);
+            var cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault() ?? new Cart(CategoryForm.CartItems);
             cartForm.Show();
             this.Close();
         }
 
         private void backbtn_Click(object sender, EventArgs e)
         {
-            // When going back, ensure the updated cart items are retained
-            CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
+            var mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
             if (mainForm == null)
             {
                 mainForm = new CategoryForm();
@@ -122,8 +135,7 @@ namespace RevisedGroceryApp
                 mainForm.Show();
             }
 
-            // Retain the CartItems
-            CategoryForm.CartItems = CategoryForm.CartItems; // Ensure the CartItems list persists
+            CategoryForm.CartItems = CategoryForm.CartItems;
         }
 
         private void itemToCart_Click_1(object sender, EventArgs e)
@@ -133,16 +145,16 @@ namespace RevisedGroceryApp
 
         private void AddItemsToCart()
         {
-            var items = new List<(string Name, TextBox TextBox, Label StockLabel)>
+            var items = new List<(string Name, TextBox TextBox)>
             {
-                ("Wine", wineTxtBox, wineStockLbl),
-                ("Juice", juiceTxtBox, juiceStockLbl),
-                ("Soda", sodaTxtBox, sodaStockLbl)
+                ("Wine", wineTxtBox),
+                ("Juice", juiceTxtBox),
+                ("Soda", sodaTxtBox)
             };
 
             List<Items> selectedItems = new List<Items>();
 
-            foreach (var (itemName, textBox, stockLabel) in items)
+            foreach (var (itemName, textBox) in items)
             {
                 int quantity = int.TryParse(textBox.Text, out int q) ? q : 0;
                 if (quantity > 0)
@@ -157,8 +169,6 @@ namespace RevisedGroceryApp
 
                     decimal price = DatabaseHelperClass.GetItemPrice(itemName);
                     selectedItems.Add(new Items { Name = itemName, Quantity = quantity, Price = price });
-
-                    DatabaseHelperClass.UpdateItemStock(itemName, quantity);
                 }
             }
 
@@ -169,22 +179,22 @@ namespace RevisedGroceryApp
                 return;
             }
 
-            // Update the global cart (CartItems) based on selected items
             foreach (var newItem in selectedItems)
             {
                 var existingItem = CategoryForm.CartItems.FirstOrDefault(i => i.Name == newItem.Name);
                 if (existingItem != null)
                 {
-                    existingItem.Quantity += newItem.Quantity; // Update the quantity if item already exists in cart
+                    existingItem.Quantity += newItem.Quantity;
                 }
                 else
                 {
-                    CategoryForm.CartItems.Add(newItem); // Add new item to cart
+                    CategoryForm.CartItems.Add(newItem);
                 }
+
+                DatabaseHelperClass.UpdateItemStock(newItem.Name, newItem.Quantity, DateTime.Now);
             }
 
-            // Show the updated cart
-            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
+            var cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
             if (cartForm == null)
             {
                 cartForm = new Cart(CategoryForm.CartItems);
@@ -192,12 +202,20 @@ namespace RevisedGroceryApp
             }
             else
             {
-                cartForm.LoadCartItems(CategoryForm.CartItems); // Reload the updated cart items
+                cartForm.LoadCartItems(CategoryForm.CartItems);
                 cartForm.Show();
             }
 
-            LoadStockLabels(); // Refresh stock labels
-            this.Close(); // Close the current form after adding items
+            LoadStockLabels();
+            ResetQuantities();
+            this.Close();
+        }
+
+        private void ResetQuantities()
+        {
+            wineTxtBox.Text = "0";
+            juiceTxtBox.Text = "0";
+            sodaTxtBox.Text = "0";
         }
     }
 }

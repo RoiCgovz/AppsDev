@@ -1,144 +1,105 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace RevisedGroceryApp
 {
     public static class DatabaseHelperClass
     {
-        private static readonly string connectionString = "Data Source=DESKTOP-L1QSSAU\\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
+        private static readonly string connectionString = "Data Source=DESKTOP-L1QSSAU\\SQLEXPRESS;Initial Catalog=grocerydb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        // Method to get item stock
         public static int GetItemStock(string itemName)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand("SELECT Quantity FROM GroceryStock WHERE ItemName = @itemName", conn))
-                {
-                    cmd.Parameters.AddWithValue("@itemName", itemName);
-                    object result = cmd.ExecuteScalar();
-                    return result != null ? Convert.ToInt32(result) : 0;
-                }
-            }
-        }
-
-        public static void UpdateItemStock(string itemName, int quantitySold)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand("UPDATE GroceryStock SET Quantity = Quantity - @quantity WHERE ItemName = @itemName", conn))
-                {
-                    cmd.Parameters.AddWithValue("@quantity", quantitySold);
-                    cmd.Parameters.AddWithValue("@itemName", itemName);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
-
-        public static decimal GetItemPrice(string itemName)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand("SELECT Price FROM GroceryStock WHERE ItemName = @itemName", conn))
-                {
-                    cmd.Parameters.AddWithValue("@itemName", itemName);
-                    object result = cmd.ExecuteScalar();
-                    return result != null ? Convert.ToDecimal(result) : 0;
-                }
-            }
-        }
-
-        public static decimal CalculateTotalPrice(string itemName, int quantity)
-        {
-            decimal pricePerItem = GetItemPrice(itemName);
-            return pricePerItem * quantity;
-        }
-
-        public static Dictionary<string, int> LoadInitialStock()
-        {
-            Dictionary<string, int> initialStock = new Dictionary<string, int>();
-
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("SELECT ItemName, Quantity FROM GroceryStock", conn))
+                    using (SqlCommand cmd = new SqlCommand("dbo.GetItemStock", conn))
                     {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                string itemName = reader["ItemName"].ToString();
-                                int quantity = Convert.ToInt32(reader["Quantity"]);
-                                initialStock[itemName] = quantity;
-                            }
-                        }
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@ItemName", SqlDbType.NVarChar).Value = itemName;
+                        object result = cmd.ExecuteScalar();
+                        return result != null ? Convert.ToInt32(result) : 0;
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error loading initial stock: " + ex.Message);
+                MessageBox.Show($"Error fetching stock: {ex.Message}");
+                return 0;
             }
-
-            return initialStock;
         }
 
+        // Method to update item stock after sale
+        public static void UpdateItemStock(string itemName, int quantitySold, DateTime date)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("dbo.UpdateItemStockAfterSale", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@ItemName", SqlDbType.NVarChar).Value = itemName;
+                        cmd.Parameters.Add("@SoldQuantity", SqlDbType.Int).Value = quantitySold;
+                        cmd.Parameters.Add("@InventoryDate", SqlDbType.DateTime).Value = date;
+                        cmd.ExecuteNonQuery();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating stock: {ex.Message}");
+            }
+        }
+
+        // Method to get item price
+        public static decimal GetItemPrice(string itemName)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("dbo.GetItemPriceByName", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@ItemName", SqlDbType.NVarChar).Value = itemName;
+                        object result = cmd.ExecuteScalar();
+                        return result != null ? Convert.ToDecimal(result) : 0m;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error retrieving price: {ex.Message}");
+                return 0;
+            }
+        }
+
+        // Method to reset stock to default value
         public static void ResetAllStocks()
         {
-      
-            var initialStock = new Dictionary<string, int>
-                    {
-                        // Bakery Items
-                        { "Croissant", 20 },
-                        { "Sliced Bread", 25 },
-                        { "Bagel", 30 },
-
-                        // Dairy Items
-                        { "Butter", 30 },
-                        { "Cheese", 20 },
-                        { "Yogurt", 20 },
-
-                        // Beverages Items
-                        { "Wine", 30 },
-                        { "Juice", 50 },
-                        { "Soda", 60 },
-
-                        // Grains Items
-                        { "Rice", 1000 },
-                        { "Wheat", 90 },
-                        { "Corn", 70 },
-
-                        // Produce Items
-                        { "Tomato", 40 },
-                        { "Cabbage", 30 },
-                        { "Carrots", 30 },
-
-                        // Snacks Items
-                        { "Chips", 40 },
-                        { "Nachos", 30 },
-                        { "Cookies", 30 }
-                    };
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            try
             {
-                conn.Open();
-                foreach (var item in initialStock)
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("UPDATE GroceryStock SET Quantity = @quantity WHERE ItemName = @itemName", conn))
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("dbo.resetInventoryStock", conn))
                     {
-                        cmd.Parameters.Add(new SqlParameter("@quantity", SqlDbType.Int) { Value = item.Value });
-                        cmd.Parameters.Add(new SqlParameter("@itemName", SqlDbType.NVarChar) { Value = item.Key });
-
+                        cmd.CommandType = CommandType.StoredProcedure;
                         cmd.ExecuteNonQuery();
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error resetting stock: {ex.Message}");
+            }
         }
-
     }
 }

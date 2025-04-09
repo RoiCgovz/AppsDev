@@ -19,15 +19,57 @@ namespace RevisedGroceryApp
             sliBreStockLbl.Text = $"Stock: {DatabaseHelperClass.GetItemStock("Sliced Bread")}";
             bagelStockLbl.Text = $"Stock: {DatabaseHelperClass.GetItemStock("Bagel")}";
         }
+        private void AddItemsToCart()
+        {
+            var items = new[]
+            {
+                ("Croissant", croisTxtBox, croisStockLbl),
+                ("Sliced Bread", sliBreTxtBox, sliBreStockLbl),
+                ("Bagel", bagelTxtBox, bagelStockLbl)
+            };
 
-        private void croisMin_Click(object sender, EventArgs e) => DecrementQuantity(croisTxtBox);
-        private void croisAdd_Click(object sender, EventArgs e) => IncrementQuantity(croisTxtBox, "Croissant");
+            var selectedItems = new List<Items>();
 
-        private void sliBreMin_Click(object sender, EventArgs e) => DecrementQuantity(sliBreTxtBox);
-        private void sliBreAdd_Click(object sender, EventArgs e) => IncrementQuantity(sliBreTxtBox, "Sliced Bread");
+            foreach (var (name, textBox, _) in items)
+            {
+                if (!int.TryParse(textBox.Text, out int qty) || qty <= 0) continue;
 
-        private void bagelMin_Click(object sender, EventArgs e) => DecrementQuantity(bagelTxtBox);
-        private void bagelAdd_Click(object sender, EventArgs e) => IncrementQuantity(bagelTxtBox, "Bagel");
+                int stock = DatabaseHelperClass.GetItemStock(name);
+                if (stock < qty)
+                {
+                    MessageBox.Show($"Not enough stock for {name}. Available: {stock}",
+                                    "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    continue;
+                }
+
+                decimal price = DatabaseHelperClass.GetItemPrice(name);
+                selectedItems.Add(new Items { Name = name, Quantity = qty, Price = price });
+                DatabaseHelperClass.UpdateItemStock(name, qty, DateTime.Now);
+            }
+
+            if (!selectedItems.Any())
+            {
+                MessageBox.Show("Please select at least one item before adding to the cart.",
+                                "No Items Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            foreach (var item in selectedItems)
+            {
+                var existing = CategoryForm.CartItems.FirstOrDefault(i => i.Name == item.Name);
+                if (existing != null)
+                    existing.Quantity += item.Quantity;
+                else
+                    CategoryForm.CartItems.Add(item);
+            }
+
+            var cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault() ?? new Cart(CategoryForm.CartItems);
+            cartForm.LoadCartItems(CategoryForm.CartItems);
+            cartForm.Show();
+
+            LoadStockLabels();
+            this.Close();
+        }
 
         private void IncrementQuantity(TextBox txtBox, string itemName)
         {
@@ -53,6 +95,16 @@ namespace RevisedGroceryApp
             }
         }
 
+        private void croisMin_Click(object sender, EventArgs e) => DecrementQuantity(croisTxtBox);
+        private void croisAdd_Click(object sender, EventArgs e) => IncrementQuantity(croisTxtBox, "Croissant");
+
+        private void sliBreMin_Click(object sender, EventArgs e) => DecrementQuantity(sliBreTxtBox);
+        private void sliBreAdd_Click(object sender, EventArgs e) => IncrementQuantity(sliBreTxtBox, "Sliced Bread");
+
+        private void bagelMin_Click(object sender, EventArgs e) => DecrementQuantity(bagelTxtBox);
+        private void bagelAdd_Click(object sender, EventArgs e) => IncrementQuantity(bagelTxtBox, "Bagel");
+
+       
         private void homeBtn_Click(object sender, EventArgs e)
         {
             CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault() ?? new CategoryForm();
@@ -95,73 +147,7 @@ namespace RevisedGroceryApp
         }
 
        
-        private void AddItemsToCart()
-        {
-            var items = new List<(string Name, TextBox TextBox, Label StockLabel)>
-            {
-                ("Croissant", croisTxtBox, croisStockLbl),
-                ("Sliced Bread", sliBreTxtBox, sliBreStockLbl),
-                ("Bagel", bagelTxtBox, bagelStockLbl)
-            };
-
-            List<Items> selectedItems = new List<Items>();
-
-            foreach (var (itemName, textBox, stockLabel) in items)
-            {
-                int quantity = int.TryParse(textBox.Text, out int q) ? q : 0;
-                if (quantity > 0)
-                {
-                    int stock = DatabaseHelperClass.GetItemStock(itemName);
-                    if (stock < quantity)
-                    {
-                        MessageBox.Show($"Not enough stock for {itemName}. Available: {stock}",
-                                        "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        continue;
-                    }
-
-                    decimal price = DatabaseHelperClass.GetItemPrice(itemName);
-                    selectedItems.Add(new Items { Name = itemName, Quantity = quantity, Price = price });
-
-                    DatabaseHelperClass.UpdateItemStock(itemName, quantity);
-                }
-            }
-
-            if (selectedItems.Count == 0)
-            {
-                MessageBox.Show("Please select at least one item before adding to the cart.",
-                                "No Items Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            foreach (var newItem in selectedItems)
-            {
-                var existingItem = CategoryForm.CartItems.FirstOrDefault(i => i.Name == newItem.Name);
-                if (existingItem != null)
-                {
-                    existingItem.Quantity += newItem.Quantity;
-                }
-                else
-                {
-                    CategoryForm.CartItems.Add(newItem);
-                }
-            }
-
-            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
-            if (cartForm == null)
-            {
-                cartForm = new Cart(CategoryForm.CartItems);
-                cartForm.Show();
-            }
-            else
-            {
-                cartForm.LoadCartItems(CategoryForm.CartItems);
-                cartForm.Show();
-            }
-
-            LoadStockLabels();
-            this.Close();
-        }
-
+       
         private void itemToCart_Click(object sender, EventArgs e)
         {
             AddItemsToCart();
@@ -180,7 +166,6 @@ namespace RevisedGroceryApp
                 mainForm.Show();
             }
         }
-
         private void xBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
