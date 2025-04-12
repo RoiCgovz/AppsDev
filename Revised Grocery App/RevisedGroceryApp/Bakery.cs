@@ -124,7 +124,6 @@ namespace RevisedGroceryApp
             bev.Show();
             this.Close();
         }
-
         private void grainsBtn_Click(object sender, EventArgs e)
         {
             Grains grains = new Grains();
@@ -145,9 +144,6 @@ namespace RevisedGroceryApp
             produce.Show();
             this.Close();
         }
-
-       
-       
         private void itemToCart_Click(object sender, EventArgs e)
         {
             AddItemsToCart();
