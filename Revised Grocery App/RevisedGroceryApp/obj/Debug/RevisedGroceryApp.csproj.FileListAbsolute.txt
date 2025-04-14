@@ -46,3 +46,13 @@ C:\Users\PTO\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debu
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Produce.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Snacks.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Beverages.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\LiveCharts.dll
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\LiveCharts.pdb
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\LiveCharts.xml
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedG.4B9EFBCB.Up2Date

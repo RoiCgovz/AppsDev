@@ -440,7 +440,6 @@
             this.Name = "CategoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Category";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CategoryForm_FormClosing);
             this.panel1.ResumeLayout(false);
             this.categoryPnl.ResumeLayout(false);
             this.snksPnl.ResumeLayout(false);

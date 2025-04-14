@@ -12,9 +12,7 @@ namespace RevisedGroceryApp
         public CategoryForm()
         {
             InitializeComponent();
-            
         }
-
         private void xBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -75,13 +73,6 @@ namespace RevisedGroceryApp
             Grains g = new Grains();
             this.Hide();
             g.Show();
-        }
-
-        private void CategoryForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DatabaseHelperClass.ResetAllStocks();
-        }
-
-        
+        }  
     }
 }

@@ -12,7 +12,6 @@ namespace RevisedGroceryApp
             InitializeComponent();
             LoadStockLabels();
         }
-
         private void LoadStockLabels()
         {
             croisStockLbl.Text = $"Stock: {DatabaseHelperClass.GetItemStock("Croissant")}";

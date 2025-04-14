@@ -103,7 +103,7 @@ namespace RevisedGroceryApp
                 mainForm.Show();
             }
 
-            this.Close(); // Close the receipt form
+            this.Close();
         }
 
         private void grandTotalLbl_Click(object sender, EventArgs e)

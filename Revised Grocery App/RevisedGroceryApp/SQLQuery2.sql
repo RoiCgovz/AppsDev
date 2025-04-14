@@ -1,55 +1,54 @@
 ﻿use grocerydb;
 go
 
--- Gets the stock of a specific item
+-- Gets the item Stock
 CREATE PROCEDURE GetItemStock
     @ItemName NVARCHAR(100)
 AS
 BEGIN
-    SELECT inventorystock
-    FROM dbo.inventory
+    SELECT inv.inventoryStock
+    FROM inventory inv
+    INNER JOIN items i ON inv.inv_itemId = i.itemId
+    WHERE i.itemName = @ItemName;
 END
-go
+GO
 
--- Updates the stock after a sale
-create procedure UpdateItemStockAfterSale
-    @ItemName nvarchar(50),
-    @SoldQuantity int,
-    @InventoryDate datetime
-as
-begin
-    set nocount on;
+-- Updates Stock after Sale
+CREATE PROCEDURE UpdateItemStockAfterSale
+    @ItemName NVARCHAR(50),
+    @SoldQuantity INT,
+    @InventoryDate DATETIME
+AS
+BEGIN
+    SET NOCOUNT ON;
 
-    declare @ItemId int, @CurrentStock int;
+    DECLARE @ItemId INT, @CurrentStock INT;
 
-    select @ItemId = itemid
-    from dbo.items
-    where items.itemname = @ItemName;
+    -- Get the item ID based on item name
+    SELECT @ItemId = itemid
+    FROM dbo.items
+    WHERE itemname = @ItemName;
 
-    if @ItemId is not null
-    begin
+    IF @ItemId IS NOT NULL
+    BEGIN
+        -- Get the most recent inventory stock for that item
+        SELECT TOP 1 @CurrentStock = inventorystock
+        FROM dbo.inventory
+        WHERE inv_itemid = @ItemId
+        ORDER BY inventorydate DESC;
 
-        select top 1 @CurrentStock = inventorystock
-        from inventory
-        where inventory.inv_itemid = @ItemId
-        order by inventorydate desc;
+        -- If enough stock is available, update the stock
+        IF @CurrentStock >= @SoldQuantity
+        BEGIN
+            UPDATE dbo.inventory
+            SET inventorystock = inventorystock - @SoldQuantity, inventorydate = @InventoryDate
+            WHERE inv_itemid = @ItemId
+            AND inventorystock = @CurrentStock;
+        END
+    END
+END;
+GO
 
-        if @CurrentStock >= @SoldQuantity
-        begin
-            insert into inventory (inv_itemid, inventorystock, inventorydate)
-            values (@ItemId, @CurrentStock - @SoldQuantity, @InventoryDate);
-        end
-        else
-        begin
-            raiserror('Not enough stock available for sale.', 16, 1);
-        end
-    end
-    else
-    begin
-        raiserror('Item not found.', 16, 1);
-    end
-end;
-go
 
 -- Get Item Price Procedure
 create procedure GetItemPriceByName
@@ -64,33 +63,3 @@ begin
 end;
 go
 
--- Reset Inventory Stock Procedure
-create procedure resetInventoryStock
-AS
-BEGIN
-    UPDATE inventory
-    SET inventorystock = CASE 
-        WHEN items.itemname = 'croissant' THEN 20
-        WHEN items.itemname = 'sliced bread' THEN 25
-        WHEN items.itemname = 'bagel' THEN 30
-        WHEN items.itemname = 'butter' THEN 30
-        WHEN items.itemname = 'cheese' THEN 20
-        WHEN items.itemname = 'yogurt' THEN 20
-        WHEN items.itemname = 'wine' THEN 30
-        WHEN items.itemname = 'juice' THEN 50
-        WHEN items.itemname = 'soda' THEN 60
-        WHEN items.itemname = 'rice' THEN 1000
-        WHEN items.itemname = 'wheat' THEN 90
-        WHEN items.itemname = 'corn' THEN 70
-        WHEN items.itemname = 'tomato' THEN 40
-        WHEN items.itemname = 'cabbage' THEN 30
-        WHEN items.itemname = 'carrots' THEN 30
-        WHEN items.itemname = 'chips' THEN 40
-        WHEN items.itemname = 'nachos' THEN 30
-        WHEN items.itemname = 'cookies' THEN 30
-        ELSE inventorystock
-    END
-    FROM inventory
-    INNER JOIN items ON inventory.inv_itemid = items.itemid;
-END;
-GO

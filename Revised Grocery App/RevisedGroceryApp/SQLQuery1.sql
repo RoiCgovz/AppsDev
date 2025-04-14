@@ -11,7 +11,7 @@ create table items (
 );
 
 create table inventory (
-    inventoryid int primary key identity(1,1),
+    inventoryid int primary key identity(100,1),
     inv_itemid int not null,
     inventorydate datetime not null,
     inventorystock int not null,
@@ -19,12 +19,12 @@ create table inventory (
 );
 
 create table sales (
-    saleid int primary key identity(1,1),
+    saleid int primary key identity(1000,1),
     saledate datetime not null
 );
 
 create table salesdetails (
-    salesdetailid int primary key identity(1,1),
+    salesdetailid int primary key identity(10000,1),
     salesdetails_invid int not null,
     salesdetails_saleid int not null,
     quantity int not null,
@@ -46,24 +46,24 @@ create table salesreports (
 INSERT INTO items (itemName, itemCategory, itemPrice)
 SELECT itemName, itemCategory, itemPrice
 FROM (VALUES
-    ('croissant', 'bakery', 2.50),
-    ('sliced bread', 'bakery', 1.80),
-    ('bagel', 'bakery', 2.00),
-    ('butter', 'dairy', 1.50),
-    ('cheese', 'dairy', 3.00),
-    ('yogurt', 'dairy', 1.20),
-    ('wine', 'beverage', 12.00),
-    ('juice', 'beverage', 3.50),
-    ('soda', 'beverage', 1.00),
-    ('rice', 'grains', 0.75),
-    ('wheat', 'grains', 0.90),
-    ('corn', 'grains', 1.20),
-    ('tomato', 'vegetable', 0.80),
-    ('cabbage', 'vegetable', 1.00),
-    ('carrots', 'vegetable', 0.90),
-    ('chips', 'snacks', 2.00),
-    ('nachos', 'snacks', 2.50),
-    ('cookies', 'snacks', 1.50)
+    ('croissant', 'bakery', 1.20),
+    ('sliced bread', 'bakery', 1.40),
+    ('bagel', 'bakery', 1.78),
+    ('butter', 'dairy', 1.20),
+    ('cheese', 'dairy', 2.30),
+    ('yogurt', 'dairy', 2.50),
+    ('wine', 'beverage', 15.35),
+    ('juice', 'beverage', 3.00),
+    ('soda', 'beverage', 1.50),
+    ('rice', 'grains', 4.00),
+    ('wheat', 'grains', 2.40),
+    ('corn', 'grains', 1.50),
+    ('tomato', 'produce', 1.36),
+    ('cabbage', 'produce', 1.12),
+    ('carrots', 'produce', 1.53),
+    ('chips', 'snacks', 0.56),
+    ('nachos', 'snacks', 1.23),
+    ('cookies', 'snacks', 0.78)
 ) 
 AS ItemsData(itemName, itemCategory, itemPrice)
 WHERE NOT EXISTS (SELECT 1 FROM items WHERE items.itemName = ItemsData.itemName);
@@ -96,14 +96,48 @@ WHERE NOT EXISTS (
     SELECT 1 FROM inventory WHERE inv_itemId = i.itemId
 );
 
-
+/*
+UPDATE inv
+SET inv.inventorystock = s.inventoryStock
+FROM dbo.inventory inv
+JOIN (
+    VALUES
+        ('croissant', 20),
+        ('sliced bread', 25),
+        ('bagel', 30),
+        ('butter', 30),
+        ('cheese', 20),
+        ('yogurt', 20),
+        ('wine', 30),
+        ('juice', 50),
+        ('soda', 60),
+        ('rice', 1000),
+        ('wheat', 90),
+        ('corn', 70),
+        ('tomato', 40),
+        ('cabbage', 30),
+        ('carrots', 30),
+        ('chips', 40),
+        ('nachos', 30),
+        ('cookies', 30)
+) AS s(itemName, inventoryStock)
+ON inv.inv_itemid = (
+    SELECT itemId
+    FROM dbo.items
+    WHERE itemName = s.itemName
+);
+*/
 -- Testing the Database
 select * from items;
 select * from inventory;
-select * from sales;
-select * from salesdetails;
-select * from salesreports;
+-- select * from sales;
+-- select * from salesdetails;
+-- select * from salesreports;
 
 -- Optionally drop the database for testing purposes (use with caution)
--- drop database grocerydb;
--- drop procedure dbo.insertIntoItems
+-- DROP DATABASE grocerydb;
+-- drop procedure dbo.insertIntoItem
+-- EXEC GetItemStock @ItemName = 'rice';
+-- EXEC UpdateItemStockAfterSale 'rice', 200, '2025-02-20'
+
+

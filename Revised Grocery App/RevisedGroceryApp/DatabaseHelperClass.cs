@@ -8,6 +8,7 @@ namespace RevisedGroceryApp
     public static class DatabaseHelperClass
     {
         private static readonly string connectionString = "Data Source=DESKTOP-L1QSSAU\\SQLEXPRESS;Initial Catalog=grocerydb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        
         // Method to get item stock
         public static int GetItemStock(string itemName)
         {
@@ -16,7 +17,7 @@ namespace RevisedGroceryApp
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("dbo.GetItemStock", conn))
+                    using (SqlCommand cmd = new SqlCommand("GetItemStock", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("@ItemName", SqlDbType.NVarChar).Value = itemName;
@@ -40,14 +41,13 @@ namespace RevisedGroceryApp
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("dbo.UpdateItemStockAfterSale", conn))
+                    using (SqlCommand cmd = new SqlCommand("UpdateItemStockAfterSale", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("@ItemName", SqlDbType.NVarChar).Value = itemName;
                         cmd.Parameters.Add("@SoldQuantity", SqlDbType.Int).Value = quantitySold;
                         cmd.Parameters.Add("@InventoryDate", SqlDbType.DateTime).Value = date;
                         cmd.ExecuteNonQuery();
-
                     }
                 }
             }
@@ -65,7 +65,7 @@ namespace RevisedGroceryApp
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("dbo.GetItemPriceByName", conn))
+                    using (SqlCommand cmd = new SqlCommand("GetItemPriceByName", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.Add("@ItemName", SqlDbType.NVarChar).Value = itemName;
@@ -81,25 +81,6 @@ namespace RevisedGroceryApp
             }
         }
 
-        // Method to reset stock to default value
-        public static void ResetAllStocks()
-        {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("dbo.resetInventoryStock", conn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error resetting stock: {ex.Message}");
-            }
-        }
+        
     }
 }
