@@ -28,477 +28,649 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cartBtn = new System.Windows.Forms.Button();
-            this.homeBtn = new System.Windows.Forms.Button();
-            this.categoryPnl = new System.Windows.Forms.Panel();
-            this.snksPnl = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.snksVwMr = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.prodPnl = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.prodVwMr = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.daiPnl = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.daiVwMr = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.bkryPnl = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bkryVwMr = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.bevPnl = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bevVwMr = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.grainsPnl = new System.Windows.Forms.Panel();
+            this.components = new System.ComponentModel.Container();
+            this.cuiFormRounder1 = new CuoreUI.Components.cuiFormRounder();
+            this.Color1 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha1 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha2 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha3 = new System.Windows.Forms.ColorWithAlpha();
+            this.xBtn = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gnVwMr = new System.Windows.Forms.Label();
+            this.cuiEllipse1 = new CuoreUI.Controls.Shapes.cuiEllipse();
+            this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
+            this.cuiPictureBox2 = new CuoreUI.Controls.cuiPictureBox();
+            this.cuiEllipse2 = new CuoreUI.Controls.Shapes.cuiEllipse();
+            this.cuiPictureBox3 = new CuoreUI.Controls.cuiPictureBox();
+            this.cuiEllipse3 = new CuoreUI.Controls.Shapes.cuiEllipse();
+            this.roundedPanel5 = new RoundedPanel.RoundedPanel(this.components);
+            this.roundedPanel2 = new RoundedPanel.RoundedPanel(this.components);
+            this.cuiButton1 = new CuoreUI.Controls.cuiButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.xBtn = new System.Windows.Forms.PictureBox();
-            this.headerPicture = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            this.categoryPnl.SuspendLayout();
-            this.snksPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.prodPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.daiPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.bkryPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.bevPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.grainsPnl.SuspendLayout();
+            this.roundedPanel1 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cuiButton2 = new CuoreUI.Controls.cuiButton();
+            this.roundedPanel3 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.cuiButton3 = new CuoreUI.Controls.cuiButton();
+            this.roundedPanel4 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.cuiButton4 = new CuoreUI.Controls.cuiButton();
+            this.roundedPanel6 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.cuiButton5 = new CuoreUI.Controls.cuiButton();
+            this.roundedPanel7 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.cuiButton6 = new CuoreUI.Controls.cuiButton();
+            this.roundedPanel5.SuspendLayout();
+            this.roundedPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).BeginInit();
+            this.roundedPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.roundedPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.roundedPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.roundedPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.roundedPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // cuiFormRounder1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.cartBtn);
-            this.panel1.Controls.Add(this.homeBtn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(0, 202);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 44);
-            this.panel1.TabIndex = 0;
+            this.cuiFormRounder1.EnhanceCorners = false;
+            this.cuiFormRounder1.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cuiFormRounder1.Rounding = 15;
+            this.cuiFormRounder1.TargetForm = this;
             // 
-            // flowLayoutPanel1
+            // Color1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 58);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.Color1.Alpha = 255;
+            this.Color1.Color = System.Drawing.Color.Black;
+            this.Color1.Parent = null;
             // 
-            // cartBtn
+            // colorWithAlpha1
             // 
-            this.cartBtn.Location = new System.Drawing.Point(547, 0);
-            this.cartBtn.Name = "cartBtn";
-            this.cartBtn.Size = new System.Drawing.Size(119, 44);
-            this.cartBtn.TabIndex = 4;
-            this.cartBtn.Text = "Cart";
-            this.cartBtn.UseVisualStyleBackColor = true;
-            this.cartBtn.Click += new System.EventHandler(this.cartBtn_Click);
+            this.colorWithAlpha1.Alpha = 255;
+            this.colorWithAlpha1.Color = System.Drawing.Color.Black;
             // 
-            // homeBtn
+            // colorWithAlpha2
             // 
-            this.homeBtn.Location = new System.Drawing.Point(364, 0);
-            this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(119, 44);
-            this.homeBtn.TabIndex = 3;
-            this.homeBtn.Text = "Home";
-            this.homeBtn.UseVisualStyleBackColor = true;
+            this.colorWithAlpha2.Alpha = 255;
+            this.colorWithAlpha2.Color = System.Drawing.SystemColors.ActiveCaptionText;
             // 
-            // categoryPnl
+            // colorWithAlpha3
             // 
-            this.categoryPnl.AutoScroll = true;
-            this.categoryPnl.BackColor = System.Drawing.Color.White;
-            this.categoryPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.categoryPnl.Controls.Add(this.snksPnl);
-            this.categoryPnl.Controls.Add(this.prodPnl);
-            this.categoryPnl.Controls.Add(this.daiPnl);
-            this.categoryPnl.Controls.Add(this.bkryPnl);
-            this.categoryPnl.Controls.Add(this.bevPnl);
-            this.categoryPnl.Controls.Add(this.grainsPnl);
-            this.categoryPnl.Location = new System.Drawing.Point(35, 330);
-            this.categoryPnl.Name = "categoryPnl";
-            this.categoryPnl.Size = new System.Drawing.Size(927, 368);
-            this.categoryPnl.TabIndex = 3;
+            this.colorWithAlpha3.Alpha = 255;
+            this.colorWithAlpha3.Color = System.Drawing.SystemColors.ActiveCaptionText;
             // 
-            // snksPnl
+            // xBtn
             // 
-            this.snksPnl.BackColor = System.Drawing.Color.White;
-            this.snksPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.snksPnl.Controls.Add(this.label6);
-            this.snksPnl.Controls.Add(this.snksVwMr);
-            this.snksPnl.Controls.Add(this.pictureBox6);
-            this.snksPnl.Location = new System.Drawing.Point(472, 257);
-            this.snksPnl.Name = "snksPnl";
-            this.snksPnl.Size = new System.Drawing.Size(195, 205);
-            this.snksPnl.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label6.Location = new System.Drawing.Point(25, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 21);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Snacks";
-            // 
-            // snksVwMr
-            // 
-            this.snksVwMr.AutoSize = true;
-            this.snksVwMr.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.snksVwMr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.snksVwMr.Location = new System.Drawing.Point(3, 169);
-            this.snksVwMr.Name = "snksVwMr";
-            this.snksVwMr.Size = new System.Drawing.Size(108, 25);
-            this.snksVwMr.TabIndex = 1;
-            this.snksVwMr.Text = "View More";
-            this.snksVwMr.Click += new System.EventHandler(this.snksVwMr_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.istockphoto_1263013701_612x612;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(59, 22);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
-            // prodPnl
-            // 
-            this.prodPnl.BackColor = System.Drawing.Color.White;
-            this.prodPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.prodPnl.Controls.Add(this.label5);
-            this.prodPnl.Controls.Add(this.prodVwMr);
-            this.prodPnl.Controls.Add(this.pictureBox5);
-            this.prodPnl.Location = new System.Drawing.Point(248, 257);
-            this.prodPnl.Name = "prodPnl";
-            this.prodPnl.Size = new System.Drawing.Size(195, 205);
-            this.prodPnl.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(18, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 21);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Produce";
-            // 
-            // prodVwMr
-            // 
-            this.prodVwMr.AutoSize = true;
-            this.prodVwMr.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prodVwMr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.prodVwMr.Location = new System.Drawing.Point(3, 169);
-            this.prodVwMr.Name = "prodVwMr";
-            this.prodVwMr.Size = new System.Drawing.Size(108, 25);
-            this.prodVwMr.TabIndex = 1;
-            this.prodVwMr.Text = "View More";
-            this.prodVwMr.Click += new System.EventHandler(this.prodVwMr_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._360_F_53144147_Zx2dgnSeefxIjOQ5cjD4PBdZF4m8M7sm;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(59, 22);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // daiPnl
-            // 
-            this.daiPnl.BackColor = System.Drawing.Color.White;
-            this.daiPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.daiPnl.Controls.Add(this.label4);
-            this.daiPnl.Controls.Add(this.daiVwMr);
-            this.daiPnl.Controls.Add(this.pictureBox4);
-            this.daiPnl.Location = new System.Drawing.Point(694, 27);
-            this.daiPnl.Name = "daiPnl";
-            this.daiPnl.Size = new System.Drawing.Size(195, 205);
-            this.daiPnl.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(29, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 21);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Dairy";
-            // 
-            // daiVwMr
-            // 
-            this.daiVwMr.AutoSize = true;
-            this.daiVwMr.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daiVwMr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.daiVwMr.Location = new System.Drawing.Point(3, 169);
-            this.daiVwMr.Name = "daiVwMr";
-            this.daiVwMr.Size = new System.Drawing.Size(108, 25);
-            this.daiVwMr.TabIndex = 1;
-            this.daiVwMr.Text = "View More";
-            this.daiVwMr.Click += new System.EventHandler(this.daiVwMr_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.istockphoto_1194278577_612x612;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(42, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // bkryPnl
-            // 
-            this.bkryPnl.BackColor = System.Drawing.Color.White;
-            this.bkryPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bkryPnl.Controls.Add(this.label3);
-            this.bkryPnl.Controls.Add(this.bkryVwMr);
-            this.bkryPnl.Controls.Add(this.pictureBox3);
-            this.bkryPnl.Location = new System.Drawing.Point(472, 27);
-            this.bkryPnl.Name = "bkryPnl";
-            this.bkryPnl.Size = new System.Drawing.Size(195, 205);
-            this.bkryPnl.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(24, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 21);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Bakery";
-            // 
-            // bkryVwMr
-            // 
-            this.bkryVwMr.AutoSize = true;
-            this.bkryVwMr.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bkryVwMr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.bkryVwMr.Location = new System.Drawing.Point(3, 169);
-            this.bkryVwMr.Name = "bkryVwMr";
-            this.bkryVwMr.Size = new System.Drawing.Size(108, 25);
-            this.bkryVwMr.TabIndex = 1;
-            this.bkryVwMr.Text = "View More";
-            this.bkryVwMr.Click += new System.EventHandler(this.bkryVwMr_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__4_;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(80, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // bevPnl
-            // 
-            this.bevPnl.BackColor = System.Drawing.Color.White;
-            this.bevPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bevPnl.Controls.Add(this.label2);
-            this.bevPnl.Controls.Add(this.bevVwMr);
-            this.bevPnl.Controls.Add(this.pictureBox2);
-            this.bevPnl.Location = new System.Drawing.Point(248, 27);
-            this.bevPnl.Name = "bevPnl";
-            this.bevPnl.Size = new System.Drawing.Size(195, 205);
-            this.bevPnl.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label2.Location = new System.Drawing.Point(18, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Beverage";
-            // 
-            // bevVwMr
-            // 
-            this.bevVwMr.AutoSize = true;
-            this.bevVwMr.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bevVwMr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.bevVwMr.Location = new System.Drawing.Point(7, 169);
-            this.bevVwMr.Name = "bevVwMr";
-            this.bevVwMr.Size = new System.Drawing.Size(108, 25);
-            this.bevVwMr.TabIndex = 1;
-            this.bevVwMr.Text = "View More";
-            this.bevVwMr.Click += new System.EventHandler(this.bevVwMr_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__3_;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(75, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(177, 171);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // grainsPnl
-            // 
-            this.grainsPnl.BackColor = System.Drawing.Color.White;
-            this.grainsPnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.grainsPnl.Controls.Add(this.label1);
-            this.grainsPnl.Controls.Add(this.gnVwMr);
-            this.grainsPnl.Controls.Add(this.pictureBox1);
-            this.grainsPnl.Location = new System.Drawing.Point(27, 27);
-            this.grainsPnl.Name = "grainsPnl";
-            this.grainsPnl.Size = new System.Drawing.Size(195, 205);
-            this.grainsPnl.TabIndex = 0;
+            this.xBtn.AutoSize = true;
+            this.xBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.xBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.xBtn.ForeColor = System.Drawing.Color.White;
+            this.xBtn.Location = new System.Drawing.Point(1302, 38);
+            this.xBtn.Name = "xBtn";
+            this.xBtn.Size = new System.Drawing.Size(24, 28);
+            this.xBtn.TabIndex = 4;
+            this.xBtn.Text = "X";
+            this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(16, 13);
+            this.label1.Font = new System.Drawing.Font("Constantia", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(598, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Grains";
+            this.label1.Size = new System.Drawing.Size(443, 97);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Categories";
             // 
-            // gnVwMr
+            // cuiEllipse1
             // 
-            this.gnVwMr.AutoSize = true;
-            this.gnVwMr.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gnVwMr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.gnVwMr.Location = new System.Drawing.Point(3, 169);
-            this.gnVwMr.Name = "gnVwMr";
-            this.gnVwMr.Size = new System.Drawing.Size(108, 25);
-            this.gnVwMr.TabIndex = 1;
-            this.gnVwMr.Text = "View More";
-            this.gnVwMr.Click += new System.EventHandler(this.gnVwMr_Click);
+            this.cuiEllipse1.Location = new System.Drawing.Point(25, 231);
+            this.cuiEllipse1.Name = "cuiEllipse1";
+            this.cuiEllipse1.OutlineColor = System.Drawing.Color.Empty;
+            this.cuiEllipse1.OutlineThickness = 1;
+            this.cuiEllipse1.PanelColor = System.Drawing.Color.Black;
+            this.cuiEllipse1.Size = new System.Drawing.Size(80, 80);
+            this.cuiEllipse1.TabIndex = 15;
+            // 
+            // cuiPictureBox1
+            // 
+            this.cuiPictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_home_100__1_;
+            this.cuiPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cuiPictureBox1.Content = null;
+            this.cuiPictureBox1.CornerRadius = 8;
+            this.cuiPictureBox1.ImageTint = System.Drawing.Color.White;
+            this.cuiPictureBox1.Location = new System.Drawing.Point(41, 245);
+            this.cuiPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cuiPictureBox1.Name = "cuiPictureBox1";
+            this.cuiPictureBox1.OutlineThickness = 1F;
+            this.cuiPictureBox1.PanelOutlineColor = System.Drawing.Color.Empty;
+            this.cuiPictureBox1.Rotation = 0;
+            this.cuiPictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.cuiPictureBox1.TabIndex = 14;
+            this.cuiPictureBox1.Load += new System.EventHandler(this.cuiPictureBox1_Load_1);
+            // 
+            // cuiPictureBox2
+            // 
+            this.cuiPictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_home_100__1_;
+            this.cuiPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cuiPictureBox2.Content = null;
+            this.cuiPictureBox2.CornerRadius = 8;
+            this.cuiPictureBox2.ImageTint = System.Drawing.Color.White;
+            this.cuiPictureBox2.Location = new System.Drawing.Point(41, 425);
+            this.cuiPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cuiPictureBox2.Name = "cuiPictureBox2";
+            this.cuiPictureBox2.OutlineThickness = 1F;
+            this.cuiPictureBox2.PanelOutlineColor = System.Drawing.Color.Empty;
+            this.cuiPictureBox2.Rotation = 0;
+            this.cuiPictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.cuiPictureBox2.TabIndex = 16;
+            // 
+            // cuiEllipse2
+            // 
+            this.cuiEllipse2.Location = new System.Drawing.Point(25, 412);
+            this.cuiEllipse2.Name = "cuiEllipse2";
+            this.cuiEllipse2.OutlineColor = System.Drawing.Color.Empty;
+            this.cuiEllipse2.OutlineThickness = 1;
+            this.cuiEllipse2.PanelColor = System.Drawing.Color.Black;
+            this.cuiEllipse2.Size = new System.Drawing.Size(80, 80);
+            this.cuiEllipse2.TabIndex = 17;
+            // 
+            // cuiPictureBox3
+            // 
+            this.cuiPictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_home_100__1_;
+            this.cuiPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cuiPictureBox3.Content = null;
+            this.cuiPictureBox3.CornerRadius = 8;
+            this.cuiPictureBox3.ImageTint = System.Drawing.Color.White;
+            this.cuiPictureBox3.Location = new System.Drawing.Point(41, 620);
+            this.cuiPictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cuiPictureBox3.Name = "cuiPictureBox3";
+            this.cuiPictureBox3.OutlineThickness = 1F;
+            this.cuiPictureBox3.PanelOutlineColor = System.Drawing.Color.Empty;
+            this.cuiPictureBox3.Rotation = 0;
+            this.cuiPictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.cuiPictureBox3.TabIndex = 18;
+            // 
+            // cuiEllipse3
+            // 
+            this.cuiEllipse3.Location = new System.Drawing.Point(25, 605);
+            this.cuiEllipse3.Name = "cuiEllipse3";
+            this.cuiEllipse3.OutlineColor = System.Drawing.Color.Empty;
+            this.cuiEllipse3.OutlineThickness = 1;
+            this.cuiEllipse3.PanelColor = System.Drawing.Color.Black;
+            this.cuiEllipse3.Size = new System.Drawing.Size(80, 80);
+            this.cuiEllipse3.TabIndex = 19;
+            // 
+            // roundedPanel5
+            // 
+            this.roundedPanel5.BackColor = System.Drawing.Color.Black;
+            this.roundedPanel5.BorderRadius = 30;
+            this.roundedPanel5.Controls.Add(this.cuiPictureBox2);
+            this.roundedPanel5.Controls.Add(this.cuiPictureBox1);
+            this.roundedPanel5.Controls.Add(this.cuiEllipse2);
+            this.roundedPanel5.Controls.Add(this.cuiEllipse1);
+            this.roundedPanel5.Controls.Add(this.cuiPictureBox3);
+            this.roundedPanel5.Controls.Add(this.cuiEllipse3);
+            this.roundedPanel5.Location = new System.Drawing.Point(-3, -2);
+            this.roundedPanel5.Name = "roundedPanel5";
+            this.roundedPanel5.RadiusButtonLeft = 30;
+            this.roundedPanel5.RadiusButtonRight = 30;
+            this.roundedPanel5.RadiusTopLeft = 30;
+            this.roundedPanel5.RadiusTopRight = 30;
+            this.roundedPanel5.Size = new System.Drawing.Size(141, 977);
+            this.roundedPanel5.TabIndex = 23;
+            // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.BackColor = System.Drawing.Color.White;
+            this.roundedPanel2.BorderRadius = 30;
+            this.roundedPanel2.Controls.Add(this.pictureBox1);
+            this.roundedPanel2.Controls.Add(this.cuiButton1);
+            this.roundedPanel2.Location = new System.Drawing.Point(336, 179);
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.RadiusButtonLeft = 30;
+            this.roundedPanel2.RadiusButtonRight = 30;
+            this.roundedPanel2.RadiusTopLeft = 30;
+            this.roundedPanel2.RadiusTopRight = 30;
+            this.roundedPanel2.Size = new System.Drawing.Size(228, 347);
+            this.roundedPanel2.TabIndex = 23;
+            // 
+            // cuiButton1
+            // 
+            this.cuiButton1.CheckButton = false;
+            this.cuiButton1.Checked = false;
+            this.cuiButton1.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton1.CheckedForeColor = System.Drawing.Color.White;
+            this.cuiButton1.CheckedImageTint = System.Drawing.Color.White;
+            this.cuiButton1.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton1.Content = "Your text here!";
+            this.cuiButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.cuiButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cuiButton1.ForeColor = System.Drawing.Color.White;
+            this.cuiButton1.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton1.HoveredImageTint = System.Drawing.Color.White;
+            this.cuiButton1.HoverForeColor = System.Drawing.Color.White;
+            this.cuiButton1.HoverOutline = System.Drawing.Color.Empty;
+            this.cuiButton1.Image = null;
+            this.cuiButton1.ImageAutoCenter = true;
+            this.cuiButton1.ImageExpand = new System.Drawing.Point(0, 0);
+            this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton1.Location = new System.Drawing.Point(22, 281);
+            this.cuiButton1.Name = "cuiButton1";
+            this.cuiButton1.NormalBackground = System.Drawing.Color.Black;
+            this.cuiButton1.NormalForeColor = System.Drawing.Color.White;
+            this.cuiButton1.NormalImageTint = System.Drawing.Color.White;
+            this.cuiButton1.NormalOutline = System.Drawing.Color.Empty;
+            this.cuiButton1.OutlineThickness = 1.6F;
+            this.cuiButton1.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton1.PressedForeColor = System.Drawing.Color.White;
+            this.cuiButton1.PressedImageTint = System.Drawing.Color.White;
+            this.cuiButton1.PressedOutline = System.Drawing.Color.Empty;
+            this.cuiButton1.Rounding = new System.Windows.Forms.Padding(8);
+            this.cuiButton1.Size = new System.Drawing.Size(193, 51);
+            this.cuiButton1.TabIndex = 0;
+            this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(67, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.Size = new System.Drawing.Size(268, 198);
+            this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // xBtn
+            // roundedPanel1
             // 
-            this.xBtn.BackColor = System.Drawing.Color.Navy;
-            this.xBtn.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__1_;
-            this.xBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.xBtn.Location = new System.Drawing.Point(968, 12);
-            this.xBtn.Name = "xBtn";
-            this.xBtn.Size = new System.Drawing.Size(20, 20);
-            this.xBtn.TabIndex = 2;
-            this.xBtn.TabStop = false;
-            this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
+            this.roundedPanel1.BackColor = System.Drawing.Color.White;
+            this.roundedPanel1.BorderRadius = 30;
+            this.roundedPanel1.Controls.Add(this.pictureBox2);
+            this.roundedPanel1.Controls.Add(this.cuiButton2);
+            this.roundedPanel1.Location = new System.Drawing.Point(697, 179);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.RadiusButtonLeft = 30;
+            this.roundedPanel1.RadiusButtonRight = 30;
+            this.roundedPanel1.RadiusTopLeft = 30;
+            this.roundedPanel1.RadiusTopRight = 30;
+            this.roundedPanel1.Size = new System.Drawing.Size(228, 347);
+            this.roundedPanel1.TabIndex = 24;
             // 
-            // headerPicture
+            // pictureBox2
             // 
-            this.headerPicture.BackColor = System.Drawing.Color.Black;
-            this.headerPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.headerPicture.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerPicture.Image = global::RevisedGroceryApp.Properties.Resources.output_onlinepngtools__1_;
-            this.headerPicture.Location = new System.Drawing.Point(0, 0);
-            this.headerPicture.Name = "headerPicture";
-            this.headerPicture.Size = new System.Drawing.Size(1000, 202);
-            this.headerPicture.TabIndex = 0;
-            this.headerPicture.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(46, 50);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(268, 198);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // cuiButton2
+            // 
+            this.cuiButton2.CheckButton = false;
+            this.cuiButton2.Checked = false;
+            this.cuiButton2.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton2.CheckedForeColor = System.Drawing.Color.White;
+            this.cuiButton2.CheckedImageTint = System.Drawing.Color.White;
+            this.cuiButton2.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton2.Content = "Your text here!";
+            this.cuiButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.cuiButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cuiButton2.ForeColor = System.Drawing.Color.White;
+            this.cuiButton2.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton2.HoveredImageTint = System.Drawing.Color.White;
+            this.cuiButton2.HoverForeColor = System.Drawing.Color.White;
+            this.cuiButton2.HoverOutline = System.Drawing.Color.Empty;
+            this.cuiButton2.Image = null;
+            this.cuiButton2.ImageAutoCenter = true;
+            this.cuiButton2.ImageExpand = new System.Drawing.Point(0, 0);
+            this.cuiButton2.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton2.Location = new System.Drawing.Point(22, 281);
+            this.cuiButton2.Name = "cuiButton2";
+            this.cuiButton2.NormalBackground = System.Drawing.Color.Black;
+            this.cuiButton2.NormalForeColor = System.Drawing.Color.White;
+            this.cuiButton2.NormalImageTint = System.Drawing.Color.White;
+            this.cuiButton2.NormalOutline = System.Drawing.Color.Empty;
+            this.cuiButton2.OutlineThickness = 1.6F;
+            this.cuiButton2.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton2.PressedForeColor = System.Drawing.Color.White;
+            this.cuiButton2.PressedImageTint = System.Drawing.Color.White;
+            this.cuiButton2.PressedOutline = System.Drawing.Color.Empty;
+            this.cuiButton2.Rounding = new System.Windows.Forms.Padding(8);
+            this.cuiButton2.Size = new System.Drawing.Size(193, 51);
+            this.cuiButton2.TabIndex = 0;
+            this.cuiButton2.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // roundedPanel3
+            // 
+            this.roundedPanel3.BackColor = System.Drawing.Color.White;
+            this.roundedPanel3.BorderRadius = 30;
+            this.roundedPanel3.Controls.Add(this.pictureBox3);
+            this.roundedPanel3.Controls.Add(this.cuiButton3);
+            this.roundedPanel3.Location = new System.Drawing.Point(1066, 179);
+            this.roundedPanel3.Name = "roundedPanel3";
+            this.roundedPanel3.RadiusButtonLeft = 30;
+            this.roundedPanel3.RadiusButtonRight = 30;
+            this.roundedPanel3.RadiusTopLeft = 30;
+            this.roundedPanel3.RadiusTopRight = 30;
+            this.roundedPanel3.Size = new System.Drawing.Size(228, 347);
+            this.roundedPanel3.TabIndex = 24;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(46, 50);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(268, 198);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // cuiButton3
+            // 
+            this.cuiButton3.CheckButton = false;
+            this.cuiButton3.Checked = false;
+            this.cuiButton3.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton3.CheckedForeColor = System.Drawing.Color.White;
+            this.cuiButton3.CheckedImageTint = System.Drawing.Color.White;
+            this.cuiButton3.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton3.Content = "Your text here!";
+            this.cuiButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.cuiButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cuiButton3.ForeColor = System.Drawing.Color.White;
+            this.cuiButton3.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton3.HoveredImageTint = System.Drawing.Color.White;
+            this.cuiButton3.HoverForeColor = System.Drawing.Color.White;
+            this.cuiButton3.HoverOutline = System.Drawing.Color.Empty;
+            this.cuiButton3.Image = null;
+            this.cuiButton3.ImageAutoCenter = true;
+            this.cuiButton3.ImageExpand = new System.Drawing.Point(0, 0);
+            this.cuiButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton3.Location = new System.Drawing.Point(22, 281);
+            this.cuiButton3.Name = "cuiButton3";
+            this.cuiButton3.NormalBackground = System.Drawing.Color.Black;
+            this.cuiButton3.NormalForeColor = System.Drawing.Color.White;
+            this.cuiButton3.NormalImageTint = System.Drawing.Color.White;
+            this.cuiButton3.NormalOutline = System.Drawing.Color.Empty;
+            this.cuiButton3.OutlineThickness = 1.6F;
+            this.cuiButton3.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton3.PressedForeColor = System.Drawing.Color.White;
+            this.cuiButton3.PressedImageTint = System.Drawing.Color.White;
+            this.cuiButton3.PressedOutline = System.Drawing.Color.Empty;
+            this.cuiButton3.Rounding = new System.Windows.Forms.Padding(8);
+            this.cuiButton3.Size = new System.Drawing.Size(193, 51);
+            this.cuiButton3.TabIndex = 0;
+            this.cuiButton3.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.BackColor = System.Drawing.Color.White;
+            this.roundedPanel4.BorderRadius = 30;
+            this.roundedPanel4.Controls.Add(this.pictureBox4);
+            this.roundedPanel4.Controls.Add(this.cuiButton4);
+            this.roundedPanel4.Location = new System.Drawing.Point(336, 603);
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.RadiusButtonLeft = 30;
+            this.roundedPanel4.RadiusButtonRight = 30;
+            this.roundedPanel4.RadiusTopLeft = 30;
+            this.roundedPanel4.RadiusTopRight = 30;
+            this.roundedPanel4.Size = new System.Drawing.Size(228, 347);
+            this.roundedPanel4.TabIndex = 24;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(46, 50);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(268, 198);
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // cuiButton4
+            // 
+            this.cuiButton4.CheckButton = false;
+            this.cuiButton4.Checked = false;
+            this.cuiButton4.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton4.CheckedForeColor = System.Drawing.Color.White;
+            this.cuiButton4.CheckedImageTint = System.Drawing.Color.White;
+            this.cuiButton4.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton4.Content = "Your text here!";
+            this.cuiButton4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.cuiButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cuiButton4.ForeColor = System.Drawing.Color.White;
+            this.cuiButton4.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton4.HoveredImageTint = System.Drawing.Color.White;
+            this.cuiButton4.HoverForeColor = System.Drawing.Color.White;
+            this.cuiButton4.HoverOutline = System.Drawing.Color.Empty;
+            this.cuiButton4.Image = null;
+            this.cuiButton4.ImageAutoCenter = true;
+            this.cuiButton4.ImageExpand = new System.Drawing.Point(0, 0);
+            this.cuiButton4.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton4.Location = new System.Drawing.Point(22, 281);
+            this.cuiButton4.Name = "cuiButton4";
+            this.cuiButton4.NormalBackground = System.Drawing.Color.Black;
+            this.cuiButton4.NormalForeColor = System.Drawing.Color.White;
+            this.cuiButton4.NormalImageTint = System.Drawing.Color.White;
+            this.cuiButton4.NormalOutline = System.Drawing.Color.Empty;
+            this.cuiButton4.OutlineThickness = 1.6F;
+            this.cuiButton4.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton4.PressedForeColor = System.Drawing.Color.White;
+            this.cuiButton4.PressedImageTint = System.Drawing.Color.White;
+            this.cuiButton4.PressedOutline = System.Drawing.Color.Empty;
+            this.cuiButton4.Rounding = new System.Windows.Forms.Padding(8);
+            this.cuiButton4.Size = new System.Drawing.Size(193, 51);
+            this.cuiButton4.TabIndex = 0;
+            this.cuiButton4.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // roundedPanel6
+            // 
+            this.roundedPanel6.BackColor = System.Drawing.Color.White;
+            this.roundedPanel6.BorderRadius = 30;
+            this.roundedPanel6.Controls.Add(this.pictureBox5);
+            this.roundedPanel6.Controls.Add(this.cuiButton5);
+            this.roundedPanel6.Location = new System.Drawing.Point(697, 603);
+            this.roundedPanel6.Name = "roundedPanel6";
+            this.roundedPanel6.RadiusButtonLeft = 30;
+            this.roundedPanel6.RadiusButtonRight = 30;
+            this.roundedPanel6.RadiusTopLeft = 30;
+            this.roundedPanel6.RadiusTopRight = 30;
+            this.roundedPanel6.Size = new System.Drawing.Size(228, 347);
+            this.roundedPanel6.TabIndex = 25;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(46, 50);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(268, 198);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // cuiButton5
+            // 
+            this.cuiButton5.CheckButton = false;
+            this.cuiButton5.Checked = false;
+            this.cuiButton5.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton5.CheckedForeColor = System.Drawing.Color.White;
+            this.cuiButton5.CheckedImageTint = System.Drawing.Color.White;
+            this.cuiButton5.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton5.Content = "Your text here!";
+            this.cuiButton5.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.cuiButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cuiButton5.ForeColor = System.Drawing.Color.White;
+            this.cuiButton5.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton5.HoveredImageTint = System.Drawing.Color.White;
+            this.cuiButton5.HoverForeColor = System.Drawing.Color.White;
+            this.cuiButton5.HoverOutline = System.Drawing.Color.Empty;
+            this.cuiButton5.Image = null;
+            this.cuiButton5.ImageAutoCenter = true;
+            this.cuiButton5.ImageExpand = new System.Drawing.Point(0, 0);
+            this.cuiButton5.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton5.Location = new System.Drawing.Point(22, 281);
+            this.cuiButton5.Name = "cuiButton5";
+            this.cuiButton5.NormalBackground = System.Drawing.Color.Black;
+            this.cuiButton5.NormalForeColor = System.Drawing.Color.White;
+            this.cuiButton5.NormalImageTint = System.Drawing.Color.White;
+            this.cuiButton5.NormalOutline = System.Drawing.Color.Empty;
+            this.cuiButton5.OutlineThickness = 1.6F;
+            this.cuiButton5.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton5.PressedForeColor = System.Drawing.Color.White;
+            this.cuiButton5.PressedImageTint = System.Drawing.Color.White;
+            this.cuiButton5.PressedOutline = System.Drawing.Color.Empty;
+            this.cuiButton5.Rounding = new System.Windows.Forms.Padding(8);
+            this.cuiButton5.Size = new System.Drawing.Size(193, 51);
+            this.cuiButton5.TabIndex = 0;
+            this.cuiButton5.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // roundedPanel7
+            // 
+            this.roundedPanel7.BackColor = System.Drawing.Color.White;
+            this.roundedPanel7.BorderRadius = 30;
+            this.roundedPanel7.Controls.Add(this.pictureBox6);
+            this.roundedPanel7.Controls.Add(this.cuiButton6);
+            this.roundedPanel7.Location = new System.Drawing.Point(1075, 603);
+            this.roundedPanel7.Name = "roundedPanel7";
+            this.roundedPanel7.RadiusButtonLeft = 30;
+            this.roundedPanel7.RadiusButtonRight = 30;
+            this.roundedPanel7.RadiusTopLeft = 30;
+            this.roundedPanel7.RadiusTopRight = 30;
+            this.roundedPanel7.Size = new System.Drawing.Size(228, 347);
+            this.roundedPanel7.TabIndex = 25;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(46, 50);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(268, 198);
+            this.pictureBox6.TabIndex = 1;
+            this.pictureBox6.TabStop = false;
+            // 
+            // cuiButton6
+            // 
+            this.cuiButton6.CheckButton = false;
+            this.cuiButton6.Checked = false;
+            this.cuiButton6.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton6.CheckedForeColor = System.Drawing.Color.White;
+            this.cuiButton6.CheckedImageTint = System.Drawing.Color.White;
+            this.cuiButton6.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton6.Content = "Your text here!";
+            this.cuiButton6.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.cuiButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cuiButton6.ForeColor = System.Drawing.Color.White;
+            this.cuiButton6.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton6.HoveredImageTint = System.Drawing.Color.White;
+            this.cuiButton6.HoverForeColor = System.Drawing.Color.White;
+            this.cuiButton6.HoverOutline = System.Drawing.Color.Empty;
+            this.cuiButton6.Image = null;
+            this.cuiButton6.ImageAutoCenter = true;
+            this.cuiButton6.ImageExpand = new System.Drawing.Point(0, 0);
+            this.cuiButton6.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton6.Location = new System.Drawing.Point(22, 281);
+            this.cuiButton6.Name = "cuiButton6";
+            this.cuiButton6.NormalBackground = System.Drawing.Color.Black;
+            this.cuiButton6.NormalForeColor = System.Drawing.Color.White;
+            this.cuiButton6.NormalImageTint = System.Drawing.Color.White;
+            this.cuiButton6.NormalOutline = System.Drawing.Color.Empty;
+            this.cuiButton6.OutlineThickness = 1.6F;
+            this.cuiButton6.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.cuiButton6.PressedForeColor = System.Drawing.Color.White;
+            this.cuiButton6.PressedImageTint = System.Drawing.Color.White;
+            this.cuiButton6.PressedOutline = System.Drawing.Color.Empty;
+            this.cuiButton6.Rounding = new System.Windows.Forms.Padding(8);
+            this.cuiButton6.Size = new System.Drawing.Size(193, 51);
+            this.cuiButton6.TabIndex = 0;
+            this.cuiButton6.TextOffset = new System.Drawing.Point(0, 0);
             // 
             // CategoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1000, 720);
-            this.Controls.Add(this.categoryPnl);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.ClientSize = new System.Drawing.Size(1379, 972);
+            this.Controls.Add(this.roundedPanel7);
+            this.Controls.Add(this.roundedPanel6);
+            this.Controls.Add(this.roundedPanel4);
+            this.Controls.Add(this.roundedPanel3);
+            this.Controls.Add(this.roundedPanel1);
+            this.Controls.Add(this.roundedPanel2);
+            this.Controls.Add(this.roundedPanel5);
             this.Controls.Add(this.xBtn);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.headerPicture);
+            this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CategoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Category";
-            this.panel1.ResumeLayout(false);
-            this.categoryPnl.ResumeLayout(false);
-            this.snksPnl.ResumeLayout(false);
-            this.snksPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.prodPnl.ResumeLayout(false);
-            this.prodPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.daiPnl.ResumeLayout(false);
-            this.daiPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.bkryPnl.ResumeLayout(false);
-            this.bkryPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.bevPnl.ResumeLayout(false);
-            this.bevPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.grainsPnl.ResumeLayout(false);
-            this.grainsPnl.PerformLayout();
+            this.Text = "a";
+            this.roundedPanel5.ResumeLayout(false);
+            this.roundedPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.headerPicture)).EndInit();
+            this.roundedPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.roundedPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.roundedPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.roundedPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.roundedPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox headerPicture;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button cartBtn;
-        private System.Windows.Forms.Button homeBtn;
-        private System.Windows.Forms.PictureBox xBtn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel categoryPnl;
-        private System.Windows.Forms.Panel grainsPnl;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label gnVwMr;
-        private System.Windows.Forms.Panel daiPnl;
-        private System.Windows.Forms.Label daiVwMr;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel bkryPnl;
-        private System.Windows.Forms.Label bkryVwMr;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel bevPnl;
-        private System.Windows.Forms.Label bevVwMr;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel snksPnl;
-        private System.Windows.Forms.Label snksVwMr;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel prodPnl;
-        private System.Windows.Forms.Label prodVwMr;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private CuoreUI.Components.cuiFormRounder cuiFormRounder1;
+        private System.Windows.Forms.ColorWithAlpha Color1;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha1;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha2;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha3;
+        private System.Windows.Forms.Label xBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private CuoreUI.Controls.cuiPictureBox cuiPictureBox3;
+        private CuoreUI.Controls.Shapes.cuiEllipse cuiEllipse3;
+        private CuoreUI.Controls.cuiPictureBox cuiPictureBox2;
+        private CuoreUI.Controls.Shapes.cuiEllipse cuiEllipse2;
+        private CuoreUI.Controls.cuiPictureBox cuiPictureBox1;
+        private CuoreUI.Controls.Shapes.cuiEllipse cuiEllipse1;
+        private RoundedPanel.RoundedPanel roundedPanel5;
+        private RoundedPanel.RoundedPanel roundedPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private CuoreUI.Controls.cuiButton cuiButton1;
+        private RoundedPanel.RoundedPanel roundedPanel7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private CuoreUI.Controls.cuiButton cuiButton6;
+        private RoundedPanel.RoundedPanel roundedPanel6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private CuoreUI.Controls.cuiButton cuiButton5;
+        private RoundedPanel.RoundedPanel roundedPanel4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private CuoreUI.Controls.cuiButton cuiButton4;
+        private RoundedPanel.RoundedPanel roundedPanel3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private CuoreUI.Controls.cuiButton cuiButton3;
+        private RoundedPanel.RoundedPanel roundedPanel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private CuoreUI.Controls.cuiButton cuiButton2;
     }
 }
 

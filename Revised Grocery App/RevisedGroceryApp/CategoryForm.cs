@@ -17,7 +17,6 @@ namespace RevisedGroceryApp
         {
             Application.Exit();
         }
-
         private void cartBtn_Click(object sender, EventArgs e)
         {
             if (cartForm == null || cartForm.IsDisposed)
@@ -73,6 +72,16 @@ namespace RevisedGroceryApp
             Grains g = new Grains();
             this.Hide();
             g.Show();
-        }  
+        }
+
+        private void cuiPictureBox1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiPictureBox1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
