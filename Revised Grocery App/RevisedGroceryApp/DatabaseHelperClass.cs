@@ -7,7 +7,7 @@ namespace RevisedGroceryApp
 {
     public static class DatabaseHelperClass
     {
-        private static readonly string connectionString = "Data Source=DESKTOP-L1QSSAU\\SQLEXPRESS;Initial Catalog=grocerydb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private static readonly string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=grocerydb;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         
         // Method to get item stock
         public static int GetItemStock(string itemName)

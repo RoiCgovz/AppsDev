@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AlphaGradientPanel, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\AlphaGradientPanel.1.1.2.0\lib\net40\AlphaGradientPanel.dll</HintPath>
-    </Reference>
     <Reference Include="CuoreUI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\CuoreUI.Winforms.2025.4.18\lib\netstandard2.0\CuoreUI.dll</HintPath>
     </Reference>
@@ -155,6 +152,11 @@
     <Compile Include="Beverages.Designer.cs">
       <DependentUpon>Beverages.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Receipt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,14 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Beverages.resx">
       <DependentUpon>Beverages.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,19 +219,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\images.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\istockphoto-1203599923-612x612.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\istockphoto-1203599923-612x612 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\istockphoto-1203599923-612x612.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\output-onlinepngtools.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\output-onlinepngtools %281%29.png" />
@@ -318,9 +303,6 @@
     <None Include="Resources\_carrots1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\_cabbage2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\2bananachips1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -334,10 +316,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-6-Circle.ico" />
+    <None Include="Resources\icons8-b-100.png" />
+    <None Include="Resources\icons8-profile-picture-100.png" />
+    <None Include="Resources\icons8-cart-48.png" />
+    <None Include="Resources\icons8-food-basket-48.png" />
+    <None Include="Resources\icons8-home-48.png" />
     <None Include="Resources\icons8-cart-100.png" />
-    <None Include="Resources\icons8-home-100 %281%29.png" />
-    <None Include="Resources\icons8-ingredients-100.png" />
-    <None Include="Resources\icons8-basket-100.png" />
     <None Include="Resources\icons8-home-1001.png" />
     <None Include="Resources\icons8-home-100.png" />
     <None Include="Resources\icons8-grains-96.png" />

@@ -252,7 +252,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._1cheese;
+          
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(45, 37);
             this.pictureBox1.Name = "pictureBox1";
@@ -312,7 +312,7 @@
             // xBtn
             // 
             this.xBtn.BackColor = System.Drawing.Color.Navy;
-            this.xBtn.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__1_;
+    
             this.xBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.xBtn.Location = new System.Drawing.Point(555, 12);
             this.xBtn.Name = "xBtn";
@@ -385,9 +385,8 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._1yogurt;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.ErrorImage = global::RevisedGroceryApp.Properties.Resources._1yogurt;
+          
             this.pictureBox3.Location = new System.Drawing.Point(43, 42);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(151, 165);
@@ -461,7 +460,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._1btr;
+            
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(45, 37);
             this.pictureBox2.Name = "pictureBox2";

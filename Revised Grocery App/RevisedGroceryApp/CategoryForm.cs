@@ -17,71 +17,46 @@ namespace RevisedGroceryApp
         {
             Application.Exit();
         }
-        private void cartBtn_Click(object sender, EventArgs e)
-        {
-            if (cartForm == null || cartForm.IsDisposed)
-            {
-                cartForm = new Cart(CartItems);
-            }
-            else
-            {
-                cartForm.LoadCartItems(CartItems);
-            }
-
-            this.Hide();
-            cartForm.Show();
-        }
-
-        private void bevVwMr_Click(object sender, EventArgs e)
-        {
-            Beverages bev = new Beverages();
-            this.Hide();
-            bev.Show();
-        }
-
-        private void daiVwMr_Click(object sender, EventArgs e)
-        {
-            Dairy dairy = new Dairy();
-            this.Hide();
-            dairy.Show();
-        }
-
-        private void bkryVwMr_Click(object sender, EventArgs e)
+        private void bakeBtn_Click(object sender, EventArgs e)
         {
             Bakery bakery = new Bakery();
             this.Hide();
             bakery.Show();
         }
 
-        private void prodVwMr_Click(object sender, EventArgs e)
+        private void bevBtn_Click(object sender, EventArgs e)
         {
-            Produce p = new Produce();
+            Beverages bev = new Beverages();
             this.Hide();
-            p.Show();
+            bev.Show();
         }
 
-        private void snksVwMr_Click(object sender, EventArgs e)
+        private void dairyBtn_Click(object sender, EventArgs e)
         {
-            Snacks s = new Snacks();
+            Dairy dairy = new Dairy();
             this.Hide();
-            s.Show();
+            dairy.Show();
         }
 
-        private void gnVwMr_Click(object sender, EventArgs e)
+        private void grainsBtn_Click(object sender, EventArgs e)
         {
             Grains g = new Grains();
             this.Hide();
             g.Show();
         }
 
-        private void cuiPictureBox1_Load(object sender, EventArgs e)
+        private void prodBtn_Click(object sender, EventArgs e)
         {
-
+            Produce p = new Produce();
+            this.Hide();
+            p.Show();
         }
 
-        private void cuiPictureBox1_Load_1(object sender, EventArgs e)
+        private void snkBtn_Click(object sender, EventArgs e)
         {
-
+            Snacks s = new Snacks();
+            this.Hide();
+            s.Show();
         }
     }
 }

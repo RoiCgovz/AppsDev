@@ -227,7 +227,6 @@
             // xBtn
             // 
             this.xBtn.BackColor = System.Drawing.Color.Navy;
-            this.xBtn.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__1_;
             this.xBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.xBtn.Location = new System.Drawing.Point(555, 12);
             this.xBtn.Name = "xBtn";
@@ -314,7 +313,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._1nacho;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(45, 37);
             this.pictureBox2.Name = "pictureBox2";
@@ -376,7 +374,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._1_Chips;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(44, 33);
             this.pictureBox1.Name = "pictureBox1";
@@ -451,7 +448,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.cookies;
+       
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(39, 37);
             this.pictureBox3.Name = "pictureBox3";

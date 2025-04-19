@@ -82,4 +82,3 @@ C:\Users\deths\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\De
 C:\Users\deths\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\System.CodeDom.dll
 C:\Users\deths\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\Newtonsoft.Json.xml
 C:\Users\deths\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\System.CodeDom.xml
-C:\Users\deths\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\AlphaGradientPanel.dll
