@@ -58,5 +58,17 @@ namespace RevisedGroceryApp
             this.Hide();
             s.Show();
         }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+            HomePage home = new HomePage();
+            home.Show();
+            this.Hide();
+        }
+
+        private void CategoryForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

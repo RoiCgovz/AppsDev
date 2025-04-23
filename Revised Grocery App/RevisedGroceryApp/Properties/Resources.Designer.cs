@@ -93,6 +93,16 @@ namespace RevisedGroceryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2e4a5e994ef8d0dddee3c331bcb22626 {
+            get {
+                object obj = ResourceManager.GetObject("2e4a5e994ef8d0dddee3c331bcb22626", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _360_F_53144147_Zx2dgnSeefxIjOQ5cjD4PBdZF4m8M7sm {
             get {
                 object obj = ResourceManager.GetObject("360_F_53144147_Zx2dgnSeefxIjOQ5cjD4PBdZF4m8M7sm", resourceCulture);
@@ -163,6 +173,16 @@ namespace RevisedGroceryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Adobe_Express___file {
+            get {
+                object obj = ResourceManager.GetObject("Adobe Express - file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Adobe_Express___file__1_ {
             get {
                 object obj = ResourceManager.GetObject("Adobe Express - file (1)", resourceCulture);
@@ -173,9 +193,29 @@ namespace RevisedGroceryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Adobe_Express___file__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("Adobe Express - file (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Adobe_Express___file__2_ {
             get {
                 object obj = ResourceManager.GetObject("Adobe Express - file (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Adobe_Express___file__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Adobe Express - file (2)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +236,16 @@ namespace RevisedGroceryApp.Properties {
         internal static System.Drawing.Bitmap Adobe_Express___file__4_ {
             get {
                 object obj = ResourceManager.GetObject("Adobe Express - file (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Adobe_Express___file1 {
+            get {
+                object obj = ResourceManager.GetObject("Adobe Express - file1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +296,16 @@ namespace RevisedGroceryApp.Properties {
         internal static System.Drawing.Bitmap icons8_profile_picture_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-profile-picture-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1047798504_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1047798504-612x612", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -131,6 +131,12 @@
     <Compile Include="Grains.Designer.cs">
       <DependentUpon>Grains.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items.cs" />
     <Compile Include="LogInForm.cs">
       <SubType>Form</SubType>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Grains.resx">
       <DependentUpon>Grains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
@@ -316,6 +325,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-6-Circle.ico" />
+    <None Include="Resources\Adobe Express - file %282%291.png" />
+    <None Include="Resources\Adobe Express - file %281%291.png" />
+    <None Include="Resources\2e4a5e994ef8d0dddee3c331bcb22626.jpg" />
+    <None Include="Resources\Adobe Express - file1.png" />
+    <None Include="Resources\Adobe Express - file.png" />
     <None Include="Resources\icons8-b-100.png" />
     <None Include="Resources\icons8-profile-picture-100.png" />
     <None Include="Resources\icons8-cart-48.png" />
