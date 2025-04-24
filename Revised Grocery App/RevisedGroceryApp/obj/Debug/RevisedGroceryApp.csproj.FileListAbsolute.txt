@@ -33,7 +33,6 @@ C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\De
 C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.CategoryForm.resources
 C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Grains.resources
 C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Properties.Resources.resources
-C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Resources.Beverages.resources
 C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Receipt.resources
 C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.csproj.GenerateResource.cache
 C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.csproj.CoreCompileInputs.cache
@@ -83,3 +82,15 @@ C:\Users\deths\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\De
 C:\Users\deths\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\Newtonsoft.Json.xml
 C:\Users\deths\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\System.CodeDom.xml
 C:\Users\deths\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.HomePage.resources
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\CuoreUI.dll
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\RoundedPanel.dll
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\System.CodeDom.dll
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\bin\Debug\System.CodeDom.xml
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.HomePage.resources
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.LogInForm.resources
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Produce.resources
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Beverages.resources
+C:\Users\xx521\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.Snacks.resources
+C:\Users\xx521\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedG.4B9EFBCB.Up2Date

@@ -21,5 +21,12 @@ namespace RevisedGroceryApp
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            CategoryForm cat = new CategoryForm();
+            cat.Show();
+            this.Close();
+        }
     }
 }
