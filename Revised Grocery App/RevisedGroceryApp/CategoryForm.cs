@@ -20,60 +20,85 @@ namespace RevisedGroceryApp
         private void bakeBtn_Click(object sender, EventArgs e)
         {
             Bakery bakery = new Bakery();
-            this.Hide();
+            this.Close();
             bakery.Show();
         }
 
         private void bevBtn_Click(object sender, EventArgs e)
         {
             Beverages bev = new Beverages();
-            this.Hide();
+            this.Close();
             bev.Show();
         }
 
         private void dairyBtn_Click(object sender, EventArgs e)
         {
             Dairy dairy = new Dairy();
-            this.Hide();
+            this.Close();
             dairy.Show();
         }
 
         private void grainsBtn_Click(object sender, EventArgs e)
         {
             Grains g = new Grains();
-            this.Hide();
+            this.Close();
             g.Show();
         }
 
         private void prodBtn_Click(object sender, EventArgs e)
         {
             Produce p = new Produce();
-            this.Hide();
+            this.Close();
             p.Show();
         }
 
         private void snkBtn_Click(object sender, EventArgs e)
         {
             Snacks s = new Snacks();
-            this.Hide();
+            this.Close();
             s.Show();
         }
 
-        private void homeBtn_Click(object sender, EventArgs e)
+        private void cartPnl_Click(object sender, EventArgs e)
+        {
+            Cart cart = new Cart();
+            cart.Show();
+            this.Close();
+        }
+
+        private void homePnl_Click(object sender, EventArgs e)
         {
             HomePage home = new HomePage();
             home.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void CategoryForm_Load(object sender, EventArgs e)
+        private void catPnl_Click(object sender, EventArgs e)
         {
-
+            CategoryForm cat = new CategoryForm();
+            cat.Show();
+            this.Close();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void homelbl_Click(object sender, EventArgs e)
         {
+            HomePage home = new HomePage();
+            home.Show();
+            this.Close();
+        }
 
+        private void catLbl_Click(object sender, EventArgs e)
+        {
+            CategoryForm cat = new CategoryForm();
+            cat.Show();
+            this.Close();
+        }
+
+        private void cartLbl_Click(object sender, EventArgs e)
+        {
+            Cart cart = new Cart();
+            cart.Show();
+            this.Close();
         }
     }
 }

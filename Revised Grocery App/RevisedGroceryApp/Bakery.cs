@@ -165,5 +165,14 @@ namespace RevisedGroceryApp
         {
             Application.Exit();
         }
+
+        private void snksBtn_Click(object sender, EventArgs e)
+        {
+            Snacks snacks = new Snacks();
+            snacks.Show();
+            this.Close();
+        }
+
+       
     }
 }

@@ -16,17 +16,37 @@ namespace RevisedGroceryApp
         {
             InitializeComponent();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void catBtn_Click(object sender, EventArgs e)
         {
             CategoryForm cat = new CategoryForm();
             cat.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+            HomePage home = new HomePage();
+            home.Show();
+            this.Hide();
+        }
+
+        private void xBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void shopBtn_Click(object sender, EventArgs e)
+        {
+            CategoryForm cat = new CategoryForm();
+            cat.Show();
+            this.Hide();
+        }
+
+        private void cartBtn_Click(object sender, EventArgs e)
+        {
+            Cart cart = new Cart();
+            cart.Show();
+            this.Hide();
         }
     }
 }
