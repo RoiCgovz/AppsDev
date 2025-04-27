@@ -99,7 +99,7 @@ namespace RevisedGroceryApp
         }
         private void xBtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

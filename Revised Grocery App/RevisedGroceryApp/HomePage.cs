@@ -44,7 +44,7 @@ namespace RevisedGroceryApp
         }
         private void xBtn_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

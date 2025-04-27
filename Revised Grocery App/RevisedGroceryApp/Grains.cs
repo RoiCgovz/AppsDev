@@ -14,20 +14,55 @@ namespace RevisedGroceryApp
         public Grains()
         {
             InitializeComponent();
+            LoadStockLabels();
+            InitializeQuantityBoxes();
         }
 
-        private void riceAdd_Click(object sender, EventArgs e) => IncrementQuantity(riceTxtBox);
-        private void riceMin_Click(object sender, EventArgs e) => DecrementQuantity(riceTxtBox);
-        private void wheatAdd_Click(object sender, EventArgs e) => IncrementQuantity(wheatTxtBox);
-        private void wheatMin_Click(object sender, EventArgs e) => DecrementQuantity(wheatTxtBox);
-        private void cornAdd_Click(object sender, EventArgs e) => IncrementQuantity(cornTxtBox);
-        private void cornMin_Click(object sender, EventArgs e) => DecrementQuantity(cornTxtBox);
-        private void xBtn_Click(object sender, EventArgs e) => Application.Exit();
-
-        private void IncrementQuantity(TextBox txtBox)
+        private void InitializeQuantityBoxes()
         {
+            riceTxtBox.Text = "0";
+            wheatTxtBox.Text = "0";
+            cornTxtBox.Text = "0";
+            riceTxtBox.TextChanged += QuantityChanged;
+            wheatTxtBox.TextChanged += QuantityChanged;
+            cornTxtBox.TextChanged += QuantityChanged;
+            itemToCart.Enabled = false;
+        }
+
+        private void QuantityChanged(object sender, EventArgs e)
+        {
+            itemToCart.Enabled = riceTxtBox.Text != "0" || wheatTxtBox.Text != "0" || cornTxtBox.Text != "0";
+        }
+
+        private void LoadStockLabels()
+        {
+            riceStockLbl.Text = $"Stock: {DatabaseHelperClass.GetItemStock("Rice")}";
+            wheatStockLbl.Text = $"Stock: {DatabaseHelperClass.GetItemStock("Wheat")}";
+            cornStockLbl.Text = $"Stock: {DatabaseHelperClass.GetItemStock("Corn")}";
+        }
+
+        private void riceMin_Click(object sender, EventArgs e) => DecrementQuantity(riceTxtBox);
+        private void riceAdd_Click(object sender, EventArgs e) => IncrementQuantity(riceTxtBox, "Rice");
+
+        private void wheatMin_Click(object sender, EventArgs e) => DecrementQuantity(wheatTxtBox);
+        private void wheatAdd_Click(object sender, EventArgs e) => IncrementQuantity(wheatTxtBox, "Wheat");
+
+        private void cornMin_Click(object sender, EventArgs e) => DecrementQuantity(cornTxtBox);
+        private void cornAdd_Click(object sender, EventArgs e) => IncrementQuantity(cornTxtBox, "Corn");
+
+        private void IncrementQuantity(TextBox txtBox, string itemName)
+        {
+            int stock = DatabaseHelperClass.GetItemStock(itemName);
             int currentValue = int.TryParse(txtBox.Text, out int value) ? value : 0;
-            txtBox.Text = (currentValue + 1).ToString();
+
+            if (currentValue < stock)
+            {
+                txtBox.Text = (currentValue + 1).ToString();
+            }
+            else
+            {
+                MessageBox.Show($"Only {stock} {itemName} left in stock.", "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void DecrementQuantity(TextBox txtBox)
@@ -41,70 +76,74 @@ namespace RevisedGroceryApp
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
-            if (mainForm == null)
-            {
-                mainForm = new CategoryForm();
-                mainForm.Show();
-            }
-            else
-            {
-                mainForm.Show();
-            }
+            var mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault() ?? new CategoryForm();
+            mainForm.Show();
         }
 
         private void cartBtn_Click(object sender, EventArgs e)
         {
-            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
-            if (cartForm == null)
-            {
-                cartForm = new Cart(CategoryForm.CartItems);
-                cartForm.Show();
-            }
-            else
-            {
-                cartForm.Show();
-            }
+            var cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault() ?? new Cart(CategoryForm.CartItems);
+            cartForm.Show();
             this.Close();
         }
 
-        private void itemToCart_Click(object sender, EventArgs e)
+        private void backbtn_Click(object sender, EventArgs e)
         {
-            int riceQty = int.TryParse(riceTxtBox.Text, out int rQty) ? rQty : 0;
-            int wheatQty = int.TryParse(wheatTxtBox.Text, out int wQty) ? wQty : 0;
-            int cornQty = int.TryParse(cornTxtBox.Text, out int cQty) ? cQty : 0;
 
-            if (riceQty == 0 && wheatQty == 0 && cornQty == 0)
+        }
+
+        private void AddItemsToCart()
+        {
+            var items = new List<(string Name, TextBox TextBox)>
+            {
+                ("Rice", riceTxtBox),
+                ("Wheat", wheatTxtBox),
+                ("Corn", cornTxtBox)
+            };
+
+            List<Items> selectedItems = new List<Items>();
+
+            foreach (var (itemName, textBox) in items)
+            {
+                int quantity = int.TryParse(textBox.Text, out int q) ? q : 0;
+                if (quantity > 0)
+                {
+                    int stock = DatabaseHelperClass.GetItemStock(itemName);
+                    if (stock < quantity)
+                    {
+                        MessageBox.Show($"Not enough stock for {itemName}. Available: {stock}",
+                                        "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        continue;
+                    }
+
+                    decimal price = DatabaseHelperClass.GetItemPrice(itemName);
+                    selectedItems.Add(new Items { Name = itemName, Quantity = quantity, Price = price });
+                }
+            }
+
+            if (selectedItems.Count == 0)
             {
                 MessageBox.Show("Please select at least one item before adding to the cart.",
                                 "No Items Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            List<Items> selectedItems = new List<Items>
-            {
-                new Items { Name = "Rice", Quantity = riceQty, Price = ricePrice },
-                new Items { Name = "Wheat", Quantity = wheatQty, Price = wheatPrice },
-                new Items { Name = "Corn", Quantity = cornQty, Price = cornPrice }
-            };
-
             foreach (var newItem in selectedItems)
             {
-                if (newItem.Quantity > 0)
+                var existingItem = CategoryForm.CartItems.FirstOrDefault(i => i.Name == newItem.Name);
+                if (existingItem != null)
                 {
-                    var existingItem = CategoryForm.CartItems.FirstOrDefault(i => i.Name == newItem.Name);
-                    if (existingItem != null)
-                    {
-                        existingItem.Quantity += newItem.Quantity; 
-                    }
-                    else
-                    {
-                        CategoryForm.CartItems.Add(newItem); 
-                    }
+                    existingItem.Quantity += newItem.Quantity;
                 }
+                else
+                {
+                    CategoryForm.CartItems.Add(newItem);
+                }
+
+                DatabaseHelperClass.UpdateItemStock(newItem.Name, newItem.Quantity, DateTime.Now);
             }
 
-            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
+            var cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
             if (cartForm == null)
             {
                 cartForm = new Cart(CategoryForm.CartItems);
@@ -115,21 +154,29 @@ namespace RevisedGroceryApp
                 cartForm.LoadCartItems(CategoryForm.CartItems);
                 cartForm.Show();
             }
+
+            LoadStockLabels();
+            ResetQuantities();
             this.Close();
         }
 
-        private void backbtn_Click_1(object sender, EventArgs e)
+        private void ResetQuantities()
         {
-            CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
-            if (mainForm == null)
-            {
-                mainForm = new CategoryForm();
-                mainForm.Show();
-            }
-            else
-            {
-                mainForm.Show();
-            }
+            riceTxtBox.Text = "0";
+            wheatTxtBox.Text = "0";
+            cornTxtBox.Text = "0";
+        }
+
+        private void itemToCart_Click(object sender, EventArgs e)
+        {
+            AddItemsToCart();
+        }
+
+        private void bakeBtn_Click(object sender, EventArgs e)
+        {
+            Bakery bake = new Bakery();
+            bake.Show();
+            this.Close();
         }
 
         private void daiBtn_Click(object sender, EventArgs e)
@@ -141,15 +188,8 @@ namespace RevisedGroceryApp
 
         private void bevBtn_Click(object sender, EventArgs e)
         {
-            Beverages bev = new Beverages(); 
+            Beverages bev = new Beverages();
             bev.Show();
-            this.Close();
-        }
-
-        private void bakeBtn_Click(object sender, EventArgs e)
-        {
-            Bakery bake = new Bakery();
-            bake.Show();
             this.Close();
         }
 
@@ -165,6 +205,11 @@ namespace RevisedGroceryApp
             Snacks sn = new Snacks();
             sn.Show();
             this.Close();
+        }
+
+        private void xBtn_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

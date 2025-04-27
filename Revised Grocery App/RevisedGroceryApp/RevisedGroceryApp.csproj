@@ -325,6 +325,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-6-Circle.ico" />
+    <None Include="Resources\1nacho2.jpg" />
+    <None Include="Resources\cookies2.jpg" />
+    <None Include="Resources\_carrots2.jpg" />
+    <None Include="Resources\_cabbage2.jpg" />
+    <None Include="Resources\1yogurt1.jpg" />
+    <None Include="Resources\1btr2.jpg" />
+    <None Include="Resources\1cheese2.jpg" />
+    <None Include="Resources\icons8-bread-801.png" />
+    <None Include="Resources\icons8-wine-801.png" />
+    <None Include="Resources\icons8-grains-64.png" />
+    <None Include="Resources\icons8-grains-64 %281%292.png" />
+    <None Include="Resources\icons8-dairy-641.png" />
+    <None Include="Resources\icons8-fruits-321.png" />
+    <None Include="Resources\icons8-snacks-641.png" />
+    <None Include="Resources\icons8-fruits-66.png" />
+    <None Include="Resources\icons8-fruits-66 %281%291.png" />
+    <None Include="Resources\icons8-bread-80.png" />
+    <None Include="Resources\icons8-fruits-66 %281%29.png" />
+    <None Include="Resources\icons8-snacks-64.png" />
+    <None Include="Resources\icons8-fruits-32.png" />
+    <None Include="Resources\icons8-grains-64 %281%291.png" />
+    <None Include="Resources\icons8-dairy-64.png" />
+    <None Include="Resources\icons8-grains-64 %281%29.png" />
+    <None Include="Resources\icons8-wine-80.png" />
     <None Include="Resources\2bagel2.jpg" />
     <None Include="Resources\2bread2.jpg" />
     <None Include="Resources\Adobe Express - file %282%291.png" />

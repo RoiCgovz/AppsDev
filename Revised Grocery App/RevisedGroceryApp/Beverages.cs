@@ -74,40 +74,7 @@ namespace RevisedGroceryApp
             }
         }
 
-        private void bakeBtn_Click(object sender, EventArgs e)
-        {
-            new Bakery().Show();
-            this.Hide();
-        }
-
-        private void prodBtn_Click(object sender, EventArgs e)
-        {
-            new Produce().Show();
-            this.Close();
-        }
-
-        private void daiBtn_Click(object sender, EventArgs e)
-        {
-            new Dairy().Show();
-            this.Close();
-        }
-
-        private void grnBtn_Click(object sender, EventArgs e)
-        {
-            new Grains().Show();
-            this.Close();
-        }
-
-        private void snksBtn_Click(object sender, EventArgs e)
-        {
-            new Snacks().Show();
-            this.Close();
-        }
-
-        private void xBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
@@ -138,10 +105,7 @@ namespace RevisedGroceryApp
             CategoryForm.CartItems = CategoryForm.CartItems;
         }
 
-        private void itemToCart_Click_1(object sender, EventArgs e)
-        {
-            AddItemsToCart();
-        }
+       
 
         private void AddItemsToCart()
         {
@@ -216,6 +180,51 @@ namespace RevisedGroceryApp
             wineTxtBox.Text = "0";
             juiceTxtBox.Text = "0";
             sodaTxtBox.Text = "0";
+        }
+
+        private void bakeBtn_Click(object sender, EventArgs e)
+        {
+            Bakery bake = new Bakery();
+            bake.Show();
+            this.Close();
+        }
+
+        private void daiBtn_Click(object sender, EventArgs e)
+        {
+            Dairy dai = new Dairy();
+            dai.Show();
+            this.Close();
+        }
+
+        private void graBtn_Click(object sender, EventArgs e)
+        {
+            Grains g = new Grains();
+            g.Show();
+            this.Close();
+        }
+
+        private void prodBtn_Click(object sender, EventArgs e)
+        {
+            Produce p = new Produce(); 
+            p.Show(); 
+            this.Close();
+        }
+
+        private void snkBtn_Click(object sender, EventArgs e)
+        {
+            Snacks s = new Snacks();
+            s.Show();
+            this.Close();
+        }
+
+        private void itemToCart_Click(object sender, EventArgs e)
+        {
+            AddItemsToCart();
+        }
+
+        private void xBtn_Click_1(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
