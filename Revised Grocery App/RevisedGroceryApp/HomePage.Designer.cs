@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.homePic = new System.Windows.Forms.PictureBox();
@@ -39,6 +40,7 @@
             this.shopBtn = new CuoreUI.Controls.cuiButton();
             this.label2 = new System.Windows.Forms.Label();
             this.cuiFormRounder1 = new CuoreUI.Components.cuiFormRounder();
+            this.inAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.xBtn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homePic)).BeginInit();
@@ -193,18 +195,27 @@
             this.cuiFormRounder1.Rounding = 8;
             this.cuiFormRounder1.TargetForm = this;
             // 
+            // inAnim
+            // 
+            this.inAnim.AnimateOnStart = true;
+            this.inAnim.Duration = 600;
+            this.inAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadIn;
+            this.inAnim.StartOpacity = 0D;
+            this.inAnim.TargetForm = this;
+            this.inAnim.TargetOpacity = 1D;
+            // 
             // xBtn
             // 
             this.xBtn.AutoSize = true;
             this.xBtn.BackColor = System.Drawing.Color.Transparent;
             this.xBtn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.xBtn.ForeColor = System.Drawing.Color.White;
-            this.xBtn.Location = new System.Drawing.Point(971, 9);
+            this.xBtn.Location = new System.Drawing.Point(961, 9);
             this.xBtn.Name = "xBtn";
             this.xBtn.Size = new System.Drawing.Size(27, 30);
             this.xBtn.TabIndex = 13;
             this.xBtn.Text = "X";
-            this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
+            this.xBtn.Click += new System.EventHandler(this.xBtn_Click_1);
             // 
             // HomePage
             // 
@@ -246,6 +257,7 @@
         private CuoreUI.Controls.cuiButton shopBtn;
         private System.Windows.Forms.Label label2;
         private CuoreUI.Components.cuiFormRounder cuiFormRounder1;
+        private CuoreUI.Components.cuiFormAnimator inAnim;
         private System.Windows.Forms.Label xBtn;
     }
 }

@@ -13,10 +13,7 @@ namespace RevisedGroceryApp
         {
             InitializeComponent();
         }
-        private void xBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
         private void bakeBtn_Click(object sender, EventArgs e)
         {
             Bakery bakery = new Bakery();
@@ -99,6 +96,10 @@ namespace RevisedGroceryApp
             Cart cart = new Cart();
             cart.Show();
             this.Close();
+        }
+        private void xBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

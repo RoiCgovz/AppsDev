@@ -29,12 +29,6 @@ namespace RevisedGroceryApp
             home.Show();
             this.Hide();
         }
-
-        private void xBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void shopBtn_Click(object sender, EventArgs e)
         {
             CategoryForm cat = new CategoryForm();
@@ -47,6 +41,10 @@ namespace RevisedGroceryApp
             Cart cart = new Cart();
             cart.Show();
             this.Hide();
+        }
+        private void xBtn_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

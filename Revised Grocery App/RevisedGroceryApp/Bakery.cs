@@ -103,7 +103,7 @@ namespace RevisedGroceryApp
         private void bagelMin_Click(object sender, EventArgs e) => DecrementQuantity(bagelTxtBox);
         private void bagelAdd_Click(object sender, EventArgs e) => IncrementQuantity(bagelTxtBox, "Bagel");
 
-       
+
         private void homeBtn_Click(object sender, EventArgs e)
         {
             CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault() ?? new CategoryForm();
@@ -161,18 +161,15 @@ namespace RevisedGroceryApp
                 mainForm.Show();
             }
         }
-        private void xBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void snksBtn_Click(object sender, EventArgs e)
         {
             Snacks snacks = new Snacks();
             snacks.Show();
             this.Close();
         }
-
-       
+        private void xBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

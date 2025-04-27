@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.xBtn = new System.Windows.Forms.Label();
             this.roundedPanel2 = new RoundedPanel.RoundedPanel(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bakeBtn = new CuoreUI.Controls.cuiButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.roundedPanel1 = new RoundedPanel.RoundedPanel(this.components);
-            this.bevBtn = new CuoreUI.Controls.cuiButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bevBtn = new CuoreUI.Controls.cuiButton();
             this.roundedPanel3 = new RoundedPanel.RoundedPanel(this.components);
             this.dairyBtn = new CuoreUI.Controls.cuiButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -64,6 +64,7 @@
             this.homelbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cuiFormRounder1 = new CuoreUI.Components.cuiFormRounder();
+            this.inAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.roundedPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.roundedPanel1.SuspendLayout();
@@ -115,17 +116,6 @@
             this.roundedPanel2.Size = new System.Drawing.Size(160, 240);
             this.roundedPanel2.TabIndex = 23;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__4_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(254, 160);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // bakeBtn
             // 
             this.bakeBtn.CheckButton = false;
@@ -163,6 +153,17 @@
             this.bakeBtn.TextOffset = new System.Drawing.Point(0, 0);
             this.bakeBtn.Click += new System.EventHandler(this.bakeBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__4_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(39, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(254, 160);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // roundedPanel1
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.White;
@@ -177,6 +178,17 @@
             this.roundedPanel1.RadiusTopRight = 30;
             this.roundedPanel1.Size = new System.Drawing.Size(160, 240);
             this.roundedPanel1.TabIndex = 24;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__3_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(27, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(208, 161);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // bevBtn
             // 
@@ -214,17 +226,6 @@
             this.bevBtn.TabIndex = 0;
             this.bevBtn.TextOffset = new System.Drawing.Point(0, 0);
             this.bevBtn.Click += new System.EventHandler(this.bevBtn_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__3_;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(27, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(208, 161);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // roundedPanel3
             // 
@@ -647,6 +648,15 @@
             this.cuiFormRounder1.Rounding = 8;
             this.cuiFormRounder1.TargetForm = this;
             // 
+            // inAnim
+            // 
+            this.inAnim.AnimateOnStart = true;
+            this.inAnim.Duration = 600;
+            this.inAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadIn;
+            this.inAnim.StartOpacity = 0D;
+            this.inAnim.TargetForm = this;
+            this.inAnim.TargetOpacity = 1D;
+            // 
             // CategoryForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -734,6 +744,7 @@
         private System.Windows.Forms.Label catLbl;
         private System.Windows.Forms.Label label3;
         private CuoreUI.Components.cuiFormRounder cuiFormRounder1;
+        private CuoreUI.Components.cuiFormAnimator inAnim;
     }
 }
 
