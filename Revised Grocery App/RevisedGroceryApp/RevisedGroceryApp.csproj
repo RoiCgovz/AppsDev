@@ -100,6 +100,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSignIn.Designer.cs">
+      <DependentUpon>AdminSignIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bakery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,12 @@
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Items.cs" />
+    <Compile Include="SignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignForm.Designer.cs">
+      <DependentUpon>SignForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +187,9 @@
     <Compile Include="Snacks.Designer.cs">
       <DependentUpon>Snacks.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminSignIn.resx">
+      <DependentUpon>AdminSignIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bakery.resx">
       <DependentUpon>Bakery.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignForm.resx">
+      <DependentUpon>SignForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
