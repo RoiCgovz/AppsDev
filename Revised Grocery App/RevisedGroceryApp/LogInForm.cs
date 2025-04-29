@@ -17,9 +17,23 @@ namespace RevisedGroceryApp
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void xBtn_Click(object sender, EventArgs e)
         {
+            Environment.Exit(0);
+        }
 
+        private void signUpLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUpUser signUp = new SignUpUser();
+            signUp.Show();
+            this.Hide();
+        }
+
+        private void signInAdminBtn_Click(object sender, EventArgs e)
+        {
+            AdminLogin adLog = new AdminLogin();
+            adLog.Show();
+            this.Hide();
         }
     }
 }

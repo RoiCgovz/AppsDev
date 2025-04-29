@@ -513,6 +513,16 @@ namespace RevisedGroceryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_60 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-password-60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_profile_picture_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-profile-picture-100", resourceCulture);

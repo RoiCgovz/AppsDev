@@ -120,3 +120,4 @@ C:\Users\xx513\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\De
 C:\Users\xx513\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedG.4B9EFBCB.Up2Date
 C:\Users\xx513\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.exe
 C:\Users\xx513\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.pdb
+C:\Users\PTO\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.SignUpUser.resources

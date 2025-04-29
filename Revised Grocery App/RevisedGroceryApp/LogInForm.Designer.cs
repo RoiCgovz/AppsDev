@@ -28,207 +28,335 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cuiTextBox21 = new CuoreUI.Controls.cuiTextBox2();
-            this.cuiTextBox22 = new CuoreUI.Controls.cuiTextBox2();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cuiButton1 = new CuoreUI.Controls.cuiButton();
-            this.cuiButton2 = new CuoreUI.Controls.cuiButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.loginUserNameTxtBox = new CuoreUI.Controls.cuiTextBox2();
+            this.loginPasswordTxtBox = new CuoreUI.Controls.cuiTextBox2();
+            this.loginUserBtn = new CuoreUI.Controls.cuiButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.signUpLabel = new System.Windows.Forms.LinkLabel();
+            this.xBtn = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.signInAdminBtn = new CuoreUI.Controls.cuiButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.signUpAdminBtn = new CuoreUI.Controls.cuiButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.FormAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.cuiButton1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 601);
-            this.panel1.TabIndex = 0;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.signInAdminBtn);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.signUpAdminBtn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(372, 641);
+            this.panel2.TabIndex = 0;
             // 
-            // cuiTextBox21
+            // label4
             // 
-            this.cuiTextBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cuiTextBox21.BackgroundColor = System.Drawing.Color.White;
-            this.cuiTextBox21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cuiTextBox21.BorderSize = 1;
-            this.cuiTextBox21.Content = "";
-            this.cuiTextBox21.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cuiTextBox21.FocusBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.cuiTextBox21.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.cuiTextBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuiTextBox21.ForeColor = System.Drawing.Color.Gray;
-            this.cuiTextBox21.Location = new System.Drawing.Point(538, 260);
-            this.cuiTextBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.cuiTextBox21.Multiline = false;
-            this.cuiTextBox21.Name = "cuiTextBox21";
-            this.cuiTextBox21.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
-            this.cuiTextBox21.PasswordChar = false;
-            this.cuiTextBox21.PlaceholderColor = System.Drawing.SystemColors.WindowText;
-            this.cuiTextBox21.PlaceholderText = "";
-            this.cuiTextBox21.Rounding = new System.Windows.Forms.Padding(8);
-            this.cuiTextBox21.Size = new System.Drawing.Size(266, 45);
-            this.cuiTextBox21.TabIndex = 1;
-            this.cuiTextBox21.TextOffset = new System.Drawing.Size(0, 0);
-            this.cuiTextBox21.UnderlinedStyle = false;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(621, 163);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 65);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Login";
             // 
-            // cuiTextBox22
+            // loginUserNameTxtBox
             // 
-            this.cuiTextBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cuiTextBox22.BackgroundColor = System.Drawing.Color.White;
-            this.cuiTextBox22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cuiTextBox22.BorderSize = 1;
-            this.cuiTextBox22.Content = "";
-            this.cuiTextBox22.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.cuiTextBox22.FocusBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.cuiTextBox22.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.cuiTextBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuiTextBox22.ForeColor = System.Drawing.Color.Gray;
-            this.cuiTextBox22.Location = new System.Drawing.Point(538, 346);
-            this.cuiTextBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.cuiTextBox22.Multiline = false;
-            this.cuiTextBox22.Name = "cuiTextBox22";
-            this.cuiTextBox22.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
-            this.cuiTextBox22.PasswordChar = false;
-            this.cuiTextBox22.PlaceholderColor = System.Drawing.SystemColors.WindowText;
-            this.cuiTextBox22.PlaceholderText = "";
-            this.cuiTextBox22.Rounding = new System.Windows.Forms.Padding(8);
-            this.cuiTextBox22.Size = new System.Drawing.Size(266, 45);
-            this.cuiTextBox22.TabIndex = 2;
-            this.cuiTextBox22.TextOffset = new System.Drawing.Size(0, 0);
-            this.cuiTextBox22.UnderlinedStyle = false;
+            this.loginUserNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.loginUserNameTxtBox.BackgroundColor = System.Drawing.Color.White;
+            this.loginUserNameTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loginUserNameTxtBox.BorderSize = 1;
+            this.loginUserNameTxtBox.Content = "";
+            this.loginUserNameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.loginUserNameTxtBox.FocusBackgroundColor = System.Drawing.Color.White;
+            this.loginUserNameTxtBox.FocusBorderColor = System.Drawing.Color.Black;
+            this.loginUserNameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginUserNameTxtBox.ForeColor = System.Drawing.Color.Black;
+            this.loginUserNameTxtBox.Location = new System.Drawing.Point(567, 285);
+            this.loginUserNameTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.loginUserNameTxtBox.Multiline = false;
+            this.loginUserNameTxtBox.Name = "loginUserNameTxtBox";
+            this.loginUserNameTxtBox.Padding = new System.Windows.Forms.Padding(15, 14, 15, 0);
+            this.loginUserNameTxtBox.PasswordChar = false;
+            this.loginUserNameTxtBox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
+            this.loginUserNameTxtBox.PlaceholderText = "Username";
+            this.loginUserNameTxtBox.Rounding = new System.Windows.Forms.Padding(8);
+            this.loginUserNameTxtBox.Size = new System.Drawing.Size(266, 42);
+            this.loginUserNameTxtBox.TabIndex = 2;
+            this.loginUserNameTxtBox.TextOffset = new System.Drawing.Size(0, 0);
+            this.loginUserNameTxtBox.UnderlinedStyle = false;
             // 
-            // label1
+            // loginPasswordTxtBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label1.Location = new System.Drawing.Point(81, 214);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 65);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Sign Up";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.loginPasswordTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.loginPasswordTxtBox.BackgroundColor = System.Drawing.Color.White;
+            this.loginPasswordTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loginPasswordTxtBox.BorderSize = 1;
+            this.loginPasswordTxtBox.Content = "";
+            this.loginPasswordTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.loginPasswordTxtBox.FocusBackgroundColor = System.Drawing.Color.White;
+            this.loginPasswordTxtBox.FocusBorderColor = System.Drawing.Color.Black;
+            this.loginPasswordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginPasswordTxtBox.ForeColor = System.Drawing.Color.Black;
+            this.loginPasswordTxtBox.Location = new System.Drawing.Point(567, 373);
+            this.loginPasswordTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.loginPasswordTxtBox.Multiline = false;
+            this.loginPasswordTxtBox.Name = "loginPasswordTxtBox";
+            this.loginPasswordTxtBox.Padding = new System.Windows.Forms.Padding(15, 14, 15, 0);
+            this.loginPasswordTxtBox.PasswordChar = false;
+            this.loginPasswordTxtBox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
+            this.loginPasswordTxtBox.PlaceholderText = "Password";
+            this.loginPasswordTxtBox.Rounding = new System.Windows.Forms.Padding(8);
+            this.loginPasswordTxtBox.Size = new System.Drawing.Size(266, 42);
+            this.loginPasswordTxtBox.TabIndex = 3;
+            this.loginPasswordTxtBox.TextOffset = new System.Drawing.Size(0, 0);
+            this.loginPasswordTxtBox.UnderlinedStyle = false;
             // 
-            // label2
+            // loginUserBtn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label2.Location = new System.Drawing.Point(35, 292);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(309, 50);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Enter your personal info and create\r\nnew account to connect us";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.loginUserBtn.CheckButton = false;
+            this.loginUserBtn.Checked = false;
+            this.loginUserBtn.CheckedBackground = System.Drawing.Color.Black;
+            this.loginUserBtn.CheckedForeColor = System.Drawing.Color.Black;
+            this.loginUserBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.loginUserBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loginUserBtn.Content = "Login";
+            this.loginUserBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.loginUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.loginUserBtn.ForeColor = System.Drawing.Color.White;
+            this.loginUserBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loginUserBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.loginUserBtn.HoverForeColor = System.Drawing.Color.Black;
+            this.loginUserBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.loginUserBtn.Image = null;
+            this.loginUserBtn.ImageAutoCenter = true;
+            this.loginUserBtn.ImageExpand = new System.Drawing.Point(0, 0);
+            this.loginUserBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.loginUserBtn.Location = new System.Drawing.Point(623, 497);
+            this.loginUserBtn.Name = "loginUserBtn";
+            this.loginUserBtn.NormalBackground = System.Drawing.Color.Black;
+            this.loginUserBtn.NormalForeColor = System.Drawing.Color.White;
+            this.loginUserBtn.NormalImageTint = System.Drawing.Color.White;
+            this.loginUserBtn.NormalOutline = System.Drawing.Color.White;
+            this.loginUserBtn.OutlineThickness = 1.6F;
+            this.loginUserBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loginUserBtn.PressedForeColor = System.Drawing.Color.White;
+            this.loginUserBtn.PressedImageTint = System.Drawing.Color.White;
+            this.loginUserBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.loginUserBtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.loginUserBtn.Size = new System.Drawing.Size(153, 55);
+            this.loginUserBtn.TabIndex = 4;
+            this.loginUserBtn.TextOffset = new System.Drawing.Point(0, 0);
             // 
-            // cuiButton1
+            // label5
             // 
-            this.cuiButton1.CheckButton = false;
-            this.cuiButton1.Checked = false;
-            this.cuiButton1.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.cuiButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.cuiButton1.CheckedImageTint = System.Drawing.Color.White;
-            this.cuiButton1.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.cuiButton1.Content = "Sign Up";
-            this.cuiButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.cuiButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuiButton1.ForeColor = System.Drawing.Color.White;
-            this.cuiButton1.HoverBackground = System.Drawing.Color.DarkGray;
-            this.cuiButton1.HoveredImageTint = System.Drawing.Color.White;
-            this.cuiButton1.HoverForeColor = System.Drawing.Color.White;
-            this.cuiButton1.HoverOutline = System.Drawing.Color.Empty;
-            this.cuiButton1.Image = null;
-            this.cuiButton1.ImageAutoCenter = true;
-            this.cuiButton1.ImageExpand = new System.Drawing.Point(0, 0);
-            this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.cuiButton1.Location = new System.Drawing.Point(112, 410);
-            this.cuiButton1.Name = "cuiButton1";
-            this.cuiButton1.NormalBackground = System.Drawing.Color.Black;
-            this.cuiButton1.NormalForeColor = System.Drawing.Color.White;
-            this.cuiButton1.NormalImageTint = System.Drawing.Color.White;
-            this.cuiButton1.NormalOutline = System.Drawing.Color.Empty;
-            this.cuiButton1.OutlineThickness = 1.6F;
-            this.cuiButton1.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.cuiButton1.PressedForeColor = System.Drawing.Color.White;
-            this.cuiButton1.PressedImageTint = System.Drawing.Color.White;
-            this.cuiButton1.PressedOutline = System.Drawing.Color.Empty;
-            this.cuiButton1.Rounding = new System.Windows.Forms.Padding(8);
-            this.cuiButton1.Size = new System.Drawing.Size(153, 45);
-            this.cuiButton1.TabIndex = 5;
-            this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(499, 433);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 15);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Don\'t have an Account?";
             // 
-            // cuiButton2
+            // signUpLabel
             // 
-            this.cuiButton2.CheckButton = false;
-            this.cuiButton2.Checked = false;
-            this.cuiButton2.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.cuiButton2.CheckedForeColor = System.Drawing.Color.White;
-            this.cuiButton2.CheckedImageTint = System.Drawing.Color.White;
-            this.cuiButton2.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.cuiButton2.Content = "Login";
-            this.cuiButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.cuiButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuiButton2.ForeColor = System.Drawing.Color.Black;
-            this.cuiButton2.HoverBackground = System.Drawing.Color.LightGray;
-            this.cuiButton2.HoveredImageTint = System.Drawing.Color.White;
-            this.cuiButton2.HoverForeColor = System.Drawing.Color.White;
-            this.cuiButton2.HoverOutline = System.Drawing.Color.Empty;
-            this.cuiButton2.Image = null;
-            this.cuiButton2.ImageAutoCenter = true;
-            this.cuiButton2.ImageExpand = new System.Drawing.Point(0, 0);
-            this.cuiButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.cuiButton2.Location = new System.Drawing.Point(597, 441);
-            this.cuiButton2.Name = "cuiButton2";
-            this.cuiButton2.NormalBackground = System.Drawing.Color.DarkGray;
-            this.cuiButton2.NormalForeColor = System.Drawing.Color.Black;
-            this.cuiButton2.NormalImageTint = System.Drawing.Color.White;
-            this.cuiButton2.NormalOutline = System.Drawing.Color.Empty;
-            this.cuiButton2.OutlineThickness = 1.6F;
-            this.cuiButton2.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.cuiButton2.PressedForeColor = System.Drawing.Color.White;
-            this.cuiButton2.PressedImageTint = System.Drawing.Color.White;
-            this.cuiButton2.PressedOutline = System.Drawing.Color.Empty;
-            this.cuiButton2.Rounding = new System.Windows.Forms.Padding(8);
-            this.cuiButton2.Size = new System.Drawing.Size(153, 45);
-            this.cuiButton2.TabIndex = 6;
-            this.cuiButton2.TextOffset = new System.Drawing.Point(0, 0);
+            this.signUpLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.signUpLabel.AutoSize = true;
+            this.signUpLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpLabel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.signUpLabel.LinkColor = System.Drawing.Color.Cyan;
+            this.signUpLabel.Location = new System.Drawing.Point(629, 433);
+            this.signUpLabel.Name = "signUpLabel";
+            this.signUpLabel.Size = new System.Drawing.Size(48, 15);
+            this.signUpLabel.TabIndex = 8;
+            this.signUpLabel.TabStop = true;
+            this.signUpLabel.Text = "Sign Up";
+            this.signUpLabel.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.signUpLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.signUpLabel_LinkClicked);
             // 
-            // label3
+            // xBtn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label3.Location = new System.Drawing.Point(511, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(323, 65);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Login to App";
+            this.xBtn.AutoSize = true;
+            this.xBtn.BackColor = System.Drawing.Color.Transparent;
+            this.xBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.xBtn.Location = new System.Drawing.Point(964, 9);
+            this.xBtn.Name = "xBtn";
+            this.xBtn.Size = new System.Drawing.Size(24, 25);
+            this.xBtn.TabIndex = 9;
+            this.xBtn.Text = "X";
+            this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_password_60;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(502, 373);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_profile_picture_100;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(502, 285);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // signInAdminBtn
+            // 
+            this.signInAdminBtn.CheckButton = false;
+            this.signInAdminBtn.Checked = false;
+            this.signInAdminBtn.CheckedBackground = System.Drawing.Color.Black;
+            this.signInAdminBtn.CheckedForeColor = System.Drawing.Color.Black;
+            this.signInAdminBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.signInAdminBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signInAdminBtn.Content = "Sign in to Admin";
+            this.signInAdminBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.signInAdminBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.signInAdminBtn.ForeColor = System.Drawing.Color.White;
+            this.signInAdminBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signInAdminBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.signInAdminBtn.HoverForeColor = System.Drawing.Color.Black;
+            this.signInAdminBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.signInAdminBtn.Image = null;
+            this.signInAdminBtn.ImageAutoCenter = true;
+            this.signInAdminBtn.ImageExpand = new System.Drawing.Point(0, 0);
+            this.signInAdminBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.signInAdminBtn.Location = new System.Drawing.Point(91, 462);
+            this.signInAdminBtn.Name = "signInAdminBtn";
+            this.signInAdminBtn.NormalBackground = System.Drawing.Color.Black;
+            this.signInAdminBtn.NormalForeColor = System.Drawing.Color.White;
+            this.signInAdminBtn.NormalImageTint = System.Drawing.Color.White;
+            this.signInAdminBtn.NormalOutline = System.Drawing.Color.White;
+            this.signInAdminBtn.OutlineThickness = 1.6F;
+            this.signInAdminBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signInAdminBtn.PressedForeColor = System.Drawing.Color.White;
+            this.signInAdminBtn.PressedImageTint = System.Drawing.Color.White;
+            this.signInAdminBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.signInAdminBtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.signInAdminBtn.Size = new System.Drawing.Size(153, 55);
+            this.signInAdminBtn.TabIndex = 15;
+            this.signInAdminBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.signInAdminBtn.Click += new System.EventHandler(this.signInAdminBtn_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(39, 151);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(269, 63);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Register as an Administrator:\r\nCreate a new admin account \r\nto manage system sett" +
+    "ings and users.";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // signUpAdminBtn
+            // 
+            this.signUpAdminBtn.CheckButton = false;
+            this.signUpAdminBtn.Checked = false;
+            this.signUpAdminBtn.CheckedBackground = System.Drawing.Color.Black;
+            this.signUpAdminBtn.CheckedForeColor = System.Drawing.Color.Black;
+            this.signUpAdminBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.signUpAdminBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signUpAdminBtn.Content = "Sign up for Admin";
+            this.signUpAdminBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.signUpAdminBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.signUpAdminBtn.ForeColor = System.Drawing.Color.White;
+            this.signUpAdminBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signUpAdminBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.signUpAdminBtn.HoverForeColor = System.Drawing.Color.Black;
+            this.signUpAdminBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.signUpAdminBtn.Image = null;
+            this.signUpAdminBtn.ImageAutoCenter = true;
+            this.signUpAdminBtn.ImageExpand = new System.Drawing.Point(0, 0);
+            this.signUpAdminBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.signUpAdminBtn.Location = new System.Drawing.Point(91, 233);
+            this.signUpAdminBtn.Name = "signUpAdminBtn";
+            this.signUpAdminBtn.NormalBackground = System.Drawing.Color.Black;
+            this.signUpAdminBtn.NormalForeColor = System.Drawing.Color.White;
+            this.signUpAdminBtn.NormalImageTint = System.Drawing.Color.White;
+            this.signUpAdminBtn.NormalOutline = System.Drawing.Color.White;
+            this.signUpAdminBtn.OutlineThickness = 1.6F;
+            this.signUpAdminBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signUpAdminBtn.PressedForeColor = System.Drawing.Color.White;
+            this.signUpAdminBtn.PressedImageTint = System.Drawing.Color.White;
+            this.signUpAdminBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.signUpAdminBtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.signUpAdminBtn.Size = new System.Drawing.Size(153, 55);
+            this.signUpAdminBtn.TabIndex = 13;
+            this.signUpAdminBtn.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(72, 324);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(196, 105);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "OR\r\n\r\nLogin as an Administrator: \r\nLogin to manage system \r\nsettings and users.";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FormAnim
+            // 
+            this.FormAnim.AnimateOnStart = true;
+            this.FormAnim.Duration = 600;
+            this.FormAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadInOut;
+            this.FormAnim.StartOpacity = 0D;
+            this.FormAnim.TargetForm = this;
+            this.FormAnim.TargetOpacity = 1D;
             // 
             // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(984, 601);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cuiButton2);
-            this.Controls.Add(this.cuiTextBox22);
-            this.Controls.Add(this.cuiTextBox21);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1000, 641);
+            this.Controls.Add(this.xBtn);
+            this.Controls.Add(this.signUpLabel);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.loginUserBtn);
+            this.Controls.Add(this.loginPasswordTxtBox);
+            this.Controls.Add(this.loginUserNameTxtBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogInForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +372,20 @@
         private CuoreUI.Controls.cuiButton cuiButton1;
         private CuoreUI.Controls.cuiButton cuiButton2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
+        private CuoreUI.Controls.cuiTextBox2 loginUserNameTxtBox;
+        private CuoreUI.Controls.cuiTextBox2 loginPasswordTxtBox;
+        private CuoreUI.Controls.cuiButton loginUserBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.LinkLabel signUpLabel;
+        private System.Windows.Forms.Label xBtn;
+        private CuoreUI.Controls.cuiButton signInAdminBtn;
+        private System.Windows.Forms.Label label7;
+        private CuoreUI.Controls.cuiButton signUpAdminBtn;
+        private System.Windows.Forms.Label label6;
+        private CuoreUI.Components.cuiFormAnimator FormAnim;
     }
 }

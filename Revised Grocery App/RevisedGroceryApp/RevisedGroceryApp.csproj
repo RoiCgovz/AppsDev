@@ -100,11 +100,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminSignIn.cs">
+    <Compile Include="AdminLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminSignIn.Designer.cs">
-      <DependentUpon>AdminSignIn.cs</DependentUpon>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Bakery.cs">
       <SubType>Form</SubType>
@@ -144,12 +144,6 @@
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Items.cs" />
-    <Compile Include="SignForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignForm.Designer.cs">
-      <DependentUpon>SignForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,15 +175,18 @@
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="SignUpUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpUser.Designer.cs">
+      <DependentUpon>SignUpUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Snacks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Snacks.Designer.cs">
       <DependentUpon>Snacks.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminSignIn.resx">
-      <DependentUpon>AdminSignIn.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bakery.resx">
       <DependentUpon>Bakery.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,9 +205,6 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignForm.resx">
-      <DependentUpon>SignForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpUser.resx">
+      <DependentUpon>SignUpUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Snacks.resx">
       <DependentUpon>Snacks.cs</DependentUpon>
@@ -343,6 +340,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-6-Circle.ico" />
+    <None Include="Resources\icons8-password-60.png" />
     <None Include="Resources\1nacho2.jpg" />
     <None Include="Resources\cookies2.jpg" />
     <None Include="Resources\_carrots2.jpg" />
