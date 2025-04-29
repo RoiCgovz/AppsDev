@@ -59,8 +59,8 @@
             this.cuiTextBox22.Name = "cuiTextBox22";
             this.cuiTextBox22.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
             this.cuiTextBox22.PasswordChar = false;
-            this.cuiTextBox22.PlaceholderColor = System.Drawing.SystemColors.WindowText;
-            this.cuiTextBox22.PlaceholderText = "";
+            this.cuiTextBox22.PlaceholderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cuiTextBox22.PlaceholderText = "Password";
             this.cuiTextBox22.Rounding = new System.Windows.Forms.Padding(8);
             this.cuiTextBox22.Size = new System.Drawing.Size(266, 45);
             this.cuiTextBox22.TabIndex = 9;
@@ -85,8 +85,8 @@
             this.cuiTextBox21.Name = "cuiTextBox21";
             this.cuiTextBox21.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
             this.cuiTextBox21.PasswordChar = false;
-            this.cuiTextBox21.PlaceholderColor = System.Drawing.SystemColors.WindowText;
-            this.cuiTextBox21.PlaceholderText = "";
+            this.cuiTextBox21.PlaceholderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cuiTextBox21.PlaceholderText = "Username";
             this.cuiTextBox21.Rounding = new System.Windows.Forms.Padding(8);
             this.cuiTextBox21.Size = new System.Drawing.Size(266, 45);
             this.cuiTextBox21.TabIndex = 8;
