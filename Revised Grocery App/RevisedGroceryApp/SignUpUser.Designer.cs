@@ -41,15 +41,15 @@
             this.signUpPasswordTxtBox = new CuoreUI.Controls.cuiTextBox2();
             this.signUpUserNameTxtBox = new CuoreUI.Controls.cuiTextBox2();
             this.label4 = new System.Windows.Forms.Label();
+            this.signUpConfirmPassTxtBox = new CuoreUI.Controls.cuiTextBox2();
+            this.FormAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.signUpConfirmPassTxtBox = new CuoreUI.Controls.cuiTextBox2();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.FormAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -164,6 +164,7 @@
             this.signUpAdminBtn.Size = new System.Drawing.Size(153, 55);
             this.signUpAdminBtn.TabIndex = 9;
             this.signUpAdminBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.signUpAdminBtn.Click += new System.EventHandler(this.signUpAdminBtn_Click);
             // 
             // xBtn
             // 
@@ -176,6 +177,7 @@
             this.xBtn.Size = new System.Drawing.Size(24, 25);
             this.xBtn.TabIndex = 19;
             this.xBtn.Text = "X";
+            this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
             // 
             // signInLabel
             // 
@@ -240,6 +242,7 @@
             this.signUpUserBtn.Size = new System.Drawing.Size(153, 55);
             this.signUpUserBtn.TabIndex = 14;
             this.signUpUserBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.signUpUserBtn.Click += new System.EventHandler(this.signUpUserBtn_Click);
             // 
             // signUpPasswordTxtBox
             // 
@@ -305,26 +308,6 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Sign Up";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_password_60;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(528, 276);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 42);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_profile_picture_100;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(528, 190);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 42);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // signUpConfirmPassTxtBox
             // 
             this.signUpConfirmPassTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -351,6 +334,15 @@
             this.signUpConfirmPassTxtBox.TextOffset = new System.Drawing.Size(0, 0);
             this.signUpConfirmPassTxtBox.UnderlinedStyle = false;
             // 
+            // FormAnim
+            // 
+            this.FormAnim.AnimateOnStart = true;
+            this.FormAnim.Duration = 600;
+            this.FormAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadInOut;
+            this.FormAnim.StartOpacity = 0D;
+            this.FormAnim.TargetForm = this;
+            this.FormAnim.TargetOpacity = 1D;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_password_60;
@@ -361,14 +353,25 @@
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
             // 
-            // FormAnim
+            // pictureBox2
             // 
-            this.FormAnim.AnimateOnStart = true;
-            this.FormAnim.Duration = 600;
-            this.FormAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadInOut;
-            this.FormAnim.StartOpacity = 0D;
-            this.FormAnim.TargetForm = this;
-            this.FormAnim.TargetOpacity = 1D;
+            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_password_60;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(528, 276);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_profile_picture_100;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(528, 190);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // SignUpUser
             // 
@@ -390,13 +393,14 @@
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUpUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpUser";
             this.Load += new System.EventHandler(this.SignUpUser_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

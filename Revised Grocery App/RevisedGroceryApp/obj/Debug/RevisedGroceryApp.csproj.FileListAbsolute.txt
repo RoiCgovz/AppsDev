@@ -121,3 +121,6 @@ C:\Users\xx513\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\De
 C:\Users\xx513\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.exe
 C:\Users\xx513\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.pdb
 C:\Users\PTO\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.SignUpUser.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.AdminLogin.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.AdminSignUp.resources
+C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.AdminHomePage.resources

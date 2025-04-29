@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.signInAdminBtn = new CuoreUI.Controls.cuiButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.signUpAdminBtn = new CuoreUI.Controls.cuiButton();
             this.label4 = new System.Windows.Forms.Label();
             this.loginUserNameTxtBox = new CuoreUI.Controls.cuiTextBox2();
             this.loginPasswordTxtBox = new CuoreUI.Controls.cuiTextBox2();
@@ -37,13 +41,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.signUpLabel = new System.Windows.Forms.LinkLabel();
             this.xBtn = new System.Windows.Forms.Label();
+            this.FormAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.signInAdminBtn = new CuoreUI.Controls.cuiButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.signUpAdminBtn = new CuoreUI.Controls.cuiButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.FormAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,6 +61,107 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(372, 641);
             this.panel2.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(72, 324);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(196, 105);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "OR\r\n\r\nLogin as an Administrator: \r\nLogin to manage system \r\nsettings and users.";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // signInAdminBtn
+            // 
+            this.signInAdminBtn.CheckButton = false;
+            this.signInAdminBtn.Checked = false;
+            this.signInAdminBtn.CheckedBackground = System.Drawing.Color.Black;
+            this.signInAdminBtn.CheckedForeColor = System.Drawing.Color.Black;
+            this.signInAdminBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.signInAdminBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signInAdminBtn.Content = "Sign in to Admin";
+            this.signInAdminBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.signInAdminBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.signInAdminBtn.ForeColor = System.Drawing.Color.White;
+            this.signInAdminBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signInAdminBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.signInAdminBtn.HoverForeColor = System.Drawing.Color.Black;
+            this.signInAdminBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.signInAdminBtn.Image = null;
+            this.signInAdminBtn.ImageAutoCenter = true;
+            this.signInAdminBtn.ImageExpand = new System.Drawing.Point(0, 0);
+            this.signInAdminBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.signInAdminBtn.Location = new System.Drawing.Point(91, 462);
+            this.signInAdminBtn.Name = "signInAdminBtn";
+            this.signInAdminBtn.NormalBackground = System.Drawing.Color.Black;
+            this.signInAdminBtn.NormalForeColor = System.Drawing.Color.White;
+            this.signInAdminBtn.NormalImageTint = System.Drawing.Color.White;
+            this.signInAdminBtn.NormalOutline = System.Drawing.Color.White;
+            this.signInAdminBtn.OutlineThickness = 1.6F;
+            this.signInAdminBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signInAdminBtn.PressedForeColor = System.Drawing.Color.White;
+            this.signInAdminBtn.PressedImageTint = System.Drawing.Color.White;
+            this.signInAdminBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.signInAdminBtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.signInAdminBtn.Size = new System.Drawing.Size(153, 55);
+            this.signInAdminBtn.TabIndex = 15;
+            this.signInAdminBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.signInAdminBtn.Click += new System.EventHandler(this.signInAdminBtn_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(39, 151);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(269, 63);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Register as an Administrator:\r\nCreate a new admin account \r\nto manage system sett" +
+    "ings and users.";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // signUpAdminBtn
+            // 
+            this.signUpAdminBtn.CheckButton = false;
+            this.signUpAdminBtn.Checked = false;
+            this.signUpAdminBtn.CheckedBackground = System.Drawing.Color.Black;
+            this.signUpAdminBtn.CheckedForeColor = System.Drawing.Color.Black;
+            this.signUpAdminBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.signUpAdminBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signUpAdminBtn.Content = "Sign up for Admin";
+            this.signUpAdminBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.signUpAdminBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.signUpAdminBtn.ForeColor = System.Drawing.Color.White;
+            this.signUpAdminBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signUpAdminBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.signUpAdminBtn.HoverForeColor = System.Drawing.Color.Black;
+            this.signUpAdminBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.signUpAdminBtn.Image = null;
+            this.signUpAdminBtn.ImageAutoCenter = true;
+            this.signUpAdminBtn.ImageExpand = new System.Drawing.Point(0, 0);
+            this.signUpAdminBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.signUpAdminBtn.Location = new System.Drawing.Point(91, 233);
+            this.signUpAdminBtn.Name = "signUpAdminBtn";
+            this.signUpAdminBtn.NormalBackground = System.Drawing.Color.Black;
+            this.signUpAdminBtn.NormalForeColor = System.Drawing.Color.White;
+            this.signUpAdminBtn.NormalImageTint = System.Drawing.Color.White;
+            this.signUpAdminBtn.NormalOutline = System.Drawing.Color.White;
+            this.signUpAdminBtn.OutlineThickness = 1.6F;
+            this.signUpAdminBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signUpAdminBtn.PressedForeColor = System.Drawing.Color.White;
+            this.signUpAdminBtn.PressedImageTint = System.Drawing.Color.White;
+            this.signUpAdminBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.signUpAdminBtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.signUpAdminBtn.Size = new System.Drawing.Size(153, 55);
+            this.signUpAdminBtn.TabIndex = 13;
+            this.signUpAdminBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.signUpAdminBtn.Click += new System.EventHandler(this.signUpAdminBtn_Click);
             // 
             // label4
             // 
@@ -161,6 +262,7 @@
             this.loginUserBtn.Size = new System.Drawing.Size(153, 55);
             this.loginUserBtn.TabIndex = 4;
             this.loginUserBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.loginUserBtn.Click += new System.EventHandler(this.loginUserBtn_Click);
             // 
             // label5
             // 
@@ -203,6 +305,15 @@
             this.xBtn.Text = "X";
             this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
             // 
+            // FormAnim
+            // 
+            this.FormAnim.AnimateOnStart = true;
+            this.FormAnim.Duration = 600;
+            this.FormAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadInOut;
+            this.FormAnim.StartOpacity = 0D;
+            this.FormAnim.TargetForm = this;
+            this.FormAnim.TargetOpacity = 1D;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_password_60;
@@ -222,115 +333,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(45, 42);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // signInAdminBtn
-            // 
-            this.signInAdminBtn.CheckButton = false;
-            this.signInAdminBtn.Checked = false;
-            this.signInAdminBtn.CheckedBackground = System.Drawing.Color.Black;
-            this.signInAdminBtn.CheckedForeColor = System.Drawing.Color.Black;
-            this.signInAdminBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.signInAdminBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signInAdminBtn.Content = "Sign in to Admin";
-            this.signInAdminBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.signInAdminBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.signInAdminBtn.ForeColor = System.Drawing.Color.White;
-            this.signInAdminBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signInAdminBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.signInAdminBtn.HoverForeColor = System.Drawing.Color.Black;
-            this.signInAdminBtn.HoverOutline = System.Drawing.Color.Empty;
-            this.signInAdminBtn.Image = null;
-            this.signInAdminBtn.ImageAutoCenter = true;
-            this.signInAdminBtn.ImageExpand = new System.Drawing.Point(0, 0);
-            this.signInAdminBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.signInAdminBtn.Location = new System.Drawing.Point(91, 462);
-            this.signInAdminBtn.Name = "signInAdminBtn";
-            this.signInAdminBtn.NormalBackground = System.Drawing.Color.Black;
-            this.signInAdminBtn.NormalForeColor = System.Drawing.Color.White;
-            this.signInAdminBtn.NormalImageTint = System.Drawing.Color.White;
-            this.signInAdminBtn.NormalOutline = System.Drawing.Color.White;
-            this.signInAdminBtn.OutlineThickness = 1.6F;
-            this.signInAdminBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signInAdminBtn.PressedForeColor = System.Drawing.Color.White;
-            this.signInAdminBtn.PressedImageTint = System.Drawing.Color.White;
-            this.signInAdminBtn.PressedOutline = System.Drawing.Color.Empty;
-            this.signInAdminBtn.Rounding = new System.Windows.Forms.Padding(15);
-            this.signInAdminBtn.Size = new System.Drawing.Size(153, 55);
-            this.signInAdminBtn.TabIndex = 15;
-            this.signInAdminBtn.TextOffset = new System.Drawing.Point(0, 0);
-            this.signInAdminBtn.Click += new System.EventHandler(this.signInAdminBtn_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(39, 151);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(269, 63);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Register as an Administrator:\r\nCreate a new admin account \r\nto manage system sett" +
-    "ings and users.";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // signUpAdminBtn
-            // 
-            this.signUpAdminBtn.CheckButton = false;
-            this.signUpAdminBtn.Checked = false;
-            this.signUpAdminBtn.CheckedBackground = System.Drawing.Color.Black;
-            this.signUpAdminBtn.CheckedForeColor = System.Drawing.Color.Black;
-            this.signUpAdminBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.signUpAdminBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signUpAdminBtn.Content = "Sign up for Admin";
-            this.signUpAdminBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.signUpAdminBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.signUpAdminBtn.ForeColor = System.Drawing.Color.White;
-            this.signUpAdminBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signUpAdminBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.signUpAdminBtn.HoverForeColor = System.Drawing.Color.Black;
-            this.signUpAdminBtn.HoverOutline = System.Drawing.Color.Empty;
-            this.signUpAdminBtn.Image = null;
-            this.signUpAdminBtn.ImageAutoCenter = true;
-            this.signUpAdminBtn.ImageExpand = new System.Drawing.Point(0, 0);
-            this.signUpAdminBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.signUpAdminBtn.Location = new System.Drawing.Point(91, 233);
-            this.signUpAdminBtn.Name = "signUpAdminBtn";
-            this.signUpAdminBtn.NormalBackground = System.Drawing.Color.Black;
-            this.signUpAdminBtn.NormalForeColor = System.Drawing.Color.White;
-            this.signUpAdminBtn.NormalImageTint = System.Drawing.Color.White;
-            this.signUpAdminBtn.NormalOutline = System.Drawing.Color.White;
-            this.signUpAdminBtn.OutlineThickness = 1.6F;
-            this.signUpAdminBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signUpAdminBtn.PressedForeColor = System.Drawing.Color.White;
-            this.signUpAdminBtn.PressedImageTint = System.Drawing.Color.White;
-            this.signUpAdminBtn.PressedOutline = System.Drawing.Color.Empty;
-            this.signUpAdminBtn.Rounding = new System.Windows.Forms.Padding(15);
-            this.signUpAdminBtn.Size = new System.Drawing.Size(153, 55);
-            this.signUpAdminBtn.TabIndex = 13;
-            this.signUpAdminBtn.TextOffset = new System.Drawing.Point(0, 0);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(72, 324);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(196, 105);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "OR\r\n\r\nLogin as an Administrator: \r\nLogin to manage system \r\nsettings and users.";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // FormAnim
-            // 
-            this.FormAnim.AnimateOnStart = true;
-            this.FormAnim.Duration = 600;
-            this.FormAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadInOut;
-            this.FormAnim.StartOpacity = 0D;
-            this.FormAnim.TargetForm = this;
-            this.FormAnim.TargetOpacity = 1D;
             // 
             // LogInForm
             // 

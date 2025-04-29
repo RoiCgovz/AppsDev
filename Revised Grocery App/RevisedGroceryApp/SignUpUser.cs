@@ -35,5 +35,22 @@ namespace RevisedGroceryApp
             adLog.Show();
             this.Hide();
         }
+
+        private void signUpAdminBtn_Click(object sender, EventArgs e)
+        {
+            AdminSignUp signup = new AdminSignUp();
+            signup.Show();
+            this.Hide();
+        }
+
+        private void signUpUserBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xBtn_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
