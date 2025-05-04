@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace RevisedGroceryApp
 {
@@ -45,7 +46,29 @@ namespace RevisedGroceryApp
 
         private void signUpUserBtn_Click(object sender, EventArgs e)
         {
+            string userName = signUpUserNameTxtBox.Text;
+            string password = ConfirmPassword();
 
+            if (DatabaseHelperClass.InsertAdminAccount(userName, password))
+            { 
+                MessageBox.Show("Admin account created successfully.");
+            }
+            else
+                MessageBox.Show("Failed to create admin account.");
+        }
+        private string ConfirmPassword()
+        {
+            if (signUpPasswordTxtBox.Text != signUpConfirmPassTxtBox.Text)
+            {
+                MessageBox.Show("Passwords are different, please try again.");
+                signUpConfirmPassTxtBox.Text = "";
+                signUpPasswordTxtBox.Text = "";
+                return null;
+            }
+            else
+            {
+                return signUpConfirmPassTxtBox.Text;
+            }
         }
 
         private void xBtn_Click(object sender, EventArgs e)

@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
+using System.Windows.Markup;
 
 namespace RevisedGroceryApp
 {
     public static class DatabaseHelperClass
     {
-        private static readonly string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=grocerydb;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private static readonly string 
+        connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=grocerydb;" +
+                           "Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;" +
+                           "ApplicationIntent=ReadWrite;MultiSubnetFailover=True";
         
-        // Method to get item stock
+        
         public static int GetItemStock(string itemName)
         {
             try
@@ -81,6 +86,34 @@ namespace RevisedGroceryApp
             }
         }
 
-        
+        public static bool InsertUserAccount(string userName, string userPass)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand("insertUserAccount", conn))
+            {
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@UserName", userName);
+                cmd.Parameters.AddWithValue("@UserPass", userPass);
+
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                return rows > 0;
+            }
+        }
+
+        public static bool InsertAdminAccount(string adminUserName, string adminPass)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand("insertAdminAccount", conn))
+            {
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@AdminUserName", adminUserName);
+                cmd.Parameters.AddWithValue("@AdminPass", adminPass);
+
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                return rows > 0;
+            }
+        }
     }
 }

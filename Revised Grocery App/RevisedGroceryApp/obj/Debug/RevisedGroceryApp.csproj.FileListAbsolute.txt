@@ -124,3 +124,7 @@ C:\Users\PTO\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debu
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.AdminLogin.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.AdminSignUp.resources
 C:\Users\PTO\source\repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.AdminHomePage.resources
+C:\Users\deths\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.AdminHomePage.resources
+C:\Users\deths\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.AdminLogin.resources
+C:\Users\deths\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.AdminSignUp.resources
+C:\Users\deths\Source\Repos\AppsDev\Revised Grocery App\RevisedGroceryApp\obj\Debug\RevisedGroceryApp.SignUpUser.resources

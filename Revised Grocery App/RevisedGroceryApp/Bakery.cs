@@ -110,13 +110,6 @@ namespace RevisedGroceryApp
             mainForm.Show();
         }
 
-        private void cartBtn_Click(object sender, EventArgs e)
-        {
-            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault() ?? new Cart(CategoryForm.CartItems);
-            cartForm.Show();
-            this.Close();
-        }
-
         private void bevBtn_Click(object sender, EventArgs e)
         {
             Beverages bev = new Beverages();
@@ -148,7 +141,32 @@ namespace RevisedGroceryApp
             AddItemsToCart();
         }
 
-        private void backbtn_Click(object sender, EventArgs e)
+        private void snksBtn_Click(object sender, EventArgs e)
+        {
+            Snacks snacks = new Snacks();
+            snacks.Show();
+            this.Close();
+        }
+        private void xBtn_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void catLbl_Click(object sender, EventArgs e)
+        {
+            CategoryForm cat = new CategoryForm();
+            this.Close();
+            cat.Show();
+        }
+
+        private void cartPnl_Click(object sender, EventArgs e)
+        {
+            Cart cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault() ?? new Cart(CategoryForm.CartItems);
+            cartForm.Show();
+            this.Close();
+        }
+
+        private void backBtn_Click_1(object sender, EventArgs e)
         {
             CategoryForm mainForm = Application.OpenForms.OfType<CategoryForm>().FirstOrDefault();
             if (mainForm == null)
@@ -161,15 +179,7 @@ namespace RevisedGroceryApp
                 mainForm.Show();
             }
         }
-        private void snksBtn_Click(object sender, EventArgs e)
-        {
-            Snacks snacks = new Snacks();
-            snacks.Show();
-            this.Close();
-        }
-        private void xBtn_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
+
+        
     }
 }

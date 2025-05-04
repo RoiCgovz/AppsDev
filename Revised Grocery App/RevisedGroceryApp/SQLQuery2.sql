@@ -63,3 +63,26 @@ begin
 end;
 go
 
+CREATE PROCEDURE insertUserAccount
+    @UserName NVARCHAR(20),
+    @UserPass NVARCHAR(15)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO userAcc (userName, userPass)
+    VALUES (@UserName, @UserPass);
+END;
+GO
+
+CREATE PROCEDURE insertAdminAccount
+    @AdminUserName NVARCHAR(20),
+    @AdminPass NVARCHAR(15)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO adminAcc (adminUserName, adminPass)
+    VALUES (@AdminUserName, @AdminPass);
+END;
+GO

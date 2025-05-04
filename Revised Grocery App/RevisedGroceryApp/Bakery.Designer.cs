@@ -47,49 +47,50 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cartPnl = new System.Windows.Forms.Panel();
             this.cartLbl = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
             this.catPnl = new System.Windows.Forms.Panel();
             this.catLbl = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.homePnl = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.homelbl = new System.Windows.Forms.Label();
             this.roundedPanel1 = new RoundedPanel.RoundedPanel(this.components);
-            this.itemToCart = new CuoreUI.Controls.cuiButton();
-            this.roundedPanel2 = new RoundedPanel.RoundedPanel(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.bakeryRounded = new CuoreUI.Components.cuiFormRounder();
-            this.xBtn = new System.Windows.Forms.Label();
-            this.inAnimator = new CuoreUI.Components.cuiFormAnimator(this.components);
-            this.roundedPanel3 = new RoundedPanel.RoundedPanel(this.components);
-            this.roundedPanel4 = new RoundedPanel.RoundedPanel(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.prodBtn = new CuoreUI.Controls.cuiButton();
             this.snkBtn = new CuoreUI.Controls.cuiButton();
             this.graBtn = new CuoreUI.Controls.cuiButton();
             this.daiBtn = new CuoreUI.Controls.cuiButton();
             this.bevBtn = new CuoreUI.Controls.cuiButton();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.itemToCart = new CuoreUI.Controls.cuiButton();
+            this.roundedPanel2 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bakeryRounded = new CuoreUI.Components.cuiFormRounder();
+            this.xBtn = new System.Windows.Forms.Label();
+            this.inAnimator = new CuoreUI.Components.cuiFormAnimator(this.components);
+            this.roundedPanel3 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.roundedPanel4 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.backBtn = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.cartPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel3.SuspendLayout();
             this.catPnl.SuspendLayout();
-            this.homePnl.SuspendLayout();
-            this.roundedPanel1.SuspendLayout();
-            this.roundedPanel2.SuspendLayout();
-            this.roundedPanel3.SuspendLayout();
-            this.roundedPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.homePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.roundedPanel1.SuspendLayout();
+            this.roundedPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.roundedPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.roundedPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // sliBreTxtBox
@@ -297,6 +298,7 @@
             this.cartPnl.Name = "cartPnl";
             this.cartPnl.Size = new System.Drawing.Size(175, 57);
             this.cartPnl.TabIndex = 32;
+            this.cartPnl.Click += new System.EventHandler(this.cartPnl_Click);
             // 
             // cartLbl
             // 
@@ -309,6 +311,16 @@
             this.cartLbl.TabIndex = 3;
             this.cartLbl.Text = "Cart";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_cart_48;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(15, 13);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox10.TabIndex = 0;
+            this.pictureBox10.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.cuiPictureBox1);
@@ -317,6 +329,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(197, 122);
             this.panel3.TabIndex = 32;
+            // 
+            // cuiPictureBox1
+            // 
+            this.cuiPictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_profile_picture_100;
+            this.cuiPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cuiPictureBox1.Content = null;
+            this.cuiPictureBox1.CornerRadius = 8;
+            this.cuiPictureBox1.ImageTint = System.Drawing.Color.White;
+            this.cuiPictureBox1.Location = new System.Drawing.Point(12, 28);
+            this.cuiPictureBox1.Name = "cuiPictureBox1";
+            this.cuiPictureBox1.OutlineThickness = 1F;
+            this.cuiPictureBox1.PanelOutlineColor = System.Drawing.Color.Empty;
+            this.cuiPictureBox1.Rotation = 0;
+            this.cuiPictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.cuiPictureBox1.TabIndex = 0;
             // 
             // catPnl
             // 
@@ -337,6 +364,27 @@
             this.catLbl.Size = new System.Drawing.Size(78, 21);
             this.catLbl.TabIndex = 2;
             this.catLbl.Text = "Category";
+            this.catLbl.Click += new System.EventHandler(this.catLbl_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_food_basket_48;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(15, 13);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_1;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(59, 64);
+            this.pictureBox7.TabIndex = 32;
+            this.pictureBox7.TabStop = false;
             // 
             // homePnl
             // 
@@ -347,6 +395,17 @@
             this.homePnl.Name = "homePnl";
             this.homePnl.Size = new System.Drawing.Size(175, 57);
             this.homePnl.TabIndex = 33;
+            this.homePnl.Click += new System.EventHandler(this.homeBtn_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_home_48;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
             // 
             // homelbl
             // 
@@ -358,6 +417,7 @@
             this.homelbl.Size = new System.Drawing.Size(55, 21);
             this.homelbl.TabIndex = 1;
             this.homelbl.Text = "Home";
+            this.homelbl.Click += new System.EventHandler(this.homeBtn_Click);
             // 
             // roundedPanel1
             // 
@@ -376,6 +436,201 @@
             this.roundedPanel1.RadiusTopRight = 60;
             this.roundedPanel1.Size = new System.Drawing.Size(75, 518);
             this.roundedPanel1.TabIndex = 20;
+            // 
+            // prodBtn
+            // 
+            this.prodBtn.BackColor = System.Drawing.Color.Transparent;
+            this.prodBtn.CausesValidation = false;
+            this.prodBtn.CheckButton = false;
+            this.prodBtn.Checked = false;
+            this.prodBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.prodBtn.CheckedForeColor = System.Drawing.Color.White;
+            this.prodBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.prodBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.prodBtn.Content = "";
+            this.prodBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.prodBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.prodBtn.ForeColor = System.Drawing.Color.White;
+            this.prodBtn.HoverBackground = System.Drawing.Color.Black;
+            this.prodBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.prodBtn.HoverForeColor = System.Drawing.Color.White;
+            this.prodBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.prodBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_fruits_66__1_;
+            this.prodBtn.ImageAutoCenter = true;
+            this.prodBtn.ImageExpand = new System.Drawing.Point(13, 13);
+            this.prodBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.prodBtn.Location = new System.Drawing.Point(10, 315);
+            this.prodBtn.Name = "prodBtn";
+            this.prodBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.prodBtn.NormalForeColor = System.Drawing.Color.White;
+            this.prodBtn.NormalImageTint = System.Drawing.Color.White;
+            this.prodBtn.NormalOutline = System.Drawing.Color.White;
+            this.prodBtn.OutlineThickness = 1.5F;
+            this.prodBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.prodBtn.PressedForeColor = System.Drawing.Color.White;
+            this.prodBtn.PressedImageTint = System.Drawing.Color.White;
+            this.prodBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.prodBtn.Rounding = new System.Windows.Forms.Padding(10);
+            this.prodBtn.Size = new System.Drawing.Size(55, 70);
+            this.prodBtn.TabIndex = 37;
+            this.prodBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.prodBtn.Click += new System.EventHandler(this.prodBtn_Click);
+            // 
+            // snkBtn
+            // 
+            this.snkBtn.BackColor = System.Drawing.Color.Transparent;
+            this.snkBtn.CausesValidation = false;
+            this.snkBtn.CheckButton = false;
+            this.snkBtn.Checked = false;
+            this.snkBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.snkBtn.CheckedForeColor = System.Drawing.Color.White;
+            this.snkBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.snkBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.snkBtn.Content = "";
+            this.snkBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.snkBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.snkBtn.ForeColor = System.Drawing.Color.White;
+            this.snkBtn.HoverBackground = System.Drawing.Color.Black;
+            this.snkBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.snkBtn.HoverForeColor = System.Drawing.Color.White;
+            this.snkBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.snkBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_snacks_64;
+            this.snkBtn.ImageAutoCenter = true;
+            this.snkBtn.ImageExpand = new System.Drawing.Point(18, 18);
+            this.snkBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.snkBtn.Location = new System.Drawing.Point(10, 416);
+            this.snkBtn.Name = "snkBtn";
+            this.snkBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.snkBtn.NormalForeColor = System.Drawing.Color.White;
+            this.snkBtn.NormalImageTint = System.Drawing.Color.White;
+            this.snkBtn.NormalOutline = System.Drawing.Color.White;
+            this.snkBtn.OutlineThickness = 1.5F;
+            this.snkBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.snkBtn.PressedForeColor = System.Drawing.Color.White;
+            this.snkBtn.PressedImageTint = System.Drawing.Color.White;
+            this.snkBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.snkBtn.Rounding = new System.Windows.Forms.Padding(10);
+            this.snkBtn.Size = new System.Drawing.Size(55, 70);
+            this.snkBtn.TabIndex = 35;
+            this.snkBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.snkBtn.Click += new System.EventHandler(this.snksBtn_Click);
+            // 
+            // graBtn
+            // 
+            this.graBtn.BackColor = System.Drawing.Color.Transparent;
+            this.graBtn.CausesValidation = false;
+            this.graBtn.CheckButton = false;
+            this.graBtn.Checked = false;
+            this.graBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.graBtn.CheckedForeColor = System.Drawing.Color.White;
+            this.graBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.graBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.graBtn.Content = "";
+            this.graBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.graBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.graBtn.ForeColor = System.Drawing.Color.White;
+            this.graBtn.HoverBackground = System.Drawing.Color.Black;
+            this.graBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.graBtn.HoverForeColor = System.Drawing.Color.White;
+            this.graBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.graBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_grains_64__1_1;
+            this.graBtn.ImageAutoCenter = true;
+            this.graBtn.ImageExpand = new System.Drawing.Point(20, 20);
+            this.graBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.graBtn.Location = new System.Drawing.Point(10, 222);
+            this.graBtn.Name = "graBtn";
+            this.graBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.graBtn.NormalForeColor = System.Drawing.Color.White;
+            this.graBtn.NormalImageTint = System.Drawing.Color.White;
+            this.graBtn.NormalOutline = System.Drawing.Color.White;
+            this.graBtn.OutlineThickness = 1.5F;
+            this.graBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.graBtn.PressedForeColor = System.Drawing.Color.White;
+            this.graBtn.PressedImageTint = System.Drawing.Color.White;
+            this.graBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.graBtn.Rounding = new System.Windows.Forms.Padding(10);
+            this.graBtn.Size = new System.Drawing.Size(55, 70);
+            this.graBtn.TabIndex = 36;
+            this.graBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.graBtn.Click += new System.EventHandler(this.grainsBtn_Click);
+            // 
+            // daiBtn
+            // 
+            this.daiBtn.BackColor = System.Drawing.Color.Transparent;
+            this.daiBtn.CausesValidation = false;
+            this.daiBtn.CheckButton = false;
+            this.daiBtn.Checked = false;
+            this.daiBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.daiBtn.CheckedForeColor = System.Drawing.Color.White;
+            this.daiBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.daiBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.daiBtn.Content = "";
+            this.daiBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.daiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.daiBtn.ForeColor = System.Drawing.Color.White;
+            this.daiBtn.HoverBackground = System.Drawing.Color.Black;
+            this.daiBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.daiBtn.HoverForeColor = System.Drawing.Color.White;
+            this.daiBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.daiBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_dairy_64;
+            this.daiBtn.ImageAutoCenter = true;
+            this.daiBtn.ImageExpand = new System.Drawing.Point(15, 15);
+            this.daiBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.daiBtn.Location = new System.Drawing.Point(10, 128);
+            this.daiBtn.Name = "daiBtn";
+            this.daiBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.daiBtn.NormalForeColor = System.Drawing.Color.White;
+            this.daiBtn.NormalImageTint = System.Drawing.Color.White;
+            this.daiBtn.NormalOutline = System.Drawing.Color.White;
+            this.daiBtn.OutlineThickness = 1.5F;
+            this.daiBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.daiBtn.PressedForeColor = System.Drawing.Color.White;
+            this.daiBtn.PressedImageTint = System.Drawing.Color.White;
+            this.daiBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.daiBtn.Rounding = new System.Windows.Forms.Padding(10);
+            this.daiBtn.Size = new System.Drawing.Size(55, 70);
+            this.daiBtn.TabIndex = 35;
+            this.daiBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.daiBtn.Click += new System.EventHandler(this.dairyBtn_Click);
+            // 
+            // bevBtn
+            // 
+            this.bevBtn.BackColor = System.Drawing.Color.Transparent;
+            this.bevBtn.CausesValidation = false;
+            this.bevBtn.CheckButton = false;
+            this.bevBtn.Checked = false;
+            this.bevBtn.CheckedBackground = System.Drawing.Color.Transparent;
+            this.bevBtn.CheckedForeColor = System.Drawing.Color.White;
+            this.bevBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.bevBtn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.bevBtn.Content = "";
+            this.bevBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bevBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.bevBtn.ForeColor = System.Drawing.Color.White;
+            this.bevBtn.HoverBackground = System.Drawing.Color.Silver;
+            this.bevBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.bevBtn.HoverForeColor = System.Drawing.Color.White;
+            this.bevBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.bevBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_wine_80;
+            this.bevBtn.ImageAutoCenter = true;
+            this.bevBtn.ImageExpand = new System.Drawing.Point(20, 20);
+            this.bevBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.bevBtn.Location = new System.Drawing.Point(10, 33);
+            this.bevBtn.Name = "bevBtn";
+            this.bevBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.bevBtn.NormalForeColor = System.Drawing.Color.White;
+            this.bevBtn.NormalImageTint = System.Drawing.Color.White;
+            this.bevBtn.NormalOutline = System.Drawing.Color.White;
+            this.bevBtn.OutlineThickness = 1.5F;
+            this.bevBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.bevBtn.PressedForeColor = System.Drawing.Color.White;
+            this.bevBtn.PressedImageTint = System.Drawing.Color.White;
+            this.bevBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.bevBtn.Rounding = new System.Windows.Forms.Padding(10);
+            this.bevBtn.Size = new System.Drawing.Size(55, 70);
+            this.bevBtn.TabIndex = 34;
+            this.bevBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.bevBtn.Click += new System.EventHandler(this.bevBtn_Click);
             // 
             // itemToCart
             // 
@@ -431,6 +686,16 @@
             this.roundedPanel2.RadiusTopRight = 30;
             this.roundedPanel2.Size = new System.Drawing.Size(195, 244);
             this.roundedPanel2.TabIndex = 21;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._2bread;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(62, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(214, 155);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
@@ -490,6 +755,16 @@
             this.roundedPanel3.Size = new System.Drawing.Size(195, 244);
             this.roundedPanel3.TabIndex = 22;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._2croissant;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(75, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 165);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // roundedPanel4
             // 
             this.roundedPanel4.BackColor = System.Drawing.Color.White;
@@ -518,270 +793,19 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox1
+            // backBtn
             // 
-            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._2croissant;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(75, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 165);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._2bread;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(62, 38);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(214, 155);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // prodBtn
-            // 
-            this.prodBtn.BackColor = System.Drawing.Color.Transparent;
-            this.prodBtn.CausesValidation = false;
-            this.prodBtn.CheckButton = false;
-            this.prodBtn.Checked = false;
-            this.prodBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.prodBtn.CheckedForeColor = System.Drawing.Color.White;
-            this.prodBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.prodBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.prodBtn.Content = "";
-            this.prodBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.prodBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.prodBtn.ForeColor = System.Drawing.Color.White;
-            this.prodBtn.HoverBackground = System.Drawing.Color.Black;
-            this.prodBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.prodBtn.HoverForeColor = System.Drawing.Color.White;
-            this.prodBtn.HoverOutline = System.Drawing.Color.Empty;
-            this.prodBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_fruits_66__1_;
-            this.prodBtn.ImageAutoCenter = true;
-            this.prodBtn.ImageExpand = new System.Drawing.Point(13, 13);
-            this.prodBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.prodBtn.Location = new System.Drawing.Point(10, 315);
-            this.prodBtn.Name = "prodBtn";
-            this.prodBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.prodBtn.NormalForeColor = System.Drawing.Color.White;
-            this.prodBtn.NormalImageTint = System.Drawing.Color.White;
-            this.prodBtn.NormalOutline = System.Drawing.Color.White;
-            this.prodBtn.OutlineThickness = 1.5F;
-            this.prodBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.prodBtn.PressedForeColor = System.Drawing.Color.White;
-            this.prodBtn.PressedImageTint = System.Drawing.Color.White;
-            this.prodBtn.PressedOutline = System.Drawing.Color.Empty;
-            this.prodBtn.Rounding = new System.Windows.Forms.Padding(10);
-            this.prodBtn.Size = new System.Drawing.Size(55, 70);
-            this.prodBtn.TabIndex = 37;
-            this.prodBtn.TextOffset = new System.Drawing.Point(0, 0);
-            // 
-            // snkBtn
-            // 
-            this.snkBtn.BackColor = System.Drawing.Color.Transparent;
-            this.snkBtn.CausesValidation = false;
-            this.snkBtn.CheckButton = false;
-            this.snkBtn.Checked = false;
-            this.snkBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.snkBtn.CheckedForeColor = System.Drawing.Color.White;
-            this.snkBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.snkBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.snkBtn.Content = "";
-            this.snkBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.snkBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.snkBtn.ForeColor = System.Drawing.Color.White;
-            this.snkBtn.HoverBackground = System.Drawing.Color.Black;
-            this.snkBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.snkBtn.HoverForeColor = System.Drawing.Color.White;
-            this.snkBtn.HoverOutline = System.Drawing.Color.Empty;
-            this.snkBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_snacks_64;
-            this.snkBtn.ImageAutoCenter = true;
-            this.snkBtn.ImageExpand = new System.Drawing.Point(18, 18);
-            this.snkBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.snkBtn.Location = new System.Drawing.Point(10, 416);
-            this.snkBtn.Name = "snkBtn";
-            this.snkBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.snkBtn.NormalForeColor = System.Drawing.Color.White;
-            this.snkBtn.NormalImageTint = System.Drawing.Color.White;
-            this.snkBtn.NormalOutline = System.Drawing.Color.White;
-            this.snkBtn.OutlineThickness = 1.5F;
-            this.snkBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.snkBtn.PressedForeColor = System.Drawing.Color.White;
-            this.snkBtn.PressedImageTint = System.Drawing.Color.White;
-            this.snkBtn.PressedOutline = System.Drawing.Color.Empty;
-            this.snkBtn.Rounding = new System.Windows.Forms.Padding(10);
-            this.snkBtn.Size = new System.Drawing.Size(55, 70);
-            this.snkBtn.TabIndex = 35;
-            this.snkBtn.TextOffset = new System.Drawing.Point(0, 0);
-            // 
-            // graBtn
-            // 
-            this.graBtn.BackColor = System.Drawing.Color.Transparent;
-            this.graBtn.CausesValidation = false;
-            this.graBtn.CheckButton = false;
-            this.graBtn.Checked = false;
-            this.graBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.graBtn.CheckedForeColor = System.Drawing.Color.White;
-            this.graBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.graBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.graBtn.Content = "";
-            this.graBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.graBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.graBtn.ForeColor = System.Drawing.Color.White;
-            this.graBtn.HoverBackground = System.Drawing.Color.Black;
-            this.graBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.graBtn.HoverForeColor = System.Drawing.Color.White;
-            this.graBtn.HoverOutline = System.Drawing.Color.Empty;
-            this.graBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_grains_64__1_1;
-            this.graBtn.ImageAutoCenter = true;
-            this.graBtn.ImageExpand = new System.Drawing.Point(20, 20);
-            this.graBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.graBtn.Location = new System.Drawing.Point(10, 222);
-            this.graBtn.Name = "graBtn";
-            this.graBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.graBtn.NormalForeColor = System.Drawing.Color.White;
-            this.graBtn.NormalImageTint = System.Drawing.Color.White;
-            this.graBtn.NormalOutline = System.Drawing.Color.White;
-            this.graBtn.OutlineThickness = 1.5F;
-            this.graBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.graBtn.PressedForeColor = System.Drawing.Color.White;
-            this.graBtn.PressedImageTint = System.Drawing.Color.White;
-            this.graBtn.PressedOutline = System.Drawing.Color.Empty;
-            this.graBtn.Rounding = new System.Windows.Forms.Padding(10);
-            this.graBtn.Size = new System.Drawing.Size(55, 70);
-            this.graBtn.TabIndex = 36;
-            this.graBtn.TextOffset = new System.Drawing.Point(0, 0);
-            // 
-            // daiBtn
-            // 
-            this.daiBtn.BackColor = System.Drawing.Color.Transparent;
-            this.daiBtn.CausesValidation = false;
-            this.daiBtn.CheckButton = false;
-            this.daiBtn.Checked = false;
-            this.daiBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.daiBtn.CheckedForeColor = System.Drawing.Color.White;
-            this.daiBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.daiBtn.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.daiBtn.Content = "";
-            this.daiBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.daiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.daiBtn.ForeColor = System.Drawing.Color.White;
-            this.daiBtn.HoverBackground = System.Drawing.Color.Black;
-            this.daiBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.daiBtn.HoverForeColor = System.Drawing.Color.White;
-            this.daiBtn.HoverOutline = System.Drawing.Color.Empty;
-            this.daiBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_dairy_64;
-            this.daiBtn.ImageAutoCenter = true;
-            this.daiBtn.ImageExpand = new System.Drawing.Point(15, 15);
-            this.daiBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.daiBtn.Location = new System.Drawing.Point(10, 128);
-            this.daiBtn.Name = "daiBtn";
-            this.daiBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.daiBtn.NormalForeColor = System.Drawing.Color.White;
-            this.daiBtn.NormalImageTint = System.Drawing.Color.White;
-            this.daiBtn.NormalOutline = System.Drawing.Color.White;
-            this.daiBtn.OutlineThickness = 1.5F;
-            this.daiBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.daiBtn.PressedForeColor = System.Drawing.Color.White;
-            this.daiBtn.PressedImageTint = System.Drawing.Color.White;
-            this.daiBtn.PressedOutline = System.Drawing.Color.Empty;
-            this.daiBtn.Rounding = new System.Windows.Forms.Padding(10);
-            this.daiBtn.Size = new System.Drawing.Size(55, 70);
-            this.daiBtn.TabIndex = 35;
-            this.daiBtn.TextOffset = new System.Drawing.Point(0, 0);
-            // 
-            // bevBtn
-            // 
-            this.bevBtn.BackColor = System.Drawing.Color.Transparent;
-            this.bevBtn.CausesValidation = false;
-            this.bevBtn.CheckButton = false;
-            this.bevBtn.Checked = false;
-            this.bevBtn.CheckedBackground = System.Drawing.Color.Transparent;
-            this.bevBtn.CheckedForeColor = System.Drawing.Color.White;
-            this.bevBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.bevBtn.CheckedOutline = System.Drawing.Color.Transparent;
-            this.bevBtn.Content = "";
-            this.bevBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bevBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.bevBtn.ForeColor = System.Drawing.Color.White;
-            this.bevBtn.HoverBackground = System.Drawing.Color.Silver;
-            this.bevBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.bevBtn.HoverForeColor = System.Drawing.Color.White;
-            this.bevBtn.HoverOutline = System.Drawing.Color.Empty;
-            this.bevBtn.Image = global::RevisedGroceryApp.Properties.Resources.icons8_wine_80;
-            this.bevBtn.ImageAutoCenter = true;
-            this.bevBtn.ImageExpand = new System.Drawing.Point(20, 20);
-            this.bevBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.bevBtn.Location = new System.Drawing.Point(10, 33);
-            this.bevBtn.Name = "bevBtn";
-            this.bevBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.bevBtn.NormalForeColor = System.Drawing.Color.White;
-            this.bevBtn.NormalImageTint = System.Drawing.Color.White;
-            this.bevBtn.NormalOutline = System.Drawing.Color.White;
-            this.bevBtn.OutlineThickness = 1.5F;
-            this.bevBtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.bevBtn.PressedForeColor = System.Drawing.Color.White;
-            this.bevBtn.PressedImageTint = System.Drawing.Color.White;
-            this.bevBtn.PressedOutline = System.Drawing.Color.Empty;
-            this.bevBtn.Rounding = new System.Windows.Forms.Padding(10);
-            this.bevBtn.Size = new System.Drawing.Size(55, 70);
-            this.bevBtn.TabIndex = 34;
-            this.bevBtn.TextOffset = new System.Drawing.Point(0, 0);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_cart_48;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(15, 13);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox10.TabIndex = 0;
-            this.pictureBox10.TabStop = false;
-            // 
-            // cuiPictureBox1
-            // 
-            this.cuiPictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_profile_picture_100;
-            this.cuiPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cuiPictureBox1.Content = null;
-            this.cuiPictureBox1.CornerRadius = 8;
-            this.cuiPictureBox1.ImageTint = System.Drawing.Color.White;
-            this.cuiPictureBox1.Location = new System.Drawing.Point(12, 28);
-            this.cuiPictureBox1.Name = "cuiPictureBox1";
-            this.cuiPictureBox1.OutlineThickness = 1F;
-            this.cuiPictureBox1.PanelOutlineColor = System.Drawing.Color.Empty;
-            this.cuiPictureBox1.Rotation = 0;
-            this.cuiPictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.cuiPictureBox1.TabIndex = 0;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_food_basket_48;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(15, 13);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_1;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(59, 64);
-            this.pictureBox7.TabIndex = 32;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_home_48;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
+            this.backBtn.AutoSize = true;
+            this.backBtn.BackColor = System.Drawing.Color.Transparent;
+            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.backBtn.ForeColor = System.Drawing.Color.White;
+            this.backBtn.Location = new System.Drawing.Point(221, 9);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(28, 30);
+            this.backBtn.TabIndex = 34;
+            this.backBtn.Text = "<";
+            this.backBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click_1);
             // 
             // Bakery
             // 
@@ -789,7 +813,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1068, 633);
+            this.ClientSize = new System.Drawing.Size(1085, 633);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.roundedPanel3);
             this.Controls.Add(this.xBtn);
@@ -808,25 +833,25 @@
             this.panel1.ResumeLayout(false);
             this.cartPnl.ResumeLayout(false);
             this.cartPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel3.ResumeLayout(false);
             this.catPnl.ResumeLayout(false);
             this.catPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.homePnl.ResumeLayout(false);
             this.homePnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel2.ResumeLayout(false);
             this.roundedPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.roundedPanel3.ResumeLayout(false);
             this.roundedPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.roundedPanel4.ResumeLayout(false);
             this.roundedPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -879,5 +904,6 @@
         private CuoreUI.Controls.cuiButton snkBtn;
         private CuoreUI.Controls.cuiButton graBtn;
         private CuoreUI.Controls.cuiButton daiBtn;
+        private System.Windows.Forms.Label backBtn;
     }
 }

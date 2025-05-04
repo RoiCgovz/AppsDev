@@ -42,7 +42,20 @@ create table salesreports (
     foreign key (salesrep_itemid) references items(itemid) on delete no action
 );
 
--- Insert items into table
+create table userAcc(
+    userId int primary key identity(900,25),
+    userName nvarchar(20) not null,
+    userPass nvarchar(20) not null
+);
+
+create table adminAcc(
+    adminId int primary key identity(900,25),
+    adminUserName nvarchar(20) not null,
+    adminPass nvarchar(20) not null
+);
+
+
+-- Initialize Insert items into table
 INSERT INTO items (itemName, itemCategory, itemPrice)
 SELECT itemName, itemCategory, itemPrice
 FROM (VALUES
@@ -68,6 +81,7 @@ FROM (VALUES
 AS ItemsData(itemName, itemCategory, itemPrice)
 WHERE NOT EXISTS (SELECT 1 FROM items WHERE items.itemName = ItemsData.itemName);
 
+-- Initalize Inventory
 INSERT INTO inventory (inv_itemId, inventoryDate, inventoryStock)
 SELECT i.itemId, GETDATE(), s.inventoryStock
 FROM (
@@ -95,6 +109,8 @@ JOIN items i ON i.itemName = s.itemName
 WHERE NOT EXISTS (
     SELECT 1 FROM inventory WHERE inv_itemId = i.itemId
 );
+
+
 -- Update items in case of 0 stock
 /*
 UPDATE inv
@@ -133,17 +149,17 @@ select * from inventory;
 -- select * from sales;
 -- select * from salesdetails;
 -- select * from salesreports;
+select * from userAcc;
+select * from adminAcc;
 
 -- Optionally drop the database for testing purposes (use with caution)
 
---USE master;
---GO
---ALTER DATABASE grocerydb SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
---GO
---DROP DATABASE grocerydb;
+USE master;
+GO
+ALTER DATABASE grocerydb SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+DROP DATABASE grocerydb;
 --GO
 -- drop procedure dbo.insertIntoItem
 -- EXEC GetItemStock @ItemName = 'rice';
 -- EXEC UpdateItemStockAfterSale 'rice', 200, '2025-02-20'
-
-
