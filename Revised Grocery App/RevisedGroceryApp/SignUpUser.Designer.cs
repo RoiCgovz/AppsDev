@@ -38,14 +38,14 @@
             this.signInLabel = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.signUpUserBtn = new CuoreUI.Controls.cuiButton();
-            this.signUpPasswordTxtBox = new CuoreUI.Controls.cuiTextBox2();
-            this.signUpUserNameTxtBox = new CuoreUI.Controls.cuiTextBox2();
             this.label4 = new System.Windows.Forms.Label();
-            this.signUpConfirmPassTxtBox = new CuoreUI.Controls.cuiTextBox2();
             this.FormAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.signUpConfirmPassTxtBox = new CuoreUI.Controls.cuiTextBox2();
+            this.signUpPasswordTxtBox = new CuoreUI.Controls.cuiTextBox2();
+            this.signUpUserNameTxtBox = new CuoreUI.Controls.cuiTextBox2();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -244,6 +244,83 @@
             this.signUpUserBtn.TextOffset = new System.Drawing.Point(0, 0);
             this.signUpUserBtn.Click += new System.EventHandler(this.signUpUserBtn_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(618, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(206, 65);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Sign Up";
+            // 
+            // FormAnim
+            // 
+            this.FormAnim.AnimateOnStart = true;
+            this.FormAnim.Duration = 600;
+            this.FormAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadInOut;
+            this.FormAnim.StartOpacity = 0D;
+            this.FormAnim.TargetForm = this;
+            this.FormAnim.TargetOpacity = 1D;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_password_60;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(528, 367);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_password_60;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(528, 276);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_profile_picture_100;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(528, 190);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // signUpConfirmPassTxtBox
+            // 
+            this.signUpConfirmPassTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.signUpConfirmPassTxtBox.BackgroundColor = System.Drawing.Color.White;
+            this.signUpConfirmPassTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.signUpConfirmPassTxtBox.BorderSize = 1;
+            this.signUpConfirmPassTxtBox.Content = "";
+            this.signUpConfirmPassTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.signUpConfirmPassTxtBox.FocusBackgroundColor = System.Drawing.Color.White;
+            this.signUpConfirmPassTxtBox.FocusBorderColor = System.Drawing.Color.Black;
+            this.signUpConfirmPassTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpConfirmPassTxtBox.ForeColor = System.Drawing.Color.Black;
+            this.signUpConfirmPassTxtBox.Location = new System.Drawing.Point(593, 367);
+            this.signUpConfirmPassTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.signUpConfirmPassTxtBox.Multiline = false;
+            this.signUpConfirmPassTxtBox.Name = "signUpConfirmPassTxtBox";
+            this.signUpConfirmPassTxtBox.Padding = new System.Windows.Forms.Padding(15, 14, 15, 0);
+            this.signUpConfirmPassTxtBox.PasswordChar = false;
+            this.signUpConfirmPassTxtBox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
+            this.signUpConfirmPassTxtBox.PlaceholderText = "Confirm Password";
+            this.signUpConfirmPassTxtBox.Rounding = new System.Windows.Forms.Padding(8);
+            this.signUpConfirmPassTxtBox.Size = new System.Drawing.Size(266, 42);
+            this.signUpConfirmPassTxtBox.TabIndex = 20;
+            this.signUpConfirmPassTxtBox.TextOffset = new System.Drawing.Size(0, 0);
+            this.signUpConfirmPassTxtBox.UnderlinedStyle = false;
+            // 
             // signUpPasswordTxtBox
             // 
             this.signUpPasswordTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -296,83 +373,6 @@
             this.signUpUserNameTxtBox.TextOffset = new System.Drawing.Size(0, 0);
             this.signUpUserNameTxtBox.UnderlinedStyle = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(618, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 65);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Sign Up";
-            // 
-            // signUpConfirmPassTxtBox
-            // 
-            this.signUpConfirmPassTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.signUpConfirmPassTxtBox.BackgroundColor = System.Drawing.Color.White;
-            this.signUpConfirmPassTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.signUpConfirmPassTxtBox.BorderSize = 1;
-            this.signUpConfirmPassTxtBox.Content = "";
-            this.signUpConfirmPassTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.signUpConfirmPassTxtBox.FocusBackgroundColor = System.Drawing.Color.White;
-            this.signUpConfirmPassTxtBox.FocusBorderColor = System.Drawing.Color.Black;
-            this.signUpConfirmPassTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpConfirmPassTxtBox.ForeColor = System.Drawing.Color.Black;
-            this.signUpConfirmPassTxtBox.Location = new System.Drawing.Point(593, 367);
-            this.signUpConfirmPassTxtBox.Margin = new System.Windows.Forms.Padding(4);
-            this.signUpConfirmPassTxtBox.Multiline = false;
-            this.signUpConfirmPassTxtBox.Name = "signUpConfirmPassTxtBox";
-            this.signUpConfirmPassTxtBox.Padding = new System.Windows.Forms.Padding(15, 14, 15, 0);
-            this.signUpConfirmPassTxtBox.PasswordChar = false;
-            this.signUpConfirmPassTxtBox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
-            this.signUpConfirmPassTxtBox.PlaceholderText = "Confirm Password";
-            this.signUpConfirmPassTxtBox.Rounding = new System.Windows.Forms.Padding(8);
-            this.signUpConfirmPassTxtBox.Size = new System.Drawing.Size(266, 42);
-            this.signUpConfirmPassTxtBox.TabIndex = 20;
-            this.signUpConfirmPassTxtBox.TextOffset = new System.Drawing.Size(0, 0);
-            this.signUpConfirmPassTxtBox.UnderlinedStyle = false;
-            // 
-            // FormAnim
-            // 
-            this.FormAnim.AnimateOnStart = true;
-            this.FormAnim.Duration = 600;
-            this.FormAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadInOut;
-            this.FormAnim.StartOpacity = 0D;
-            this.FormAnim.TargetForm = this;
-            this.FormAnim.TargetOpacity = 1D;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_password_60;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(528, 367);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 42);
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_password_60;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(528, 276);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 42);
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_profile_picture_100;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(528, 190);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 42);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // SignUpUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,13 +417,13 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private CuoreUI.Controls.cuiButton signUpUserBtn;
-        private CuoreUI.Controls.cuiTextBox2 signUpPasswordTxtBox;
-        private CuoreUI.Controls.cuiTextBox2 signUpUserNameTxtBox;
         private System.Windows.Forms.Label label4;
-        private CuoreUI.Controls.cuiTextBox2 signUpConfirmPassTxtBox;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private CuoreUI.Controls.cuiButton signInAdminBtn;
         private CuoreUI.Components.cuiFormAnimator FormAnim;
+        private CuoreUI.Controls.cuiTextBox2 signUpConfirmPassTxtBox;
+        private CuoreUI.Controls.cuiTextBox2 signUpPasswordTxtBox;
+        private CuoreUI.Controls.cuiTextBox2 signUpUserNameTxtBox;
     }
 }

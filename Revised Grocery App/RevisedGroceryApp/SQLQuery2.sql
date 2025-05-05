@@ -63,26 +63,37 @@ begin
 end;
 go
 
-CREATE PROCEDURE insertUserAccount
-    @UserName NVARCHAR(20),
-    @UserPass NVARCHAR(15)
+
+
+CREATE PROCEDURE accLogin
+    @username NVARCHAR(20),
+    @password NVARCHAR(20),
+    @userType NVARCHAR(10) OUTPUT,
+    @accountId INT OUTPUT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    INSERT INTO userAcc (userName, userPass)
-    VALUES (@UserName, @UserPass);
+    -- First check in userAcc
+    SELECT @accountId = userId, @userType = 'User'
+    FROM userAcc
+    WHERE userName = @username AND userPass = @password;
+
+    IF @accountId IS NULL
+    BEGIN
+        -- Then check in adminAcc
+        SELECT @accountId = adminId, @userType = 'Admin'
+        FROM adminAcc
+        WHERE adminUserName = @username AND adminPass = @password;
+    END
+
+    -- If still NULL, then login failed
+    IF @accountId IS NULL
+    BEGIN
+        SET @userType = 'Invalid';
+    END
 END;
 GO
 
-CREATE PROCEDURE insertAdminAccount
-    @AdminUserName NVARCHAR(20),
-    @AdminPass NVARCHAR(15)
-AS
-BEGIN
-    SET NOCOUNT ON;
-
-    INSERT INTO adminAcc (adminUserName, adminPass)
-    VALUES (@AdminUserName, @AdminPass);
-END;
-GO
+select * from userAcc
+select * from adminAcc

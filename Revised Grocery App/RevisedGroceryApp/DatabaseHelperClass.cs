@@ -89,18 +89,16 @@ namespace RevisedGroceryApp
         public static bool InsertUserAccount(string userName, string userPass)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand("insertUserAccount", conn))
+            using (SqlCommand cmd = new SqlCommand("INSERT INTO userAcc (userName, userPass) VALUES (@UserName, @UserPass)", conn))
             {
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@UserName", userName);
-                cmd.Parameters.AddWithValue("@UserPass", userPass);
+                cmd.Parameters.Add(new SqlParameter("@UserName", SqlDbType.NVarChar, 20) { Value = userName });
+                cmd.Parameters.Add(new SqlParameter("@UserPass", SqlDbType.NVarChar, 20) { Value = userPass });
 
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
                 return rows > 0;
             }
         }
-
         public static bool InsertAdminAccount(string adminUserName, string adminPass)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -115,5 +113,41 @@ namespace RevisedGroceryApp
                 return rows > 0;
             }
         }
+
+        public static bool LoginAccount(string username, string password, out string userType, out int accountId)
+        {
+            userType = "Invalid";
+            accountId = -1;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand("accLogin", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                SqlParameter userTypeParam = new SqlParameter("@userType", SqlDbType.NVarChar, 10)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(userTypeParam);
+
+                SqlParameter accountIdParam = new SqlParameter("@accountId", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(accountIdParam);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                userType = userTypeParam.Value?.ToString() ?? "Invalid";
+                accountId = accountIdParam.Value != DBNull.Value ? (int)accountIdParam.Value : -1;
+
+                return userType == "User" || userType == "Admin";
+            }
+        }
+
     }
 }

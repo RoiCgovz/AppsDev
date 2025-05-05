@@ -38,9 +38,20 @@ namespace RevisedGroceryApp
 
         private void loginUserBtn_Click(object sender, EventArgs e)
         {
-            HomePage home = new HomePage();
-            this.Hide();
-            home.Show();
+            string username = loginUserNameTxtBox.Text;
+            string password = loginPasswordTxtBox.Text;
+
+            if (DatabaseHelperClass.LoginAccount(username, password, out string userType, out int accountId))
+            {
+                MessageBox.Show($"Login successful! Type: {userType}, ID: {accountId}");
+                HomePage home = new HomePage();
+                this.Hide();
+                home.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid login credentials.");
+            }
         }
 
         private void signUpAdminBtn_Click(object sender, EventArgs e)

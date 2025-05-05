@@ -43,7 +43,7 @@ create table salesreports (
 );
 
 create table userAcc(
-    userId int primary key identity(900,25),
+    userId int primary key identity(9010,25),
     userName nvarchar(20) not null,
     userPass nvarchar(20) not null
 );
@@ -163,3 +163,5 @@ DROP DATABASE grocerydb;
 -- drop procedure dbo.insertIntoItem
 -- EXEC GetItemStock @ItemName = 'rice';
 -- EXEC UpdateItemStockAfterSale 'rice', 200, '2025-02-20'
+
+drop table userAcc

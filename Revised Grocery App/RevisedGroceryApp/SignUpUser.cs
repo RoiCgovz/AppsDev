@@ -46,28 +46,33 @@ namespace RevisedGroceryApp
 
         private void signUpUserBtn_Click(object sender, EventArgs e)
         {
-            string userName = signUpUserNameTxtBox.Text;
+            string userName = textBox1.Text;
             string password = ConfirmPassword();
 
-            if (DatabaseHelperClass.InsertAdminAccount(userName, password))
-            { 
-                MessageBox.Show("Admin account created successfully.");
+            if (password == null)
+                return;     
+
+            if (DatabaseHelperClass.InsertUserAccount(userName, password) == true)
+            {
+                MessageBox.Show("User account created successfully.");
             }
             else
-                MessageBox.Show("Failed to create admin account.");
+            {
+                MessageBox.Show("Failed to create user account.");
+            }
         }
         private string ConfirmPassword()
         {
-            if (signUpPasswordTxtBox.Text != signUpConfirmPassTxtBox.Text)
+            if (signUpPasswordTxtBox.Text == signUpConfirmPassTxtBox.Text)
+            {
+                return signUpConfirmPassTxtBox.Text;
+            }
+            else
             {
                 MessageBox.Show("Passwords are different, please try again.");
                 signUpConfirmPassTxtBox.Text = "";
                 signUpPasswordTxtBox.Text = "";
                 return null;
-            }
-            else
-            {
-                return signUpConfirmPassTxtBox.Text;
             }
         }
 
