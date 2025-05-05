@@ -86,6 +86,7 @@ namespace RevisedGroceryApp
             }
         }
 
+        //Insert UserAcc into Database
         public static bool InsertUserAccount(string userName, string userPass)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -99,6 +100,7 @@ namespace RevisedGroceryApp
                 return rows > 0;
             }
         }
+        // Insert Admin Acc into Database
         public static bool InsertAdminAccount(string adminUserName, string adminPass)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
