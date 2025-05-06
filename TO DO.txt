@@ -1,0 +1,31 @@
+TO DO:
+
+Cart:
+
+- Make the cells editable
+- Redesign Cart
+- Delete Items from Cart
+
+Admin Forms:
+
+Items Admin Form:
+
+- Add New Items (Add Picture, Name of the Item and default price)
+- Delete Items
+
+Inv Admin Form: 
+
+- Modify Price of Item
+- Set the Quantity of the item
+
+Sales Form:
+
+- Display the sales of the app of given day/ year
+
+Sales Report: 
+
+- Display the Report of the sales and convert to pdf
+
+Profile:
+
+- View Profile
