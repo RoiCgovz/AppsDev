@@ -22,8 +22,9 @@ Sales Form:
 
 - Display the sales of the app of given day/ year
 
-Sales Report: 
+Report: 
 
+- Make the user choose between InvReport or SalesReport
 - Display the Report of the sales and convert to pdf
 
 Profile:
