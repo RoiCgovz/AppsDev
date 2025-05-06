@@ -218,7 +218,7 @@
             this.loginPasswordTxtBox.Multiline = false;
             this.loginPasswordTxtBox.Name = "loginPasswordTxtBox";
             this.loginPasswordTxtBox.Padding = new System.Windows.Forms.Padding(15, 14, 15, 0);
-            this.loginPasswordTxtBox.PasswordChar = false;
+            this.loginPasswordTxtBox.PasswordChar = true;
             this.loginPasswordTxtBox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
             this.loginPasswordTxtBox.PlaceholderText = "Password";
             this.loginPasswordTxtBox.Rounding = new System.Windows.Forms.Padding(8);

@@ -155,7 +155,19 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvAdmin.Designer.cs">
+      <DependentUpon>InvAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items.cs" />
+    <Compile Include="ItemsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemsAdmin.Designer.cs">
+      <DependentUpon>ItemsAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +198,18 @@
     </Compile>
     <Compile Include="Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAdmin.Designer.cs">
+      <DependentUpon>SalesAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="SignUpUser.cs">
       <SubType>Form</SubType>
@@ -361,6 +385,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Custom-Icon-Design-Flatastic-6-Circle.ico" />
+    <None Include="Resources\icons8-report-100.png" />
+    <None Include="Resources\icons8-sales-100.png" />
+    <None Include="Resources\icons8-inventory-100.png" />
+    <None Include="Resources\icons8-open-box-100 %281%29.png" />
+    <None Include="Resources\icons8-open-box-100.png" />
     <None Include="Resources\icons8-password-60.png" />
     <None Include="Resources\1nacho2.jpg" />
     <None Include="Resources\cookies2.jpg" />

@@ -38,8 +38,8 @@ namespace RevisedGroceryApp
 
         private void loginUserBtn_Click(object sender, EventArgs e)
         {
-            string username = loginUserNameTxtBox.Text;
-            string password = loginPasswordTxtBox.Text;
+            string username = loginUserNameTxtBox.Content;
+            string password = loginPasswordTxtBox.Content;
 
             if (DatabaseHelperClass.LoginAccount(username, password, out string userType, out int accountId))
             {

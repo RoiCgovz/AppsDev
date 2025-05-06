@@ -46,7 +46,7 @@ namespace RevisedGroceryApp
 
         private void signUpUserBtn_Click(object sender, EventArgs e)
         {
-            string userName = textBox1.Text;
+            string userName = signUpUserNameTxtBox.Content;
             string password = ConfirmPassword();
 
             if (password == null)
@@ -63,15 +63,15 @@ namespace RevisedGroceryApp
         }
         private string ConfirmPassword()
         {
-            if (signUpPasswordTxtBox.Text == signUpConfirmPassTxtBox.Text)
+            if (signUpPasswordTxtBox.Content == signUpConfirmPassTxtBox.Content)
             {
-                return signUpConfirmPassTxtBox.Text;
+                return signUpConfirmPassTxtBox.Content;
             }
             else
             {
                 MessageBox.Show("Passwords are different, please try again.");
-                signUpConfirmPassTxtBox.Text = "";
-                signUpPasswordTxtBox.Text = "";
+                signUpConfirmPassTxtBox.Content = "";
+                signUpPasswordTxtBox.Content = "";
                 return null;
             }
         }

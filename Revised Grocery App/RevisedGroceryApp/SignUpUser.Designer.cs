@@ -366,7 +366,7 @@
             this.signUpUserNameTxtBox.Padding = new System.Windows.Forms.Padding(15, 14, 15, 0);
             this.signUpUserNameTxtBox.PasswordChar = false;
             this.signUpUserNameTxtBox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
-            this.signUpUserNameTxtBox.PlaceholderText = "Username / Email";
+            this.signUpUserNameTxtBox.PlaceholderText = "Username ";
             this.signUpUserNameTxtBox.Rounding = new System.Windows.Forms.Padding(8);
             this.signUpUserNameTxtBox.Size = new System.Drawing.Size(266, 42);
             this.signUpUserNameTxtBox.TabIndex = 12;

@@ -42,8 +42,11 @@
             this.cuiFormRounder1 = new CuoreUI.Components.cuiFormRounder();
             this.inAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.xBtn = new System.Windows.Forms.Label();
+            this.accActionPanel = new System.Windows.Forms.Panel();
+            this.logoutBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homePic)).BeginInit();
+            this.accActionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -125,6 +128,7 @@
             this.accBtn.Size = new System.Drawing.Size(83, 25);
             this.accBtn.TabIndex = 9;
             this.accBtn.Text = "Account";
+            this.accBtn.Click += new System.EventHandler(this.accBtn_Click);
             // 
             // label1
             // 
@@ -217,12 +221,38 @@
             this.xBtn.Text = "X";
             this.xBtn.Click += new System.EventHandler(this.xBtn_Click_1);
             // 
+            // accActionPanel
+            // 
+            this.accActionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.accActionPanel.Controls.Add(this.logoutBtn);
+            this.accActionPanel.Location = new System.Drawing.Point(782, 69);
+            this.accActionPanel.Name = "accActionPanel";
+            this.accActionPanel.Size = new System.Drawing.Size(151, 38);
+            this.accActionPanel.TabIndex = 27;
+            this.accActionPanel.Visible = false;
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Location = new System.Drawing.Point(0, 0);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(151, 36);
+            this.logoutBtn.TabIndex = 0;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1000, 640);
+            this.Controls.Add(this.accActionPanel);
             this.Controls.Add(this.xBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.shopBtn);
@@ -240,6 +270,7 @@
             this.Text = "HomePage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homePic)).EndInit();
+            this.accActionPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +290,7 @@
         private CuoreUI.Components.cuiFormRounder cuiFormRounder1;
         private CuoreUI.Components.cuiFormAnimator inAnim;
         private System.Windows.Forms.Label xBtn;
+        private System.Windows.Forms.Panel accActionPanel;
+        private System.Windows.Forms.Button logoutBtn;
     }
 }

@@ -149,19 +149,24 @@ select * from inventory;
 -- select * from sales;
 -- select * from salesdetails;
 -- select * from salesreports;
-select * from userAcc;
-select * from adminAcc;
+--select * from userAcc;
+--select * from adminAcc;
 
 -- Optionally drop the database for testing purposes (use with caution)
 
-USE master;
-GO
-ALTER DATABASE grocerydb SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-GO
-DROP DATABASE grocerydb;
+--USE master;
+--GO
+--ALTER DATABASE grocerydb SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+--GO
+--DROP DATABASE grocerydb;
 --GO
 -- drop procedure dbo.insertIntoItem
 -- EXEC GetItemStock @ItemName = 'rice';
 -- EXEC UpdateItemStockAfterSale 'rice', 200, '2025-02-20'
 
-drop table userAcc
+
+
+select * from userAcc
+select * from adminAcc
+
+--drop table userAcc

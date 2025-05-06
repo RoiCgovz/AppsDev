@@ -64,7 +64,7 @@ end;
 go
 
 
-
+-- Login Acc 
 CREATE PROCEDURE accLogin
     @username NVARCHAR(20),
     @password NVARCHAR(20),
@@ -94,6 +94,3 @@ BEGIN
     END
 END;
 GO
-
-select * from userAcc
-select * from adminAcc
