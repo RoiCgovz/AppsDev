@@ -1,0 +1,185 @@
+﻿namespace RevisedGroceryApp
+{
+    partial class Receipt
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.backBtn = new System.Windows.Forms.Label();
+            this.xBtn = new System.Windows.Forms.PictureBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.newOrderBtn = new System.Windows.Forms.Button();
+            this.grandTotalLbl = new System.Windows.Forms.Label();
+            this.discountLbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.backBtn);
+            this.panel1.Controls.Add(this.xBtn);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(438, 80);
+            this.panel1.TabIndex = 14;
+            // 
+            // backBtn
+            // 
+            this.backBtn.AutoSize = true;
+            this.backBtn.BackColor = System.Drawing.Color.Transparent;
+            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.ForeColor = System.Drawing.Color.Black;
+            this.backBtn.Location = new System.Drawing.Point(13, 4);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(31, 32);
+            this.backBtn.TabIndex = 14;
+            this.backBtn.Text = "<";
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // xBtn
+            // 
+            this.xBtn.BackColor = System.Drawing.Color.Black;
+            this.xBtn.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__1_;
+            this.xBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.xBtn.Location = new System.Drawing.Point(415, 16);
+            this.xBtn.Name = "xBtn";
+            this.xBtn.Size = new System.Drawing.Size(20, 20);
+            this.xBtn.TabIndex = 3;
+            this.xBtn.TabStop = false;
+            this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(262, 408);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 21);
+            this.lblTotal.TabIndex = 17;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 88);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(438, 317);
+            this.dataGridView1.TabIndex = 16;
+            // 
+            // newOrderBtn
+            // 
+            this.newOrderBtn.BackColor = System.Drawing.Color.White;
+            this.newOrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newOrderBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newOrderBtn.ForeColor = System.Drawing.Color.Black;
+            this.newOrderBtn.Location = new System.Drawing.Point(12, 462);
+            this.newOrderBtn.Name = "newOrderBtn";
+            this.newOrderBtn.Size = new System.Drawing.Size(206, 44);
+            this.newOrderBtn.TabIndex = 15;
+            this.newOrderBtn.Text = "New Transaction";
+            this.newOrderBtn.UseVisualStyleBackColor = false;
+            this.newOrderBtn.Click += new System.EventHandler(this.newOrderBtn_Click);
+            // 
+            // grandTotalLbl
+            // 
+            this.grandTotalLbl.AutoSize = true;
+            this.grandTotalLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grandTotalLbl.ForeColor = System.Drawing.Color.White;
+            this.grandTotalLbl.Location = new System.Drawing.Point(262, 475);
+            this.grandTotalLbl.Name = "grandTotalLbl";
+            this.grandTotalLbl.Size = new System.Drawing.Size(0, 21);
+            this.grandTotalLbl.TabIndex = 19;
+            this.grandTotalLbl.Click += new System.EventHandler(this.grandTotalLbl_Click);
+            // 
+            // discountLbl
+            // 
+            this.discountLbl.AutoSize = true;
+            this.discountLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discountLbl.ForeColor = System.Drawing.Color.White;
+            this.discountLbl.Location = new System.Drawing.Point(262, 441);
+            this.discountLbl.Name = "discountLbl";
+            this.discountLbl.Size = new System.Drawing.Size(0, 21);
+            this.discountLbl.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(157, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 45);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Receipt";
+            // 
+            // Receipt
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(464, 546);
+            this.Controls.Add(this.grandTotalLbl);
+            this.Controls.Add(this.discountLbl);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.newOrderBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Receipt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Receipt";
+            this.Load += new System.EventHandler(this.Receipt_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label backBtn;
+        private System.Windows.Forms.PictureBox xBtn;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button newOrderBtn;
+        private System.Windows.Forms.Label grandTotalLbl;
+        private System.Windows.Forms.Label discountLbl;
+        private System.Windows.Forms.Label label4;
+    }
+}
