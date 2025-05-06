@@ -1,5 +1,7 @@
 TO DO:
 
+- BACK BUTTON OF ALL FORMS
+
 Cart:
 
 - Make the cells editable
@@ -11,7 +13,6 @@ Admin Forms:
 Items Admin Form:
 
 - Add New Items (Add Picture, Name of the Item and default price)
-- Delete Items
 
 Inv Admin Form: 
 
