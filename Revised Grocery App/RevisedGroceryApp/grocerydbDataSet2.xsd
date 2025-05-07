@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="grocerydbDataSet2" targetNamespace="http://tempuri.org/grocerydbDataSet2.xsd" xmlns:mstns="http://tempuri.org/grocerydbDataSet2.xsd" xmlns="http://tempuri.org/grocerydbDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="grocerydbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="grocerydbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RevisedGroceryApp.Properties.Settings.GlobalReference.Default.grocerydbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="itemsTableAdapter" GeneratorDataComponentClassName="itemsTableAdapter" Name="items" UserDataComponentName="itemsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="grocerydbConnectionString (Settings)" DbObjectName="grocerydb.dbo.items" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT itemcategory FROM dbo.items</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="itemcategory" DataSetColumn="itemcategory" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="grocerydbDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="grocerydbDataSet2" msprop:Generator_DataSetName="grocerydbDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="items" msprop:Generator_RowEvHandlerName="itemsRowChangeEventHandler" msprop:Generator_RowDeletedName="itemsRowDeleted" msprop:Generator_RowDeletingName="itemsRowDeleting" msprop:Generator_RowEvArgName="itemsRowChangeEvent" msprop:Generator_TablePropName="items" msprop:Generator_RowChangedName="itemsRowChanged" msprop:Generator_RowChangingName="itemsRowChanging" msprop:Generator_TableClassName="itemsDataTable" msprop:Generator_RowClassName="itemsRow" msprop:Generator_TableVarName="tableitems" msprop:Generator_UserTableName="items">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itemcategory" msprop:Generator_ColumnPropNameInRow="itemcategory" msprop:Generator_ColumnPropNameInTable="itemcategoryColumn" msprop:Generator_ColumnVarNameInTable="columnitemcategory" msprop:Generator_UserColumnName="itemcategory">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

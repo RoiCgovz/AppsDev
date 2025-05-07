@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
 using System.Windows.Markup;
+
 
 namespace RevisedGroceryApp
 {
@@ -14,7 +16,7 @@ namespace RevisedGroceryApp
                            "Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;" +
                            "ApplicationIntent=ReadWrite;MultiSubnetFailover=True";
         
-        
+        // Method to get Item Stockz
         public static int GetItemStock(string itemName)
         {
             try
@@ -118,6 +120,7 @@ namespace RevisedGroceryApp
             }
         }
 
+        // Login Method
         public static bool LoginAccount(string username, string password, out string userType, out int accountId)
         {
             userType = "Invalid";
@@ -152,6 +155,8 @@ namespace RevisedGroceryApp
                 return userType == "User" || userType == "Admin";
             }
         }
+
+        // Delete item in Items Table based on itemId
         public bool DeleteItemById(int itemId)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -163,6 +168,117 @@ namespace RevisedGroceryApp
                     conn.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
                     return rowsAffected > 0;
+                }
+            }
+        }
+
+        // Save SalesDetails into SalesDetails and Sales Table in the Database
+        public void SaveSaleAndDetails(List<Items> receiptItems, decimal finalTotal)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlTransaction transaction = conn.BeginTransaction();
+
+                try
+                {
+                    SqlCommand insertSaleCmd = new SqlCommand(
+                        "INSERT INTO sales (saledate) OUTPUT INSERTED.saleid VALUES (@date)", conn, transaction);
+                    insertSaleCmd.Parameters.AddWithValue("@date", DateTime.Now);
+
+                    int saleId = (int)insertSaleCmd.ExecuteScalar();
+
+                    foreach (var item in receiptItems)
+                    {
+                        decimal itemTotal = item.Quantity * item.Price;
+
+                        SqlCommand insertDetailCmd = new SqlCommand(
+                            "INSERT INTO salesdetails (salesdetails_saleid, quantity, salesDetails_totalsale) " +
+                            "VALUES (@saleid, @qty, @total)", conn, transaction);
+
+                        insertDetailCmd.Parameters.AddWithValue("@saleid", saleId);
+                        insertDetailCmd.Parameters.AddWithValue("@qty", item.Quantity);
+                        insertDetailCmd.Parameters.AddWithValue("@total", itemTotal);
+
+                        insertDetailCmd.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw; 
+                }
+            }
+        }
+
+        // Get Inventory ID by Item Name
+        public static int GetInventoryIdByItemName(string itemName)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand("SELECT inventoryid FROM inventory WHERE inv_itemid = (SELECT itemid FROM items WHERE itemName = @itemName)", conn))
+            {
+                cmd.Parameters.AddWithValue("@itemName", itemName);
+                conn.Open();
+                return (int)cmd.ExecuteScalar();
+            }
+        }
+
+        // Insert Inv Out Details
+        public static int InsertInvOutDetail(int inventoryId, int quantityOut)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand("INSERT INTO invdetails (invDetailsItemIn, invDetailsItemOut, invDetails_inventoryid, invDetailsDate) OUTPUT INSERTED.invDetaisId VALUES (0, @outQty, @invId, GETDATE())", conn))
+            {
+                cmd.Parameters.AddWithValue("@outQty", quantityOut);
+                cmd.Parameters.AddWithValue("@invId", inventoryId);
+                conn.Open();
+                return (int)cmd.ExecuteScalar();
+            }
+        }
+
+        // Insert into Inv Reports
+        public static void InsertIntoInvReport(int invDetailsId, int outQty)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand("INSERT INTO invreports (invreport_invDetailsId, invreport_invDetailsItemin, invreport_invDetailsItemOut, invreport_invDetailsDate) VALUES (@id, 0, @outQty, GETDATE())", conn))
+            {
+                cmd.Parameters.AddWithValue("@id", invDetailsId);
+                cmd.Parameters.AddWithValue("@outQty", outQty);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public bool UpdateItemAndInventory(string itemName, decimal itemPrice, int itemStock, string itemCategory, int? itemId = null)
+        {
+            itemCategory = itemCategory.Trim().ToLower();
+            itemName = itemName.Trim().ToLower();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("InsertIntoItemsInventory", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@itemname", itemName);
+                        cmd.Parameters.AddWithValue("@itemcategory", itemCategory);
+                        cmd.Parameters.AddWithValue("@itemprice", itemPrice);
+                        cmd.Parameters.AddWithValue("@inventorydate", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@inventorystock", itemStock);
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    // Optional: log ex.Message
+                    return false;
                 }
             }
         }

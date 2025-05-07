@@ -54,5 +54,12 @@ namespace RevisedGroceryApp
         {
             Environment.Exit(0);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LogInForm log = new LogInForm();
+            log.Show();
+        }
     }
 }

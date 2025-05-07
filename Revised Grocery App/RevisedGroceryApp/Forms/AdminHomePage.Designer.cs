@@ -34,9 +34,13 @@
             this.accBtn = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.roundedPanel4 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.roundedPanel3 = new RoundedPanel.RoundedPanel(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.roundedPanel1 = new RoundedPanel.RoundedPanel(this.components);
+            this.invAdmin = new System.Windows.Forms.PictureBox();
             this.roundedPanel2 = new RoundedPanel.RoundedPanel(this.components);
+            this.itemsBtn = new System.Windows.Forms.PictureBox();
             this.accActionPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,20 +48,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.invAdmin = new System.Windows.Forms.PictureBox();
-            this.itemsBtn = new System.Windows.Forms.PictureBox();
             this.roundedPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.roundedPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.roundedPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.invAdmin)).BeginInit();
             this.roundedPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBtn)).BeginInit();
             this.accActionPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invAdmin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // titleName
@@ -126,6 +126,16 @@
             this.roundedPanel4.Size = new System.Drawing.Size(195, 244);
             this.roundedPanel4.TabIndex = 23;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_report_100;
+            this.pictureBox4.Location = new System.Drawing.Point(50, 70);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // roundedPanel3
             // 
             this.roundedPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -139,6 +149,16 @@
             this.roundedPanel3.RadiusTopRight = 30;
             this.roundedPanel3.Size = new System.Drawing.Size(195, 244);
             this.roundedPanel3.TabIndex = 23;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_sales_100;
+            this.pictureBox3.Location = new System.Drawing.Point(44, 70);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // roundedPanel1
             // 
@@ -154,6 +174,17 @@
             this.roundedPanel1.Size = new System.Drawing.Size(195, 244);
             this.roundedPanel1.TabIndex = 23;
             // 
+            // invAdmin
+            // 
+            this.invAdmin.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_inventory_100;
+            this.invAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.invAdmin.Location = new System.Drawing.Point(49, 70);
+            this.invAdmin.Name = "invAdmin";
+            this.invAdmin.Size = new System.Drawing.Size(100, 100);
+            this.invAdmin.TabIndex = 1;
+            this.invAdmin.TabStop = false;
+            this.invAdmin.Click += new System.EventHandler(this.invAdmin_Click);
+            // 
             // roundedPanel2
             // 
             this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -167,6 +198,17 @@
             this.roundedPanel2.RadiusTopRight = 30;
             this.roundedPanel2.Size = new System.Drawing.Size(195, 244);
             this.roundedPanel2.TabIndex = 22;
+            // 
+            // itemsBtn
+            // 
+            this.itemsBtn.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_open_box_100__1_;
+            this.itemsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.itemsBtn.Location = new System.Drawing.Point(41, 70);
+            this.itemsBtn.Name = "itemsBtn";
+            this.itemsBtn.Size = new System.Drawing.Size(100, 100);
+            this.itemsBtn.TabIndex = 0;
+            this.itemsBtn.TabStop = false;
+            this.itemsBtn.Click += new System.EventHandler(this.itemsBtn_Click);
             // 
             // accActionPanel
             // 
@@ -190,6 +232,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -250,48 +293,6 @@
             this.pictureBox7.TabIndex = 24;
             this.pictureBox7.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_report_100;
-            this.pictureBox4.Location = new System.Drawing.Point(50, 70);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_sales_100;
-            this.pictureBox3.Location = new System.Drawing.Point(44, 70);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // invAdmin
-            // 
-            this.invAdmin.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_inventory_100;
-            this.invAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.invAdmin.Location = new System.Drawing.Point(49, 70);
-            this.invAdmin.Name = "invAdmin";
-            this.invAdmin.Size = new System.Drawing.Size(100, 100);
-            this.invAdmin.TabIndex = 1;
-            this.invAdmin.TabStop = false;
-            this.invAdmin.Click += new System.EventHandler(this.invAdmin_Click);
-            // 
-            // itemsBtn
-            // 
-            this.itemsBtn.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_open_box_100__1_;
-            this.itemsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.itemsBtn.Location = new System.Drawing.Point(41, 70);
-            this.itemsBtn.Name = "itemsBtn";
-            this.itemsBtn.Size = new System.Drawing.Size(100, 100);
-            this.itemsBtn.TabIndex = 0;
-            this.itemsBtn.TabStop = false;
-            this.itemsBtn.Click += new System.EventHandler(this.itemsBtn_Click);
-            // 
             // AdminHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,15 +318,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminHomePage";
             this.roundedPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.roundedPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.invAdmin)).EndInit();
             this.roundedPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.itemsBtn)).EndInit();
             this.accActionPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invAdmin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
+
 namespace RevisedGroceryApp
 {
     public partial class Receipt : Form
@@ -110,10 +111,21 @@ namespace RevisedGroceryApp
         {
 
         }
-
+        
         private void Receipt_Load(object sender, EventArgs e)
         {
+            CalculateTotal();
+            var dbHelper = new DatabaseHelperClass();
 
+            try
+            {
+                dbHelper.SaveSaleAndDetails(receiptItems, finalTotal);
+                MessageBox.Show("Sale saved successfully.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to save sale: " + ex.Message);
+            }
         }
     }
 }

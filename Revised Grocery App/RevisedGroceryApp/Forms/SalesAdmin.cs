@@ -16,5 +16,19 @@ namespace RevisedGroceryApp
         {
             InitializeComponent();
         }
+
+        private void SalesAdmin_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'grocerydbDataSet8.sales' table. You can move, or remove it, as needed.
+            this.salesTableAdapter.Fill(this.grocerydbDataSet8.sales);
+            // TODO: This line of code loads data into the 'grocerydbDataSet5.salesdetails' table. You can move, or remove it, as needed.
+            this.salesdetailsTableAdapter.Fill(this.grocerydbDataSet5.salesdetails);
+
+        }
+
+        private void xBtn_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

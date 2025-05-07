@@ -19,6 +19,8 @@ namespace RevisedGroceryApp
 
         private void ItemsAdmin_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'grocerydbDataSet3.items' table. You can move, or remove it, as needed.
+            this.itemsTableAdapter2.Fill(this.grocerydbDataSet3.items);
             // TODO: This line of code loads data into the 'dataSet2.items' table. You can move, or remove it, as needed.
             this.itemsTableAdapter1.Fill(this.dataSet2.items);
             // TODO: This line of code loads data into the 'dataSet1.items' table. You can move, or remove it, as needed.
@@ -74,6 +76,13 @@ namespace RevisedGroceryApp
         private void xBtn_Click(object sender, EventArgs e)
         {
             Environment.Exit(0 );   
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LogInForm log = new LogInForm();
+            log.ShowDialog();
         }
     }
 }

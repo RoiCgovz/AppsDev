@@ -39,20 +39,18 @@ namespace RevisedGroceryApp
                     MessageBox.Show($"Not enough stock for {name}. Available: {stock}",
                                     "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     continue;
-                }
-
+                }   
                 decimal price = DatabaseHelperClass.GetItemPrice(name);
                 selectedItems.Add(new Items { Name = name, Quantity = qty, Price = price });
-                DatabaseHelperClass.UpdateItemStock(name, qty, DateTime.Now);
+                DatabaseHelperClass.UpdateItemStock(name, -qty, DateTime.Now);
+                RecordInvOut(name, qty);
             }
-
             if (!selectedItems.Any())
             {
                 MessageBox.Show("Please select at least one item before adding to the cart.",
                                 "No Items Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             foreach (var item in selectedItems)
             {
                 var existing = CategoryForm.CartItems.FirstOrDefault(i => i.Name == item.Name);
@@ -180,6 +178,17 @@ namespace RevisedGroceryApp
             }
         }
 
-        
+        // Record Inv Out
+        private void RecordInvOut(string itemName, int quantityOut)
+        {
+            int inventoryId = DatabaseHelperClass.GetInventoryIdByItemName(itemName);
+
+            int invDetailId = DatabaseHelperClass.InsertInvOutDetail(inventoryId, quantityOut);
+
+            DatabaseHelperClass.InsertIntoInvReport(invDetailId, quantityOut);
+        }
+
+
+
     }
 }

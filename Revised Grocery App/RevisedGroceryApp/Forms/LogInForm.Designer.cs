@@ -365,15 +365,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private CuoreUI.Controls.cuiTextBox2 cuiTextBox21;
-        private CuoreUI.Controls.cuiTextBox2 cuiTextBox22;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private CuoreUI.Controls.cuiButton cuiButton1;
-        private CuoreUI.Controls.cuiButton cuiButton2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private CuoreUI.Controls.cuiTextBox2 loginUserNameTxtBox;

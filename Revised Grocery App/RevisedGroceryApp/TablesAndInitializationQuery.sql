@@ -5,7 +5,7 @@ go
 
 create table items (
     itemid int primary key identity(1,1),
-    itemname nvarchar(50) unique not null,
+    itemname nvarchar(50) not null,
     itemcategory nvarchar(20) not null,
     itemprice decimal(10,2) not null
 );
@@ -27,20 +27,31 @@ create table salesdetails (
     salesdetailid int primary key identity(10000,1),
     salesdetails_saleid int not null,
     quantity int not null,
+    salesDetails_totalsale DECIMAL(10,2) NOT NULL DEFAULT 0,
     foreign key (salesdetails_saleid) references sales(saleid)
 );
-
-create table invdetails(
-    invDetaisId int primary key identity(3000,24),
-    invDetailsItemIn int not null,
-    invDetailsItemOut int not null,
+create table invdetails (
+    invDetailsId int primary key identity(3000, 24),
+   
     invDetails_inventoryid int not null,
-    invDetailsDate DATETIME
-    foreign key(invDetails_inventoryid) references inventory (inventoryid)
+    invDetailsDate DATETIME,
+    foreign key (invDetails_inventoryid) references inventory (inventoryid)
 );
 
+create table invreports (
+    reportid int primary key identity(5000, 1),
+    invreport_invDetailsId int not null,
+    invreport_invDetailsItemin int not null,
+    invreport_invDetailsItemOut int not null,
+    invreport_invDetailsDate DATETIME,
+    foreign key (invreport_invDetailsId) references invdetails (invDetailsId), 
+    invDetailsItemIn int not null ,  
+    invDetailsItemOut int not null , 
+);
+
+
 create table salesreports (
-    reportid int primary key identity(1,1),
+    reportid int primary key identity(15000, 1), -- Starting from 15000 to ensure uniqueness
     salesrep_salesdetailid int not null,
     salesrep_itemid int not null,
     itemprice decimal(10,2) not null,
@@ -50,7 +61,8 @@ create table salesreports (
 );
 
 create table userAcc(
-    userId int primary key identity(9010,25),
+   
+ userId int primary key identity(9010,25),
     userName nvarchar(20) not null,
     userPass nvarchar(20) not null
 );
@@ -61,58 +73,11 @@ create table adminAcc(
     adminPass nvarchar(20) not null
 );
 
-
--- Initialize Insert items into table
-INSERT INTO items (itemName, itemCategory, itemPrice)
-SELECT itemName, itemCategory, itemPrice
-FROM (VALUES
-    ('croissant', 'bakery', 1.20),
-    ('sliced bread', 'bakery', 1.40),
-    ('bagel', 'bakery', 1.78),
-    ('butter', 'dairy', 1.20),
-    ('cheese', 'dairy', 2.30),
-    ('yogurt', 'dairy', 2.50),
-    ('wine', 'beverage', 15.35),
-    ('juice', 'beverage', 3.00),
-    ('soda', 'beverage', 1.50),
-    ('rice', 'grains', 4.00),
-    ('wheat', 'grains', 2.40),
-    ('corn', 'grains', 1.50),
-    ('tomato', 'produce', 1.36),
-    ('cabbage', 'produce', 1.12),
-    ('carrots', 'produce', 1.53),
-    ('chips', 'snacks', 0.56),
-    ('nachos', 'snacks', 1.23),
-    ('cookies', 'snacks', 0.78)
-) 
-AS ItemsData(itemName, itemCategory, itemPrice)
-WHERE NOT EXISTS (SELECT 1 FROM items WHERE items.itemName = ItemsData.itemName);
-
--- Initalize Inventory
-INSERT INTO inventory (inv_itemId, inventoryDate, inventoryStock)
-SELECT i.itemId, GETDATE(), s.inventoryStock
-FROM (
-    VALUES
-        ('croissant', 20),
-        ('sliced bread', 25),
-        ('bagel', 30),
-        ('butter', 30),
-        ('cheese', 20),
-        ('yogurt', 20),
-        ('wine', 30),
-        ('juice', 50),
-        ('soda', 60),
-        ('rice', 1000),
-        ('wheat', 90),
-        ('corn', 70),
-        ('tomato', 40),
-        ('cabbage', 30),
-        ('carrots', 30),
-        ('chips', 40),
-        ('nachos', 30),
-        ('cookies', 30)
-) AS s(itemName, inventoryStock)
-JOIN items i ON i.itemName = s.itemName
-WHERE NOT EXISTS (
-    SELECT 1 FROM inventory WHERE inv_itemId = i.itemId
+CREATE TABLE ItemsInventory (
+    itemId INT PRIMARY KEY IDENTITY(1,1),
+    itemName NVARCHAR(50) NOT NULL,
+    itemCategory NVARCHAR(20) NOT NULL,
+    itemPrice DECIMAL(10,2) NOT NULL,
+    inventoryStock INT NOT NULL,
+    inventoryDate DATETIME NOT NULL DEFAULT GETDATE()
 );

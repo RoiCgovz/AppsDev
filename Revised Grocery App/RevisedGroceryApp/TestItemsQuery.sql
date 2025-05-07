@@ -5,7 +5,7 @@ SET inv.inventorystock = s.inventoryStock
 FROM dbo.inventory inv
 JOIN (
     VALUES
-        ('croissant', 20),
+        ('croissant', 10),
         ('sliced bread', 25),
         ('bagel', 30),
         ('butter', 30),
@@ -31,7 +31,7 @@ ON inv.inv_itemid = (
 );
 */
 -- Testing the Database
-select * from items;
+select * from item_inventory;
 select * from inventory;
 -- select * from sales;
 -- select * from salesdetails;
@@ -43,10 +43,10 @@ select * from inventory;
 
 --USE master;
 --GO
---ALTER DATABASE grocerydb SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
---GO
---DROP DATABASE grocerydb;
---GO
+ALTER DATABASE grocerydb SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+DROP DATABASE grocerydb;
+GO
 -- drop procedure dbo.insertIntoItem
 -- EXEC GetItemStock @ItemName = 'rice';
 -- EXEC UpdateItemStockAfterSale 'rice', 200, '2025-02-20'
@@ -55,5 +55,5 @@ select * from inventory;
 
 select * from userAcc
 select * from adminAcc
-
+select * from salesreports
 --drop table userAcc

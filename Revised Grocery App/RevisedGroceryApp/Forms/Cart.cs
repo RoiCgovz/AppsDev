@@ -80,5 +80,9 @@ namespace RevisedGroceryApp
             this.Close();
         }
 
+        private void Cart_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
