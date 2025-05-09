@@ -26,10 +26,10 @@ namespace RevisedGroceryApp
             // --- Handle static items ---
             var staticItems = new[]
             {
-                ("Croissant", croisTxtBox, croisStockLbl),
-                ("Sliced Bread", sliBreTxtBox, sliBreStockLbl),
-                ("Bagel", bagelTxtBox, bagelStockLbl)
-            };
+        ("Croissant", croisTxtBox, croisStockLbl),
+        ("Sliced Bread", sliBreTxtBox, sliBreStockLbl),
+        ("Bagel", bagelTxtBox, bagelStockLbl)
+    };
 
             foreach (var (name, textBox, _) in staticItems)
             {
@@ -57,13 +57,13 @@ namespace RevisedGroceryApp
             {
                 if (ctrl is NewItem newItem)
                 {
-                    int qty = newItem.Quantity;
-                    string name = newItem.ItemName;
-
-                    if (qty <= 0)
+                    // Access the quantity directly from the TextBox
+                    if (!int.TryParse(newItem.qtyTextBox.Text, out int qty) || qty <= 0)
                         continue;
 
+                    string name = newItem.ItemName;
                     int stock = DatabaseHelperClass.GetItemStock(name);
+
                     if (qty > stock)
                     {
                         MessageBox.Show($"Not enough stock for {name}. Available: {stock}",
@@ -115,7 +115,6 @@ namespace RevisedGroceryApp
             LoadStockLabels(); // Refresh stock label UI
             this.Close();      // Close the item selection form
         }
-
 
         private void IncrementQuantity(TextBox txtBox, string itemName)
         {

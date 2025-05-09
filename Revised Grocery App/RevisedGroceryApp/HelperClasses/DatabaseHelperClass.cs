@@ -248,14 +248,17 @@ namespace RevisedGroceryApp
         public static void InsertIntoInvReport(int invDetailsId, int outQty)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand("INSERT INTO invreports (invreport_invDetailsId, invreport_invDetailsItemin, invreport_invDetailsItemOut, invreport_invDetailsDate) VALUES (@id, 0, @outQty, GETDATE())", conn))
+            using (SqlCommand cmd = new SqlCommand(@"INSERT INTO invreports (invreport_invDetailsId, invDetailsItemIn, invDetailsItemOut, invreport_invDetailsDate) 
+                                                     VALUES (@id, 0, @outQty, GETDATE())", conn))
             {
                 cmd.Parameters.AddWithValue("@id", invDetailsId);
                 cmd.Parameters.AddWithValue("@outQty", outQty);
+
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
         }
+
 
         public static List<ImageItem> GetItemsByCategory(string category)
         {
@@ -267,15 +270,15 @@ namespace RevisedGroceryApp
                 {
                     conn.Open();
                     string query = @"
-                        SELECT 
-                            i.itemid, i.itemname, i.itemprice,
-                            inv.inventorystock,
-                            img.imagedata
-                        FROM items i
-                        INNER JOIN inventory inv ON inv.inv_itemid = i.itemid
-                        LEFT JOIN ItemImages img ON img.itemid = i.itemid
-                        WHERE i.itemcategory = @category
-                        ORDER BY inv.inventorydate DESC";
+                                    SELECT 
+                                        i.itemid, i.itemname, i.itemprice,
+                                        inv.inventorystock,
+                                        img.imagedata
+                                    FROM items i
+                                    INNER JOIN inventory inv ON inv.inv_itemid = i.itemid
+                                    LEFT JOIN ItemImages img ON img.itemid = i.itemid
+                                    WHERE i.itemcategory = @category
+                                    ORDER BY inv.inventorydate DESC";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {

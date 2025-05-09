@@ -40,8 +40,8 @@ select * from inventory;
 
 -- Optionally drop the database for testing purposes (use with caution)
 
---USE master;
---GO
+USE master;
+GO
 ALTER DATABASE grocerydb SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
 GO
 DROP DATABASE grocerydb;

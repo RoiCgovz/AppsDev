@@ -111,14 +111,13 @@ BEGIN
         IF @CurrentStock >= @SoldQuantity
         BEGIN
             UPDATE dbo.inventory
-            SET inventorystock = inventorystock - @SoldQuantity, inventorydate = @InventoryDate
+            SET inventorystock = inventorystock + @SoldQuantity, inventorydate = @InventoryDate
             WHERE inv_itemid = @ItemId
             AND inventorystock = @CurrentStock;
         END
     END
 END;
 GO
-
 
 -- Get Item Price Procedure
 create procedure GetItemPriceByName

@@ -162,12 +162,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox newItemPictureBox;
-        private System.Windows.Forms.TextBox qtyTextBox;
         private System.Windows.Forms.Button minusBtn;
         private System.Windows.Forms.Button plusBtn;
         private System.Windows.Forms.Label newItemNameLbl;
         private System.Windows.Forms.Label newItemStockLbl;
         private System.Windows.Forms.Label newItmPriLbl;
         private RoundedPanel.RoundedPanel roundedPanel1;
+        public System.Windows.Forms.TextBox qtyTextBox;
     }
 }
