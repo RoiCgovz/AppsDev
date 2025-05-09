@@ -33,8 +33,9 @@ namespace RevisedGroceryApp.Forms
 
         private void InvReport_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'grocerydbDataSet1.invreports' table. You can move, or remove it, as needed.
-            this.invreportsTableAdapter.Fill(this.grocerydbDataSet1.invreports);
+            // TODO: This line of code loads data into the 'grocerydbDataSet11.InvReportsView' table. You can move, or remove it, as needed.
+            this.invReportsViewTableAdapter.Fill(this.grocerydbDataSet11.InvReportsView);
+           
             // Load inventory data and bind it to the DataGridView
             DataSet dataSet = LoadInventoryReportGrid();
             salesRepDtaGrdVw.DataSource = dataSet.Tables[0]; // Bind the first table from the dataset to DataGridView

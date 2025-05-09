@@ -165,19 +165,6 @@ BEGIN
 END;
 GO
 
-CREATE VIEW SalesReport AS
-SELECT 
-    s.saleid,
-    s.saledate,
-    sd.salesdetailid,
-    sd.quantity,
-    sd.salesDetails_totalsale
-FROM 
-    sales s
-INNER JOIN 
-    salesdetails sd ON s.saleid = sd.salesdetails_saleid;
-GO
-
 
 create procedure InsertIntoItemsInventory
     @itemname nvarchar(50),
@@ -201,3 +188,34 @@ begin
     end
 end
 drop procedure InsertIntoItemInventory
+go
+
+-- Sales Report
+CREATE VIEW SalesReport AS
+SELECT 
+    s.saleid,
+    s.saledate,
+    sd.salesdetailid,
+    sd.quantity,
+    sd.salesDetails_totalsale
+FROM 
+    sales s
+INNER JOIN 
+    salesdetails sd ON s.saleid = sd.salesdetails_saleid;
+GO
+
+-- Inventory Reports 
+CREATE VIEW InvReportsView AS
+SELECT
+    inv.inventorydate,
+    inv.inventorystock,
+    inv.inventoryid,
+    i.itemid,
+    i.itemname,
+    i.itemcategory
+FROM 
+    inventory inv
+INNER JOIN
+    items i ON i.itemid = inv.inv_itemid;
+GO
+

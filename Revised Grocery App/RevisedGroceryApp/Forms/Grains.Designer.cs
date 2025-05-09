@@ -33,62 +33,63 @@
             this.cornTxtBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cornAdd = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.cornMin = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.wheatTxtBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.wheatAdd = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.wheatMin = new System.Windows.Forms.Button();
             this.grainsPnl = new System.Windows.Forms.Panel();
             this.riceTxtBox = new System.Windows.Forms.TextBox();
             this.riceAdd = new System.Windows.Forms.Button();
             this.riceMin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cartPnl = new System.Windows.Forms.Panel();
             this.cartLbl = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
             this.catPnl = new System.Windows.Forms.Panel();
             this.catLbl = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.homePnl = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.homelbl = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Label();
             this.roundedPanel1 = new RoundedPanel.RoundedPanel(this.components);
+            this.prodBtn = new CuoreUI.Controls.cuiButton();
+            this.snkBtn = new CuoreUI.Controls.cuiButton();
+            this.daiBtn = new CuoreUI.Controls.cuiButton();
+            this.bevBtn = new CuoreUI.Controls.cuiButton();
+            this.bakeBtn = new CuoreUI.Controls.cuiButton();
             this.itemToCart = new CuoreUI.Controls.cuiButton();
             this.wheatStockLbl = new System.Windows.Forms.Label();
             this.riceStockLbl = new System.Windows.Forms.Label();
             this.cornStockLbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.prodBtn = new CuoreUI.Controls.cuiButton();
-            this.snkBtn = new CuoreUI.Controls.cuiButton();
-            this.daiBtn = new CuoreUI.Controls.cuiButton();
-            this.bevBtn = new CuoreUI.Controls.cuiButton();
-            this.bakeBtn = new CuoreUI.Controls.cuiButton();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.inAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.grainsPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.cartPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel3.SuspendLayout();
             this.catPnl.SuspendLayout();
-            this.homePnl.SuspendLayout();
-            this.roundedPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.homePnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.roundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -141,6 +142,16 @@
             this.cornAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.cornAdd.UseVisualStyleBackColor = false;
             this.cornAdd.Click += new System.EventHandler(this.cornAdd_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._corn;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(39, 37);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(223, 165);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // cornMin
             // 
@@ -206,6 +217,16 @@
             this.wheatAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.wheatAdd.UseVisualStyleBackColor = false;
             this.wheatAdd.Click += new System.EventHandler(this.wheatAdd_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._wheat;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(45, 37);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(214, 165);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // wheatMin
             // 
@@ -286,6 +307,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Rice - $4.00/KG";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._rice;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(223, 165);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -319,6 +350,16 @@
             this.cartLbl.TabIndex = 3;
             this.cartLbl.Text = "Cart";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_cart_48;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(15, 13);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox10.TabIndex = 0;
+            this.pictureBox10.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.cuiPictureBox1);
@@ -327,6 +368,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(218, 122);
             this.panel3.TabIndex = 32;
+            // 
+            // cuiPictureBox1
+            // 
+            this.cuiPictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_profile_picture_100;
+            this.cuiPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cuiPictureBox1.Content = null;
+            this.cuiPictureBox1.CornerRadius = 8;
+            this.cuiPictureBox1.ImageTint = System.Drawing.Color.White;
+            this.cuiPictureBox1.Location = new System.Drawing.Point(12, 28);
+            this.cuiPictureBox1.Name = "cuiPictureBox1";
+            this.cuiPictureBox1.OutlineThickness = 1F;
+            this.cuiPictureBox1.PanelOutlineColor = System.Drawing.Color.Empty;
+            this.cuiPictureBox1.Rotation = 0;
+            this.cuiPictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.cuiPictureBox1.TabIndex = 0;
             // 
             // catPnl
             // 
@@ -348,6 +404,26 @@
             this.catLbl.TabIndex = 2;
             this.catLbl.Text = "Category";
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_food_basket_48;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(15, 13);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_1;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(59, 64);
+            this.pictureBox7.TabIndex = 32;
+            this.pictureBox7.TabStop = false;
+            // 
             // homePnl
             // 
             this.homePnl.Controls.Add(this.pictureBox8);
@@ -357,6 +433,16 @@
             this.homePnl.Name = "homePnl";
             this.homePnl.Size = new System.Drawing.Size(175, 57);
             this.homePnl.TabIndex = 33;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_home_48;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(15, 9);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
             // 
             // homelbl
             // 
@@ -398,99 +484,6 @@
             this.roundedPanel1.RadiusTopRight = 60;
             this.roundedPanel1.Size = new System.Drawing.Size(75, 518);
             this.roundedPanel1.TabIndex = 37;
-            // 
-            // itemToCart
-            // 
-            this.itemToCart.CheckButton = false;
-            this.itemToCart.Checked = false;
-            this.itemToCart.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.itemToCart.CheckedForeColor = System.Drawing.Color.White;
-            this.itemToCart.CheckedImageTint = System.Drawing.Color.White;
-            this.itemToCart.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.itemToCart.Content = "Add Items to Cart";
-            this.itemToCart.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.itemToCart.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.itemToCart.ForeColor = System.Drawing.Color.White;
-            this.itemToCart.HoverBackground = System.Drawing.Color.Gray;
-            this.itemToCart.HoveredImageTint = System.Drawing.Color.White;
-            this.itemToCart.HoverForeColor = System.Drawing.Color.White;
-            this.itemToCart.HoverOutline = System.Drawing.Color.Empty;
-            this.itemToCart.Image = null;
-            this.itemToCart.ImageAutoCenter = true;
-            this.itemToCart.ImageExpand = new System.Drawing.Point(0, 0);
-            this.itemToCart.ImageOffset = new System.Drawing.Point(0, 0);
-            this.itemToCart.Location = new System.Drawing.Point(615, 890);
-            this.itemToCart.Name = "itemToCart";
-            this.itemToCart.NormalBackground = System.Drawing.Color.Black;
-            this.itemToCart.NormalForeColor = System.Drawing.Color.White;
-            this.itemToCart.NormalImageTint = System.Drawing.Color.White;
-            this.itemToCart.NormalOutline = System.Drawing.Color.Empty;
-            this.itemToCart.OutlineThickness = 1.6F;
-            this.itemToCart.PressedBackground = System.Drawing.Color.Black;
-            this.itemToCart.PressedForeColor = System.Drawing.Color.White;
-            this.itemToCart.PressedImageTint = System.Drawing.Color.White;
-            this.itemToCart.PressedOutline = System.Drawing.Color.Empty;
-            this.itemToCart.Rounding = new System.Windows.Forms.Padding(8);
-            this.itemToCart.Size = new System.Drawing.Size(200, 50);
-            this.itemToCart.TabIndex = 24;
-            this.itemToCart.TextOffset = new System.Drawing.Point(0, 0);
-            this.itemToCart.Click += new System.EventHandler(this.itemToCart_Click);
-            // 
-            // wheatStockLbl
-            // 
-            this.wheatStockLbl.AutoSize = true;
-            this.wheatStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wheatStockLbl.ForeColor = System.Drawing.Color.White;
-            this.wheatStockLbl.Location = new System.Drawing.Point(821, 458);
-            this.wheatStockLbl.Name = "wheatStockLbl";
-            this.wheatStockLbl.Size = new System.Drawing.Size(106, 21);
-            this.wheatStockLbl.TabIndex = 39;
-            this.wheatStockLbl.Text = "Wheat Stock";
-            // 
-            // riceStockLbl
-            // 
-            this.riceStockLbl.AutoSize = true;
-            this.riceStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.riceStockLbl.ForeColor = System.Drawing.Color.White;
-            this.riceStockLbl.Location = new System.Drawing.Point(418, 458);
-            this.riceStockLbl.Name = "riceStockLbl";
-            this.riceStockLbl.Size = new System.Drawing.Size(97, 21);
-            this.riceStockLbl.TabIndex = 38;
-            this.riceStockLbl.Text = "Rice Stock: ";
-            // 
-            // cornStockLbl
-            // 
-            this.cornStockLbl.AutoSize = true;
-            this.cornStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cornStockLbl.ForeColor = System.Drawing.Color.White;
-            this.cornStockLbl.Location = new System.Drawing.Point(620, 816);
-            this.cornStockLbl.Name = "cornStockLbl";
-            this.cornStockLbl.Size = new System.Drawing.Size(92, 21);
-            this.cornStockLbl.TabIndex = 40;
-            this.cornStockLbl.Text = "Corn Stock";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(621, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 65);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Grains";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1012, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 30);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "X";
             // 
             // prodBtn
             // 
@@ -687,90 +680,107 @@
             this.bakeBtn.TextOffset = new System.Drawing.Point(0, 0);
             this.bakeBtn.Click += new System.EventHandler(this.bakeBtn_Click);
             // 
-            // pictureBox10
+            // itemToCart
             // 
-            this.pictureBox10.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_cart_48;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(15, 13);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox10.TabIndex = 0;
-            this.pictureBox10.TabStop = false;
+            this.itemToCart.CheckButton = false;
+            this.itemToCart.Checked = false;
+            this.itemToCart.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.itemToCart.CheckedForeColor = System.Drawing.Color.White;
+            this.itemToCart.CheckedImageTint = System.Drawing.Color.White;
+            this.itemToCart.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.itemToCart.Content = "Add Items to Cart";
+            this.itemToCart.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.itemToCart.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.itemToCart.ForeColor = System.Drawing.Color.White;
+            this.itemToCart.HoverBackground = System.Drawing.Color.Gray;
+            this.itemToCart.HoveredImageTint = System.Drawing.Color.White;
+            this.itemToCart.HoverForeColor = System.Drawing.Color.White;
+            this.itemToCart.HoverOutline = System.Drawing.Color.Empty;
+            this.itemToCart.Image = null;
+            this.itemToCart.ImageAutoCenter = true;
+            this.itemToCart.ImageExpand = new System.Drawing.Point(0, 0);
+            this.itemToCart.ImageOffset = new System.Drawing.Point(0, 0);
+            this.itemToCart.Location = new System.Drawing.Point(615, 890);
+            this.itemToCart.Name = "itemToCart";
+            this.itemToCart.NormalBackground = System.Drawing.Color.Black;
+            this.itemToCart.NormalForeColor = System.Drawing.Color.White;
+            this.itemToCart.NormalImageTint = System.Drawing.Color.White;
+            this.itemToCart.NormalOutline = System.Drawing.Color.Empty;
+            this.itemToCart.OutlineThickness = 1.6F;
+            this.itemToCart.PressedBackground = System.Drawing.Color.Black;
+            this.itemToCart.PressedForeColor = System.Drawing.Color.White;
+            this.itemToCart.PressedImageTint = System.Drawing.Color.White;
+            this.itemToCart.PressedOutline = System.Drawing.Color.Empty;
+            this.itemToCart.Rounding = new System.Windows.Forms.Padding(8);
+            this.itemToCart.Size = new System.Drawing.Size(200, 50);
+            this.itemToCart.TabIndex = 24;
+            this.itemToCart.TextOffset = new System.Drawing.Point(0, 0);
+            this.itemToCart.Click += new System.EventHandler(this.itemToCart_Click);
             // 
-            // cuiPictureBox1
+            // wheatStockLbl
             // 
-            this.cuiPictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_profile_picture_100;
-            this.cuiPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cuiPictureBox1.Content = null;
-            this.cuiPictureBox1.CornerRadius = 8;
-            this.cuiPictureBox1.ImageTint = System.Drawing.Color.White;
-            this.cuiPictureBox1.Location = new System.Drawing.Point(12, 28);
-            this.cuiPictureBox1.Name = "cuiPictureBox1";
-            this.cuiPictureBox1.OutlineThickness = 1F;
-            this.cuiPictureBox1.PanelOutlineColor = System.Drawing.Color.Empty;
-            this.cuiPictureBox1.Rotation = 0;
-            this.cuiPictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.cuiPictureBox1.TabIndex = 0;
+            this.wheatStockLbl.AutoSize = true;
+            this.wheatStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wheatStockLbl.ForeColor = System.Drawing.Color.White;
+            this.wheatStockLbl.Location = new System.Drawing.Point(821, 458);
+            this.wheatStockLbl.Name = "wheatStockLbl";
+            this.wheatStockLbl.Size = new System.Drawing.Size(106, 21);
+            this.wheatStockLbl.TabIndex = 39;
+            this.wheatStockLbl.Text = "Wheat Stock";
             // 
-            // pictureBox9
+            // riceStockLbl
             // 
-            this.pictureBox9.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_food_basket_48;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(15, 13);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
+            this.riceStockLbl.AutoSize = true;
+            this.riceStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.riceStockLbl.ForeColor = System.Drawing.Color.White;
+            this.riceStockLbl.Location = new System.Drawing.Point(418, 458);
+            this.riceStockLbl.Name = "riceStockLbl";
+            this.riceStockLbl.Size = new System.Drawing.Size(97, 21);
+            this.riceStockLbl.TabIndex = 38;
+            this.riceStockLbl.Text = "Rice Stock: ";
             // 
-            // pictureBox7
+            // cornStockLbl
             // 
-            this.pictureBox7.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.Adobe_Express___file__2_1;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(59, 64);
-            this.pictureBox7.TabIndex = 32;
-            this.pictureBox7.TabStop = false;
+            this.cornStockLbl.AutoSize = true;
+            this.cornStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cornStockLbl.ForeColor = System.Drawing.Color.White;
+            this.cornStockLbl.Location = new System.Drawing.Point(620, 816);
+            this.cornStockLbl.Name = "cornStockLbl";
+            this.cornStockLbl.Size = new System.Drawing.Size(92, 21);
+            this.cornStockLbl.TabIndex = 40;
+            this.cornStockLbl.Text = "Corn Stock";
             // 
-            // pictureBox8
+            // label5
             // 
-            this.pictureBox8.BackgroundImage = global::RevisedGroceryApp.Properties.Resources.icons8_home_48;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(15, 9);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(621, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(171, 65);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Grains";
             // 
-            // pictureBox3
+            // label3
             // 
-            this.pictureBox3.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._corn;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(39, 37);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1012, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 30);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "X";
             // 
-            // pictureBox2
+            // inAnim
             // 
-            this.pictureBox2.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._wheat;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(45, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(214, 165);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::RevisedGroceryApp.Properties.Resources._rice;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 165);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.inAnim.AnimateOnStart = true;
+            this.inAnim.Duration = 600;
+            this.inAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadIn;
+            this.inAnim.StartOpacity = 0D;
+            this.inAnim.TargetForm = this;
+            this.inAnim.TargetOpacity = 1D;
             // 
             // Grains
             // 
@@ -797,26 +807,26 @@
             this.Text = " ";
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.grainsPnl.ResumeLayout(false);
             this.grainsPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.cartPnl.ResumeLayout(false);
             this.cartPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel3.ResumeLayout(false);
             this.catPnl.ResumeLayout(false);
             this.catPnl.PerformLayout();
-            this.homePnl.ResumeLayout(false);
-            this.homePnl.PerformLayout();
-            this.roundedPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.homePnl.ResumeLayout(false);
+            this.homePnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.roundedPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -867,5 +877,6 @@
         private System.Windows.Forms.Label cornStockLbl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private CuoreUI.Components.cuiFormAnimator inAnim;
     }
 }

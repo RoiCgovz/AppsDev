@@ -31,7 +31,6 @@ ON inv.inv_itemid = (
 );
 */
 -- Testing the Database
-select * from item_inventory;
 select * from inventory;
 -- select * from sales;
 -- select * from salesdetails;

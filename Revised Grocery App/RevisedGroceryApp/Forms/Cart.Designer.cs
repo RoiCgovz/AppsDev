@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.checkoutBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.inAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -57,7 +59,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(156, 18);
+            this.label4.Location = new System.Drawing.Point(176, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 45);
             this.label4.TabIndex = 16;
@@ -94,7 +96,7 @@
             this.checkoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkoutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutBtn.ForeColor = System.Drawing.Color.White;
-            this.checkoutBtn.Location = new System.Drawing.Point(138, 471);
+            this.checkoutBtn.Location = new System.Drawing.Point(107, 461);
             this.checkoutBtn.Name = "checkoutBtn";
             this.checkoutBtn.Size = new System.Drawing.Size(206, 44);
             this.checkoutBtn.TabIndex = 10;
@@ -116,11 +118,20 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
             this.lblTotal.Location = new System.Drawing.Point(290, 417);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(0, 21);
             this.lblTotal.TabIndex = 13;
+            // 
+            // inAnim
+            // 
+            this.inAnim.AnimateOnStart = true;
+            this.inAnim.Duration = 600;
+            this.inAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadIn;
+            this.inAnim.StartOpacity = 0D;
+            this.inAnim.TargetForm = this;
+            this.inAnim.TargetOpacity = 1D;
             // 
             // Cart
             // 
@@ -154,5 +165,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label4;
+        private CuoreUI.Components.cuiFormAnimator inAnim;
     }
 }

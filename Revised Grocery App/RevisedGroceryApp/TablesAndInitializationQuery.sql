@@ -30,10 +30,11 @@ create table salesdetails (
     salesDetails_totalsale DECIMAL(10,2) NOT NULL DEFAULT 0,
     foreign key (salesdetails_saleid) references sales(saleid)
 );
+
 create table invdetails (
     invDetailsId int primary key identity(3000, 24),
-   
     invDetails_inventoryid int not null,
+    invdetail_qtyout INT NOT NULL DEFAULT 0,
     invDetailsDate DATETIME,
     foreign key (invDetails_inventoryid) references inventory (inventoryid)
 );
@@ -41,8 +42,6 @@ create table invdetails (
 create table invreports (
     reportid int primary key identity(5000, 1),
     invreport_invDetailsId int not null,
-    invreport_invDetailsItemin int not null,
-    invreport_invDetailsItemOut int not null,
     invreport_invDetailsDate DATETIME,
     foreign key (invreport_invDetailsId) references invdetails (invDetailsId), 
     invDetailsItemIn int not null ,  
@@ -80,4 +79,12 @@ CREATE TABLE ItemsInventory (
     itemPrice DECIMAL(10,2) NOT NULL,
     inventoryStock INT NOT NULL,
     inventoryDate DATETIME NOT NULL DEFAULT GETDATE()
+);
+
+CREATE TABLE ItemImages (
+    imageid INT PRIMARY KEY IDENTITY(1,1),
+    itemid INT NOT NULL,
+    imagename NVARCHAR(100),
+    imagedata VARBINARY(MAX), -- To store the image file
+    FOREIGN KEY (itemid) REFERENCES items(itemid) ON DELETE CASCADE
 );

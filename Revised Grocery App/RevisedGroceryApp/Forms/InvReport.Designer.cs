@@ -34,19 +34,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.titleName = new System.Windows.Forms.Label();
             this.salesRepDtaGrdVw = new System.Windows.Forms.DataGridView();
-            this.invreportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.grocerydbDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.grocerydbDataSet1 = new RevisedGroceryApp.grocerydbDataSet1();
             this.label6 = new System.Windows.Forms.Label();
             this.xBtn = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.printPDFBtn = new System.Windows.Forms.Button();
-            this.invreportsTableAdapter = new RevisedGroceryApp.grocerydbDataSet1TableAdapters.invreportsTableAdapter();
+            this.grocerydbDataSet11 = new RevisedGroceryApp.grocerydbDataSet11();
+            this.invReportsViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.invReportsViewTableAdapter = new RevisedGroceryApp.grocerydbDataSet11TableAdapters.InvReportsViewTableAdapter();
+            this.itemnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventoryidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemcategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventorystockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventorydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.salesRepDtaGrdVw)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invreportsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invReportsViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // titleName
@@ -66,6 +70,7 @@
             // 
             this.salesRepDtaGrdVw.AllowUserToAddRows = false;
             this.salesRepDtaGrdVw.AllowUserToDeleteRows = false;
+            this.salesRepDtaGrdVw.AutoGenerateColumns = false;
             this.salesRepDtaGrdVw.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.salesRepDtaGrdVw.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -77,6 +82,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.salesRepDtaGrdVw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.salesRepDtaGrdVw.ColumnHeadersHeight = 30;
+            this.salesRepDtaGrdVw.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemnameDataGridViewTextBoxColumn,
+            this.inventoryidDataGridViewTextBoxColumn,
+            this.itemidDataGridViewTextBoxColumn,
+            this.itemcategoryDataGridViewTextBoxColumn,
+            this.inventorystockDataGridViewTextBoxColumn,
+            this.inventorydateDataGridViewTextBoxColumn});
+            this.salesRepDtaGrdVw.DataSource = this.invReportsViewBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,21 +112,6 @@
             this.salesRepDtaGrdVw.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.salesRepDtaGrdVw.Size = new System.Drawing.Size(694, 372);
             this.salesRepDtaGrdVw.TabIndex = 59;
-            // 
-            // invreportsBindingSource
-            // 
-            this.invreportsBindingSource.DataMember = "invreports";
-            this.invreportsBindingSource.DataSource = this.grocerydbDataSet1BindingSource;
-            // 
-            // grocerydbDataSet1BindingSource
-            // 
-            this.grocerydbDataSet1BindingSource.DataSource = this.grocerydbDataSet1;
-            this.grocerydbDataSet1BindingSource.Position = 0;
-            // 
-            // grocerydbDataSet1
-            // 
-            this.grocerydbDataSet1.DataSetName = "grocerydbDataSet1";
-            this.grocerydbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label6
             // 
@@ -166,9 +164,67 @@
             this.printPDFBtn.UseVisualStyleBackColor = false;
             this.printPDFBtn.Click += new System.EventHandler(this.printPDFBtn_Click);
             // 
-            // invreportsTableAdapter
+            // grocerydbDataSet11
             // 
-            this.invreportsTableAdapter.ClearBeforeFill = true;
+            this.grocerydbDataSet11.DataSetName = "grocerydbDataSet11";
+            this.grocerydbDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // invReportsViewBindingSource
+            // 
+            this.invReportsViewBindingSource.DataMember = "InvReportsView";
+            this.invReportsViewBindingSource.DataSource = this.grocerydbDataSet11;
+            // 
+            // invReportsViewTableAdapter
+            // 
+            this.invReportsViewTableAdapter.ClearBeforeFill = true;
+            // 
+            // itemnameDataGridViewTextBoxColumn
+            // 
+            this.itemnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemnameDataGridViewTextBoxColumn.DataPropertyName = "itemname";
+            this.itemnameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.itemnameDataGridViewTextBoxColumn.Name = "itemnameDataGridViewTextBoxColumn";
+            this.itemnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inventoryidDataGridViewTextBoxColumn
+            // 
+            this.inventoryidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.inventoryidDataGridViewTextBoxColumn.DataPropertyName = "inventoryid";
+            this.inventoryidDataGridViewTextBoxColumn.HeaderText = "Inventory ID";
+            this.inventoryidDataGridViewTextBoxColumn.Name = "inventoryidDataGridViewTextBoxColumn";
+            this.inventoryidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // itemidDataGridViewTextBoxColumn
+            // 
+            this.itemidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemidDataGridViewTextBoxColumn.DataPropertyName = "itemid";
+            this.itemidDataGridViewTextBoxColumn.HeaderText = "Item ID";
+            this.itemidDataGridViewTextBoxColumn.Name = "itemidDataGridViewTextBoxColumn";
+            this.itemidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // itemcategoryDataGridViewTextBoxColumn
+            // 
+            this.itemcategoryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemcategoryDataGridViewTextBoxColumn.DataPropertyName = "itemcategory";
+            this.itemcategoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.itemcategoryDataGridViewTextBoxColumn.Name = "itemcategoryDataGridViewTextBoxColumn";
+            this.itemcategoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inventorystockDataGridViewTextBoxColumn
+            // 
+            this.inventorystockDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.inventorystockDataGridViewTextBoxColumn.DataPropertyName = "inventorystock";
+            this.inventorystockDataGridViewTextBoxColumn.HeaderText = "Stock";
+            this.inventorystockDataGridViewTextBoxColumn.Name = "inventorystockDataGridViewTextBoxColumn";
+            this.inventorystockDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inventorydateDataGridViewTextBoxColumn
+            // 
+            this.inventorydateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.inventorydateDataGridViewTextBoxColumn.DataPropertyName = "inventorydate";
+            this.inventorydateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.inventorydateDataGridViewTextBoxColumn.Name = "inventorydateDataGridViewTextBoxColumn";
+            this.inventorydateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // InvReport
             // 
@@ -187,10 +243,9 @@
             this.Text = "InvReport";
             this.Load += new System.EventHandler(this.InvReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.salesRepDtaGrdVw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.invreportsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invReportsViewBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,9 +259,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label xBtn;
         private System.Windows.Forms.Button printPDFBtn;
-        private System.Windows.Forms.BindingSource grocerydbDataSet1BindingSource;
-        private grocerydbDataSet1 grocerydbDataSet1;
-        private System.Windows.Forms.BindingSource invreportsBindingSource;
-        private grocerydbDataSet1TableAdapters.invreportsTableAdapter invreportsTableAdapter;
+        private grocerydbDataSet11 grocerydbDataSet11;
+        private System.Windows.Forms.BindingSource invReportsViewBindingSource;
+        private grocerydbDataSet11TableAdapters.InvReportsViewTableAdapter invReportsViewTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inventoryidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemcategoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inventorystockDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inventorydateDataGridViewTextBoxColumn;
     }
 }

@@ -73,6 +73,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.xBtn = new System.Windows.Forms.Label();
             this.backBtn = new System.Windows.Forms.Label();
+            this.inAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
@@ -779,6 +780,15 @@
             this.backBtn.Text = "<";
             this.backBtn.Click += new System.EventHandler(this.backbtn_Click);
             // 
+            // inAnim
+            // 
+            this.inAnim.AnimateOnStart = true;
+            this.inAnim.Duration = 600;
+            this.inAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadIn;
+            this.inAnim.StartOpacity = 0D;
+            this.inAnim.TargetForm = this;
+            this.inAnim.TargetOpacity = 1D;
+            // 
             // Beverages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -875,5 +885,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label xBtn;
         private System.Windows.Forms.Label backBtn;
+        private CuoreUI.Components.cuiFormAnimator inAnim;
     }
 }

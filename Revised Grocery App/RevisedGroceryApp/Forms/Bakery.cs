@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using RevisedGroceryApp.HelperClasses;
 
 namespace RevisedGroceryApp
 {
@@ -20,37 +21,76 @@ namespace RevisedGroceryApp
         }
         private void AddItemsToCart()
         {
-            var items = new[]
+            var selectedItems = new List<Items>();
+
+            // --- Handle static items ---
+            var staticItems = new[]
             {
                 ("Croissant", croisTxtBox, croisStockLbl),
                 ("Sliced Bread", sliBreTxtBox, sliBreStockLbl),
                 ("Bagel", bagelTxtBox, bagelStockLbl)
             };
 
-            var selectedItems = new List<Items>();
-
-            foreach (var (name, textBox, _) in items)
+            foreach (var (name, textBox, _) in staticItems)
             {
-                if (!int.TryParse(textBox.Text, out int qty) || qty <= 0) continue;
+                if (!int.TryParse(textBox.Text, out int qty) || qty <= 0)
+                    continue;
 
                 int stock = DatabaseHelperClass.GetItemStock(name);
-                if (stock < qty)
+                if (qty > stock)
                 {
                     MessageBox.Show($"Not enough stock for {name}. Available: {stock}",
                                     "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     continue;
-                }   
+                }
+
                 decimal price = DatabaseHelperClass.GetItemPrice(name);
+
                 selectedItems.Add(new Items { Name = name, Quantity = qty, Price = price });
+
                 DatabaseHelperClass.UpdateItemStock(name, -qty, DateTime.Now);
                 RecordInvOut(name, qty);
             }
+
+            // --- Handle dynamic NewItem controls ---
+            foreach (Control ctrl in bakeryPnl.Controls)
+            {
+                if (ctrl is NewItem newItem)
+                {
+                    int qty = newItem.Quantity;
+                    string name = newItem.ItemName;
+
+                    if (qty <= 0)
+                        continue;
+
+                    int stock = DatabaseHelperClass.GetItemStock(name);
+                    if (qty > stock)
+                    {
+                        MessageBox.Show($"Not enough stock for {name}. Available: {stock}",
+                                        "Stock Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        continue;
+                    }
+
+                    selectedItems.Add(new Items
+                    {
+                        Name = name,
+                        Quantity = qty,
+                        Price = newItem.Price
+                    });
+
+                    DatabaseHelperClass.UpdateItemStock(name, -qty, DateTime.Now);
+                    RecordInvOut(name, qty);
+                }
+            }
+
             if (!selectedItems.Any())
             {
                 MessageBox.Show("Please select at least one item before adding to the cart.",
                                 "No Items Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            // --- Add or merge selected items into global cart ---
             foreach (var item in selectedItems)
             {
                 var existing = CategoryForm.CartItems.FirstOrDefault(i => i.Name == item.Name);
@@ -60,13 +100,22 @@ namespace RevisedGroceryApp
                     CategoryForm.CartItems.Add(item);
             }
 
-            var cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault() ?? new Cart(CategoryForm.CartItems);
-            cartForm.LoadCartItems(CategoryForm.CartItems);
-            cartForm.Show();
+            // --- Show or update cart form ---
+            var cartForm = Application.OpenForms.OfType<Cart>().FirstOrDefault();
+            if (cartForm == null)
+            {
+                cartForm = new Cart(CategoryForm.CartItems);
+                cartForm.Show();
+            }
+            else
+            {
+                cartForm.LoadCartItems(CategoryForm.CartItems);
+            }
 
-            LoadStockLabels();
-            this.Close();
+            LoadStockLabels(); // Refresh stock label UI
+            this.Close();      // Close the item selection form
         }
+
 
         private void IncrementQuantity(TextBox txtBox, string itemName)
         {
@@ -188,7 +237,22 @@ namespace RevisedGroceryApp
             DatabaseHelperClass.InsertIntoInvReport(invDetailId, quantityOut);
         }
 
+        private void Bakery_Load(object sender, EventArgs e)
+        {
+            LoadItemsByCategory("Bakery");
+        }
 
+        private void LoadItemsByCategory(string category)
+        {
+            
+            List<ImageItem> items = DatabaseHelperClass.GetItemsByCategory(category);
 
+            foreach (ImageItem item in items)
+            {
+                NewItem newItem = new NewItem();
+                newItem.LoadItemData(item.ItemId, item.ItemName, item.ItemPrice, item.Stock, item.ImageBytes);
+                bakeryPnl.Controls.Add(newItem);
+            }
+        }
     }
 }

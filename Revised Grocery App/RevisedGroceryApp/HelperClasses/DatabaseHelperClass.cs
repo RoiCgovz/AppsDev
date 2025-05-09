@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
 using System.Windows.Markup;
+using RevisedGroceryApp.HelperClasses;
 
 
 namespace RevisedGroceryApp
@@ -229,14 +230,19 @@ namespace RevisedGroceryApp
         public static int InsertInvOutDetail(int inventoryId, int quantityOut)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
-            using (SqlCommand cmd = new SqlCommand("INSERT INTO invdetails (invDetailsItemIn, invDetailsItemOut, invDetails_inventoryid, invDetailsDate) OUTPUT INSERTED.invDetaisId VALUES (0, @outQty, @invId, GETDATE())", conn))
+            using (SqlCommand cmd = new SqlCommand(@" INSERT INTO invdetails (invDetails_inventoryid, invdetail_qtyout, invDetailsDate)
+                                                      VALUES (@invId, @qtyOut, GETDATE());
+                                                      SELECT SCOPE_IDENTITY();", conn))
             {
-                cmd.Parameters.AddWithValue("@outQty", quantityOut);
                 cmd.Parameters.AddWithValue("@invId", inventoryId);
+                cmd.Parameters.AddWithValue("@qtyOut", quantityOut);
+
                 conn.Open();
-                return (int)cmd.ExecuteScalar();
+                object result = cmd.ExecuteScalar();
+                return result != null ? Convert.ToInt32(result) : 0;
             }
         }
+
 
         // Insert into Inv Reports
         public static void InsertIntoInvReport(int invDetailsId, int outQty)
@@ -250,37 +256,57 @@ namespace RevisedGroceryApp
                 cmd.ExecuteNonQuery();
             }
         }
-        public bool UpdateItemAndInventory(string itemName, decimal itemPrice, int itemStock, string itemCategory, int? itemId = null)
-        {
-            itemCategory = itemCategory.Trim().ToLower();
-            itemName = itemName.Trim().ToLower();
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+        public static List<ImageItem> GetItemsByCategory(string category)
+        {
+            List<ImageItem> items = new List<ImageItem>();
+
+            try
             {
-                try
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
+                    string query = @"
+                        SELECT 
+                            i.itemid, i.itemname, i.itemprice,
+                            inv.inventorystock,
+                            img.imagedata
+                        FROM items i
+                        INNER JOIN inventory inv ON inv.inv_itemid = i.itemid
+                        LEFT JOIN ItemImages img ON img.itemid = i.itemid
+                        WHERE i.itemcategory = @category
+                        ORDER BY inv.inventorydate DESC";
 
-                    using (SqlCommand cmd = new SqlCommand("InsertIntoItemsInventory", conn))
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@itemname", itemName);
-                        cmd.Parameters.AddWithValue("@itemcategory", itemCategory);
-                        cmd.Parameters.AddWithValue("@itemprice", itemPrice);
-                        cmd.Parameters.AddWithValue("@inventorydate", DateTime.Now);
-                        cmd.Parameters.AddWithValue("@inventorystock", itemStock);
+                        cmd.Parameters.AddWithValue("@category", category);
 
-                        cmd.ExecuteNonQuery();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ImageItem item = new ImageItem
+                                {
+                                    ItemId = (int)reader["itemid"],
+                                    ItemName = reader["itemname"].ToString(),
+                                    ItemPrice = (decimal)reader["itemprice"],
+                                    Stock = (int)reader["inventorystock"],
+                                    ImageBytes = reader["imagedata"] != DBNull.Value
+                                        ? (byte[])reader["imagedata"]
+                                        : null
+                                };
+                                items.Add(item);
+                            }
+                        }
                     }
-
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    // Optional: log ex.Message
-                    return false;
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            return items;
         }
 
     }

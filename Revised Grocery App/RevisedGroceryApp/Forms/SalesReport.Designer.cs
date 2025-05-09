@@ -34,32 +34,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.titleName = new System.Windows.Forms.Label();
             this.salesRepDtaGrdVw = new System.Windows.Forms.DataGridView();
-            this.reportidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesrepsalesdetailidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesrepitemidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itempriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesreportsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.grocerydbDataSet4 = new RevisedGroceryApp.grocerydbDataSet4();
-            this.salesreportsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet3 = new RevisedGroceryApp.DataSet3();
+            this.saleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesdetailidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesDetailstotalsaleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saledateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grocerydbDataSet12 = new RevisedGroceryApp.grocerydbDataSet12();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.xBtn = new System.Windows.Forms.Label();
-            this.salesreportsTableAdapter = new RevisedGroceryApp.DataSet3TableAdapters.salesreportsTableAdapter();
-            this.salesreportsTableAdapter1 = new RevisedGroceryApp.grocerydbDataSet4TableAdapters.salesreportsTableAdapter();
             this.printPDFBtn = new System.Windows.Forms.Button();
-            this.grocerydbDataSet9 = new RevisedGroceryApp.grocerydbDataSet9();
-            this.salesreportsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.salesreportsTableAdapter2 = new RevisedGroceryApp.grocerydbDataSet9TableAdapters.salesreportsTableAdapter();
+            this.accActionPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.accBtn = new System.Windows.Forms.Label();
+            this.salesReportTableAdapter = new RevisedGroceryApp.grocerydbDataSet12TableAdapters.SalesReportTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.salesRepDtaGrdVw)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesreportsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesreportsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesReportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesreportsBindingSource2)).BeginInit();
+            this.accActionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // titleName
@@ -92,12 +86,12 @@
             this.salesRepDtaGrdVw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.salesRepDtaGrdVw.ColumnHeadersHeight = 30;
             this.salesRepDtaGrdVw.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.reportidDataGridViewTextBoxColumn,
-            this.salesrepsalesdetailidDataGridViewTextBoxColumn,
-            this.salesrepitemidDataGridViewTextBoxColumn,
-            this.itempriceDataGridViewTextBoxColumn,
-            this.totalDataGridViewTextBoxColumn});
-            this.salesRepDtaGrdVw.DataSource = this.salesreportsBindingSource2;
+            this.saleidDataGridViewTextBoxColumn,
+            this.salesdetailidDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.salesDetailstotalsaleDataGridViewTextBoxColumn,
+            this.saledateDataGridViewTextBoxColumn});
+            this.salesRepDtaGrdVw.DataSource = this.salesReportBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,65 +115,55 @@
             this.salesRepDtaGrdVw.Size = new System.Drawing.Size(694, 344);
             this.salesRepDtaGrdVw.TabIndex = 51;
             // 
-            // reportidDataGridViewTextBoxColumn
+            // saleidDataGridViewTextBoxColumn
             // 
-            this.reportidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.reportidDataGridViewTextBoxColumn.DataPropertyName = "reportid";
-            this.reportidDataGridViewTextBoxColumn.HeaderText = "Report ID";
-            this.reportidDataGridViewTextBoxColumn.Name = "reportidDataGridViewTextBoxColumn";
-            this.reportidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.saleidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.saleidDataGridViewTextBoxColumn.DataPropertyName = "saleid";
+            this.saleidDataGridViewTextBoxColumn.HeaderText = "Sales ID";
+            this.saleidDataGridViewTextBoxColumn.Name = "saleidDataGridViewTextBoxColumn";
+            this.saleidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // salesrepsalesdetailidDataGridViewTextBoxColumn
+            // salesdetailidDataGridViewTextBoxColumn
             // 
-            this.salesrepsalesdetailidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.salesrepsalesdetailidDataGridViewTextBoxColumn.DataPropertyName = "salesrep_salesdetailid";
-            this.salesrepsalesdetailidDataGridViewTextBoxColumn.HeaderText = "Sales Details ID";
-            this.salesrepsalesdetailidDataGridViewTextBoxColumn.Name = "salesrepsalesdetailidDataGridViewTextBoxColumn";
-            this.salesrepsalesdetailidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.salesdetailidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.salesdetailidDataGridViewTextBoxColumn.DataPropertyName = "salesdetailid";
+            this.salesdetailidDataGridViewTextBoxColumn.HeaderText = "Sales Details ID";
+            this.salesdetailidDataGridViewTextBoxColumn.Name = "salesdetailidDataGridViewTextBoxColumn";
+            this.salesdetailidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // salesrepitemidDataGridViewTextBoxColumn
+            // quantityDataGridViewTextBoxColumn
             // 
-            this.salesrepitemidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.salesrepitemidDataGridViewTextBoxColumn.DataPropertyName = "salesrep_itemid";
-            this.salesrepitemidDataGridViewTextBoxColumn.HeaderText = "Item ID";
-            this.salesrepitemidDataGridViewTextBoxColumn.Name = "salesrepitemidDataGridViewTextBoxColumn";
-            this.salesrepitemidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantityDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // itempriceDataGridViewTextBoxColumn
+            // salesDetailstotalsaleDataGridViewTextBoxColumn
             // 
-            this.itempriceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itempriceDataGridViewTextBoxColumn.DataPropertyName = "itemprice";
-            this.itempriceDataGridViewTextBoxColumn.HeaderText = "Item Price";
-            this.itempriceDataGridViewTextBoxColumn.Name = "itempriceDataGridViewTextBoxColumn";
-            this.itempriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.salesDetailstotalsaleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.salesDetailstotalsaleDataGridViewTextBoxColumn.DataPropertyName = "salesDetails_totalsale";
+            this.salesDetailstotalsaleDataGridViewTextBoxColumn.HeaderText = "Total Sales";
+            this.salesDetailstotalsaleDataGridViewTextBoxColumn.Name = "salesDetailstotalsaleDataGridViewTextBoxColumn";
+            this.salesDetailstotalsaleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // totalDataGridViewTextBoxColumn
+            // saledateDataGridViewTextBoxColumn
             // 
-            this.totalDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.saledateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.saledateDataGridViewTextBoxColumn.DataPropertyName = "saledate";
+            this.saledateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.saledateDataGridViewTextBoxColumn.Name = "saledateDataGridViewTextBoxColumn";
+            this.saledateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // salesreportsBindingSource1
+            // salesReportBindingSource
             // 
-            this.salesreportsBindingSource1.DataMember = "salesreports";
-            this.salesreportsBindingSource1.DataSource = this.grocerydbDataSet4;
+            this.salesReportBindingSource.DataMember = "SalesReport";
+            this.salesReportBindingSource.DataSource = this.grocerydbDataSet12;
             // 
-            // grocerydbDataSet4
+            // grocerydbDataSet12
             // 
-            this.grocerydbDataSet4.DataSetName = "grocerydbDataSet4";
-            this.grocerydbDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // salesreportsBindingSource
-            // 
-            this.salesreportsBindingSource.DataMember = "salesreports";
-            this.salesreportsBindingSource.DataSource = this.dataSet3;
-            // 
-            // dataSet3
-            // 
-            this.dataSet3.DataSetName = "DataSet3";
-            this.dataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.grocerydbDataSet12.DataSetName = "grocerydbDataSet12";
+            this.grocerydbDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox7
             // 
@@ -218,14 +202,6 @@
             this.xBtn.Text = "X";
             this.xBtn.Click += new System.EventHandler(this.xBtn_Click);
             // 
-            // salesreportsTableAdapter
-            // 
-            this.salesreportsTableAdapter.ClearBeforeFill = true;
-            // 
-            // salesreportsTableAdapter1
-            // 
-            this.salesreportsTableAdapter1.ClearBeforeFill = true;
-            // 
             // printPDFBtn
             // 
             this.printPDFBtn.BackColor = System.Drawing.Color.Black;
@@ -240,19 +216,46 @@
             this.printPDFBtn.UseVisualStyleBackColor = false;
             this.printPDFBtn.Click += new System.EventHandler(this.printPDFBtn_Click);
             // 
-            // grocerydbDataSet9
+            // accActionPanel
             // 
-            this.grocerydbDataSet9.DataSetName = "grocerydbDataSet9";
-            this.grocerydbDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.accActionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.accActionPanel.Controls.Add(this.button1);
+            this.accActionPanel.Location = new System.Drawing.Point(810, 57);
+            this.accActionPanel.Name = "accActionPanel";
+            this.accActionPanel.Size = new System.Drawing.Size(151, 36);
+            this.accActionPanel.TabIndex = 68;
+            this.accActionPanel.Visible = false;
             // 
-            // salesreportsBindingSource2
+            // button1
             // 
-            this.salesreportsBindingSource2.DataMember = "salesreports";
-            this.salesreportsBindingSource2.DataSource = this.grocerydbDataSet9;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 36);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // salesreportsTableAdapter2
+            // accBtn
             // 
-            this.salesreportsTableAdapter2.ClearBeforeFill = true;
+            this.accBtn.AutoSize = true;
+            this.accBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.accBtn.Location = new System.Drawing.Point(840, 29);
+            this.accBtn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.accBtn.Name = "accBtn";
+            this.accBtn.Size = new System.Drawing.Size(83, 25);
+            this.accBtn.TabIndex = 67;
+            this.accBtn.Text = "Account";
+            this.accBtn.Click += new System.EventHandler(this.accBtn_Click);
+            // 
+            // salesReportTableAdapter
+            // 
+            this.salesReportTableAdapter.ClearBeforeFill = true;
             // 
             // SalesReport
             // 
@@ -260,6 +263,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1000, 640);
+            this.Controls.Add(this.accActionPanel);
+            this.Controls.Add(this.accBtn);
             this.Controls.Add(this.printPDFBtn);
             this.Controls.Add(this.titleName);
             this.Controls.Add(this.salesRepDtaGrdVw);
@@ -271,13 +276,10 @@
             this.Text = "SalesReport";
             this.Load += new System.EventHandler(this.SalesReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.salesRepDtaGrdVw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesreportsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesreportsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesReportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesreportsBindingSource2)).EndInit();
+            this.accActionPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,20 +292,17 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label xBtn;
-        private DataSet3 dataSet3;
-        private System.Windows.Forms.BindingSource salesreportsBindingSource;
-        private DataSet3TableAdapters.salesreportsTableAdapter salesreportsTableAdapter;
-        private grocerydbDataSet4 grocerydbDataSet4;
-        private System.Windows.Forms.BindingSource salesreportsBindingSource1;
-        private grocerydbDataSet4TableAdapters.salesreportsTableAdapter salesreportsTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reportidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salesrepsalesdetailidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salesrepitemidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itempriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button printPDFBtn;
-        private grocerydbDataSet9 grocerydbDataSet9;
-        private System.Windows.Forms.BindingSource salesreportsBindingSource2;
-        private grocerydbDataSet9TableAdapters.salesreportsTableAdapter salesreportsTableAdapter2;
+        private System.Windows.Forms.Panel accActionPanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label accBtn;
+        private grocerydbDataSet12 grocerydbDataSet12;
+        private System.Windows.Forms.BindingSource salesReportBindingSource;
+        private grocerydbDataSet12TableAdapters.SalesReportTableAdapter salesReportTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saleidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salesdetailidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salesDetailstotalsaleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saledateDataGridViewTextBoxColumn;
     }
 }

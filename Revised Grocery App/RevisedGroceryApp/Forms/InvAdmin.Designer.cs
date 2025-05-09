@@ -40,37 +40,41 @@
             this.accBtn = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.salesRepDtaGrdVw = new System.Windows.Forms.DataGridView();
-            this.iteminventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.grocerydbDataSet = new RevisedGroceryApp.grocerydbDataSet();
-            this.item_inventoryTableAdapter = new RevisedGroceryApp.grocerydbDataSetTableAdapters.item_inventoryTableAdapter();
-            this.updatepnl = new System.Windows.Forms.Panel();
-            this.pricetxtbox = new CuoreUI.Controls.cuiTextBox2();
-            this.nametxtbox = new CuoreUI.Controls.cuiTextBox2();
-            this.stocktxtbox = new CuoreUI.Controls.cuiTextBox2();
-            this.saveBtn = new CuoreUI.Controls.cuiButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cuiButton1 = new CuoreUI.Controls.cuiButton();
-            this.backbtn = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.categorycombobox = new System.Windows.Forms.ComboBox();
-            this.grocerydbDataSet2 = new RevisedGroceryApp.grocerydbDataSet2();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsTableAdapter = new RevisedGroceryApp.grocerydbDataSet2TableAdapters.itemsTableAdapter();
-            this.grocerydbDataSet6 = new RevisedGroceryApp.grocerydbDataSet6();
-            this.iteminventoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.item_inventoryTableAdapter1 = new RevisedGroceryApp.grocerydbDataSet6TableAdapters.item_inventoryTableAdapter();
-            this.grocerydbDataSet7 = new RevisedGroceryApp.grocerydbDataSet7();
-            this.itemsInventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsInventoryTableAdapter = new RevisedGroceryApp.grocerydbDataSet7TableAdapters.ItemsInventoryTableAdapter();
             this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemCategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventoryStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventoryDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemsInventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grocerydbDataSet7 = new RevisedGroceryApp.grocerydbDataSet7();
+            this.iteminventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grocerydbDataSet = new RevisedGroceryApp.grocerydbDataSet();
+            this.item_inventoryTableAdapter = new RevisedGroceryApp.grocerydbDataSetTableAdapters.item_inventoryTableAdapter();
+            this.updatepnl = new System.Windows.Forms.Panel();
+            this.categorycombobox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.backbtn = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.saveBtn = new CuoreUI.Controls.cuiButton();
+            this.stocktxtbox = new CuoreUI.Controls.cuiTextBox2();
+            this.nametxtbox = new CuoreUI.Controls.cuiTextBox2();
+            this.pricetxtbox = new CuoreUI.Controls.cuiTextBox2();
+            this.cuiButton1 = new CuoreUI.Controls.cuiButton();
+            this.grocerydbDataSet2 = new RevisedGroceryApp.grocerydbDataSet2();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemsTableAdapter = new RevisedGroceryApp.grocerydbDataSet2TableAdapters.itemsTableAdapter();
+            this.grocerydbDataSet6 = new RevisedGroceryApp.grocerydbDataSet6();
+            this.iteminventoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.item_inventoryTableAdapter1 = new RevisedGroceryApp.grocerydbDataSet6TableAdapters.item_inventoryTableAdapter();
+            this.itemsInventoryTableAdapter = new RevisedGroceryApp.grocerydbDataSet7TableAdapters.ItemsInventoryTableAdapter();
+            this.inAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
+            this.cuiControlAnimator1 = new CuoreUI.Components.cuiControlAnimator();
             this.accActionPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRepDtaGrdVw)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsInventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iteminventoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet)).BeginInit();
             this.updatepnl.SuspendLayout();
@@ -78,8 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iteminventoryBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsInventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // titleName
@@ -214,290 +216,6 @@
             this.salesRepDtaGrdVw.Size = new System.Drawing.Size(833, 328);
             this.salesRepDtaGrdVw.TabIndex = 68;
             // 
-            // iteminventoryBindingSource
-            // 
-            this.iteminventoryBindingSource.DataMember = "item_inventory";
-            this.iteminventoryBindingSource.DataSource = this.grocerydbDataSet;
-            // 
-            // grocerydbDataSet
-            // 
-            this.grocerydbDataSet.DataSetName = "grocerydbDataSet";
-            this.grocerydbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // item_inventoryTableAdapter
-            // 
-            this.item_inventoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // updatepnl
-            // 
-            this.updatepnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.updatepnl.Controls.Add(this.categorycombobox);
-            this.updatepnl.Controls.Add(this.label2);
-            this.updatepnl.Controls.Add(this.backbtn);
-            this.updatepnl.Controls.Add(this.label1);
-            this.updatepnl.Controls.Add(this.saveBtn);
-            this.updatepnl.Controls.Add(this.stocktxtbox);
-            this.updatepnl.Controls.Add(this.nametxtbox);
-            this.updatepnl.Controls.Add(this.pricetxtbox);
-            this.updatepnl.Location = new System.Drawing.Point(222, 36);
-            this.updatepnl.Name = "updatepnl";
-            this.updatepnl.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.updatepnl.Size = new System.Drawing.Size(521, 457);
-            this.updatepnl.TabIndex = 69;
-            this.updatepnl.Visible = false;
-            this.updatepnl.Paint += new System.Windows.Forms.PaintEventHandler(this.updatepnl_Paint);
-            // 
-            // pricetxtbox
-            // 
-            this.pricetxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pricetxtbox.BackgroundColor = System.Drawing.Color.White;
-            this.pricetxtbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pricetxtbox.BorderSize = 1;
-            this.pricetxtbox.Content = "";
-            this.pricetxtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pricetxtbox.FocusBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.pricetxtbox.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pricetxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pricetxtbox.ForeColor = System.Drawing.Color.Gray;
-            this.pricetxtbox.Location = new System.Drawing.Point(58, 243);
-            this.pricetxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.pricetxtbox.Multiline = false;
-            this.pricetxtbox.Name = "pricetxtbox";
-            this.pricetxtbox.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
-            this.pricetxtbox.PasswordChar = false;
-            this.pricetxtbox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
-            this.pricetxtbox.PlaceholderText = "Price";
-            this.pricetxtbox.Rounding = new System.Windows.Forms.Padding(8);
-            this.pricetxtbox.Size = new System.Drawing.Size(150, 45);
-            this.pricetxtbox.TabIndex = 0;
-            this.pricetxtbox.TextOffset = new System.Drawing.Size(0, 0);
-            this.pricetxtbox.UnderlinedStyle = false;
-            this.pricetxtbox.ContentChanged += new System.EventHandler(this.pricetxtbox_ContentChanged);
-            // 
-            // nametxtbox
-            // 
-            this.nametxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.nametxtbox.BackgroundColor = System.Drawing.Color.White;
-            this.nametxtbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nametxtbox.BorderSize = 1;
-            this.nametxtbox.Content = "";
-            this.nametxtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nametxtbox.FocusBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.nametxtbox.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nametxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nametxtbox.ForeColor = System.Drawing.Color.Gray;
-            this.nametxtbox.Location = new System.Drawing.Point(58, 163);
-            this.nametxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.nametxtbox.Multiline = false;
-            this.nametxtbox.Name = "nametxtbox";
-            this.nametxtbox.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
-            this.nametxtbox.PasswordChar = false;
-            this.nametxtbox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
-            this.nametxtbox.PlaceholderText = "ItemName";
-            this.nametxtbox.Rounding = new System.Windows.Forms.Padding(8);
-            this.nametxtbox.Size = new System.Drawing.Size(150, 45);
-            this.nametxtbox.TabIndex = 1;
-            this.nametxtbox.TextOffset = new System.Drawing.Size(0, 0);
-            this.nametxtbox.UnderlinedStyle = false;
-            // 
-            // stocktxtbox
-            // 
-            this.stocktxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.stocktxtbox.BackgroundColor = System.Drawing.Color.White;
-            this.stocktxtbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stocktxtbox.BorderSize = 1;
-            this.stocktxtbox.Content = "";
-            this.stocktxtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.stocktxtbox.FocusBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.stocktxtbox.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stocktxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stocktxtbox.ForeColor = System.Drawing.Color.Gray;
-            this.stocktxtbox.Location = new System.Drawing.Point(316, 243);
-            this.stocktxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.stocktxtbox.Multiline = false;
-            this.stocktxtbox.Name = "stocktxtbox";
-            this.stocktxtbox.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
-            this.stocktxtbox.PasswordChar = false;
-            this.stocktxtbox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
-            this.stocktxtbox.PlaceholderText = "Stock";
-            this.stocktxtbox.Rounding = new System.Windows.Forms.Padding(8);
-            this.stocktxtbox.Size = new System.Drawing.Size(150, 45);
-            this.stocktxtbox.TabIndex = 2;
-            this.stocktxtbox.TextOffset = new System.Drawing.Size(0, 0);
-            this.stocktxtbox.UnderlinedStyle = false;
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.CheckButton = false;
-            this.saveBtn.Checked = false;
-            this.saveBtn.CheckedBackground = System.Drawing.Color.Gray;
-            this.saveBtn.CheckedForeColor = System.Drawing.Color.White;
-            this.saveBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.saveBtn.CheckedOutline = System.Drawing.Color.Gray;
-            this.saveBtn.Content = "Save";
-            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.saveBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.HoverBackground = System.Drawing.Color.Gray;
-            this.saveBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.saveBtn.HoverForeColor = System.Drawing.Color.White;
-            this.saveBtn.HoverOutline = System.Drawing.Color.Empty;
-            this.saveBtn.Image = null;
-            this.saveBtn.ImageAutoCenter = true;
-            this.saveBtn.ImageExpand = new System.Drawing.Point(0, 0);
-            this.saveBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.saveBtn.Location = new System.Drawing.Point(163, 389);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.saveBtn.NormalForeColor = System.Drawing.Color.White;
-            this.saveBtn.NormalImageTint = System.Drawing.Color.White;
-            this.saveBtn.NormalOutline = System.Drawing.Color.Empty;
-            this.saveBtn.OutlineThickness = 1.6F;
-            this.saveBtn.PressedBackground = System.Drawing.Color.Black;
-            this.saveBtn.PressedForeColor = System.Drawing.Color.White;
-            this.saveBtn.PressedImageTint = System.Drawing.Color.White;
-            this.saveBtn.PressedOutline = System.Drawing.Color.Empty;
-            this.saveBtn.Rounding = new System.Windows.Forms.Padding(10);
-            this.saveBtn.Size = new System.Drawing.Size(192, 46);
-            this.saveBtn.TabIndex = 12;
-            this.saveBtn.TextOffset = new System.Drawing.Point(0, 0);
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(115, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 47);
-            this.label1.TabIndex = 70;
-            this.label1.Text = "What to Update?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cuiButton1
-            // 
-            this.cuiButton1.CheckButton = false;
-            this.cuiButton1.Checked = false;
-            this.cuiButton1.CheckedBackground = System.Drawing.Color.Gray;
-            this.cuiButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.cuiButton1.CheckedImageTint = System.Drawing.Color.White;
-            this.cuiButton1.CheckedOutline = System.Drawing.Color.Gray;
-            this.cuiButton1.Content = "UPDATE";
-            this.cuiButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.cuiButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cuiButton1.ForeColor = System.Drawing.Color.White;
-            this.cuiButton1.HoverBackground = System.Drawing.Color.Gray;
-            this.cuiButton1.HoveredImageTint = System.Drawing.Color.White;
-            this.cuiButton1.HoverForeColor = System.Drawing.Color.White;
-            this.cuiButton1.HoverOutline = System.Drawing.Color.Empty;
-            this.cuiButton1.Image = null;
-            this.cuiButton1.ImageAutoCenter = true;
-            this.cuiButton1.ImageExpand = new System.Drawing.Point(0, 0);
-            this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.cuiButton1.Location = new System.Drawing.Point(379, 499);
-            this.cuiButton1.Name = "cuiButton1";
-            this.cuiButton1.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.cuiButton1.NormalForeColor = System.Drawing.Color.White;
-            this.cuiButton1.NormalImageTint = System.Drawing.Color.White;
-            this.cuiButton1.NormalOutline = System.Drawing.Color.Empty;
-            this.cuiButton1.OutlineThickness = 1.6F;
-            this.cuiButton1.PressedBackground = System.Drawing.Color.Black;
-            this.cuiButton1.PressedForeColor = System.Drawing.Color.White;
-            this.cuiButton1.PressedImageTint = System.Drawing.Color.White;
-            this.cuiButton1.PressedOutline = System.Drawing.Color.Empty;
-            this.cuiButton1.Rounding = new System.Windows.Forms.Padding(10);
-            this.cuiButton1.Size = new System.Drawing.Size(192, 46);
-            this.cuiButton1.TabIndex = 71;
-            this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
-            this.cuiButton1.Click += new System.EventHandler(this.cuiButton1_Click);
-            // 
-            // backbtn
-            // 
-            this.backbtn.AutoSize = true;
-            this.backbtn.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backbtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.backbtn.Location = new System.Drawing.Point(27, 22);
-            this.backbtn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.backbtn.Name = "backbtn";
-            this.backbtn.Size = new System.Drawing.Size(36, 37);
-            this.backbtn.TabIndex = 72;
-            this.backbtn.Text = "<";
-            this.backbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(482, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 30);
-            this.label2.TabIndex = 72;
-            this.label2.Text = "X";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // categorycombobox
-            // 
-            this.categorycombobox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categorycombobox.FormattingEnabled = true;
-            this.categorycombobox.Items.AddRange(new object[] {
-            "Bakery",
-            "Beverage",
-            "Dairy",
-            "Grains",
-            "Produce",
-            "Snacks"});
-            this.categorycombobox.Location = new System.Drawing.Point(316, 163);
-            this.categorycombobox.Name = "categorycombobox";
-            this.categorycombobox.Size = new System.Drawing.Size(150, 33);
-            this.categorycombobox.TabIndex = 73;
-            // 
-            // grocerydbDataSet2
-            // 
-            this.grocerydbDataSet2.DataSetName = "grocerydbDataSet2";
-            this.grocerydbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // itemsBindingSource
-            // 
-            this.itemsBindingSource.DataMember = "items";
-            this.itemsBindingSource.DataSource = this.grocerydbDataSet2;
-            // 
-            // itemsTableAdapter
-            // 
-            this.itemsTableAdapter.ClearBeforeFill = true;
-            // 
-            // grocerydbDataSet6
-            // 
-            this.grocerydbDataSet6.DataSetName = "grocerydbDataSet6";
-            this.grocerydbDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // iteminventoryBindingSource1
-            // 
-            this.iteminventoryBindingSource1.DataMember = "item_inventory";
-            this.iteminventoryBindingSource1.DataSource = this.grocerydbDataSet6;
-            // 
-            // item_inventoryTableAdapter1
-            // 
-            this.item_inventoryTableAdapter1.ClearBeforeFill = true;
-            // 
-            // grocerydbDataSet7
-            // 
-            this.grocerydbDataSet7.DataSetName = "grocerydbDataSet7";
-            this.grocerydbDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // itemsInventoryBindingSource
-            // 
-            this.itemsInventoryBindingSource.DataMember = "ItemsInventory";
-            this.itemsInventoryBindingSource.DataSource = this.grocerydbDataSet7;
-            // 
-            // itemsInventoryTableAdapter
-            // 
-            this.itemsInventoryTableAdapter.ClearBeforeFill = true;
-            // 
             // itemIdDataGridViewTextBoxColumn
             // 
             this.itemIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -541,6 +259,310 @@
             this.inventoryDateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.inventoryDateDataGridViewTextBoxColumn.Name = "inventoryDateDataGridViewTextBoxColumn";
             // 
+            // itemsInventoryBindingSource
+            // 
+            this.itemsInventoryBindingSource.DataMember = "ItemsInventory";
+            this.itemsInventoryBindingSource.DataSource = this.grocerydbDataSet7;
+            // 
+            // grocerydbDataSet7
+            // 
+            this.grocerydbDataSet7.DataSetName = "grocerydbDataSet7";
+            this.grocerydbDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // iteminventoryBindingSource
+            // 
+            this.iteminventoryBindingSource.DataMember = "item_inventory";
+            this.iteminventoryBindingSource.DataSource = this.grocerydbDataSet;
+            // 
+            // grocerydbDataSet
+            // 
+            this.grocerydbDataSet.DataSetName = "grocerydbDataSet";
+            this.grocerydbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // item_inventoryTableAdapter
+            // 
+            this.item_inventoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // updatepnl
+            // 
+            this.updatepnl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.updatepnl.Controls.Add(this.categorycombobox);
+            this.updatepnl.Controls.Add(this.label2);
+            this.updatepnl.Controls.Add(this.backbtn);
+            this.updatepnl.Controls.Add(this.label1);
+            this.updatepnl.Controls.Add(this.saveBtn);
+            this.updatepnl.Controls.Add(this.stocktxtbox);
+            this.updatepnl.Controls.Add(this.nametxtbox);
+            this.updatepnl.Controls.Add(this.pricetxtbox);
+            this.updatepnl.Location = new System.Drawing.Point(222, 36);
+            this.updatepnl.Name = "updatepnl";
+            this.updatepnl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.updatepnl.Size = new System.Drawing.Size(521, 457);
+            this.updatepnl.TabIndex = 69;
+            this.updatepnl.Visible = false;
+            this.updatepnl.Paint += new System.Windows.Forms.PaintEventHandler(this.updatepnl_Paint);
+            // 
+            // categorycombobox
+            // 
+            this.categorycombobox.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categorycombobox.FormattingEnabled = true;
+            this.categorycombobox.Items.AddRange(new object[] {
+            "Bakery",
+            "Beverage",
+            "Dairy",
+            "Grains",
+            "Produce",
+            "Snacks"});
+            this.categorycombobox.Location = new System.Drawing.Point(316, 175);
+            this.categorycombobox.Name = "categorycombobox";
+            this.categorycombobox.Size = new System.Drawing.Size(150, 33);
+            this.categorycombobox.TabIndex = 73;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(482, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 30);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // backbtn
+            // 
+            this.backbtn.AutoSize = true;
+            this.backbtn.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.backbtn.Location = new System.Drawing.Point(27, 22);
+            this.backbtn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.backbtn.Name = "backbtn";
+            this.backbtn.Size = new System.Drawing.Size(36, 37);
+            this.backbtn.TabIndex = 72;
+            this.backbtn.Text = "<";
+            this.backbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(115, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(292, 47);
+            this.label1.TabIndex = 70;
+            this.label1.Text = "What to Update?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // saveBtn
+            // 
+            this.saveBtn.CheckButton = false;
+            this.saveBtn.Checked = false;
+            this.saveBtn.CheckedBackground = System.Drawing.Color.Gray;
+            this.saveBtn.CheckedForeColor = System.Drawing.Color.White;
+            this.saveBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.saveBtn.CheckedOutline = System.Drawing.Color.Gray;
+            this.saveBtn.Content = "Save";
+            this.saveBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.saveBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.HoverBackground = System.Drawing.Color.Gray;
+            this.saveBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.saveBtn.HoverForeColor = System.Drawing.Color.White;
+            this.saveBtn.HoverOutline = System.Drawing.Color.Empty;
+            this.saveBtn.Image = null;
+            this.saveBtn.ImageAutoCenter = true;
+            this.saveBtn.ImageExpand = new System.Drawing.Point(0, 0);
+            this.saveBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.saveBtn.Location = new System.Drawing.Point(163, 389);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.saveBtn.NormalForeColor = System.Drawing.Color.White;
+            this.saveBtn.NormalImageTint = System.Drawing.Color.White;
+            this.saveBtn.NormalOutline = System.Drawing.Color.Empty;
+            this.saveBtn.OutlineThickness = 1.6F;
+            this.saveBtn.PressedBackground = System.Drawing.Color.Black;
+            this.saveBtn.PressedForeColor = System.Drawing.Color.White;
+            this.saveBtn.PressedImageTint = System.Drawing.Color.White;
+            this.saveBtn.PressedOutline = System.Drawing.Color.Empty;
+            this.saveBtn.Rounding = new System.Windows.Forms.Padding(10);
+            this.saveBtn.Size = new System.Drawing.Size(192, 46);
+            this.saveBtn.TabIndex = 12;
+            this.saveBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // stocktxtbox
+            // 
+            this.stocktxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.stocktxtbox.BackgroundColor = System.Drawing.Color.White;
+            this.stocktxtbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stocktxtbox.BorderSize = 1;
+            this.stocktxtbox.Content = "";
+            this.stocktxtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stocktxtbox.FocusBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.stocktxtbox.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stocktxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stocktxtbox.ForeColor = System.Drawing.Color.Gray;
+            this.stocktxtbox.Location = new System.Drawing.Point(316, 243);
+            this.stocktxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.stocktxtbox.Multiline = false;
+            this.stocktxtbox.Name = "stocktxtbox";
+            this.stocktxtbox.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
+            this.stocktxtbox.PasswordChar = false;
+            this.stocktxtbox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
+            this.stocktxtbox.PlaceholderText = "Stock";
+            this.stocktxtbox.Rounding = new System.Windows.Forms.Padding(8);
+            this.stocktxtbox.Size = new System.Drawing.Size(150, 45);
+            this.stocktxtbox.TabIndex = 2;
+            this.stocktxtbox.TextOffset = new System.Drawing.Size(0, 0);
+            this.stocktxtbox.UnderlinedStyle = false;
+            // 
+            // nametxtbox
+            // 
+            this.nametxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.nametxtbox.BackgroundColor = System.Drawing.Color.White;
+            this.nametxtbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nametxtbox.BorderSize = 1;
+            this.nametxtbox.Content = "";
+            this.nametxtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nametxtbox.FocusBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.nametxtbox.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nametxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nametxtbox.ForeColor = System.Drawing.Color.Gray;
+            this.nametxtbox.Location = new System.Drawing.Point(58, 163);
+            this.nametxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.nametxtbox.Multiline = false;
+            this.nametxtbox.Name = "nametxtbox";
+            this.nametxtbox.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
+            this.nametxtbox.PasswordChar = false;
+            this.nametxtbox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
+            this.nametxtbox.PlaceholderText = "ItemName";
+            this.nametxtbox.Rounding = new System.Windows.Forms.Padding(8);
+            this.nametxtbox.Size = new System.Drawing.Size(150, 45);
+            this.nametxtbox.TabIndex = 1;
+            this.nametxtbox.TextOffset = new System.Drawing.Size(0, 0);
+            this.nametxtbox.UnderlinedStyle = false;
+            // 
+            // pricetxtbox
+            // 
+            this.pricetxtbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pricetxtbox.BackgroundColor = System.Drawing.Color.White;
+            this.pricetxtbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pricetxtbox.BorderSize = 1;
+            this.pricetxtbox.Content = "";
+            this.pricetxtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.pricetxtbox.FocusBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.pricetxtbox.FocusBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pricetxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pricetxtbox.ForeColor = System.Drawing.Color.Gray;
+            this.pricetxtbox.Location = new System.Drawing.Point(58, 243);
+            this.pricetxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.pricetxtbox.Multiline = false;
+            this.pricetxtbox.Name = "pricetxtbox";
+            this.pricetxtbox.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
+            this.pricetxtbox.PasswordChar = false;
+            this.pricetxtbox.PlaceholderColor = System.Drawing.SystemColors.WindowFrame;
+            this.pricetxtbox.PlaceholderText = "Price";
+            this.pricetxtbox.Rounding = new System.Windows.Forms.Padding(8);
+            this.pricetxtbox.Size = new System.Drawing.Size(150, 45);
+            this.pricetxtbox.TabIndex = 0;
+            this.pricetxtbox.TextOffset = new System.Drawing.Size(0, 0);
+            this.pricetxtbox.UnderlinedStyle = false;
+            this.pricetxtbox.ContentChanged += new System.EventHandler(this.pricetxtbox_ContentChanged);
+            // 
+            // cuiButton1
+            // 
+            this.cuiButton1.CheckButton = false;
+            this.cuiButton1.Checked = false;
+            this.cuiButton1.CheckedBackground = System.Drawing.Color.Gray;
+            this.cuiButton1.CheckedForeColor = System.Drawing.Color.White;
+            this.cuiButton1.CheckedImageTint = System.Drawing.Color.White;
+            this.cuiButton1.CheckedOutline = System.Drawing.Color.Gray;
+            this.cuiButton1.Content = "UPDATE";
+            this.cuiButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.cuiButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cuiButton1.ForeColor = System.Drawing.Color.White;
+            this.cuiButton1.HoverBackground = System.Drawing.Color.Gray;
+            this.cuiButton1.HoveredImageTint = System.Drawing.Color.White;
+            this.cuiButton1.HoverForeColor = System.Drawing.Color.White;
+            this.cuiButton1.HoverOutline = System.Drawing.Color.Empty;
+            this.cuiButton1.Image = null;
+            this.cuiButton1.ImageAutoCenter = true;
+            this.cuiButton1.ImageExpand = new System.Drawing.Point(0, 0);
+            this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton1.Location = new System.Drawing.Point(379, 499);
+            this.cuiButton1.Name = "cuiButton1";
+            this.cuiButton1.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cuiButton1.NormalForeColor = System.Drawing.Color.White;
+            this.cuiButton1.NormalImageTint = System.Drawing.Color.White;
+            this.cuiButton1.NormalOutline = System.Drawing.Color.Empty;
+            this.cuiButton1.OutlineThickness = 1.6F;
+            this.cuiButton1.PressedBackground = System.Drawing.Color.Black;
+            this.cuiButton1.PressedForeColor = System.Drawing.Color.White;
+            this.cuiButton1.PressedImageTint = System.Drawing.Color.White;
+            this.cuiButton1.PressedOutline = System.Drawing.Color.Empty;
+            this.cuiButton1.Rounding = new System.Windows.Forms.Padding(10);
+            this.cuiButton1.Size = new System.Drawing.Size(192, 46);
+            this.cuiButton1.TabIndex = 71;
+            this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton1.Click += new System.EventHandler(this.cuiButton1_Click);
+            // 
+            // grocerydbDataSet2
+            // 
+            this.grocerydbDataSet2.DataSetName = "grocerydbDataSet2";
+            this.grocerydbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "items";
+            this.itemsBindingSource.DataSource = this.grocerydbDataSet2;
+            // 
+            // itemsTableAdapter
+            // 
+            this.itemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // grocerydbDataSet6
+            // 
+            this.grocerydbDataSet6.DataSetName = "grocerydbDataSet6";
+            this.grocerydbDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // iteminventoryBindingSource1
+            // 
+            this.iteminventoryBindingSource1.DataMember = "item_inventory";
+            this.iteminventoryBindingSource1.DataSource = this.grocerydbDataSet6;
+            // 
+            // item_inventoryTableAdapter1
+            // 
+            this.item_inventoryTableAdapter1.ClearBeforeFill = true;
+            // 
+            // itemsInventoryTableAdapter
+            // 
+            this.itemsInventoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // inAnim
+            // 
+            this.inAnim.AnimateOnStart = true;
+            this.inAnim.Duration = 600;
+            this.inAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadIn;
+            this.inAnim.StartOpacity = 0D;
+            this.inAnim.TargetForm = this;
+            this.inAnim.TargetOpacity = 1D;
+            // 
+            // cuiControlAnimator1
+            // 
+            this.cuiControlAnimator1.AnimateLocation = true;
+            this.cuiControlAnimator1.AnimateOnStart = true;
+            this.cuiControlAnimator1.AnimateOpacity = false;
+            this.cuiControlAnimator1.Duration = 1000;
+            this.cuiControlAnimator1.EasingType = CuoreUI.Drawing.EasingTypes.QuadInOut;
+            this.cuiControlAnimator1.TargetControl = this.updatepnl;
+            this.cuiControlAnimator1.TargetLocation = new System.Drawing.Point(0, 0);
+            this.cuiControlAnimator1.TargetOpacity = CuoreUI.Components.cuiControlAnimator.OpacityEnum.Visible;
+            // 
             // InvAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -563,6 +585,8 @@
             this.accActionPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRepDtaGrdVw)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsInventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iteminventoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet)).EndInit();
             this.updatepnl.ResumeLayout(false);
@@ -571,8 +595,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iteminventoryBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grocerydbDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemsInventoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -616,5 +638,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inventoryStockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inventoryDateDataGridViewTextBoxColumn;
+        private CuoreUI.Components.cuiFormAnimator inAnim;
+        private CuoreUI.Components.cuiControlAnimator cuiControlAnimator1;
     }
 }

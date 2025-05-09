@@ -48,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.inAnim = new CuoreUI.Components.cuiFormAnimator(this.components);
             this.roundedPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.roundedPanel3.SuspendLayout();
@@ -293,6 +294,15 @@
             this.pictureBox7.TabIndex = 24;
             this.pictureBox7.TabStop = false;
             // 
+            // inAnim
+            // 
+            this.inAnim.AnimateOnStart = true;
+            this.inAnim.Duration = 600;
+            this.inAnim.EasingType = CuoreUI.Drawing.EasingTypes.QuadIn;
+            this.inAnim.StartOpacity = 0D;
+            this.inAnim.TargetForm = this;
+            this.inAnim.TargetOpacity = 1D;
+            // 
             // AdminHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,5 +363,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private CuoreUI.Components.cuiFormAnimator inAnim;
     }
 }

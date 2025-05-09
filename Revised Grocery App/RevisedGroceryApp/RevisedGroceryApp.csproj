@@ -292,6 +292,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>grocerydbDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="grocerydbDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>grocerydbDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="grocerydbDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>grocerydbDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="grocerydbDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>grocerydbDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="grocerydbDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>grocerydbDataSet13.xsd</DependentUpon>
+    </Compile>
     <Compile Include="grocerydbDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -351,7 +371,8 @@
     <Compile Include="Forms\InvAdmin.Designer.cs">
       <DependentUpon>InvAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="HelperClasses\Items.cs" />
+    <Compile Include="ImageItem.cs" />
+    <Compile Include="Items.cs" />
     <Compile Include="Forms\ItemsAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -599,6 +620,50 @@
     </None>
     <None Include="grocerydbDataSet1.xss">
       <DependentUpon>grocerydbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="grocerydbDataSet10.xsc">
+      <DependentUpon>grocerydbDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="grocerydbDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>grocerydbDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="grocerydbDataSet10.xss">
+      <DependentUpon>grocerydbDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="grocerydbDataSet11.xsc">
+      <DependentUpon>grocerydbDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="grocerydbDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>grocerydbDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="grocerydbDataSet11.xss">
+      <DependentUpon>grocerydbDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="grocerydbDataSet12.xsc">
+      <DependentUpon>grocerydbDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="grocerydbDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>grocerydbDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="grocerydbDataSet12.xss">
+      <DependentUpon>grocerydbDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="grocerydbDataSet13.xsc">
+      <DependentUpon>grocerydbDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="grocerydbDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>grocerydbDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="grocerydbDataSet13.xss">
+      <DependentUpon>grocerydbDataSet13.xsd</DependentUpon>
     </None>
     <None Include="grocerydbDataSet2.xsc">
       <DependentUpon>grocerydbDataSet2.xsd</DependentUpon>

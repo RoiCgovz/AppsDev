@@ -33,8 +33,8 @@ namespace RevisedGroceryApp.Forms
 
         private void SalesReport_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'grocerydbDataSet9.salesreports' table. You can move, or remove it, as needed.
-            this.salesreportsTableAdapter2.Fill(this.grocerydbDataSet9.salesreports);
+            // TODO: This line of code loads data into the 'grocerydbDataSet12.SalesReport' table. You can move, or remove it, as needed.
+            this.salesReportTableAdapter.Fill(this.grocerydbDataSet12.SalesReport);
 
         }
 
@@ -134,6 +134,17 @@ namespace RevisedGroceryApp.Forms
                     throw;
                 }
             }
+        }
+
+        private void accBtn_Click(object sender, EventArgs e)
+        {
+            accActionPanel.Visible = !accActionPanel.Visible;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new LogInForm().Show();
+            Close();
         }
     }
 }

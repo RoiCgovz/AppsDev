@@ -28,108 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.sliBreTxtBox = new System.Windows.Forms.TextBox();
-            this.newItemMinItem = new System.Windows.Forms.Button();
-            this.newItemAddBtn = new System.Windows.Forms.Button();
-            this.newItemProdLbl = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.newItemPictureBox = new System.Windows.Forms.PictureBox();
+            this.qtyTextBox = new System.Windows.Forms.TextBox();
+            this.minusBtn = new System.Windows.Forms.Button();
+            this.plusBtn = new System.Windows.Forms.Button();
+            this.newItemNameLbl = new System.Windows.Forms.Label();
             this.newItemStockLbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.newItmPriLbl = new System.Windows.Forms.Label();
+            this.roundedPanel1 = new RoundedPanel.RoundedPanel(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.newItemPictureBox)).BeginInit();
+            this.roundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // newItemPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(24, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(268, 145);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.newItemPictureBox.Location = new System.Drawing.Point(34, 48);
+            this.newItemPictureBox.Name = "newItemPictureBox";
+            this.newItemPictureBox.Size = new System.Drawing.Size(268, 145);
+            this.newItemPictureBox.TabIndex = 0;
+            this.newItemPictureBox.TabStop = false;
             // 
-            // sliBreTxtBox
+            // qtyTextBox
             // 
-            this.sliBreTxtBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sliBreTxtBox.Location = new System.Drawing.Point(73, 214);
-            this.sliBreTxtBox.Multiline = true;
-            this.sliBreTxtBox.Name = "sliBreTxtBox";
-            this.sliBreTxtBox.Size = new System.Drawing.Size(50, 35);
-            this.sliBreTxtBox.TabIndex = 8;
-            this.sliBreTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.qtyTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qtyTextBox.Location = new System.Drawing.Point(66, 211);
+            this.qtyTextBox.Multiline = true;
+            this.qtyTextBox.Name = "qtyTextBox";
+            this.qtyTextBox.Size = new System.Drawing.Size(50, 35);
+            this.qtyTextBox.TabIndex = 8;
+            this.qtyTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // newItemMinItem
+            // minusBtn
             // 
-            this.newItemMinItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newItemMinItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newItemMinItem.ForeColor = System.Drawing.Color.Black;
-            this.newItemMinItem.Location = new System.Drawing.Point(25, 214);
-            this.newItemMinItem.Name = "newItemMinItem";
-            this.newItemMinItem.Size = new System.Drawing.Size(42, 35);
-            this.newItemMinItem.TabIndex = 9;
-            this.newItemMinItem.Text = "-";
-            this.newItemMinItem.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.newItemMinItem.UseVisualStyleBackColor = true;
+            this.minusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minusBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minusBtn.ForeColor = System.Drawing.Color.Black;
+            this.minusBtn.Location = new System.Drawing.Point(20, 211);
+            this.minusBtn.Name = "minusBtn";
+            this.minusBtn.Size = new System.Drawing.Size(42, 35);
+            this.minusBtn.TabIndex = 9;
+            this.minusBtn.Text = "-";
+            this.minusBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.minusBtn.UseVisualStyleBackColor = true;
+            this.minusBtn.Click += new System.EventHandler(this.minusBtn_Click);
             // 
-            // newItemAddBtn
+            // plusBtn
             // 
-            this.newItemAddBtn.BackColor = System.Drawing.Color.Transparent;
-            this.newItemAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newItemAddBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newItemAddBtn.ForeColor = System.Drawing.Color.Black;
-            this.newItemAddBtn.Location = new System.Drawing.Point(130, 214);
-            this.newItemAddBtn.Name = "newItemAddBtn";
-            this.newItemAddBtn.Size = new System.Drawing.Size(42, 35);
-            this.newItemAddBtn.TabIndex = 10;
-            this.newItemAddBtn.Text = "+";
-            this.newItemAddBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.newItemAddBtn.UseVisualStyleBackColor = false;
+            this.plusBtn.BackColor = System.Drawing.Color.Transparent;
+            this.plusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plusBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusBtn.ForeColor = System.Drawing.Color.Black;
+            this.plusBtn.Location = new System.Drawing.Point(122, 211);
+            this.plusBtn.Name = "plusBtn";
+            this.plusBtn.Size = new System.Drawing.Size(42, 35);
+            this.plusBtn.TabIndex = 10;
+            this.plusBtn.Text = "+";
+            this.plusBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.plusBtn.UseVisualStyleBackColor = false;
+            this.plusBtn.Click += new System.EventHandler(this.plusBtn_Click);
             // 
-            // newItemProdLbl
+            // newItemNameLbl
             // 
-            this.newItemProdLbl.AutoSize = true;
-            this.newItemProdLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newItemProdLbl.ForeColor = System.Drawing.Color.Black;
-            this.newItemProdLbl.Location = new System.Drawing.Point(50, 12);
-            this.newItemProdLbl.Name = "newItemProdLbl";
-            this.newItemProdLbl.Size = new System.Drawing.Size(102, 20);
-            this.newItemProdLbl.TabIndex = 11;
-            this.newItemProdLbl.Text = "(placeholder)";
-            this.newItemProdLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.newItemNameLbl.AutoSize = true;
+            this.newItemNameLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newItemNameLbl.ForeColor = System.Drawing.Color.Black;
+            this.newItemNameLbl.Location = new System.Drawing.Point(3, 15);
+            this.newItemNameLbl.Name = "newItemNameLbl";
+            this.newItemNameLbl.Size = new System.Drawing.Size(102, 20);
+            this.newItemNameLbl.TabIndex = 11;
+            this.newItemNameLbl.Text = "(placeholder)";
+            this.newItemNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // newItemStockLbl
             // 
             this.newItemStockLbl.AutoSize = true;
             this.newItemStockLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newItemStockLbl.ForeColor = System.Drawing.Color.Black;
-            this.newItemStockLbl.Location = new System.Drawing.Point(20, 262);
+            this.newItemStockLbl.Location = new System.Drawing.Point(16, 249);
             this.newItemStockLbl.Name = "newItemStockLbl";
             this.newItemStockLbl.Size = new System.Drawing.Size(113, 21);
             this.newItemStockLbl.TabIndex = 12;
             this.newItemStockLbl.Text = "(Placeholder)";
             // 
+            // newItmPriLbl
+            // 
+            this.newItmPriLbl.AutoSize = true;
+            this.newItmPriLbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newItmPriLbl.ForeColor = System.Drawing.Color.Black;
+            this.newItmPriLbl.Location = new System.Drawing.Point(111, 15);
+            this.newItmPriLbl.Name = "newItmPriLbl";
+            this.newItmPriLbl.Size = new System.Drawing.Size(56, 20);
+            this.newItmPriLbl.TabIndex = 13;
+            this.newItmPriLbl.Text = "(none)";
+            this.newItmPriLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.BackColor = System.Drawing.Color.White;
+            this.roundedPanel1.BorderRadius = 30;
+            this.roundedPanel1.Controls.Add(this.newItmPriLbl);
+            this.roundedPanel1.Controls.Add(this.newItemPictureBox);
+            this.roundedPanel1.Controls.Add(this.qtyTextBox);
+            this.roundedPanel1.Controls.Add(this.newItemStockLbl);
+            this.roundedPanel1.Controls.Add(this.plusBtn);
+            this.roundedPanel1.Controls.Add(this.newItemNameLbl);
+            this.roundedPanel1.Controls.Add(this.minusBtn);
+            this.roundedPanel1.Location = new System.Drawing.Point(43, 22);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.RadiusButtonLeft = 30;
+            this.roundedPanel1.RadiusButtonRight = 30;
+            this.roundedPanel1.RadiusTopLeft = 30;
+            this.roundedPanel1.RadiusTopRight = 30;
+            this.roundedPanel1.Size = new System.Drawing.Size(172, 291);
+            this.roundedPanel1.TabIndex = 14;
+            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
+            // 
             // NewItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.newItemStockLbl);
-            this.Controls.Add(this.newItemProdLbl);
-            this.Controls.Add(this.sliBreTxtBox);
-            this.Controls.Add(this.newItemMinItem);
-            this.Controls.Add(this.newItemAddBtn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.roundedPanel1);
             this.Name = "NewItem";
-            this.Size = new System.Drawing.Size(195, 308);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(259, 364);
+            this.Load += new System.EventHandler(this.NewItem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.newItemPictureBox)).EndInit();
+            this.roundedPanel1.ResumeLayout(false);
+            this.roundedPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox sliBreTxtBox;
-        private System.Windows.Forms.Button newItemMinItem;
-        private System.Windows.Forms.Button newItemAddBtn;
-        private System.Windows.Forms.Label newItemProdLbl;
+        private System.Windows.Forms.PictureBox newItemPictureBox;
+        private System.Windows.Forms.TextBox qtyTextBox;
+        private System.Windows.Forms.Button minusBtn;
+        private System.Windows.Forms.Button plusBtn;
+        private System.Windows.Forms.Label newItemNameLbl;
         private System.Windows.Forms.Label newItemStockLbl;
+        private System.Windows.Forms.Label newItmPriLbl;
+        private RoundedPanel.RoundedPanel roundedPanel1;
     }
 }
